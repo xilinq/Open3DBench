@@ -15,6 +15,15 @@ write_db $::env(RESULTS_DIR)/6_final.odb
 write_def $::env(RESULTS_DIR)/6_final.def
 write_verilog $::env(RESULTS_DIR)/6_final.v
 
+#new:
+check_setup -verbose -unconstrained_endpoints
+estimate_parasitics -placement
+report_wns
+report_tns
+report_worst_slack
+
+source $::env(SCRIPTS_DIR)/my_report_metric.tcl
+
 # Run extraction and STA
 if {[info exist ::env(RCX_RULES)]} {
 

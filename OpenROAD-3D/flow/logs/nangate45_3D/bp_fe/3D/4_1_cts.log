@@ -1,0 +1,67 @@
+OpenROAD v2.0-17198-g8396d0866 
+Features included (+) or not (-): +Charts +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-0366] port 'icache_id_i[0]' not found.
+[INFO CTS-0050] Root buffer is BUF_X4_bottom.
+[INFO CTS-0051] Sink buffer is BUF_X4_bottom.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    BUF_X4_bottom
+[INFO CTS-0049] Characterization buffer is BUF_X4_bottom.
+[INFO CTS-0007] Net "clk_i" found for clock "CLK".
+[INFO CTS-0010]  Clock net "clk_i" has 4326 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0200] 0 placement blockages have been identified.
+[INFO CTS-0201] 11 placed hard macros will be treated like blockages.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i.
+[INFO CTS-0028]  Total number of sinks: 4326.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 30 and with maximum cluster diameter of 100.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 30 and clustering diameter of 100.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 147.
+[INFO CTS-0024]  Normalized sink region: [(3.00866, 2.66813), (83.1651, 54.6835)].
+[INFO CTS-0025]     Width:  80.1564.
+[INFO CTS-0026]     Height: 52.0153.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 74
+    Sub-region size: 40.0782 X 52.0153
+[INFO CTS-0034]     Segment length (rounded): 20.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 37
+    Sub-region size: 40.0782 X 26.0077
+[INFO CTS-0034]     Segment length (rounded): 14.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 19
+    Sub-region size: 20.0391 X 26.0077
+[INFO CTS-0034]     Segment length (rounded): 10.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 10
+    Sub-region size: 20.0391 X 13.0038
+[INFO CTS-0034]     Segment length (rounded): 6.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 147.
+[INFO CTS-0018]     Created 168 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 4.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 4.
+[INFO CTS-0015]     Created 168 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 6:3, 7:1, 8:3, 10:6, 11:1, 12:3, 13:2, 15:1, 24:1, 26:1, 27:1, 29:1, 30:139..
+[INFO CTS-0017]     Max level of the clock tree: 4.
+[INFO CTS-0098] Clock net "clk_i"
+[INFO CTS-0099]  Sinks 4438
+[INFO CTS-0100]  Leaf buffers 147
+[INFO CTS-0101]  Average sink wire length 616.05 um
+[INFO CTS-0102]  Path depth 3 - 4
+[INFO CTS-0207]  Leaf load cells 112
+[INFO RSZ-0058] Using max wire length 640um.
+Repair setup and hold violations...
+TNS end percent 100
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./results/nangate45_3D/bp_fe/3D/placement.webp.png
+Elapsed time: 0:09.99[h:]min:sec. CPU time: user 8.76 sys 0.51 (92%). Peak memory: 547788KB.

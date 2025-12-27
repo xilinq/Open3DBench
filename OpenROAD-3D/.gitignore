@@ -87,3 +87,11 @@ docs/main
 docs/build
 GitGuide.md
 mainREADME.md
+
+3D_def/*
+3D_sdc/*
+*.def
+*.v
+*.vdb
+*.log
+*.rpt

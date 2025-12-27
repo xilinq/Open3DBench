@@ -1,0 +1,483 @@
+OpenROAD v2.0-17198-g8396d0866 
+Features included (+) or not (-): +Charts +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-0366] port 'icache_id_i[0]' not found.
+[WARNING ODB-0378] Global connections are not set up.
+[INFO] Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /workspace/Open3DBench/OpenROAD-3D/flow/platforms/nangate45_3D/nangate45_3D.rules ...
+[INFO RCX-0436] RC segment generation bp_fe_top (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 141335 rc segments
+[INFO RCX-0439] Coupling Cap extraction bp_fe_top ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 17% of 328202 wires extracted
+[INFO RCX-0442] 48% of 328202 wires extracted
+[INFO RCX-0442] 57% of 328202 wires extracted
+[INFO RCX-0442] 73% of 328202 wires extracted
+[INFO RCX-0442] 96% of 328202 wires extracted
+[INFO RCX-0442] 100% of 328202 wires extracted
+[INFO RCX-0045] Extract 35972 nets, 172951 rsegs, 172951 caps, 374417 ccs
+[INFO RCX-0443] 35972 nets finished
+
+==========================================================================
+finish report_tns
+--------------------------------------------------------------------------
+tns -814.64
+
+==========================================================================
+finish report_wns
+--------------------------------------------------------------------------
+wns -1.37
+
+==========================================================================
+finish report_worst_slack
+--------------------------------------------------------------------------
+worst slack -1.37
+
+==========================================================================
+finish report_check_types -max_slew -max_cap -max_fanout -violators
+--------------------------------------------------------------------------
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+icache_1__21781_/Q                    121.15  138.74  -17.59 (VIOLATED)
+icache_1__12215_/ZN                    63.32   75.79  -12.47 (VIOLATED)
+icache_1_lce__10742_/ZN               101.01  109.95   -8.94 (VIOLATED)
+icache_1__11221_/ZN                   237.43  241.09   -3.66 (VIOLATED)
+icache_1__11959_/ZN                    27.62   28.69   -1.07 (VIOLATED)
+bp_fe_pc_gen_1_genblk1_branch_prediction_1_btb_1__2584_/ZN   41.50   42.16   -0.65 (VIOLATED)
+bp_fe_pc_gen_1_genblk1_branch_prediction_1__0755_/ZN   28.99   29.64   -0.65 (VIOLATED)
+icache_1__11249_/ZN                   106.81  107.27   -0.45 (VIOLATED)
+icache_1_lce__13776_/ZN                27.62   27.87   -0.26 (VIOLATED)
+
+
+==========================================================================
+finish max_slew_check_slack
+--------------------------------------------------------------------------
+0.0329340323805809
+
+==========================================================================
+finish max_slew_check_limit
+--------------------------------------------------------------------------
+0.1985349953174591
+
+==========================================================================
+finish max_slew_check_slack_limit
+--------------------------------------------------------------------------
+0.1659
+
+==========================================================================
+finish max_fanout_check_slack
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_fanout_check_limit
+--------------------------------------------------------------------------
+1.0000000150474662e+30
+
+==========================================================================
+finish max_capacitance_check_slack
+--------------------------------------------------------------------------
+-17.587682723999023
+
+==========================================================================
+finish max_capacitance_check_limit
+--------------------------------------------------------------------------
+121.15499877929688
+
+==========================================================================
+finish max_capacitance_check_slack_limit
+--------------------------------------------------------------------------
+-0.1452
+
+==========================================================================
+finish max_slew_violation_count
+--------------------------------------------------------------------------
+max slew violation count 0
+
+==========================================================================
+finish max_fanout_violation_count
+--------------------------------------------------------------------------
+max fanout violation count 0
+
+==========================================================================
+finish max_cap_violation_count
+--------------------------------------------------------------------------
+max cap violation count 9
+
+==========================================================================
+finish setup_violation_count
+--------------------------------------------------------------------------
+setup violation count 2484
+
+==========================================================================
+finish hold_violation_count
+--------------------------------------------------------------------------
+hold violation count 64
++_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+-
+Startpoint: icache_1__21925_ (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: bp_fe_pc_gen_1__4114_ (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.20    0.20   clock network delay (propagated)
+   0.00    0.20 ^ icache_1__21925_/CK (DFF_X2_bottom)
+   0.18    0.38 ^ icache_1__21925_/Q (DFF_X2_bottom)
+   0.06    0.45 v icache_1__11182_/Z (XOR2_X1_bottom)
+   0.13    0.57 v icache_1__11183_/ZN (OR4_X1_bottom)
+   0.09    0.66 ^ icache_1__11226_/ZN (OAI33_X1_bottom)
+   0.05    0.71 ^ max_cap2500/Z (BUF_X1_bottom)
+   0.03    0.74 ^ max_cap2499/Z (BUF_X2_bottom)
+   0.03    0.77 v icache_1__11243_/ZN (OAI211_X4_bottom)
+   0.07    0.84 v icache_1__11244_/Z (MUX2_X2_bottom)
+   0.15    0.99 ^ icache_1__11249_/ZN (NOR2_X4_bottom)
+   0.06    1.05 ^ max_cap2294/Z (BUF_X16_bottom)
+   0.03    1.08 ^ max_cap2293/Z (BUF_X16_bottom)
+   0.05    1.13 ^ max_cap2292/Z (BUF_X16_bottom)
+   0.05    1.18 v icache_1__11250_/ZN (NAND2_X4_bottom)
+   0.09    1.27 ^ icache_1__11424_/ZN (OAI21_X1_bottom)
+   0.03    1.30 v icache_1__11427_/ZN (AOI221_X2_bottom)
+   0.17    1.46 ^ icache_1__11453_/ZN (AOI221_X2_bottom)
+   0.07    1.54 ^ bp_fe_pc_gen_1__2299_/ZN (AND2_X1_bottom)
+   0.06    1.60 v bp_fe_pc_gen_1__2300_/ZN (NAND4_X4_bottom)
+   0.07    1.67 ^ bp_fe_pc_gen_1__2302_/ZN (AOI21_X4_bottom)
+   0.08    1.75 v bp_fe_pc_gen_1__2381_/ZN (NAND2_X4_bottom)
+   0.03    1.78 ^ bp_fe_pc_gen_1__2642_/ZN (INV_X32_bottom)
+   0.16    1.94 ^ bp_fe_pc_gen_1__4020_/S (HA_X1_bottom)
+   0.05    1.98 v bp_fe_pc_gen_1__2501_/ZN (NAND4_X2_bottom)
+   0.05    2.04 ^ bp_fe_pc_gen_1__2521_/ZN (NOR2_X1_bottom)
+   0.04    2.07 v bp_fe_pc_gen_1__2525_/ZN (NAND3_X1_bottom)
+   0.07    2.14 ^ bp_fe_pc_gen_1__2526_/ZN (NOR3_X2_bottom)
+   0.02    2.16 v bp_fe_pc_gen_1__2527_/ZN (AOI21_X4_bottom)
+   0.05    2.21 ^ bp_fe_pc_gen_1__2546_/ZN (AOI21_X4_bottom)
+   0.03    2.23 v bp_fe_pc_gen_1__2575_/ZN (AOI21_X2_bottom)
+   0.05    2.29 ^ bp_fe_pc_gen_1__2582_/ZN (OAI21_X1_bottom)
+   0.03    2.32 v bp_fe_pc_gen_1__2586_/ZN (AOI221_X2_bottom)
+   0.07    2.39 v bp_fe_pc_gen_1__3959_/CO (FA_X1_bottom)
+   0.04    2.43 v bp_fe_pc_gen_1__3335_/ZN (XNOR2_X1_bottom)
+   0.05    2.48 v bp_fe_pc_gen_1__3336_/ZN (XNOR2_X1_bottom)
+   0.07    2.55 ^ bp_fe_pc_gen_1__3338_/ZN (AOI221_X2_bottom)
+   0.02    2.57 v bp_fe_pc_gen_1__3339_/ZN (OAI21_X1_bottom)
+   0.00    2.57 v bp_fe_pc_gen_1__4114_/D (DFF_X2_bottom)
+           2.57   data arrival time
+
+   1.00    1.00   clock CLK (rise edge)
+   0.23    1.23   clock network delay (propagated)
+   0.00    1.23   clock reconvergence pessimism
+           1.23 ^ bp_fe_pc_gen_1__4114_/CK (DFF_X2_bottom)
+  -0.03    1.20   library setup time
+           1.20   data required time
+---------------------------------------------------------
+           1.20   data required time
+          -2.57   data arrival time
+---------------------------------------------------------
+          -1.37   slack (VIOLATED)
+
+
+Startpoint: icache_1__21925_ (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: bp_fe_pc_gen_1__4091_ (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.20    0.20   clock network delay (propagated)
+   0.00    0.20 ^ icache_1__21925_/CK (DFF_X2_bottom)
+   0.18    0.38 ^ icache_1__21925_/Q (DFF_X2_bottom)
+   0.06    0.45 v icache_1__11182_/Z (XOR2_X1_bottom)
+   0.13    0.57 v icache_1__11183_/ZN (OR4_X1_bottom)
+   0.09    0.66 ^ icache_1__11226_/ZN (OAI33_X1_bottom)
+   0.05    0.71 ^ max_cap2500/Z (BUF_X1_bottom)
+   0.03    0.74 ^ max_cap2499/Z (BUF_X2_bottom)
+   0.03    0.77 v icache_1__11243_/ZN (OAI211_X4_bottom)
+   0.07    0.84 v icache_1__11244_/Z (MUX2_X2_bottom)
+   0.15    0.99 ^ icache_1__11249_/ZN (NOR2_X4_bottom)
+   0.06    1.05 ^ max_cap2294/Z (BUF_X16_bottom)
+   0.03    1.08 ^ max_cap2293/Z (BUF_X16_bottom)
+   0.05    1.13 ^ max_cap2292/Z (BUF_X16_bottom)
+   0.05    1.18 v icache_1__11250_/ZN (NAND2_X4_bottom)
+   0.09    1.27 ^ icache_1__11424_/ZN (OAI21_X1_bottom)
+   0.03    1.30 v icache_1__11427_/ZN (AOI221_X2_bottom)
+   0.17    1.46 ^ icache_1__11453_/ZN (AOI221_X2_bottom)
+   0.07    1.54 ^ bp_fe_pc_gen_1__2299_/ZN (AND2_X1_bottom)
+   0.06    1.60 v bp_fe_pc_gen_1__2300_/ZN (NAND4_X4_bottom)
+   0.07    1.67 ^ bp_fe_pc_gen_1__2302_/ZN (AOI21_X4_bottom)
+   0.08    1.75 v bp_fe_pc_gen_1__2381_/ZN (NAND2_X4_bottom)
+   0.03    1.78 ^ bp_fe_pc_gen_1__2642_/ZN (INV_X32_bottom)
+   0.10    1.88 ^ bp_fe_pc_gen_1__3990_/S (HA_X1_bottom)
+   0.08    1.96 ^ bp_fe_pc_gen_1__2403_/ZN (AND4_X1_bottom)
+   0.04    2.01 ^ bp_fe_pc_gen_1__2404_/ZN (AND2_X1_bottom)
+   0.02    2.03 v bp_fe_pc_gen_1__2407_/ZN (NAND2_X1_bottom)
+   0.04    2.07 ^ bp_fe_pc_gen_1__2408_/ZN (OAI21_X4_bottom)
+   0.03    2.11 v bp_fe_pc_gen_1__2450_/ZN (NAND4_X1_bottom)
+   0.03    2.13 ^ bp_fe_pc_gen_1__2451_/ZN (NAND2_X1_bottom)
+   0.02    2.15 v bp_fe_pc_gen_1__2470_/ZN (INV_X1_bottom)
+   0.04    2.20 ^ bp_fe_pc_gen_1__2488_/ZN (OAI21_X2_bottom)
+   0.02    2.21 v bp_fe_pc_gen_1__2502_/ZN (INV_X1_bottom)
+   0.11    2.32 ^ bp_fe_pc_gen_1__3948_/S (FA_X1_bottom)
+   0.01    2.33 v bp_fe_pc_gen_1__3111_/ZN (INV_X1_bottom)
+   0.06    2.39 v bp_fe_pc_gen_1__3112_/Z (MUX2_X1_bottom)
+   0.06    2.44 v bp_fe_pc_gen_1__3113_/Z (MUX2_X1_bottom)
+   0.05    2.49 ^ bp_fe_pc_gen_1__3114_/ZN (AOI22_X1_bottom)
+   0.02    2.51 v bp_fe_pc_gen_1__3115_/ZN (NAND2_X1_bottom)
+   0.03    2.54 ^ bp_fe_pc_gen_1__3116_/ZN (OAI211_X2_bottom)
+   0.01    2.55 v bp_fe_pc_gen_1__3118_/ZN (NAND2_X1_bottom)
+   0.00    2.55 v bp_fe_pc_gen_1__4091_/D (DFF_X2_bottom)
+           2.55   data arrival time
+
+   1.00    1.00   clock CLK (rise edge)
+   0.23    1.23   clock network delay (propagated)
+   0.00    1.23   clock reconvergence pessimism
+           1.23 ^ bp_fe_pc_gen_1__4091_/CK (DFF_X2_bottom)
+  -0.03    1.20   library setup time
+           1.20   data required time
+---------------------------------------------------------
+           1.20   data required time
+          -2.55   data arrival time
+---------------------------------------------------------
+          -1.35   slack (VIOLATED)
+
+
+Startpoint: icache_1__21925_ (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: bp_fe_pc_gen_1__4107_ (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.20    0.20   clock network delay (propagated)
+   0.00    0.20 ^ icache_1__21925_/CK (DFF_X2_bottom)
+   0.18    0.38 ^ icache_1__21925_/Q (DFF_X2_bottom)
+   0.06    0.45 v icache_1__11182_/Z (XOR2_X1_bottom)
+   0.13    0.57 v icache_1__11183_/ZN (OR4_X1_bottom)
+   0.09    0.66 ^ icache_1__11226_/ZN (OAI33_X1_bottom)
+   0.05    0.71 ^ max_cap2500/Z (BUF_X1_bottom)
+   0.03    0.74 ^ max_cap2499/Z (BUF_X2_bottom)
+   0.03    0.77 v icache_1__11243_/ZN (OAI211_X4_bottom)
+   0.07    0.84 v icache_1__11244_/Z (MUX2_X2_bottom)
+   0.15    0.99 ^ icache_1__11249_/ZN (NOR2_X4_bottom)
+   0.06    1.05 ^ max_cap2294/Z (BUF_X16_bottom)
+   0.03    1.08 ^ max_cap2293/Z (BUF_X16_bottom)
+   0.05    1.13 ^ max_cap2292/Z (BUF_X16_bottom)
+   0.05    1.18 v icache_1__11250_/ZN (NAND2_X4_bottom)
+   0.09    1.27 ^ icache_1__11424_/ZN (OAI21_X1_bottom)
+   0.03    1.30 v icache_1__11427_/ZN (AOI221_X2_bottom)
+   0.17    1.46 ^ icache_1__11453_/ZN (AOI221_X2_bottom)
+   0.07    1.54 ^ bp_fe_pc_gen_1__2299_/ZN (AND2_X1_bottom)
+   0.06    1.60 v bp_fe_pc_gen_1__2300_/ZN (NAND4_X4_bottom)
+   0.07    1.67 ^ bp_fe_pc_gen_1__2302_/ZN (AOI21_X4_bottom)
+   0.08    1.75 v bp_fe_pc_gen_1__2381_/ZN (NAND2_X4_bottom)
+   0.03    1.78 ^ bp_fe_pc_gen_1__2642_/ZN (INV_X32_bottom)
+   0.16    1.94 ^ bp_fe_pc_gen_1__4020_/S (HA_X1_bottom)
+   0.05    1.98 v bp_fe_pc_gen_1__2501_/ZN (NAND4_X2_bottom)
+   0.05    2.04 ^ bp_fe_pc_gen_1__2521_/ZN (NOR2_X1_bottom)
+   0.04    2.07 v bp_fe_pc_gen_1__2525_/ZN (NAND3_X1_bottom)
+   0.07    2.14 ^ bp_fe_pc_gen_1__2526_/ZN (NOR3_X2_bottom)
+   0.02    2.16 v bp_fe_pc_gen_1__2527_/ZN (AOI21_X4_bottom)
+   0.05    2.21 ^ bp_fe_pc_gen_1__2546_/ZN (AOI21_X4_bottom)
+   0.02    2.23 v bp_fe_pc_gen_1__2547_/ZN (INV_X1_bottom)
+   0.04    2.27 ^ bp_fe_pc_gen_1__2566_/ZN (OAI21_X1_bottom)
+   0.06    2.32 ^ bp_fe_pc_gen_1__3956_/S (FA_X1_bottom)
+   0.01    2.33 v bp_fe_pc_gen_1__3264_/ZN (INV_X1_bottom)
+   0.05    2.38 v bp_fe_pc_gen_1__3265_/Z (MUX2_X1_bottom)
+   0.06    2.44 v bp_fe_pc_gen_1__3266_/Z (MUX2_X1_bottom)
+   0.05    2.49 ^ bp_fe_pc_gen_1__3267_/ZN (AOI22_X1_bottom)
+   0.02    2.51 v bp_fe_pc_gen_1__3268_/ZN (NAND2_X1_bottom)
+   0.03    2.54 ^ bp_fe_pc_gen_1__3269_/ZN (OAI211_X1_bottom)
+   0.02    2.55 v bp_fe_pc_gen_1__3271_/ZN (NAND2_X1_bottom)
+   0.00    2.55 v bp_fe_pc_gen_1__4107_/D (DFF_X2_bottom)
+           2.55   data arrival time
+
+   1.00    1.00   clock CLK (rise edge)
+   0.23    1.23   clock network delay (propagated)
+   0.00    1.23   clock reconvergence pessimism
+           1.23 ^ bp_fe_pc_gen_1__4107_/CK (DFF_X2_bottom)
+  -0.03    1.20   library setup time
+           1.20   data required time
+---------------------------------------------------------
+           1.20   data required time
+          -2.55   data arrival time
+---------------------------------------------------------
+          -1.35   slack (VIOLATED)
+
+
+Startpoint: icache_1__21925_ (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: bp_fe_pc_gen_1__4113_ (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.20    0.20   clock network delay (propagated)
+   0.00    0.20 ^ icache_1__21925_/CK (DFF_X2_bottom)
+   0.18    0.38 ^ icache_1__21925_/Q (DFF_X2_bottom)
+   0.06    0.45 v icache_1__11182_/Z (XOR2_X1_bottom)
+   0.13    0.57 v icache_1__11183_/ZN (OR4_X1_bottom)
+   0.09    0.66 ^ icache_1__11226_/ZN (OAI33_X1_bottom)
+   0.05    0.71 ^ max_cap2500/Z (BUF_X1_bottom)
+   0.03    0.74 ^ max_cap2499/Z (BUF_X2_bottom)
+   0.03    0.77 v icache_1__11243_/ZN (OAI211_X4_bottom)
+   0.07    0.84 v icache_1__11244_/Z (MUX2_X2_bottom)
+   0.15    0.99 ^ icache_1__11249_/ZN (NOR2_X4_bottom)
+   0.06    1.05 ^ max_cap2294/Z (BUF_X16_bottom)
+   0.03    1.08 ^ max_cap2293/Z (BUF_X16_bottom)
+   0.05    1.13 ^ max_cap2292/Z (BUF_X16_bottom)
+   0.05    1.18 v icache_1__11250_/ZN (NAND2_X4_bottom)
+   0.09    1.27 ^ icache_1__11424_/ZN (OAI21_X1_bottom)
+   0.03    1.30 v icache_1__11427_/ZN (AOI221_X2_bottom)
+   0.17    1.46 ^ icache_1__11453_/ZN (AOI221_X2_bottom)
+   0.07    1.54 ^ bp_fe_pc_gen_1__2299_/ZN (AND2_X1_bottom)
+   0.06    1.60 v bp_fe_pc_gen_1__2300_/ZN (NAND4_X4_bottom)
+   0.07    1.67 ^ bp_fe_pc_gen_1__2302_/ZN (AOI21_X4_bottom)
+   0.08    1.75 v bp_fe_pc_gen_1__2381_/ZN (NAND2_X4_bottom)
+   0.03    1.78 ^ bp_fe_pc_gen_1__2642_/ZN (INV_X32_bottom)
+   0.16    1.94 ^ bp_fe_pc_gen_1__4020_/S (HA_X1_bottom)
+   0.05    1.98 v bp_fe_pc_gen_1__2501_/ZN (NAND4_X2_bottom)
+   0.05    2.04 ^ bp_fe_pc_gen_1__2521_/ZN (NOR2_X1_bottom)
+   0.04    2.07 v bp_fe_pc_gen_1__2525_/ZN (NAND3_X1_bottom)
+   0.07    2.14 ^ bp_fe_pc_gen_1__2526_/ZN (NOR3_X2_bottom)
+   0.02    2.16 v bp_fe_pc_gen_1__2527_/ZN (AOI21_X4_bottom)
+   0.05    2.21 ^ bp_fe_pc_gen_1__2546_/ZN (AOI21_X4_bottom)
+   0.03    2.23 v bp_fe_pc_gen_1__2575_/ZN (AOI21_X2_bottom)
+   0.05    2.29 ^ bp_fe_pc_gen_1__2582_/ZN (OAI21_X1_bottom)
+   0.03    2.32 v bp_fe_pc_gen_1__2586_/ZN (AOI221_X2_bottom)
+   0.11    2.43 ^ bp_fe_pc_gen_1__3959_/S (FA_X1_bottom)
+   0.01    2.45 v bp_fe_pc_gen_1__3326_/ZN (NAND2_X1_bottom)
+   0.02    2.47 ^ bp_fe_pc_gen_1__3328_/ZN (OAI211_X1_bottom)
+   0.02    2.49 v bp_fe_pc_gen_1__3329_/ZN (OAI21_X1_bottom)
+   0.04    2.53 ^ bp_fe_pc_gen_1__3330_/ZN (OAI211_X1_bottom)
+   0.00    2.53 ^ bp_fe_pc_gen_1__4113_/D (DFF_X2_bottom)
+           2.53   data arrival time
+
+   1.00    1.00   clock CLK (rise edge)
+   0.23    1.23   clock network delay (propagated)
+   0.00    1.23   clock reconvergence pessimism
+           1.23 ^ bp_fe_pc_gen_1__4113_/CK (DFF_X2_bottom)
+  -0.03    1.20   library setup time
+           1.20   data required time
+---------------------------------------------------------
+           1.20   data required time
+          -2.53   data arrival time
+---------------------------------------------------------
+          -1.33   slack (VIOLATED)
+
+
+Startpoint: icache_1__21925_ (rising edge-triggered flip-flop clocked by CLK)
+Endpoint: bp_fe_pc_gen_1__4111_ (rising edge-triggered flip-flop clocked by CLK)
+Path Group: CLK
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock CLK (rise edge)
+   0.20    0.20   clock network delay (propagated)
+   0.00    0.20 ^ icache_1__21925_/CK (DFF_X2_bottom)
+   0.18    0.38 ^ icache_1__21925_/Q (DFF_X2_bottom)
+   0.06    0.45 v icache_1__11182_/Z (XOR2_X1_bottom)
+   0.13    0.57 v icache_1__11183_/ZN (OR4_X1_bottom)
+   0.09    0.66 ^ icache_1__11226_/ZN (OAI33_X1_bottom)
+   0.05    0.71 ^ max_cap2500/Z (BUF_X1_bottom)
+   0.03    0.74 ^ max_cap2499/Z (BUF_X2_bottom)
+   0.03    0.77 v icache_1__11243_/ZN (OAI211_X4_bottom)
+   0.07    0.84 v icache_1__11244_/Z (MUX2_X2_bottom)
+   0.15    0.99 ^ icache_1__11249_/ZN (NOR2_X4_bottom)
+   0.06    1.05 ^ max_cap2294/Z (BUF_X16_bottom)
+   0.03    1.08 ^ max_cap2293/Z (BUF_X16_bottom)
+   0.05    1.13 ^ max_cap2292/Z (BUF_X16_bottom)
+   0.05    1.18 v icache_1__11250_/ZN (NAND2_X4_bottom)
+   0.09    1.27 ^ icache_1__11424_/ZN (OAI21_X1_bottom)
+   0.03    1.30 v icache_1__11427_/ZN (AOI221_X2_bottom)
+   0.17    1.46 ^ icache_1__11453_/ZN (AOI221_X2_bottom)
+   0.07    1.54 ^ bp_fe_pc_gen_1__2299_/ZN (AND2_X1_bottom)
+   0.06    1.60 v bp_fe_pc_gen_1__2300_/ZN (NAND4_X4_bottom)
+   0.07    1.67 ^ bp_fe_pc_gen_1__2302_/ZN (AOI21_X4_bottom)
+   0.08    1.75 v bp_fe_pc_gen_1__2381_/ZN (NAND2_X4_bottom)
+   0.03    1.78 ^ bp_fe_pc_gen_1__2642_/ZN (INV_X32_bottom)
+   0.16    1.94 ^ bp_fe_pc_gen_1__4020_/S (HA_X1_bottom)
+   0.05    1.98 v bp_fe_pc_gen_1__2501_/ZN (NAND4_X2_bottom)
+   0.05    2.04 ^ bp_fe_pc_gen_1__2521_/ZN (NOR2_X1_bottom)
+   0.04    2.07 v bp_fe_pc_gen_1__2525_/ZN (NAND3_X1_bottom)
+   0.07    2.14 ^ bp_fe_pc_gen_1__2526_/ZN (NOR3_X2_bottom)
+   0.02    2.16 v bp_fe_pc_gen_1__2527_/ZN (AOI21_X4_bottom)
+   0.05    2.21 ^ bp_fe_pc_gen_1__2546_/ZN (AOI21_X4_bottom)
+   0.03    2.23 v bp_fe_pc_gen_1__2575_/ZN (AOI21_X2_bottom)
+   0.05    2.29 ^ bp_fe_pc_gen_1__2582_/ZN (OAI21_X1_bottom)
+   0.01    2.30 v bp_fe_pc_gen_1__2583_/ZN (INV_X1_bottom)
+   0.11    2.41 ^ bp_fe_pc_gen_1__3958_/S (FA_X1_bottom)
+   0.01    2.42 v bp_fe_pc_gen_1__3305_/ZN (NAND2_X1_bottom)
+   0.02    2.45 ^ bp_fe_pc_gen_1__3307_/ZN (OAI211_X1_bottom)
+   0.02    2.47 v bp_fe_pc_gen_1__3308_/ZN (OAI21_X1_bottom)
+   0.04    2.51 ^ bp_fe_pc_gen_1__3309_/ZN (OAI211_X1_bottom)
+   0.00    2.51 ^ bp_fe_pc_gen_1__4111_/D (DFF_X2_bottom)
+           2.51   data arrival time
+
+   1.00    1.00   clock CLK (rise edge)
+   0.22    1.22   clock network delay (propagated)
+   0.00    1.22   clock reconvergence pessimism
+           1.22 ^ bp_fe_pc_gen_1__4111_/CK (DFF_X2_bottom)
+  -0.03    1.19   library setup time
+           1.19   data required time
+---------------------------------------------------------
+           1.19   data required time
+          -2.51   data arrival time
+---------------------------------------------------------
+          -1.32   slack (VIOLATED)
+
+
++_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+-
+
+==========================================================================
+finish critical path delay
+--------------------------------------------------------------------------
+2.5671
+
+==========================================================================
+finish critical path slack
+--------------------------------------------------------------------------
+-1.3704
+
+==========================================================================
+finish slack div critical path delay
+--------------------------------------------------------------------------
+-53.383195
+
+==========================================================================
+finish report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             3.60e-02   3.84e-03   3.45e-04   4.02e-02  14.2%
+Combinational          3.95e-02   4.90e-02   1.19e-03   8.98e-02  31.8%
+Clock                  6.21e-03   1.19e-02   3.42e-05   1.82e-02   6.4%
+Macro                  1.27e-01   0.00e+00   7.60e-03   1.35e-01  47.6%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  2.09e-01   6.48e-02   9.17e-03   2.83e-01 100.0%
+                          73.8%      22.9%       3.2%
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 224864 u^2 103% utilization.
+
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/final_routing.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/final_placement.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/final_ir_drop.webp.png
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/final_clocks.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/final_congestion.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/final_resizer.webp.png
+[WARNING GUI-0010] File path does not end with a valid extension, new path is: ./reports/nangate45_3D/bp_fe/3D/cts_CLK.webp.png
+Elapsed time: 0:34.32[h:]min:sec. CPU time: user 30.23 sys 1.17 (91%). Peak memory: 1217812KB.

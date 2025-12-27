@@ -11,8 +11,8 @@
 # DESIGN_CONFIG=./designs/nangate45/ariane136/config.mk
 # DESIGN_CONFIG=./designs/nangate45/black_parrot/config.mk
 # DESIGN_CONFIG=./designs/nangate45/bp_be_top/config.mk
-# DESIGN_CONFIG=./designs/nangate45/bp_fe_top/config.mk
-DESIGN_CONFIG=./designs/nangate45/bp_multi_top/config.mk
+DESIGN_CONFIG=./designs/nangate45/bp_fe_top/config.mk
+# DESIGN_CONFIG=./designs/nangate45/bp_multi_top/config.mk
 # DESIGN_CONFIG=./designs/nangate45/bp_quad/config.mk
 # DESIGN_CONFIG=./designs/nangate45/dynamic_node/config.mk
 # DESIGN_CONFIG=./designs/nangate45/gcd/config.mk
@@ -122,7 +122,8 @@ endif
 #-------------------------------------------------------------------------------
 # Proper way to initiate SHELL for make
 SHELL          := /usr/bin/env bash
-.SHELLFLAGS    := -o pipefail -c
+# SHELL		  := /bin/bash
+.SHELLFLAGS    := -euo pipefail -c
 
 #-------------------------------------------------------------------------------
 # Setup variables to point to root / head of the OpenROAD directory
@@ -688,23 +689,38 @@ do-2D_flow:
 do-autoflow:
 	mkdir -p $(RESULTS_DIR) $(LOG_DIR) $(REPORTS_DIR)
 	$(OPENROAD_EXE) -exit scripts_3D/init_odb.tcl
-	$(UNSET_AND_MAKE) do-pre_cts
+# 	$(UNSET_AND_MAKE) do-pre_cts
 
     
 	
 .PHONY: do-cts_eval
 do-cts_eval:
-	python3 scripts_3D/save_map.py
-	python3 scripts_3D/modify_cts_def.py
-	python3 scripts_3D/split_cts_def.py
-	$(OPENROAD_EXE) -exit scripts_3D/lg_bottom.tcl
-	$(OPENROAD_EXE) -exit scripts_3D/lg_upper.tcl
-	python3 scripts_3D/read_def_store_coord.py
-	$(OPENROAD_EXE) -exit scripts_3D/load_cts.tcl
+#original:
+# 	python3 scripts_3D/save_map.py
+# 	python3 scripts_3D/modify_cts_def.py
+# 	python3 scripts_3D/split_cts_def.py
+# 	$(OPENROAD_EXE) -exit scripts_3D/lg_bottom.tcl
+# 	$(OPENROAD_EXE) -exit scripts_3D/lg_upper.tcl
+# 	python3 scripts_3D/read_def_store_coord.py
+# 	$(OPENROAD_EXE) -exit scripts_3D/load_cts.tcl
 	
-	cp $(RESULTS_DIR)/my_cts.odb $(RESULTS_DIR)/4_cts.odb
-	cp $(RESULTS_DIR)/1_synth.sdc $(RESULTS_DIR)/4_cts.sdc
-	$(UNSET_AND_MAKE) do-route do-finish
+# 	cp $(RESULTS_DIR)/my_cts.odb $(RESULTS_DIR)/4_cts.odb
+# 	cp $(RESULTS_DIR)/1_synth.sdc $(RESULTS_DIR)/4_cts.sdc
+# 	$(UNSET_AND_MAKE) do-route do-finish
+
+#new:
+# 	cp designs/asap7_3D/${DESIGN_NAME}/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def $(RESULTS_DIR)/4_1_cts.def
+# 	python3 scripts_3D/my_save_map.py
+# 	python3 scripts_3D/my_split_def.py
+# 	$(OPENROAD_EXE) -exit scripts_3D/lg_bottom.tcl
+# 	$(OPENROAD_EXE) -exit scripts_3D/lg_upper.tcl
+# 	python3 scripts_3D/my_merge_def.py
+# 	$(OPENROAD_EXE) -exit scripts_3D/load_cts.tcl
+	
+# 	cp $(RESULTS_DIR)/my_cts.odb $(RESULTS_DIR)/4_cts.odb
+# 	cp $(RESULTS_DIR)/1_synth.sdc $(RESULTS_DIR)/4_cts.sdc
+# 	$(UNSET_AND_MAKE) do-route do-finish
+	$(UNSET_AND_MAKE) do-finish
 
 # RWQ
 .PHONY: do-hotspot

@@ -1,0 +1,21 @@
+name: oprd
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - tqdm
+  - pyyaml
+  - requests
+  - jinja2
+  - sympy
+  - pillow
+  - pip:
+      - psutil
+      - aiohttp
+      - attrs

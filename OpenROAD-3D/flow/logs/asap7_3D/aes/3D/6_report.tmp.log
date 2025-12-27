@@ -1,0 +1,37 @@
+OpenROAD v2.0-17198-g8396d0866 
+Features included (+) or not (-): +Charts +GPU +GUI +Python : None
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13178, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13211, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13244, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13277, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13310, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13343, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 13376, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 14772, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 14805, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_upper/asap7_SIMPLE_LVT_TT_upper.lib line 14838, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13178, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13211, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13244, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13277, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13310, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13343, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 13376, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 14772, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 14805, timing group from output port.
+[WARNING STA-1212] /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/lib_bottom/asap7_SIMPLE_LVT_TT_bottom.lib line 14838, timing group from output port.
+[WARNING ODB-0378] Global connections are not set up.
+[INFO] Deleted 0 routing obstructions
+wns -54.30
+tns -174.37
+worst slack -54.30
+Report generation complete: ./results/asap7_3D/aes/3D/cell_timing_report.csv
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/asap7_3D.rules ...
+[ERROR RCX-0468] Can't open extraction model file /workspace/Open3DBench/OpenROAD-3D/flow/platforms/asap7_3D/asap7_3D.rules
+Error: final_report.tcl, 69 RCX-0468
+Command exited with non-zero status 1
+Elapsed time: 0:05.58[h:]min:sec. CPU time: user 5.13 sys 0.21 (95%). Peak memory: 381696KB.

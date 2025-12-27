@@ -1,0 +1,9 @@
+DIEAREA ( 0 0 ) ( 1200000 800000 ) ;
+COMPONENTS 29721 ;
+    - icache_1_data_mem_banks_2__data_mem_bank_macro_mem_mem fakeram45_512x64_upper + FIXED ( 285000 526190 ) N ;
+    - icache_1_data_mem_banks_3__data_mem_bank_macro_mem_mem fakeram45_512x64_upper + FIXED ( 636120 526190 ) N ;
+    - icache_1_data_mem_banks_4__data_mem_bank_macro_mem_mem fakeram45_512x64_upper + FIXED ( 495140 285390 ) N ;
+    - icache_1_data_mem_banks_5__data_mem_bank_macro_mem_mem fakeram45_512x64_upper + FIXED ( 278160 44590 ) N ;
+    - icache_1_data_mem_banks_6__data_mem_bank_macro_mem_mem fakeram45_512x64_upper + FIXED ( 620540 44590 ) N ;
+    - icache_1_data_mem_banks_7__data_mem_bank_macro_mem_mem fakeram45_512x64_upper + FIXED ( 851960 299390 ) N ;
+END COMPONENTS

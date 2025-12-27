@@ -1,0 +1,1812 @@
+A2O1A1Ixp33_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+A2O1A1Ixp5_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+A2O1A1O1Ixp33_upper
+  A1
+  A2
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+AND2x2_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+AND2x4_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+AND2x6_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+AND3x1_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+AND3x2_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+AND3x4_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+AND4x1_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+AND4x2_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+AND5x1_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+AND5x2_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+AO211x1_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+AO211x2_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+AO21x1_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+AO21x2_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+AO221x1_upper
+  A1
+  A2
+  B1
+  B2
+  C
+  VDD
+  VSS
+  Y
+AO221x2_upper
+  A1
+  A2
+  B1
+  B2
+  C
+  VDD
+  VSS
+  Y
+AO222x1_upper
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AO222x2_upper
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AO22x1_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+AO22x2_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+AO311x1_upper
+  A1
+  A2
+  A3
+  B
+  C
+  VDD
+  VSS
+  Y
+AO311x2_upper
+  A1
+  A2
+  A3
+  B
+  C
+  VDD
+  VSS
+  Y
+AO31x1_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+AO31x2_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+AO321x1_upper
+  A3
+  VDD
+  VSS
+  Y
+  A1
+  A2
+  B1
+  B2
+  C
+AO321x2_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C
+  Y
+AO322x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AO322x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AO32x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  VDD
+  VSS
+  Y
+AO32x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  VDD
+  VSS
+  Y
+AO331x1_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C
+  Y
+AO331x2_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C
+  Y
+AO332x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AO332x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AO333x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  C3
+  VDD
+  VSS
+  Y
+AO333x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  C3
+  VDD
+  VSS
+  Y
+AO33x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  VDD
+  VSS
+  Y
+AO33x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  VDD
+  VSS
+  Y
+AOI211xp25_upper
+  VDD
+  VSS
+  A1
+  A2
+  B
+  C
+  Y
+AOI211xp5_upper
+  A2
+  VDD
+  VSS
+  A1
+  B
+  C
+  Y
+AOI21x1_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+AOI21xp25_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+AOI21xp5_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+AOI221xp25_upper
+  VDD
+  VSS
+  A1
+  A2
+  B1
+  B2
+  C
+  Y
+AOI221xp5_upper
+  VDD
+  VSS
+  A1
+  A2
+  B1
+  B2
+  C
+  Y
+AOI222xp25_upper
+  VDD
+  VSS
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  Y
+AOI22xp25_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+AOI22xp5_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+AOI311xp33_upper
+  A1
+  A2
+  A3
+  B
+  C
+  VDD
+  VSS
+  Y
+AOI31xp33_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+AOI31xp67_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+AOI321xp17_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C
+  Y
+AOI322xp17_upper
+  B2
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  C1
+  C2
+  Y
+AOI32xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  Y
+AOI331xp17_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C
+  Y
+AOI332xp17_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  VDD
+  VSS
+  Y
+AOI333xp17_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  C3
+  VDD
+  VSS
+  Y
+AOI33xp33_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  VDD
+  VSS
+  Y
+BUFx10_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx12_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx12q_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx16q_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx24_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx2_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx3_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx4_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx4q_upper
+  VDD
+  A
+  VSS
+  Y
+BUFx5_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx6q_upper
+  A
+  VDD
+  VSS
+  Y
+BUFx8_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx10_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx11_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx12_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx14_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx16_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx20_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx5p5_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx6p5_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx8_upper
+  A
+  VDD
+  VSS
+  Y
+CKINVDCx9p5_upper
+  A
+  VDD
+  VSS
+  Y
+DECAPx10_upper
+  VDD
+  VSS
+DECAPx1_upper
+  VDD
+  VSS
+DECAPx2_upper
+  VDD
+  VSS
+DECAPx2b_upper
+  VDD
+  VSS
+DECAPx4_upper
+  VDD
+  VSS
+DECAPx6_upper
+  VDD
+  VSS
+DFFARHQNx1_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+  RESETN
+DFFASHQNx1_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+  SETN
+DFFASRHQNx1_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+  RESETN
+  SETN
+DFFHQNx1_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+DFFHQNx2_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+DFFHQNx3_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+DFFHQx4_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DFFLQNx1_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+DFFLQNx2_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+DFFLQNx3_upper
+  CLK
+  D
+  QN
+  VDD
+  VSS
+DFFLQx4_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DHLx1_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DHLx2_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DHLx3_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DLLx1_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DLLx2_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+DLLx3_upper
+  CLK
+  D
+  Q
+  VDD
+  VSS
+FAxp33_upper
+  VDD
+  VSS
+  A
+  B
+  CI
+  CON
+  SN
+FILLER_upper
+  VDD
+  VSS
+FILLERxp5_upper
+  VDD
+  VSS
+HAxp5_upper
+  A
+  B
+  CON
+  SN
+  VDD
+  VSS
+HB1x1_upper
+  A
+  VDD
+  VSS
+  Y
+HB2x1_upper
+  A
+  VDD
+  VSS
+  Y
+HB3x1_upper
+  A
+  VDD
+  VSS
+  Y
+HB4x1_upper
+  A
+  VDD
+  VSS
+  Y
+ICGx10_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx12_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx1_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx2_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx3_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx4_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx5_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+ICGx8_upper
+  CLK
+  ENA
+  GCLK
+  SE
+  VDD
+  VSS
+INVx11_upper
+  A
+  VDD
+  VSS
+  Y
+INVx13_upper
+  A
+  VDD
+  VSS
+  Y
+INVx1_upper
+  A
+  VDD
+  VSS
+  Y
+INVx2_upper
+  A
+  VDD
+  VSS
+  Y
+INVx3_upper
+  A
+  VDD
+  VSS
+  Y
+INVx4_upper
+  A
+  VDD
+  VSS
+  Y
+INVx5_upper
+  A
+  VDD
+  VSS
+  Y
+INVx6_upper
+  A
+  VDD
+  VSS
+  Y
+INVx8_upper
+  A
+  VDD
+  VSS
+  Y
+INVxp5_upper
+  A
+  VDD
+  VSS
+  Y
+MAJIxp5_upper
+  A
+  C
+  VDD
+  VSS
+  Y
+  B
+MAJx1_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+MAJx2_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+MAJx3_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NAND2x1_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NAND2x1p5_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NAND2x2_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NAND2xp5R_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NAND2xp5_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NAND3x1_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NAND3x2_upper
+  A
+  C
+  VDD
+  VSS
+  Y
+  B
+NAND3xp33R_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NAND3xp33_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NAND4xp25R_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+NAND4xp25_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+NAND4xp75_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+NAND5xp2R_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+NAND5xp2_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+NOR2x1_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NOR2x2R_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NOR2x2_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NOR2xp5_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+NOR3x1_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NOR3x1f_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NOR3x2_upper
+  A
+  C
+  VDD
+  VSS
+  Y
+  B
+NOR3xp33_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+NOR4x3f_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+NOR4xp25_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+NOR5x1f_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+NOR5xp2_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+O2A1O1A1Ixp33_upper
+  A1
+  A2
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+O2A1O1Ixp33_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+O2A1O1Ixp5_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+OA211x1_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+OA211x2_upper
+  A1
+  A2
+  B
+  C
+  VDD
+  VSS
+  Y
+OA21x1_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+OA21x2_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+OA221x1_upper
+  A1
+  A2
+  B1
+  B2
+  C
+  VDD
+  VSS
+  Y
+OA221x2_upper
+  A1
+  A2
+  B1
+  B2
+  C
+  VDD
+  VSS
+  Y
+OA222x1_upper
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OA222x2_upper
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OA22x1_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+OA22x2_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+OA311x1_upper
+  A1
+  A2
+  A3
+  B
+  C
+  VDD
+  VSS
+  Y
+OA311x2_upper
+  A1
+  A2
+  A3
+  B
+  C
+  VDD
+  VSS
+  Y
+OA31x1_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+OA31x2_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+OA321x1_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C
+  Y
+OA321x2_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C
+  Y
+OA322x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OA322x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OA32x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  VDD
+  VSS
+  Y
+OA32x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  VDD
+  VSS
+  Y
+OA331x1_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C
+  Y
+OA331x2_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C
+  Y
+OA332x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OA332x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OA333x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  C3
+  VDD
+  VSS
+  Y
+OA333x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  C3
+  VDD
+  VSS
+  Y
+OA33x1_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  VDD
+  VSS
+  Y
+OA33x2_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  VDD
+  VSS
+  Y
+OAI211xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  B
+  C
+  Y
+OAI211xp67b_upper
+  VDD
+  VSS
+  A1
+  A2
+  B
+  C
+  Y
+OAI21xp25_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+OAI21xp5_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+OAI21xp5b_upper
+  A1
+  A2
+  B
+  VDD
+  VSS
+  Y
+OAI221xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  B1
+  B2
+  C
+  Y
+OAI221xp33f_upper
+  VDD
+  VSS
+  A1
+  A2
+  B1
+  B2
+  C
+  Y
+OAI222xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  B1
+  B2
+  C1
+  C2
+  Y
+OAI22xp5_upper
+  A1
+  A2
+  B1
+  B2
+  VDD
+  VSS
+  Y
+OAI311xp33_upper
+  A1
+  A2
+  A3
+  B
+  C
+  VDD
+  VSS
+  Y
+OAI31x1f_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+OAI31xp5f_upper
+  A1
+  A2
+  A3
+  B
+  VDD
+  VSS
+  Y
+OAI321xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C
+  Y
+OAI322xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C1
+  C2
+  Y
+OAI322xp33b_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  C1
+  C2
+  Y
+OAI32xp5f_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  Y
+OAI331xp33_upper
+  VDD
+  VSS
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C
+  Y
+OAI332xp33_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  VDD
+  VSS
+  Y
+OAI333xp33_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  C1
+  C2
+  C3
+  VDD
+  VSS
+  Y
+OAI33xp5f_upper
+  A1
+  A2
+  A3
+  B1
+  B2
+  B3
+  VDD
+  VSS
+  Y
+OR2x2_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+OR2x3R_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+OR2x4_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+OR3x1_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+OR3x2_upper
+  A
+  B
+  C
+  VDD
+  VSS
+  Y
+OR3x4_upper
+  VDD
+  VSS
+  A
+  B
+  C
+  Y
+OR4x1_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+OR4x2_upper
+  A
+  B
+  C
+  D
+  VDD
+  VSS
+  Y
+OR5x1_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+OR5x2_upper
+  A
+  B
+  C
+  D
+  E
+  VDD
+  VSS
+  Y
+SDFHx1_upper
+  CLK
+  QN
+  SE
+  VDD
+  VSS
+  D
+  SI
+SDFHx2_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+SDFHx3_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+SDFHx4_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+SDFLx1_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+SDFLx2_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+SDFLx3_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+SDFLx4_upper
+  CLK
+  D
+  QN
+  SE
+  SI
+  VDD
+  VSS
+TAPCELL_WITH_FILLER_upper
+  VDD
+  VSS
+TAPCELL_upper
+  VDD
+  VSS
+TIEHIxp5_upper
+  H
+  VDD
+  VSS
+TIELOxp5_upper
+  L
+  VDD
+  VSS
+XNOR2x2_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+XNOR2xp5_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+XNOR2xp5f_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+XOR2x2_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+XOR2xp5_upper
+  A
+  B
+  VDD
+  VSS
+  Y
+XOR2xp5r_upper
+  A
+  B
+  VDD
+  VSS
+  Y
