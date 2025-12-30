@@ -1,8 +1,9 @@
 #!/bin/bash
 
-bash scripts_3D/autoflow.sh 3D aes aes
+# bash scripts_3D/autoflow.sh 3D aes aes
 # bash scripts_3D/autoflow.sh 3D des des
 # bash scripts_3D/autoflow.sh 3D sha256 sha256
+bash scripts_3D/autoflow.sh 3D vga_enh_top vga_enh_top
 # bash scripts_3D/autoflow.sh 3D ethernet ethernet
 
 # bash scripts_3D/autoflow.sh 3D bp_be bp_be_top

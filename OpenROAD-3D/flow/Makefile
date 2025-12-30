@@ -690,6 +690,9 @@ do-autoflow:
 	mkdir -p $(RESULTS_DIR) $(LOG_DIR) $(REPORTS_DIR)
 	$(OPENROAD_EXE) -exit scripts_3D/init_odb.tcl
 # 	$(UNSET_AND_MAKE) do-pre_cts
+	cp $(RESULTS_DIR)/$(DESIGN_DIMENSION)_out.odb $(RESULTS_DIR)/3_place.odb
+	cp $(RESULTS_DIR)/1_synth.sdc $(RESULTS_DIR)/3_place.sdc
+	$(UNSET_AND_MAKE) do-cts
 
     
 	
@@ -710,17 +713,17 @@ do-cts_eval:
 
 #new:
 # 	cp designs/asap7_3D/${DESIGN_NAME}/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def $(RESULTS_DIR)/4_1_cts.def
-# 	python3 scripts_3D/my_save_map.py
-# 	python3 scripts_3D/my_split_def.py
-# 	$(OPENROAD_EXE) -exit scripts_3D/lg_bottom.tcl
-# 	$(OPENROAD_EXE) -exit scripts_3D/lg_upper.tcl
-# 	python3 scripts_3D/my_merge_def.py
-# 	$(OPENROAD_EXE) -exit scripts_3D/load_cts.tcl
+	python3 scripts_3D/my_save_map.py
+	python3 scripts_3D/my_split_def.py
+	$(OPENROAD_EXE) -exit scripts_3D/lg_bottom.tcl
+	$(OPENROAD_EXE) -exit scripts_3D/lg_upper.tcl
+	python3 scripts_3D/my_merge_def.py
+	$(OPENROAD_EXE) -exit scripts_3D/load_cts.tcl
 	
-# 	cp $(RESULTS_DIR)/my_cts.odb $(RESULTS_DIR)/4_cts.odb
-# 	cp $(RESULTS_DIR)/1_synth.sdc $(RESULTS_DIR)/4_cts.sdc
-# 	$(UNSET_AND_MAKE) do-route do-finish
-	$(UNSET_AND_MAKE) do-finish
+	cp $(RESULTS_DIR)/my_cts.odb $(RESULTS_DIR)/4_cts.odb
+	cp $(RESULTS_DIR)/1_synth.sdc $(RESULTS_DIR)/4_cts.sdc
+	$(UNSET_AND_MAKE) do-route do-finish
+# 	$(UNSET_AND_MAKE) do-finish
 
 # RWQ
 .PHONY: do-hotspot

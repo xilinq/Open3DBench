@@ -63,4 +63,4 @@ export PLACE_DENSITY_MAX_POST_HOLD = 0.12
 export TNS_END_PERCENT        = 100
 
 export DETAILED_ROUTE_ARGS = -droute_end_iter 0
-export GLOBAL_ROUTE_ARGS = -allow_congestion -verbose -congestion_iterations 2
+export GLOBAL_ROUTE_ARGS = -verbose -congestion_iterations 50

@@ -84,7 +84,7 @@ export PLACE_DENSITY ?= 0.60
 #  CTS
 #  -------------------------------------------------------
 # TritonCTS options
-export CTS_BUF_CELL   ?= BUFx2_bottom
+export CTS_BUF_CELL   ?= BUFx2_bottom BUFx3_bottom BUFx4_bottom BUFx5_bottom BUFx8_bottom BUFx10_bottom BUFx12_bottom BUFx24_bottom
 
 # ---------------------------------------------------------
 #  Route

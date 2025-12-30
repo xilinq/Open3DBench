@@ -16,6 +16,11 @@ set all_instances [get_cells *]
 
 # 3. 遍历每个实例
 foreach inst $all_instances {
+    # 如果 ref_name 含有 DFF，则跳过
+    set ref_name [get_property $inst ref_name]
+    if {[string match "*DFF*" $ref_name]} {
+        continue
+    }
     set inst_name [get_property $inst full_name]
     
     # 获取单元类型 (Ref Name)

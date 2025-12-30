@@ -1,0 +1,233 @@
+import os
+
+
+def _find_components_block(def_lines):
+    """返回 (start, end, header_line, end_line, body_lines[start+1:end-1])；区间为 [start,end)"""
+    n = len(def_lines)
+    start = None
+    end = None
+
+    for i in range(n):
+        if def_lines[i].lstrip().startswith("COMPONENTS"):
+            start = i
+            break
+    if start is None:
+        return None, None, None, None, []
+
+    for j in range(start + 1, n):
+        if def_lines[j].lstrip().startswith("END COMPONENTS"):
+            end = j + 1
+            break
+
+    if end is None:
+        # COMPONENTS 没有正常结束：尽量返回剩余部分
+        return start, None, def_lines[start], None, def_lines[start + 1 :]
+
+    header = def_lines[start]
+    end_line = def_lines[end - 1]
+    body = def_lines[start + 1 : end - 1]
+    return start, end, header, end_line, body
+
+
+def _split_component_statements(component_body_lines):
+    """
+    将 COMPONENTS body 按语句（从 '-' 开始，到含 ';' 结束）切分。
+    返回 list[list[str]]，每个元素是一条组件语句的原始多行。
+    """
+    stmts = []
+    buf = None
+
+    for ln in component_body_lines:
+        s = ln.lstrip()
+        if s.startswith("-"):
+            if buf:
+                stmts.append(buf)
+            buf = [ln]
+            if ";" in ln:
+                stmts.append(buf)
+                buf = None
+            continue
+
+        if buf is not None:
+            buf.append(ln)
+            if ";" in ln:
+                stmts.append(buf)
+                buf = None
+        else:
+            # body 里可能有空行/注释等：保留为“独立语句”，两边都写回
+            stmts.append([ln])
+
+    if buf:
+        stmts.append(buf)
+
+    return stmts
+
+
+def _classify_component_stmt(stmt_lines):
+    """
+    返回 ('bottom'|'upper'|'all')。
+    规则：根据组件语句首行（以 '-' 开头）里的 master 名是否包含 bottom/upper。
+    """
+    first = ""
+    for ln in stmt_lines:
+        if ln.lstrip().startswith("-"):
+            first = ln.strip()
+            break
+    if not first:
+        return "all"
+
+    parts = first.split()
+    # 典型：- <instName> <masterName> + ...
+    if len(parts) < 3:
+        return "all"
+
+    master = parts[2].lower()
+    if "bottom" in master:
+        return "bottom"
+    if "upper" in master:
+        return "upper"
+    return "all"
+
+
+def _is_component_stmt(stmt_lines):
+    """是否为真正的组件语句（含以 '-' 开头的行）"""
+    return any(ln.lstrip().startswith("-") for ln in stmt_lines)
+
+
+def _find_nets_block(def_lines):
+    """返回 NETS 的 [start,end)；找不到返回 (None,None)"""
+    n = len(def_lines)
+    start = None
+    end = None
+
+    for i in range(n):
+        if def_lines[i].lstrip().startswith("NETS"):
+            start = i
+            break
+    if start is None:
+        return None, None
+
+    for j in range(start + 1, n):
+        if def_lines[j].lstrip().startswith("END NETS"):
+            end = j + 1
+            break
+
+    return start, end
+
+
+def _rewrite_def(lines, *, comps_repl=None, drop_nets=True):
+    """
+    按 block 级别重写：
+      - 可替换 COMPONENTS block
+      - 可删除 NETS block
+    注意：不再改动 ROW 规则（除 split_3dic_def 中对 ROW 行做字符串替换外）。
+    """
+    comps_start, comps_end, _, _, _ = _find_components_block(lines)
+    nets_start, nets_end = _find_nets_block(lines)
+
+    out = []
+    i = 0
+    n = len(lines)
+    while i < n:
+        if comps_repl is not None and comps_start is not None and comps_end is not None and i == comps_start:
+            out.extend(comps_repl)
+            i = comps_end
+            continue
+
+        if drop_nets and nets_start is not None and nets_end is not None and i == nets_start:
+            i = nets_end
+            continue
+
+        out.append(lines[i])
+        i += 1
+
+    return out
+
+
+def _replace_row_site_strings(lines, old_site="asap7sc7p5t", new_site="asap7sc6t"):
+    """
+    只在以 'ROW ' 开头的行中进行字符串替换（不解析/重建 ROW block）。
+    """
+    out = []
+    for ln in lines:
+        if ln.lstrip().startswith("ROW "):
+            out.append(ln.replace(old_site, new_site))
+        else:
+            out.append(ln)
+    return out
+
+
+def split_3dic_def():
+    results_dir = os.environ.get("RESULTS_DIR")
+    if not results_dir:
+        print("ERROR: RESULTS_DIR not set.")
+        return
+
+    input_def = os.path.join(results_dir, "4_1_cts.def")
+    print(f"[*] Processing {input_def}...")
+
+    with open(input_def, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # ---- ROW: 仅替换字符串 asap7p5t -> asap6t（只作用于 ROW 行）----
+    lines = _replace_row_site_strings(lines, old_site="asap7p5t", new_site="asap6t")
+
+    # ---- COMPONENTS split ----
+    comps_start, comps_end, _, comps_end_line, comps_body = _find_components_block(lines)
+    comps_repl_bottom = None
+    comps_repl_upper = None
+
+    if comps_start is not None and comps_end is not None and comps_end_line is not None:
+        stmts = _split_component_statements(comps_body)
+
+        bottom_body = []
+        upper_body = []
+        bottom_cnt = 0
+        upper_cnt = 0
+
+        for stmt in stmts:
+            cls = _classify_component_stmt(stmt)
+
+            if cls in ("bottom", "all"):
+                bottom_body.extend(stmt)
+                if _is_component_stmt(stmt):
+                    bottom_cnt += 1
+
+            if cls in ("upper", "all"):
+                upper_body.extend(stmt)
+                if _is_component_stmt(stmt):
+                    upper_cnt += 1
+
+        comps_repl_bottom = [f"COMPONENTS {bottom_cnt} ;\n"] + bottom_body + [comps_end_line]
+        comps_repl_upper = [f"COMPONENTS {upper_cnt} ;\n"] + upper_body + [comps_end_line]
+    else:
+        print("[!] COMPONENTS block not found or incomplete; will not rewrite COMPONENTS.")
+
+    # ---- write bottom.def (ROW 等其余内容原样保留，仅重写 COMPONENTS/删除 NETS) ----
+    bottom_lines = _rewrite_def(
+        lines,
+        comps_repl=comps_repl_bottom,
+        drop_nets=True,
+    )
+    with open(os.path.join(results_dir, "bottom.def"), "w", encoding="utf-8") as f:
+        f.writelines(bottom_lines)
+
+    # ---- write upper.def ----
+    upper_lines = _rewrite_def(
+        lines,
+        comps_repl=comps_repl_upper,
+        drop_nets=True,
+    )
+    with open(os.path.join(results_dir, "upper.def"), "w", encoding="utf-8") as f:
+        f.writelines(upper_lines)
+
+    print("[*] Done.")
+    if comps_start is not None and comps_end is not None:
+        print(f"[*] COMPONENTS block rewritten: [{comps_start}, {comps_end})")
+    nets_start, nets_end = _find_nets_block(lines)
+    if nets_start is not None and nets_end is not None:
+        print(f"[*] NETS block dropped: [{nets_start}, {nets_end})")
+
+
+if __name__ == "__main__":
+    split_3dic_def()

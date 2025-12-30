@@ -17,7 +17,7 @@ write_verilog $::env(RESULTS_DIR)/6_final.v
 
 #new:
 check_setup -verbose -unconstrained_endpoints
-estimate_parasitics -placement
+estimate_parasitics -global_routing
 report_wns
 report_tns
 report_worst_slack

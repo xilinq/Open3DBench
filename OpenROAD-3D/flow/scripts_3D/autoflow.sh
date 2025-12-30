@@ -16,7 +16,9 @@ if [ "$DESIGN_DIMENSION" = "3D" ]
 
 then
     echo "3D flow"
-    cp ../3D_def/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def designs/asap7_3D/${DESIGN_NAME}/
+    cp ../3D_def/${DEF_VERSION}.def designs/asap7_3D/${DESIGN_NAME}/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def
+    cp ../3D_sdc/${DEF_VERSION}.sdc designs/asap7_3D/${DESIGN_NAME}/
+    cp ../3D_sdc/${DEF_VERSION}.sdc results/asap7_3D/${DESIGN_NAME}/${DESIGN_DIMENSION}/1_synth.sdc
     make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config.mk do-autoflow 
     make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config.mk do-cts_eval 
 

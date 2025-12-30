@@ -95,3 +95,5 @@ mainREADME.md
 *.vdb
 *.log
 *.rpt
+*.odb
+*.gp.def

@@ -54524,7 +54524,7 @@ library (asap7_SIMPLE_LVT_TT_upper) {
       }
     }
   }
-  cell (TIEHIxp5_upper) {
+  cell (TIEHIx1_upper) {
     area : 0.034992;
     pg_pin (VDD) {
       direction : input;
@@ -54573,7 +54573,7 @@ library (asap7_SIMPLE_LVT_TT_upper) {
       output_voltage : default_VDD_VSS_output;
     }
   }
-  cell (TIELOxp5_upper) {
+  cell (TIELOx1_upper) {
     area : 0.034992;
     pg_pin (VDD) {
       direction : input;

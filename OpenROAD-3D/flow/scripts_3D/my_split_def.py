@@ -4,10 +4,6 @@ import re
 
 
 def _parse_units_scale(def_lines):
-    """
-    从 'UNITS DISTANCE MICRONS <scale> ;' 解析出 scale（如 1000）。
-    解析失败则返回 1000。
-    """
     for ln in def_lines:
         s = ln.strip()
         if s.startswith("UNITS DISTANCE MICRONS"):
@@ -18,12 +14,6 @@ def _parse_units_scale(def_lines):
 
 
 def _find_row_block(def_lines):
-    """
-    找到 ROW block 的 [start, end) 区间，并按“语句”收集原始 row 语句（每条可能跨多行）。
-    兼容：
-      ROW ...\n
-       ;\n
-    """
     n = len(def_lines)
     start = None
     end = None
@@ -75,26 +65,53 @@ def _row_stmt_first_row_line(row_stmt_lines):
     return ""
 
 
-def _normalize_row_stmt_to_single_line_with_semicolon(row_stmt_lines):
+def _parse_core_box(def_lines, *, units_scale):
     """
-    bottom.def 要求：ROW 规则要带分号。
-    把多行 ROW 语句规范化成单行并补 ' ;\\n'。
+    DEF 中 FE_CORE_BOX_* 是 REAL（通常是微米），需要转换为 DEF database units：
+      units_value = microns_value * units_scale
+    返回 (llx,lly,urx,ury) in DEF units 或 None。
     """
-    first = _row_stmt_first_row_line(row_stmt_lines).rstrip("\n")
-    if not first:
-        return ""
+    llx = lly = urx = ury = None
 
-    first = first.rstrip()
-    if first.endswith(";"):
-        first = first[:-1].rstrip()
-    return first + " ;\n"
+    # 只捕获：1) 完整 key  2) 数值；避免 group 索引被 (LL|UR)/(X|Y) 干扰
+    pat = re.compile(
+        r"^DESIGN\s+"
+        r"(FE_CORE_BOX_(?:LL|UR)_(?:X|Y))"
+        r"\s+REAL\s+"
+        r"([-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?)"
+        r"\s*;\s*$"
+    )
+
+    for ln in def_lines:
+        m = pat.match(ln.strip())
+        if not m:
+            continue
+        key = m.group(1)
+        val_um = float(m.group(2))
+        val_units = val_um * float(units_scale)
+
+        if key == "FE_CORE_BOX_LL_X":
+            llx = val_units
+        elif key == "FE_CORE_BOX_LL_Y":
+            lly = val_units
+        elif key == "FE_CORE_BOX_UR_X":
+            urx = val_units
+        elif key == "FE_CORE_BOX_UR_Y":
+            ury = val_units
+
+    if None in (llx, lly, urx, ury):
+        return None
+    return llx, lly, urx, ury
 
 
-def generate_upper_rows(orig_row_main_lines, units_scale=1000, new_site="asap7sc6t", new_h=0.216):
-    """
-    upper.def：只替换 ROW block。
-    生成 6T rows（new_h 默认按微米给，自动换算到 DEF units）。
-    """
+def generate_upper_rows(
+    orig_row_main_lines,
+    *,
+    units_scale,
+    new_site="asap7sc6t",
+    new_h_um=0.216,
+    core_box_units=None,  # (llx,lly,urx,ury) in DEF units
+):
     if not orig_row_main_lines:
         return []
 
@@ -104,7 +121,6 @@ def generate_upper_rows(orig_row_main_lines, units_scale=1000, new_site="asap7sc
         if len(parts) < 6 or parts[0] != "ROW":
             raise ValueError(f"Cannot parse ROW line: {line!r}")
 
-        # 关键：不要用“提取第一个数字”的方式（CORE_ROW_0 会干扰）
         x = float(parts[3])
         y = float(parts[4])
 
@@ -117,25 +133,32 @@ def generate_upper_rows(orig_row_main_lines, units_scale=1000, new_site="asap7sc
         return x, y, num_sites, step_x
 
     x0, y0, num_sites, step_x = parse_row_main_line(orig_row_main_lines[0])
-    _, y_last, _, _ = parse_row_main_line(orig_row_main_lines[-1])
 
+    # 兜底 pitch（只用于 core_box 缺失时）
     if len(orig_row_main_lines) > 1:
         _, y1, _, _ = parse_row_main_line(orig_row_main_lines[1])
         orig_pitch = abs(y1 - y0)
     else:
         orig_pitch = 270.0  # 0.27um * 1000（兜底）
 
-    total_height = abs(y_last - y0) + orig_pitch
-
-    new_h_units = float(new_h) * units_scale if float(new_h) < 10.0 else float(new_h)
+    new_h_units = float(new_h_um) * float(units_scale)
     if new_h_units <= 0:
-        raise ValueError(f"new_h must be > 0, got {new_h}")
+        raise ValueError(f"new_h_um must be > 0, got {new_h_um}")
 
-    new_count = int(math.ceil(total_height / new_h_units))
+    if core_box_units is not None:
+        _, core_lly, _, core_ury = core_box_units
+        base_y = float(core_lly)
+        total_height = float(core_ury) - float(core_lly)
+    else:
+        _, y_last, _, _ = parse_row_main_line(orig_row_main_lines[-1])
+        base_y = float(y0)
+        total_height = abs(y_last - y0) + orig_pitch
+
+    # 关键：向下取整保证“总行高不超过原高度”，且至少 1 行
+    new_count = max(1, int(math.floor(total_height / new_h_units)))
 
     new_rows = []
     x0i = int(round(x0))
-    base_y = float(y0)
     step_xi = int(round(step_x))
 
     for i in range(new_count):
@@ -149,25 +172,20 @@ def generate_upper_rows(orig_row_main_lines, units_scale=1000, new_site="asap7sc
 
 
 def _find_components_block(def_lines):
-    """返回 (start, end, header_line, end_line, body_lines[start+1:end-1])，区间为 [start,end)"""
     n = len(def_lines)
     start = end = None
 
-    i = 0
-    while i < n:
+    for i in range(n):
         if def_lines[i].lstrip().startswith("COMPONENTS"):
             start = i
             break
-        i += 1
     if start is None:
         return None, None, None, None, []
 
-    i = start + 1
-    while i < n:
-        if def_lines[i].lstrip().startswith("END COMPONENTS"):
-            end = i + 1
+    for j in range(start + 1, n):
+        if def_lines[j].lstrip().startswith("END COMPONENTS"):
+            end = j + 1
             break
-        i += 1
     if end is None:
         return start, None, def_lines[start], None, def_lines[start + 1 :]
 
@@ -178,10 +196,6 @@ def _find_components_block(def_lines):
 
 
 def _split_component_statements(component_body_lines):
-    """
-    将 COMPONENTS body 按语句（从 '-' 开始，到含 ';' 结束）切分。
-    返回 list[list[str]]，每个元素是一条组件语句的原始多行。
-    """
     stmts = []
     buf = None
 
@@ -202,7 +216,6 @@ def _split_component_statements(component_body_lines):
                 stmts.append(buf)
                 buf = None
         else:
-            # body 里可能有空行/注释等：保留为“独立语句”，两边都写回
             stmts.append([ln])
 
     if buf:
@@ -212,10 +225,6 @@ def _split_component_statements(component_body_lines):
 
 
 def _classify_component_stmt(stmt_lines):
-    """
-    返回 ('bottom'|'upper'|'all')。
-    规则参考 split_cts_def.py：根据 master/class 名是否包含 bottom/upper。
-    """
     first = ""
     for ln in stmt_lines:
         if ln.lstrip().startswith("-"):
@@ -225,7 +234,6 @@ def _classify_component_stmt(stmt_lines):
         return "all"
 
     parts = first.split()
-    # 典型：- <instName> <masterName> + ...
     if len(parts) < 3:
         return "all"
 
@@ -238,7 +246,6 @@ def _classify_component_stmt(stmt_lines):
 
 
 def _find_nets_block(def_lines):
-    """返回 NETS 的 [start,end)；找不到返回 (None,None)"""
     n = len(def_lines)
     start = end = None
 
@@ -258,12 +265,6 @@ def _find_nets_block(def_lines):
 
 
 def _rewrite_def(lines, *, row_repl=None, comps_repl=None, drop_nets=True):
-    """
-    按 block 级别重写：
-      - 可替换 ROW block
-      - 可替换 COMPONENTS block
-      - 可删除 NETS block（参考 split_cts_def.py 的做法）
-    """
     row_start, row_end, _ = _find_row_block(lines)
     comps_start, comps_end, _, _, _ = _find_components_block(lines)
     nets_start, nets_end = _find_nets_block(lines)
@@ -305,32 +306,30 @@ def split_3dic_def():
         lines = f.readlines()
 
     units_scale = _parse_units_scale(lines)
+    core_box_units = _parse_core_box(lines, units_scale=units_scale)
 
-    # ---- ROW blocks ----
+    # ---- ROW ----
     row_start, row_end, row_stmts = _find_row_block(lines)
     if row_start is None:
         print("ERROR: No ROW block found in DEF.")
         return
 
     row_main_lines = []
-    normalized_orig_rows = []
     for stmt in row_stmts:
         main = _row_stmt_first_row_line(stmt)
         if main:
             row_main_lines.append(main)
-        norm = _normalize_row_stmt_to_single_line_with_semicolon(stmt)
-        if norm:
-            normalized_orig_rows.append(norm)
 
     upper_rows = generate_upper_rows(
         row_main_lines,
         units_scale=units_scale,
         new_site="asap7sc6t",
-        new_h=0.216,
+        new_h_um=0.216,
+        core_box_units=core_box_units,
     )
 
-    # ---- COMPONENTS split (参考 split_cts_def.py) ----
-    comps_start, comps_end, comps_header, comps_end_line, comps_body = _find_components_block(lines)
+    # ---- COMPONENTS split ----
+    comps_start, comps_end, _, comps_end_line, comps_body = _find_components_block(lines)
     comps_repl_bottom = None
     comps_repl_upper = None
 
@@ -344,54 +343,47 @@ def split_3dic_def():
 
         for stmt in stmts:
             cls = _classify_component_stmt(stmt)
+
             if cls in ("bottom", "all"):
                 bottom_body.extend(stmt)
-                if cls == "bottom":
-                    bottom_cnt += 1
-                elif any(ln.lstrip().startswith("-") for ln in stmt):
-                    # 'all' 组件也计入 COMPONENTS 数量（更符合 DEF 语义）
+                if any(ln.lstrip().startswith("-") for ln in stmt):
                     bottom_cnt += 1
 
             if cls in ("upper", "all"):
                 upper_body.extend(stmt)
-                if cls == "upper":
-                    upper_cnt += 1
-                elif any(ln.lstrip().startswith("-") for ln in stmt):
+                if any(ln.lstrip().startswith("-") for ln in stmt):
                     upper_cnt += 1
 
-        # 重建 COMPONENTS block（更新计数）
         comps_repl_bottom = [f"COMPONENTS {bottom_cnt} ;\n"] + bottom_body + [comps_end_line]
         comps_repl_upper = [f"COMPONENTS {upper_cnt} ;\n"] + upper_body + [comps_end_line]
 
-    # ---- write bottom.def ----
+    # ---- write bottom.def (ROW block 原样保留) ----
     bottom_lines = _rewrite_def(
         lines,
-        row_repl=normalized_orig_rows,   # bottom：ROW 规范化并补分号
-        comps_repl=comps_repl_bottom,    # bottom：组件拆分
-        drop_nets=True,                  # 参考 split_cts_def.py：去掉 NETS
+        row_repl=None,
+        comps_repl=comps_repl_bottom,
+        drop_nets=True,
     )
     with open(os.path.join(results_dir, "bottom.def"), "w", encoding="utf-8") as f:
         f.writelines(bottom_lines)
 
-    # ---- write upper.def ----
+    # ---- write upper.def (替换 ROW block) ----
     upper_lines = _rewrite_def(
         lines,
-        row_repl=upper_rows,             # upper：只替换 ROW block
-        comps_repl=comps_repl_upper,     # upper：组件拆分
-        drop_nets=True,                  # 参考 split_cts_def.py：去掉 NETS
+        row_repl=upper_rows,
+        comps_repl=comps_repl_upper,
+        drop_nets=True,
     )
     with open(os.path.join(results_dir, "upper.def"), "w", encoding="utf-8") as f:
         f.writelines(upper_lines)
 
     print("[*] Done.")
-    print(f"[*] ROW block replaced: [{row_start}, {row_end})")
-    print(f"[*] bottom.def rows: {len(normalized_orig_rows)} (normalized with semicolons)")
-    print(f"[*] upper.def rows: {len(upper_rows)} (6T re-distributed)")
-    if comps_start is not None and comps_end is not None:
-        print(f"[*] COMPONENTS block rewritten: [{comps_start}, {comps_end})")
-    nets_start, nets_end = _find_nets_block(lines)
-    if nets_start is not None and nets_end is not None:
-        print(f"[*] NETS block dropped: [{nets_start}, {nets_end})")
+    print(f"[*] units_scale: {units_scale}")
+    if core_box_units is not None:
+        llx, lly, urx, ury = core_box_units
+        print(f"[*] core_box_units: ({llx:.1f},{lly:.1f})-({urx:.1f},{ury:.1f})")
+    print(f"[*] bottom.def rows: {len(row_stmts)} (kept original ROW block)")
+    print(f"[*] upper.def rows: {len(upper_rows)} (6T, total height ~= original, floor)")
 
 
 if __name__ == "__main__":
