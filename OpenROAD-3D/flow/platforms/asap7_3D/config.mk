@@ -115,7 +115,7 @@ export KLAYOUT_TECH_FILE = $(PLATFORM_DIR)/asap7.lyt
 # export TEMPLATE_PGA_CFG ?= $(PLATFORM_DIR)/template_pga.cfg
 
 # OpenRCX extRules
-export RCX_RULES               = $(PLATFORM_DIR)/asap7_3D.rules
+export RCX_RULES               = $(PLATFORM_DIR)/new.rules
 # ---------------------------------------------------------
 #  IR Drop
 # ---------------------------------------------------------

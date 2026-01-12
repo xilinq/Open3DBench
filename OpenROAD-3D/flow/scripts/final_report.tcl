@@ -15,14 +15,27 @@ write_db $::env(RESULTS_DIR)/6_final.odb
 write_def $::env(RESULTS_DIR)/6_final.def
 write_verilog $::env(RESULTS_DIR)/6_final.v
 
+#debug:
+# report_checks -unconstrained -path_delay max
+
 #new:
 check_setup -verbose -unconstrained_endpoints
-estimate_parasitics -global_routing
+
+estimate_parasitics -placement
+puts "post placement phase"
 report_wns
 report_tns
 report_worst_slack
+report_power
+# estimate_parasitics -global_routing
+# puts "global routing phase"
+# report_wns
+# report_tns
+# report_worst_slack
+# report_power
+source $::env(SCRIPTS_DIR)/count_cross_die_nets.tcl
 
-source $::env(SCRIPTS_DIR)/my_report_metric.tcl
+# source $::env(SCRIPTS_DIR)/my_report_metric.tcl
 
 # Run extraction and STA
 if {[info exist ::env(RCX_RULES)]} {
@@ -34,15 +47,22 @@ if {[info exist ::env(RCX_RULES)]} {
   }
 
   # RCX section
-  define_process_corner -ext_model_index 0 X
+  define_process_corner -ext_model_index 0 tt0p7v25c
   extract_parasitics -ext_model_file $::env(RCX_RULES)
 
   # Write Spef
   write_spef $::env(RESULTS_DIR)/6_final.spef
   file delete $::env(DESIGN_NAME).totCap
 
+  # report_checks -path_group DFF -fields nets
+
+  # puts "---------------------------."
+
   # Read Spef for OpenSTA
   read_spef $::env(RESULTS_DIR)/6_final.spef
+  # report_parasitic_annotation -report_unannotated
+
+  # report_checks -path_group DFF -fields nets
 
   # Static IR drop analysis
   # if {[info exist ::env(PWR_NETS_VOLTAGES)]} {
@@ -68,8 +88,13 @@ if {[info exist ::env(RCX_RULES)]} {
   puts "OpenRCX is not enabled for this platform."
 }
 
-source $::env(SCRIPTS_DIR)/report_metrics.tcl
-report_metrics "finish"
+puts "post routing phase"
+report_wns
+report_tns
+report_worst_slack
+report_power
+# source $::env(SCRIPTS_DIR)/report_metrics.tcl
+# report_metrics "finish"
 
 # Save a final image if openroad is compiled with the gui
 if {[expr [llength [info procs save_image]] > 0]} {

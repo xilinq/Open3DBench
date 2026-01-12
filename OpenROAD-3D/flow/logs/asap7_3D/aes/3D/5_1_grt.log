@@ -46,14 +46,14 @@ Components of this program may be licensed under more restrictive licenses which
 [INFO GRT-0002] Maximum degree: 76
 [INFO GRT-0003] Macros: 0
 [INFO GRT-0043] No OR_DEFAULT vias defined.
-[INFO GRT-0004] Blockages: 23129
+[INFO GRT-0004] Blockages: 2666
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
 Layer     Direction    Resources     Resources    Reduction (%)
 ---------------------------------------------------------------
 M1         Vertical            0             0          0.00%
-M2         Horizontal      49861         32663          34.49%
+M2         Horizontal      49861         33764          32.28%
 M3         Vertical        57325         41340          27.88%
 M4         Horizontal      42109         30073          28.58%
 M5         Vertical        42018         30060          28.46%
@@ -63,41 +63,41 @@ M8         Horizontal      12031          7930          34.09%
 M9         Vertical        30858         22740          26.31%
 M10        Horizontal      42109         30073          28.58%
 M11        Vertical        42445         30360          28.47%
-M12        Horizontal      57427         39092          31.93%
-M13        Vertical        57325         37778          34.10%
+M12        Horizontal      57427         40408          29.64%
+M13        Vertical        57325         38368          33.07%
 M14        Horizontal      57427         41419          27.88%
 ---------------------------------------------------------------
 
-[INFO GRT-0197] Via related to pin nodes: 32733
-[INFO GRT-0198] Via related Steiner nodes: 2185
+[INFO GRT-0197] Via related to pin nodes: 35497
+[INFO GRT-0198] Via related Steiner nodes: 2392
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 49683
-[INFO GRT-0112] Final usage 3D: 194535
+[INFO GRT-0111] Final number of vias: 58799
+[INFO GRT-0112] Final usage 3D: 221371
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
 ---------------------------------------------------------------------------------------
 M1                   0             0            0.00%             0 /  0 /  0
-M2               32663          8219           25.16%             0 /  0 /  0
-M3               41340          9463           22.89%             0 /  0 /  0
-M4               30073          6584           21.89%             0 /  0 /  0
-M5               30060           642            2.14%             0 /  0 /  0
-M6               22570          1494            6.62%             0 /  0 /  0
-M7                7920           146            1.84%             0 /  0 /  0
-M8                7930           229            2.89%             0 /  0 /  0
-M9               22740           220            0.97%             0 /  0 /  0
-M10              30073          1046            3.48%             0 /  0 /  0
-M11              30360          1541            5.08%             0 /  0 /  0
-M12              39092          4968           12.71%             0 /  0 /  0
-M13              37778          8143           21.55%             0 /  0 /  0
-M14              41419          2791            6.74%             0 /  0 /  0
+M2               33764          3317            9.82%             0 /  0 /  0
+M3               41340          4605           11.14%             0 /  0 /  0
+M4               30073          6118           20.34%             0 /  0 /  0
+M5               30060           894            2.97%             0 /  0 /  0
+M6               22570          2041            9.04%             0 /  0 /  0
+M7                7920           436            5.51%             0 /  0 /  0
+M8                7930           470            5.93%             0 /  0 /  0
+M9               22740           594            2.61%             0 /  0 /  0
+M10              30073           974            3.24%             0 /  0 /  0
+M11              30360          2319            7.64%             0 /  0 /  0
+M12              40408          6812           16.86%             0 /  0 /  0
+M13              38368         11411           29.74%             0 /  0 /  0
+M14              41419          4983           12.03%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total           374018         45486           12.16%             0 /  0 /  0
+Total           377025         44974           11.93%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 33639 um
+[INFO GRT-0018] Total wirelength: 33696 um
 [INFO GRT-0014] Routed nets: 4674
 [INFO FLW-0007] clock clk period 1000.000000
-[INFO FLW-0008] Clock clk period 968.416
-[INFO FLW-0009] Clock clk slack -19.385
-[INFO FLW-0011] Path endpoint count 1491
-Elapsed time: 0:05.80[h:]min:sec. CPU time: user 5.43 sys 0.25 (98%). Peak memory: 496788KB.
+[INFO FLW-0008] Clock clk period 987.491
+[INFO FLW-0009] Clock clk slack -39.464
+[INFO FLW-0011] Path endpoint count 1489
+Elapsed time: 0:05.62[h:]min:sec. CPU time: user 5.25 sys 0.27 (98%). Peak memory: 496756KB.

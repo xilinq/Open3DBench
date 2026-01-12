@@ -3284,41 +3284,41 @@ module aes (clk,
  wire [127:0] subbytes_data_o;
  wire [7:0] subbytes_sbox_data_o;
 
- INVx4_bottom FE_DBTC88_n1666 (.A(n1666),
+ INVx4_upper FE_DBTC88_n1666 (.A(n1666),
     .Y(FE_DBTN88_n1666));
  INVx5_bottom FE_DBTC89_n1665 (.A(n1665),
     .Y(FE_DBTN89_n1665));
- INVx1_upper FE_OFC0_reset (.A(reset),
+ INVx1_bottom FE_OFC0_reset (.A(reset),
     .Y(FE_OFN0_reset));
- BUFx3_bottom FE_OFC100_n275 (.A(n275),
+ BUFx3_upper FE_OFC100_n275 (.A(n275),
     .Y(FE_OFN103_n275));
- BUFx5_bottom FE_OFC101_n275 (.A(FE_OFN103_n275),
+ BUFx5_upper FE_OFC101_n275 (.A(FE_OFN103_n275),
     .Y(FE_OFN104_n275));
- BUFx3_bottom FE_OFC102_n275 (.A(FE_OFN121_FE_OFN103_n275),
+ BUFx3_upper FE_OFC102_n275 (.A(FE_OFN121_FE_OFN103_n275),
     .Y(FE_OFN105_n275));
- BUFx8_bottom FE_OFC103_n278 (.A(n278),
+ BUFx8_upper FE_OFC103_n278 (.A(n278),
     .Y(FE_OFN106_n278));
- BUFx8_bottom FE_OFC104_n278 (.A(FE_OFN106_n278),
+ BUFx8_upper FE_OFC104_n278 (.A(FE_OFN106_n278),
     .Y(FE_OFN107_n278));
- BUFx2_bottom FE_OFC105_sbox_data_o_7 (.A(sbox_data_o[7]),
+ BUFx2_upper FE_OFC105_sbox_data_o_7 (.A(sbox_data_o[7]),
     .Y(FE_OFN108_sbox_data_o_7));
- BUFx2_bottom FE_OFC106_sbox_data_o_6 (.A(sbox_data_o[6]),
+ BUFx2_upper FE_OFC106_sbox_data_o_6 (.A(sbox_data_o[6]),
     .Y(FE_OFN109_sbox_data_o_6));
- BUFx2_bottom FE_OFC107_sbox_data_o_5 (.A(sbox_data_o[5]),
+ BUFx2_upper FE_OFC107_sbox_data_o_5 (.A(sbox_data_o[5]),
     .Y(FE_OFN110_sbox_data_o_5));
- BUFx2_bottom FE_OFC108_sbox_data_o_4 (.A(sbox_data_o[4]),
+ BUFx2_upper FE_OFC108_sbox_data_o_4 (.A(sbox_data_o[4]),
     .Y(FE_OFN111_sbox_data_o_4));
- BUFx2_bottom FE_OFC109_sbox_data_o_3 (.A(sbox_data_o[3]),
+ BUFx2_upper FE_OFC109_sbox_data_o_3 (.A(sbox_data_o[3]),
     .Y(FE_OFN112_sbox_data_o_3));
  INVx3_upper FE_OFC10_reset (.A(FE_OFN0_reset),
     .Y(FE_OFN13_reset));
- BUFx2_bottom FE_OFC110_sbox_data_o_2 (.A(sbox_data_o[2]),
+ BUFx2_upper FE_OFC110_sbox_data_o_2 (.A(sbox_data_o[2]),
     .Y(FE_OFN113_sbox_data_o_2));
- BUFx2_bottom FE_OFC111_sbox_data_o_1 (.A(sbox_data_o[1]),
+ BUFx2_upper FE_OFC111_sbox_data_o_1 (.A(sbox_data_o[1]),
     .Y(FE_OFN114_sbox_data_o_1));
- BUFx2_bottom FE_OFC112_sbox_data_o_0 (.A(sbox_data_o[0]),
+ BUFx2_upper FE_OFC112_sbox_data_o_0 (.A(sbox_data_o[0]),
     .Y(FE_OFN115_sbox_data_o_0));
- BUFx3_bottom FE_OFC116_FE_OFN40_n1121 (.A(FE_OFN40_n1121),
+ BUFx3_upper FE_OFC116_FE_OFN40_n1121 (.A(FE_OFN40_n1121),
     .Y(FE_OFN119_FE_OFN40_n1121));
  BUFx2_upper FE_OFC118_FE_OFN103_n275 (.A(FE_OFN103_n275),
     .Y(FE_OFN121_FE_OFN103_n275));
@@ -3326,7 +3326,7 @@ module aes (clk,
     .Y(FE_OFN14_reset));
  BUFx4_upper FE_OFC120_FE_OFN87_n279 (.A(FE_OFN87_n279),
     .Y(FE_OFN123_FE_OFN87_n279));
- BUFx2_bottom FE_OFC123_FE_OFN84_FE_DBTN89_n1665 (.A(FE_OFN84_FE_DBTN89_n1665),
+ BUFx2_upper FE_OFC123_FE_OFN84_FE_DBTN89_n1665 (.A(FE_OFN84_FE_DBTN89_n1665),
     .Y(FE_OFN126_FE_OFN84_FE_DBTN89_n1665));
  BUFx4_upper FE_OFC124_FE_OFN84_FE_DBTN89_n1665 (.A(FE_OFN84_FE_DBTN89_n1665),
     .Y(FE_OFN127_FE_OFN84_FE_DBTN89_n1665));
@@ -3336,13 +3336,13 @@ module aes (clk,
     .Y(FE_OFN16_reset));
  INVx1_bottom FE_OFC14_reset (.A(FE_OFN14_reset),
     .Y(FE_OFN17_reset));
- INVx1_upper FE_OFC15_reset (.A(FE_OFN14_reset),
+ INVx1_bottom FE_OFC15_reset (.A(FE_OFN14_reset),
     .Y(FE_OFN18_reset));
- INVx1_upper FE_OFC16_reset (.A(FE_OFN15_reset),
+ INVx1_bottom FE_OFC16_reset (.A(FE_OFN15_reset),
     .Y(FE_OFN19_reset));
- INVx6_bottom FE_OFC18_reset (.A(FE_OFN16_reset),
+ INVx6_upper FE_OFC18_reset (.A(FE_OFN16_reset),
     .Y(FE_OFN21_reset));
- INVx8_bottom FE_OFC19_reset (.A(FE_OFN17_reset),
+ INVx8_upper FE_OFC19_reset (.A(FE_OFN17_reset),
     .Y(FE_OFN22_reset));
  BUFx3_upper FE_OFC1_reset (.A(reset),
     .Y(FE_OFN1_reset));
@@ -3358,7 +3358,7 @@ module aes (clk,
     .Y(FE_OFN28_FE_OFN14_reset));
  BUFx5_upper FE_OFC26_FE_OFN12_reset (.A(FE_OFN12_reset),
     .Y(FE_OFN29_FE_OFN12_reset));
- BUFx5_bottom FE_OFC27_FE_OFN7_reset (.A(FE_OFN7_reset),
+ BUFx5_upper FE_OFC27_FE_OFN7_reset (.A(FE_OFN7_reset),
     .Y(FE_OFN30_FE_OFN7_reset));
  BUFx4_upper FE_OFC28_FE_OFN4_reset (.A(FE_OFN4_reset),
     .Y(FE_OFN31_FE_OFN4_reset));
@@ -3368,19 +3368,19 @@ module aes (clk,
     .Y(FE_OFN33_FE_DBTN88_n1666));
  BUFx4_upper FE_OFC31_FE_DBTN88_n1666 (.A(FE_DBTN88_n1666),
     .Y(FE_OFN34_FE_DBTN88_n1666));
- BUFx3_bottom FE_OFC32_n268 (.A(n268),
+ BUFx3_upper FE_OFC32_n268 (.A(n268),
     .Y(FE_OFN35_n268));
  BUFx8_upper FE_OFC33_n268 (.A(FE_OFN35_n268),
     .Y(FE_OFN36_n268));
  BUFx2_upper FE_OFC34_n268 (.A(FE_OFN36_n268),
     .Y(FE_OFN37_n268));
- BUFx2_bottom FE_OFC35_n1037 (.A(n1037),
+ BUFx2_upper FE_OFC35_n1037 (.A(n1037),
     .Y(FE_OFN38_n1037));
  BUFx3_upper FE_OFC36_n1121 (.A(n1121),
     .Y(FE_OFN39_n1121));
  BUFx2_upper FE_OFC37_n1121 (.A(n1121),
     .Y(FE_OFN40_n1121));
- BUFx3_bottom FE_OFC38_n1121 (.A(FE_OFN119_FE_OFN40_n1121),
+ BUFx3_upper FE_OFC38_n1121 (.A(FE_OFN119_FE_OFN40_n1121),
     .Y(FE_OFN41_n1121));
  BUFx3_upper FE_OFC39_n1664 (.A(n1664),
     .Y(FE_OFN42_n1664));
@@ -3394,49 +3394,49 @@ module aes (clk,
     .Y(FE_OFN4_reset));
  BUFx4_upper FE_OFC5_reset (.A(reset),
     .Y(FE_OFN5_reset));
- BUFx2_bottom FE_OFC68_keysched_sbox_access_o (.A(keysched_sbox_access_o),
+ BUFx2_upper FE_OFC68_keysched_sbox_access_o (.A(keysched_sbox_access_o),
     .Y(FE_OFN71_keysched_sbox_access_o));
- BUFx8_bottom FE_OFC69_n272 (.A(n272),
+ BUFx8_upper FE_OFC69_n272 (.A(n272),
     .Y(FE_OFN72_n272));
- BUFx10_bottom FE_OFC6_reset (.A(reset),
+ BUFx10_upper FE_OFC6_reset (.A(reset),
     .Y(FE_OFN6_reset));
- BUFx3_bottom FE_OFC70_n272 (.A(FE_OFN72_n272),
+ BUFx3_upper FE_OFC70_n272 (.A(FE_OFN72_n272),
     .Y(FE_OFN73_n272));
- BUFx2_bottom FE_OFC71_n272 (.A(FE_OFN72_n272),
+ BUFx2_upper FE_OFC71_n272 (.A(FE_OFN72_n272),
     .Y(FE_OFN74_n272));
  BUFx3_upper FE_OFC72_n1123 (.A(n1123),
     .Y(FE_OFN75_n1123));
  BUFx4_upper FE_OFC73_n1123 (.A(n1123),
     .Y(FE_OFN76_n1123));
- BUFx4_bottom FE_OFC74_n1123 (.A(FE_OFN76_n1123),
+ BUFx4_upper FE_OFC74_n1123 (.A(FE_OFN76_n1123),
     .Y(FE_OFN77_n1123));
- BUFx3_bottom FE_OFC75_n1850 (.A(n1850),
+ BUFx3_upper FE_OFC75_n1850 (.A(n1850),
     .Y(subbytes_sbox_decrypt_o));
  BUFx4_bottom FE_OFC79_FE_DBTN89_n1665 (.A(FE_DBTN89_n1665),
     .Y(FE_OFN82_FE_DBTN89_n1665));
- BUFx3_bottom FE_OFC7_reset (.A(reset),
+ BUFx3_upper FE_OFC7_reset (.A(reset),
     .Y(FE_OFN7_reset));
- BUFx8_bottom FE_OFC80_FE_DBTN89_n1665 (.A(FE_DBTN89_n1665),
+ BUFx8_upper FE_OFC80_FE_DBTN89_n1665 (.A(FE_DBTN89_n1665),
     .Y(FE_OFN83_FE_DBTN89_n1665));
- BUFx2_bottom FE_OFC81_FE_DBTN89_n1665 (.A(FE_OFN83_FE_DBTN89_n1665),
+ BUFx2_upper FE_OFC81_FE_DBTN89_n1665 (.A(FE_OFN83_FE_DBTN89_n1665),
     .Y(FE_OFN84_FE_DBTN89_n1665));
- BUFx4_bottom FE_OFC82_FE_DBTN89_n1665 (.A(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ BUFx4_upper FE_OFC82_FE_DBTN89_n1665 (.A(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .Y(FE_OFN85_FE_DBTN89_n1665));
- BUFx8_bottom FE_OFC83_n279 (.A(n279),
+ BUFx8_upper FE_OFC83_n279 (.A(n279),
     .Y(FE_OFN86_n279));
- BUFx3_bottom FE_OFC84_n279 (.A(FE_OFN86_n279),
+ BUFx3_upper FE_OFC84_n279 (.A(FE_OFN86_n279),
     .Y(FE_OFN87_n279));
  BUFx4_bottom FE_OFC96_n11 (.A(n11),
     .Y(FE_OFN99_n11));
- BUFx3_bottom FE_OFC97_n11 (.A(n11),
+ BUFx3_upper FE_OFC97_n11 (.A(n11),
     .Y(FE_OFN100_n11));
  BUFx8_bottom FE_OFC98_n11 (.A(FE_OFN99_n11),
     .Y(FE_OFN101_n11));
- BUFx5_bottom FE_OFC99_n11 (.A(FE_OFN99_n11),
+ BUFx5_upper FE_OFC99_n11 (.A(FE_OFN99_n11),
     .Y(FE_OFN102_n11));
  BUFx4_upper FE_OFC9_reset (.A(reset),
     .Y(FE_OFN12_reset));
- XOR2xp5_upper U1000 (.A(key_i[95]),
+ XOR2xp5_bottom U1000 (.A(key_i[95]),
     .B(n1003),
     .Y(n1001));
  OA21x2_upper U1001 (.A1(FE_OFN104_n275),
@@ -3457,10 +3457,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n1008),
     .Y(n1006));
- XOR2xp5_upper U1005 (.A(keysched_new_key_o[96]),
+ XOR2xp5_bottom U1005 (.A(keysched_new_key_o[96]),
     .B(n1009),
     .Y(n1008));
- XOR2xp5_upper U1006 (.A(key_i[96]),
+ XOR2xp5_bottom U1006 (.A(key_i[96]),
     .B(n1009),
     .Y(n1007));
  OA21x2_upper U1007 (.A1(FE_OFN104_n275),
@@ -3476,7 +3476,7 @@ module aes (clk,
     .A2(FE_OFN36_n268),
     .B(n1012),
     .Y(n1629));
- OAI22xp5_bottom U101 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U101 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2087),
     .B1(FE_OFN102_n11),
     .B2(n2439),
@@ -3486,10 +3486,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n1014),
     .Y(n1012));
- XOR2xp5_upper U1011 (.A(keysched_new_key_o[97]),
+ XOR2xp5_bottom U1011 (.A(keysched_new_key_o[97]),
     .B(n1015),
     .Y(n1014));
- XOR2xp5_upper U1012 (.A(key_i[97]),
+ XOR2xp5_bottom U1012 (.A(key_i[97]),
     .B(n1015),
     .Y(n1013));
  OA21x2_upper U1013 (.A1(FE_OFN104_n275),
@@ -3501,11 +3501,11 @@ module aes (clk,
     .B1(mixcol_data_o[97]),
     .B2(FE_OFN87_n279),
     .Y(n1017));
- AOI21xp5_bottom U1015 (.A1(data_o[98]),
+ AOI21xp5_upper U1015 (.A1(data_o[98]),
     .A2(FE_OFN35_n268),
     .B(n1018),
     .Y(n1631));
- OAI22xp5_bottom U1016 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U1016 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n1019),
     .B1(FE_OFN72_n272),
     .B2(n1020),
@@ -3516,11 +3516,11 @@ module aes (clk,
  XOR2xp5_bottom U1018 (.A(key_i[98]),
     .B(n1021),
     .Y(n1019));
- OA21x2_bottom U1019 (.A1(FE_OFN104_n275),
+ OA21x2_upper U1019 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[98]),
     .B(n1023),
     .Y(n1021));
- AOI22xp5_bottom U1020 (.A1(data_i[98]),
+ AOI22xp5_upper U1020 (.A1(data_i[98]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[98]),
     .B2(FE_OFN86_n279),
@@ -3534,10 +3534,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n1026),
     .Y(n1024));
- XOR2xp5_upper U1023 (.A(keysched_new_key_o[99]),
+ XOR2xp5_bottom U1023 (.A(keysched_new_key_o[99]),
     .B(n1027),
     .Y(n1026));
- XOR2xp5_upper U1024 (.A(key_i[99]),
+ XOR2xp5_bottom U1024 (.A(key_i[99]),
     .B(n1027),
     .Y(n1025));
  OA21x2_upper U1025 (.A1(FE_OFN104_n275),
@@ -3549,11 +3549,11 @@ module aes (clk,
     .B1(mixcol_data_o[99]),
     .B2(FE_OFN86_n279),
     .Y(n1029));
- AOI21xp5_bottom U1027 (.A1(data_o[9]),
+ AOI21xp5_upper U1027 (.A1(data_o[9]),
     .A2(FE_OFN36_n268),
     .B(n1030),
     .Y(n1635));
- OAI22xp5_bottom U1028 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U1028 (.A1(FE_DBTN88_n1666),
     .A2(n1031),
     .B1(FE_OFN72_n272),
     .B2(n1032),
@@ -3566,29 +3566,29 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(n2440),
     .Y(subbytes_data_i[55]));
- XOR2xp5_bottom U1030 (.A(key_i[9]),
+ XOR2xp5_upper U1030 (.A(key_i[9]),
     .B(n1033),
     .Y(n1031));
- OA21x2_bottom U1031 (.A1(FE_OFN105_n275),
+ OA21x2_upper U1031 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[9]),
     .B(n1035),
     .Y(n1033));
- AOI22xp5_bottom U1032 (.A1(data_i[9]),
+ AOI22xp5_upper U1032 (.A1(data_i[9]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[9]),
     .B2(FE_OFN86_n279),
     .Y(n1035));
- AOI22xp5_bottom U1033 (.A1(addroundkey_round[3]),
+ AOI22xp5_upper U1033 (.A1(addroundkey_round[3]),
     .A2(n1855),
     .B1(FE_OFN38_n1037),
     .B2(n1038),
     .Y(n1637));
- AOI22xp5_bottom U1034 (.A1(addroundkey_round[2]),
+ AOI22xp5_upper U1034 (.A1(addroundkey_round[2]),
     .A2(n1855),
     .B1(FE_OFN38_n1037),
     .B2(n1039),
     .Y(n1639));
- AOI22xp5_bottom U1035 (.A1(addroundkey_round[1]),
+ AOI22xp5_upper U1035 (.A1(addroundkey_round[1]),
     .A2(n1855),
     .B1(n2383),
     .B2(FE_OFN38_n1037),
@@ -3598,7 +3598,7 @@ module aes (clk,
     .B(n1045),
     .C(n1046),
     .Y(n1643));
- A2O1A1Ixp33_bottom U1040 (.A1(n1051),
+ A2O1A1Ixp33_upper U1040 (.A1(n1051),
     .A2(n1052),
     .B(n1053),
     .C(n1054),
@@ -3607,20 +3607,20 @@ module aes (clk,
     .B(n1051),
     .C(n1053),
     .Y(n1054));
- XOR2xp5_bottom U1042 (.A(n2386),
+ XOR2xp5_upper U1042 (.A(n2386),
     .B(round[1]),
     .Y(n1053));
- OAI21xp5_bottom U1043 (.A1(n2247),
+ OAI21xp5_upper U1043 (.A1(n2247),
     .A2(n2248),
     .B(n1058),
     .Y(n1645));
- XOR2xp5_bottom U1044 (.A(n2386),
+ XOR2xp5_upper U1044 (.A(n2386),
     .B(n1059),
     .Y(n1058));
- NAND2xp5_bottom U1045 (.A(n1049),
+ NAND2xp5_upper U1045 (.A(n1049),
     .B(n1048),
     .Y(n1059));
- AOI311xp33_bottom U1046 (.A1(n1060),
+ AOI311xp33_upper U1046 (.A1(n1060),
     .A2(n2248),
     .A3(n1061),
     .B(n1062),
@@ -3631,13 +3631,13 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(n2441),
     .Y(subbytes_data_i[54]));
- AOI221xp5_bottom U1051 (.A1(n2118),
+ AOI221xp5_upper U1051 (.A1(n2118),
     .A2(n1066),
     .B1(n1986),
     .B2(n1068),
     .C(n1987),
     .Y(n1064));
- NAND2xp5_bottom U1052 (.A(n1060),
+ NAND2xp5_upper U1052 (.A(n1060),
     .B(round[2]),
     .Y(n1068));
  AOI21xp5_upper U1055 (.A1(data_o[127]),
@@ -3668,7 +3668,7 @@ module aes (clk,
     .B1(mixcol_data_o[127]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n1078));
- OAI22xp5_bottom U1062 (.A1(n1079),
+ OAI22xp5_upper U1062 (.A1(n1079),
     .A2(n1052),
     .B1(n1080),
     .B2(n1081),
@@ -3676,15 +3676,15 @@ module aes (clk,
  NOR2x1_bottom U1063 (.A(n1082),
     .B(n1080),
     .Y(n278));
- AOI21xp5_bottom U1064 (.A1(n1987),
+ AOI21xp5_upper U1064 (.A1(n1987),
     .A2(n2117),
     .B(n2381),
     .Y(n1080));
- AOI21xp5_bottom U1065 (.A1(n2117),
+ AOI21xp5_upper U1065 (.A1(n2117),
     .A2(n2118),
     .B(n1085),
     .Y(n275));
- A2O1A1Ixp33_bottom U1066 (.A1(n1051),
+ A2O1A1Ixp33_upper U1066 (.A1(n1051),
     .A2(n1086),
     .B(n2381),
     .C(FE_DBTN89_n1665),
@@ -3693,41 +3693,41 @@ module aes (clk,
     .B(n1051),
     .C(n1086),
     .Y(n1079));
- OAI22xp5_bottom U107 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U107 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2075),
     .B1(n11),
     .B2(n2442),
     .Y(subbytes_data_i[53]));
- OAI21xp5_bottom U1070 (.A1(n1666),
+ OAI21xp5_upper U1070 (.A1(n1666),
     .A2(n1854),
     .B(n1075),
     .Y(n268));
- AO32x1_bottom U1071 (.A1(addroundkey_round[0]),
+ AO32x1_upper U1071 (.A1(addroundkey_round[0]),
     .A2(n1075),
     .A3(n1042),
     .B1(n1856),
     .B2(n2382),
     .Y(n1651));
- AO221x1_bottom U1073 (.A1(n1093),
+ AO221x1_upper U1073 (.A1(n1093),
     .A2(n1051),
     .B1(state),
     .B2(n1047),
     .C(n1094),
     .Y(n1653));
- AOI21xp5_bottom U1074 (.A1(n2248),
+ AOI21xp5_upper U1074 (.A1(n2248),
     .A2(n1048),
     .B(first_round_reg),
     .Y(n1094));
- NAND2xp5_bottom U1075 (.A(n1987),
+ NAND2xp5_upper U1075 (.A(n1987),
     .B(n1051),
     .Y(n1048));
- XOR2xp5_bottom U1078 (.A(n2381),
+ XOR2xp5_upper U1078 (.A(n2381),
     .B(n1096),
     .Y(n1657));
  NAND2xp5_bottom U1079 (.A(n1655),
     .B(n1659),
     .Y(n1096));
- NAND2xp5_bottom U1080 (.A(load_i),
+ NAND2xp5_upper U1080 (.A(load_i),
     .B(n2381),
     .Y(n1655));
  NAND2xp5_bottom U1081 (.A(n8),
@@ -3736,64 +3736,64 @@ module aes (clk,
  NOR2x1_bottom U1082 (.A(n2381),
     .B(n1086),
     .Y(n8));
- OAI21xp5_bottom U1084 (.A1(round[2]),
+ OAI21xp5_upper U1084 (.A1(round[2]),
     .A2(n1049),
     .B(n1097),
     .Y(n1661));
- OAI21xp5_bottom U1085 (.A1(n1047),
+ OAI21xp5_upper U1085 (.A1(n1047),
     .A2(n1098),
     .B(n1049),
     .Y(n1097));
- A2O1A1Ixp33_bottom U1086 (.A1(round[2]),
+ A2O1A1Ixp33_upper U1086 (.A1(round[2]),
     .A2(n1099),
     .B(n1100),
     .C(n1051),
     .Y(n1098));
- NAND2xp5_bottom U1087 (.A(subbytes_ready_o),
+ NAND2xp5_upper U1087 (.A(subbytes_ready_o),
     .B(n1101),
     .Y(n1051));
- AOI22xp5_bottom U1088 (.A1(n1052),
+ AOI22xp5_upper U1088 (.A1(n1052),
     .A2(n1066),
     .B1(n1102),
     .B2(n1087),
     .Y(n1100));
- XOR2xp5_bottom U1089 (.A(n1060),
+ XOR2xp5_upper U1089 (.A(n1060),
     .B(n2380),
     .Y(n1102));
- OAI22xp5_bottom U109 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U109 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2071),
     .B1(n11),
     .B2(n2443),
     .Y(subbytes_data_i[52]));
- AND2x2_bottom U1090 (.A(round[0]),
+ AND2x2_upper U1090 (.A(round[0]),
     .B(round[1]),
     .Y(n1060));
- A2O1A1Ixp33_bottom U1091 (.A1(n2386),
+ A2O1A1Ixp33_upper U1091 (.A1(n2386),
     .A2(n2387),
     .B(n1087),
     .C(n1095),
     .Y(n1099));
- NAND2xp5_bottom U1092 (.A(n1052),
+ NAND2xp5_upper U1092 (.A(n1052),
     .B(n1087),
     .Y(n1095));
  NAND2xp5_bottom U1093 (.A(mixcol_ready_o),
     .B(n1851),
     .Y(n1052));
- NAND2xp5_bottom U1094 (.A(subbytes_ready_o),
+ NAND2xp5_upper U1094 (.A(subbytes_ready_o),
     .B(n1850),
     .Y(n1087));
- OAI21xp5_bottom U1095 (.A1(n1086),
+ OAI21xp5_upper U1095 (.A1(n1086),
     .A2(n2377),
     .B(state),
     .Y(n1047));
- OA21x2_bottom U1097 (.A1(n1850),
+ OA21x2_upper U1097 (.A1(n1850),
     .A2(n1103),
     .B(n1104),
     .Y(n1086));
- OR2x2_bottom U1098 (.A(state),
+ OR2x2_upper U1098 (.A(state),
     .B(load_i),
     .Y(n1049));
- AOI21xp5_bottom U1099 (.A1(n1854),
+ AOI21xp5_upper U1099 (.A1(n1854),
     .A2(n1075),
     .B(n1666),
     .Y(n1663));
@@ -3808,10 +3808,10 @@ module aes (clk,
     .D(n1108),
     .E(keysched_ready_o),
     .Y(n1092));
- AND2x2_bottom U1103 (.A(state),
+ AND2x2_upper U1103 (.A(state),
     .B(n1101),
     .Y(n1093));
- NAND2xp5_bottom U1104 (.A(n1104),
+ NAND2xp5_upper U1104 (.A(n1104),
     .B(n1111),
     .Y(n1101));
  NAND5xp2_bottom U1105 (.A(n2387),
@@ -3820,18 +3820,18 @@ module aes (clk,
     .D(round[0]),
     .E(round[3]),
     .Y(n1111));
- NAND2xp5_bottom U1106 (.A(n1850),
+ NAND2xp5_upper U1106 (.A(n1850),
     .B(n1112),
     .Y(n1104));
  NAND2xp5_bottom U1107 (.A(n1665),
     .B(addroundkey_ready_o),
     .Y(n1110));
- OAI22xp5_bottom U111 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U111 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2067),
     .B1(n11),
     .B2(n2444),
     .Y(subbytes_data_i[51]));
- OAI22xp5_bottom U1110 (.A1(n2391),
+ OAI22xp5_upper U1110 (.A1(n2391),
     .A2(FE_OFN83_FE_DBTN89_n1665),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[9]),
@@ -3841,7 +3841,7 @@ module aes (clk,
     .B1(n11),
     .B2(subbytes_data_o[99]),
     .Y(mixcol_data_i[99]));
- OAI22xp5_bottom U1116 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1116 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2393),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[98]),
@@ -3861,7 +3861,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2127),
     .Y(mixcol_data_i[95]));
- OAI22xp5_bottom U1128 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1128 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2397),
     .B1(FE_OFN101_n11),
     .B2(n2128),
@@ -3871,27 +3871,27 @@ module aes (clk,
     .B1(n11),
     .B2(n2445),
     .Y(subbytes_data_i[50]));
- OAI22xp5_bottom U1131 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1131 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2398),
     .B1(FE_OFN101_n11),
     .B2(n2129),
     .Y(mixcol_data_i[93]));
- OAI22xp5_bottom U1134 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1134 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2399),
     .B1(FE_OFN101_n11),
     .B2(n2130),
     .Y(mixcol_data_i[92]));
- OAI22xp5_bottom U1137 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1137 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2400),
     .B1(FE_OFN101_n11),
     .B2(n2131),
     .Y(mixcol_data_i[91]));
- OAI22xp5_bottom U1140 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1140 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2401),
     .B1(FE_OFN101_n11),
     .B2(n2132),
     .Y(mixcol_data_i[90]));
- OAI22xp5_bottom U1143 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1143 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2402),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[8]),
@@ -3901,12 +3901,12 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2133),
     .Y(mixcol_data_i[89]));
- OAI22xp5_bottom U1149 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1149 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2404),
     .B1(FE_OFN101_n11),
     .B2(n2134),
     .Y(mixcol_data_i[88]));
- OAI22xp5_bottom U115 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U115 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2004),
     .B1(FE_OFN99_n11),
     .B2(n2446),
@@ -3921,22 +3921,22 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[86]),
     .Y(mixcol_data_i[86]));
- OAI22xp5_bottom U1158 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1158 (.A1(FE_DBTN89_n1665),
     .A2(n2407),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[85]),
     .Y(mixcol_data_i[85]));
- OAI22xp5_bottom U1161 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1161 (.A1(FE_DBTN89_n1665),
     .A2(n2408),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[84]),
     .Y(mixcol_data_i[84]));
- OAI22xp5_bottom U1164 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1164 (.A1(FE_DBTN89_n1665),
     .A2(n2409),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[83]),
     .Y(mixcol_data_i[83]));
- OAI22xp5_bottom U1167 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1167 (.A1(FE_DBTN89_n1665),
     .A2(n2410),
     .B1(n11),
     .B2(subbytes_data_o[82]),
@@ -3961,7 +3961,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2239),
     .Y(mixcol_data_i[7]));
- OAI22xp5_bottom U1179 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1179 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2414),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[79]),
@@ -3971,7 +3971,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[78]),
     .Y(mixcol_data_i[78]));
- OAI22xp5_bottom U1185 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1185 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2416),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[77]),
@@ -3986,12 +3986,12 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2448),
     .Y(subbytes_data_i[48]));
- OAI22xp5_bottom U1191 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1191 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2418),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[75]),
     .Y(mixcol_data_i[75]));
- OAI22xp5_bottom U1194 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1194 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2419),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[74]),
@@ -4006,12 +4006,12 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[72]),
     .Y(mixcol_data_i[72]));
- OAI22xp5_bottom U1203 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1203 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2422),
     .B1(n11),
     .B2(subbytes_data_o[71]),
     .Y(mixcol_data_i[71]));
- OAI22xp5_bottom U1206 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1206 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2423),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[70]),
@@ -4021,12 +4021,12 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2240),
     .Y(mixcol_data_i[6]));
- OAI22xp5_bottom U121 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U121 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2051),
     .B1(FE_OFN101_n11),
     .B2(n2449),
     .Y(subbytes_data_i[47]));
- OAI22xp5_bottom U1212 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1212 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2425),
     .B1(n11),
     .B2(subbytes_data_o[69]),
@@ -4036,17 +4036,17 @@ module aes (clk,
     .B1(n11),
     .B2(subbytes_data_o[68]),
     .Y(mixcol_data_i[68]));
- OAI22xp5_bottom U1218 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1218 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2427),
     .B1(n11),
     .B2(subbytes_data_o[67]),
     .Y(mixcol_data_i[67]));
- OAI22xp5_bottom U1221 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1221 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2428),
     .B1(n11),
     .B2(subbytes_data_o[66]),
     .Y(mixcol_data_i[66]));
- OAI22xp5_bottom U1224 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1224 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2429),
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[65]),
@@ -4056,7 +4056,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[64]),
     .Y(mixcol_data_i[64]));
- OAI22xp5_bottom U123 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U123 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2047),
     .B1(FE_OFN101_n11),
     .B2(n2450),
@@ -4066,7 +4066,7 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2135),
     .Y(mixcol_data_i[63]));
- OAI22xp5_bottom U1233 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1233 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2432),
     .B1(FE_OFN102_n11),
     .B2(n2136),
@@ -4076,7 +4076,7 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2137),
     .Y(mixcol_data_i[61]));
- OAI22xp5_bottom U1239 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1239 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2434),
     .B1(FE_OFN102_n11),
     .B2(n2138),
@@ -4086,7 +4086,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2241),
     .Y(mixcol_data_i[5]));
- OAI22xp5_bottom U1245 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1245 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2436),
     .B1(FE_OFN102_n11),
     .B2(n2139),
@@ -4101,12 +4101,12 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2451),
     .Y(subbytes_data_i[45]));
- OAI22xp5_bottom U1251 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1251 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2438),
     .B1(FE_OFN102_n11),
     .B2(n2141),
     .Y(mixcol_data_i[57]));
- OAI22xp5_bottom U1254 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1254 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2439),
     .B1(FE_OFN102_n11),
     .B2(n2142),
@@ -4121,32 +4121,32 @@ module aes (clk,
     .B1(n11),
     .B2(subbytes_data_o[54]),
     .Y(mixcol_data_i[54]));
- OAI22xp5_bottom U1263 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1263 (.A1(FE_DBTN89_n1665),
     .A2(n2442),
     .B1(n11),
     .B2(subbytes_data_o[53]),
     .Y(mixcol_data_i[53]));
- OAI22xp5_bottom U1266 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1266 (.A1(FE_DBTN89_n1665),
     .A2(n2443),
     .B1(n11),
     .B2(subbytes_data_o[52]),
     .Y(mixcol_data_i[52]));
- OAI22xp5_bottom U1269 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1269 (.A1(FE_DBTN89_n1665),
     .A2(n2444),
     .B1(n11),
     .B2(subbytes_data_o[51]),
     .Y(mixcol_data_i[51]));
- OAI22xp5_bottom U127 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U127 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2039),
     .B1(FE_OFN101_n11),
     .B2(n2452),
     .Y(subbytes_data_i[44]));
- OAI22xp5_bottom U1272 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1272 (.A1(FE_DBTN89_n1665),
     .A2(n2445),
     .B1(n11),
     .B2(subbytes_data_o[50]),
     .Y(mixcol_data_i[50]));
- OAI22xp5_bottom U1275 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1275 (.A1(FE_DBTN89_n1665),
     .A2(n2446),
     .B1(FE_OFN99_n11),
     .B2(n2242),
@@ -4161,7 +4161,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[48]),
     .Y(mixcol_data_i[48]));
- OAI22xp5_bottom U1284 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1284 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2449),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[47]),
@@ -4171,7 +4171,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[46]),
     .Y(mixcol_data_i[46]));
- OAI22xp5_bottom U129 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U129 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2035),
     .B1(FE_OFN102_n11),
     .B2(n2453),
@@ -4186,12 +4186,12 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[44]),
     .Y(mixcol_data_i[44]));
- OAI22xp5_bottom U1296 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1296 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2453),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[43]),
     .Y(mixcol_data_i[43]));
- OAI22xp5_bottom U1299 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1299 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2454),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[42]),
@@ -4201,12 +4201,12 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2395),
     .Y(subbytes_data_i[96]));
- OAI22xp5_bottom U1302 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1302 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2455),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[41]),
     .Y(mixcol_data_i[41]));
- OAI22xp5_bottom U1305 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1305 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2456),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[40]),
@@ -4216,17 +4216,17 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2243),
     .Y(mixcol_data_i[3]));
- OAI22xp5_bottom U131 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U131 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2031),
     .B1(FE_OFN102_n11),
     .B2(n2454),
     .Y(subbytes_data_i[42]));
- OAI22xp5_bottom U1311 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1311 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2458),
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[39]),
     .Y(mixcol_data_i[39]));
- OAI22xp5_bottom U1314 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1314 (.A1(FE_DBTN89_n1665),
     .A2(n2459),
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[38]),
@@ -4241,7 +4241,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[36]),
     .Y(mixcol_data_i[36]));
- OAI22xp5_bottom U1323 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1323 (.A1(FE_DBTN89_n1665),
     .A2(n2462),
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[35]),
@@ -4256,7 +4256,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[33]),
     .Y(mixcol_data_i[33]));
- OAI22xp5_bottom U133 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U133 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2027),
     .B1(FE_OFN102_n11),
     .B2(n2455),
@@ -4271,12 +4271,12 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2183),
     .Y(mixcol_data_i[31]));
- OAI22xp5_bottom U1338 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1338 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2467),
     .B1(FE_OFN102_n11),
     .B2(n2184),
     .Y(mixcol_data_i[30]));
- OAI22xp5_bottom U1341 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1341 (.A1(FE_DBTN89_n1665),
     .A2(n2468),
     .B1(FE_OFN99_n11),
     .B2(n2244),
@@ -4291,27 +4291,27 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2186),
     .Y(mixcol_data_i[28]));
- OAI22xp5_bottom U135 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U135 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2023),
     .B1(FE_OFN102_n11),
     .B2(n2456),
     .Y(subbytes_data_i[40]));
- OAI22xp5_bottom U1350 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1350 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2471),
     .B1(FE_OFN102_n11),
     .B2(n2187),
     .Y(mixcol_data_i[27]));
- OAI22xp5_bottom U1353 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1353 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2472),
     .B1(FE_OFN102_n11),
     .B2(n2188),
     .Y(mixcol_data_i[26]));
- OAI22xp5_bottom U1356 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1356 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2473),
     .B1(FE_OFN102_n11),
     .B2(n2189),
     .Y(mixcol_data_i[25]));
- OAI22xp5_bottom U1359 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1359 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2474),
     .B1(FE_OFN102_n11),
     .B2(n2190),
@@ -4326,7 +4326,7 @@ module aes (clk,
     .B1(n11),
     .B2(subbytes_data_o[22]),
     .Y(mixcol_data_i[22]));
- OAI22xp5_bottom U1368 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1368 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2477),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[21]),
@@ -4341,17 +4341,17 @@ module aes (clk,
     .B1(n11),
     .B2(subbytes_data_o[20]),
     .Y(mixcol_data_i[20]));
- OAI22xp5_bottom U1374 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1374 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2479),
     .B1(FE_OFN99_n11),
     .B2(n2245),
     .Y(mixcol_data_i[1]));
- OAI22xp5_bottom U1377 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1377 (.A1(FE_DBTN89_n1665),
     .A2(n2480),
     .B1(n11),
     .B2(subbytes_data_o[19]),
     .Y(mixcol_data_i[19]));
- OAI22xp5_bottom U1380 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1380 (.A1(FE_DBTN89_n1665),
     .A2(n2481),
     .B1(n11),
     .B2(subbytes_data_o[18]),
@@ -4361,7 +4361,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[17]),
     .Y(mixcol_data_i[17]));
- OAI22xp5_bottom U1386 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1386 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2483),
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[16]),
@@ -4371,7 +4371,7 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[15]),
     .Y(mixcol_data_i[15]));
- OAI22xp5_bottom U139 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U139 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2019),
     .B1(n11),
     .B2(n2458),
@@ -4381,7 +4381,7 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[14]),
     .Y(mixcol_data_i[14]));
- OAI22xp5_bottom U1395 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1395 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2486),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[13]),
@@ -4396,32 +4396,32 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2119),
     .Y(mixcol_data_i[127]));
- OAI22xp5_bottom U1404 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1404 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2488),
     .B1(FE_OFN101_n11),
     .B2(n2120),
     .Y(mixcol_data_i[126]));
- OAI22xp5_bottom U1407 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1407 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2489),
     .B1(FE_OFN101_n11),
     .B2(n2121),
     .Y(mixcol_data_i[125]));
- OAI22xp5_bottom U141 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U141 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2015),
     .B1(FE_OFN100_n11),
     .B2(n2459),
     .Y(subbytes_data_i[38]));
- OAI22xp5_bottom U1410 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1410 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2490),
     .B1(FE_OFN101_n11),
     .B2(n2122),
     .Y(mixcol_data_i[124]));
- OAI22xp5_bottom U1413 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1413 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2491),
     .B1(FE_OFN101_n11),
     .B2(n2123),
     .Y(mixcol_data_i[123]));
- OAI22xp5_bottom U1416 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U1416 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2492),
     .B1(FE_OFN101_n11),
     .B2(n2124),
@@ -4436,7 +4436,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2126),
     .Y(mixcol_data_i[120]));
- OAI22xp5_bottom U1425 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1425 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2495),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[11]),
@@ -4466,12 +4466,12 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[116]),
     .Y(mixcol_data_i[116]));
- OAI22xp5_bottom U1440 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1440 (.A1(FE_DBTN89_n1665),
     .A2(n2500),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[115]),
     .Y(mixcol_data_i[115]));
- OAI22xp5_bottom U1443 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U1443 (.A1(FE_DBTN89_n1665),
     .A2(n2501),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[114]),
@@ -4481,7 +4481,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(subbytes_data_o[113]),
     .Y(mixcol_data_i[113]));
- OAI22xp5_bottom U1449 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1449 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2503),
     .B1(n11),
     .B2(subbytes_data_o[112]),
@@ -4491,7 +4491,7 @@ module aes (clk,
     .B1(n11),
     .B2(n2461),
     .Y(subbytes_data_i[36]));
- OAI22xp5_bottom U1452 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1452 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2504),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[111]),
@@ -4501,12 +4501,12 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[110]),
     .Y(mixcol_data_i[110]));
- OAI22xp5_bottom U1458 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U1458 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2506),
     .B1(FE_OFN102_n11),
     .B2(subbytes_data_o[10]),
     .Y(mixcol_data_i[10]));
- OAI22xp5_bottom U1461 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1461 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2507),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[109]),
@@ -4516,12 +4516,12 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[108]),
     .Y(mixcol_data_i[108]));
- OAI22xp5_bottom U1467 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U1467 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2509),
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[107]),
     .Y(mixcol_data_i[107]));
- OAI22xp5_bottom U147 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U147 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2003),
     .B1(FE_OFN99_n11),
     .B2(n2462),
@@ -4541,7 +4541,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(subbytes_data_o[104]),
     .Y(mixcol_data_i[104]));
- OAI22xp5_bottom U1479 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1479 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2513),
     .B1(n11),
     .B2(subbytes_data_o[103]),
@@ -4551,7 +4551,7 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[102]),
     .Y(mixcol_data_i[102]));
- OAI22xp5_bottom U1485 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U1485 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2515),
     .B1(FE_OFN100_n11),
     .B2(subbytes_data_o[101]),
@@ -4577,7 +4577,7 @@ module aes (clk,
  NAND2xp5_bottom U1494 (.A(FE_DBTN89_n1665),
     .B(n1081),
     .Y(n1082));
- NAND2xp5_bottom U1495 (.A(n2379),
+ NAND2xp5_upper U1495 (.A(n2379),
     .B(n1851),
     .Y(n1081));
  OAI22xp5_upper U15 (.A1(FE_OFN85_FE_DBTN89_n1665),
@@ -4588,38 +4588,38 @@ module aes (clk,
  NAND2xp5_bottom U1500 (.A(n1075),
     .B(n1857),
     .Y(keysched_start_i));
- AO22x1_bottom U1501 (.A1(n1856),
+ AO22x1_upper U1501 (.A1(n1856),
     .A2(addroundkey_round[3]),
     .B1(n1038),
     .B2(FE_OFN38_n1037),
     .Y(keysched_round_i[3]));
- XNOR2xp5_bottom U1502 (.A(n1115),
+ XNOR2xp5_upper U1502 (.A(n1115),
     .B(addroundkey_round[3]),
     .Y(n1038));
- OR2x2_bottom U1503 (.A(n1116),
+ OR2x2_upper U1503 (.A(n1116),
     .B(n2389),
     .Y(n1115));
- AO22x1_bottom U1504 (.A1(n1856),
+ AO22x1_upper U1504 (.A1(n1856),
     .A2(addroundkey_round[2]),
     .B1(n1039),
     .B2(FE_OFN38_n1037),
     .Y(keysched_round_i[2]));
- XNOR2xp5_bottom U1505 (.A(n1116),
+ XNOR2xp5_upper U1505 (.A(n1116),
     .B(addroundkey_round[2]),
     .Y(n1039));
- OAI22xp5_bottom U1506 (.A1(n1118),
+ OAI22xp5_upper U1506 (.A1(n1118),
     .A2(n2388),
     .B1(n1857),
     .B2(n1041),
     .Y(keysched_round_i[1]));
- OAI21xp5_bottom U1507 (.A1(addroundkey_round[1]),
+ OAI21xp5_upper U1507 (.A1(addroundkey_round[1]),
     .A2(addroundkey_round[0]),
     .B(n1116),
     .Y(n1041));
  NAND2xp5_bottom U1508 (.A(addroundkey_round[0]),
     .B(addroundkey_round[1]),
     .Y(n1116));
- AO221x1_bottom U1509 (.A1(FE_OFN38_n1037),
+ AO221x1_upper U1509 (.A1(FE_OFN38_n1037),
     .A2(n2382),
     .B1(addroundkey_round[0]),
     .B2(n1856),
@@ -4630,7 +4630,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2464),
     .Y(subbytes_data_i[33]));
- OAI22xp5_bottom U1510 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1510 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2367),
     .B1(FE_OFN76_n1123),
     .B2(n1888),
@@ -4640,7 +4640,7 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1970),
     .Y(keysched_last_key_i[99]));
- OAI22xp5_bottom U1516 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1516 (.A1(FE_OFN39_n1121),
     .A2(n2278),
     .B1(FE_OFN75_n1123),
     .B2(n1974),
@@ -4660,7 +4660,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1891),
     .Y(keysched_last_key_i[95]));
- OAI22xp5_bottom U1528 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1528 (.A1(FE_OFN41_n1121),
     .A2(n2282),
     .B1(FE_OFN77_n1123),
     .B2(n1895),
@@ -4680,12 +4680,12 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1903),
     .Y(keysched_last_key_i[92]));
- OAI22xp5_bottom U1537 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1537 (.A1(FE_OFN41_n1121),
     .A2(n2285),
     .B1(FE_OFN77_n1123),
     .B2(n1907),
     .Y(keysched_last_key_i[91]));
- OAI22xp5_bottom U1540 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1540 (.A1(FE_OFN41_n1121),
     .A2(n2286),
     .B1(FE_OFN77_n1123),
     .B2(n1911),
@@ -4700,7 +4700,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1915),
     .Y(keysched_last_key_i[89]));
- OAI22xp5_bottom U1549 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1549 (.A1(FE_OFN41_n1121),
     .A2(n2288),
     .B1(FE_OFN77_n1123),
     .B2(n1919),
@@ -4725,12 +4725,12 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1931),
     .Y(keysched_last_key_i[85]));
- OAI22xp5_bottom U1561 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1561 (.A1(FE_OFN39_n1121),
     .A2(n2292),
     .B1(FE_OFN75_n1123),
     .B2(n1935),
     .Y(keysched_last_key_i[84]));
- OAI22xp5_bottom U1564 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1564 (.A1(FE_OFN39_n1121),
     .A2(n2293),
     .B1(FE_OFN75_n1123),
     .B2(n1939),
@@ -4740,7 +4740,7 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1943),
     .Y(keysched_last_key_i[82]));
- OAI22xp5_bottom U157 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U157 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2108),
     .B1(FE_OFN102_n11),
     .B2(n2467),
@@ -4760,7 +4760,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1957),
     .Y(keysched_last_key_i[7]));
- OAI22xp5_bottom U1579 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1579 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2297),
     .B1(FE_OFN77_n1123),
     .B2(n1866),
@@ -4770,7 +4770,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1867),
     .Y(keysched_last_key_i[78]));
- OAI22xp5_bottom U1585 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1585 (.A1(FE_OFN41_n1121),
     .A2(n2299),
     .B1(FE_OFN77_n1123),
     .B2(n1868),
@@ -4780,22 +4780,22 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1869),
     .Y(keysched_last_key_i[76]));
- OAI22xp5_bottom U159 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U159 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n1996),
     .B1(FE_OFN99_n11),
     .B2(n2468),
     .Y(subbytes_data_i[2]));
- OAI22xp5_bottom U1591 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1591 (.A1(FE_OFN41_n1121),
     .A2(n2301),
     .B1(FE_OFN77_n1123),
     .B2(n1870),
     .Y(keysched_last_key_i[75]));
- OAI22xp5_bottom U1594 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1594 (.A1(FE_OFN41_n1121),
     .A2(n2302),
     .B1(FE_OFN77_n1123),
     .B2(n1871),
     .Y(keysched_last_key_i[74]));
- OAI22xp5_bottom U1597 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1597 (.A1(FE_OFN41_n1121),
     .A2(n2303),
     .B1(FE_OFN77_n1123),
     .B2(n1872),
@@ -4805,12 +4805,12 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1873),
     .Y(keysched_last_key_i[72]));
- OAI22xp5_bottom U1603 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1603 (.A1(FE_OFN39_n1121),
     .A2(n2305),
     .B1(FE_OFN75_n1123),
     .B2(n1955),
     .Y(keysched_last_key_i[71]));
- OAI22xp5_bottom U1606 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1606 (.A1(FE_OFN39_n1121),
     .A2(n2306),
     .B1(FE_OFN75_n1123),
     .B2(n1959),
@@ -4830,17 +4830,17 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1963),
     .Y(keysched_last_key_i[69]));
- OAI22xp5_bottom U1615 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1615 (.A1(FE_OFN39_n1121),
     .A2(n2308),
     .B1(FE_OFN75_n1123),
     .B2(n1967),
     .Y(keysched_last_key_i[68]));
- OAI22xp5_bottom U1618 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1618 (.A1(FE_OFN39_n1121),
     .A2(n2309),
     .B1(FE_OFN75_n1123),
     .B2(n1971),
     .Y(keysched_last_key_i[67]));
- OAI22xp5_bottom U1621 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1621 (.A1(FE_OFN39_n1121),
     .A2(n2310),
     .B1(FE_OFN75_n1123),
     .B2(n1975),
@@ -4875,7 +4875,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1900),
     .Y(keysched_last_key_i[61]));
- OAI22xp5_bottom U1639 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1639 (.A1(FE_OFN41_n1121),
     .A2(n2316),
     .B1(FE_OFN77_n1123),
     .B2(n1904),
@@ -4885,7 +4885,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1965),
     .Y(keysched_last_key_i[5]));
- OAI22xp5_bottom U1645 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1645 (.A1(FE_OFN41_n1121),
     .A2(n2317),
     .B1(FE_OFN77_n1123),
     .B2(n1908),
@@ -4895,17 +4895,17 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1912),
     .Y(keysched_last_key_i[58]));
- OAI22xp5_bottom U165 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U165 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2096),
     .B1(FE_OFN102_n11),
     .B2(n2471),
     .Y(subbytes_data_i[27]));
- OAI22xp5_bottom U1651 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1651 (.A1(FE_OFN41_n1121),
     .A2(n2319),
     .B1(FE_OFN77_n1123),
     .B2(n1916),
     .Y(keysched_last_key_i[57]));
- OAI22xp5_bottom U1654 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1654 (.A1(FE_OFN41_n1121),
     .A2(n2320),
     .B1(FE_OFN77_n1123),
     .B2(n1920),
@@ -4925,17 +4925,17 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1932),
     .Y(keysched_last_key_i[53]));
- OAI22xp5_bottom U1666 (.A1(n1121),
+ OAI22xp5_upper U1666 (.A1(n1121),
     .A2(n2324),
     .B1(n1123),
     .B2(n1936),
     .Y(keysched_last_key_i[52]));
- OAI22xp5_bottom U1669 (.A1(n1121),
+ OAI22xp5_upper U1669 (.A1(n1121),
     .A2(n2325),
     .B1(n1123),
     .B2(n1940),
     .Y(keysched_last_key_i[51]));
- OAI22xp5_bottom U167 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U167 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2092),
     .B1(FE_OFN102_n11),
     .B2(n2472),
@@ -4945,7 +4945,7 @@ module aes (clk,
     .B1(n1123),
     .B2(n1944),
     .Y(keysched_last_key_i[50]));
- OAI22xp5_bottom U1675 (.A1(FE_OFN40_n1121),
+ OAI22xp5_upper U1675 (.A1(FE_OFN40_n1121),
     .A2(n2372),
     .B1(FE_OFN76_n1123),
     .B2(n1969),
@@ -4960,7 +4960,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1952),
     .Y(keysched_last_key_i[48]));
- OAI22xp5_bottom U1684 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1684 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2329),
     .B1(FE_OFN76_n1123),
     .B2(n1874),
@@ -4970,7 +4970,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1875),
     .Y(keysched_last_key_i[46]));
- OAI22xp5_bottom U169 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U169 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2088),
     .B1(FE_OFN102_n11),
     .B2(n2473),
@@ -4980,27 +4980,27 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1876),
     .Y(keysched_last_key_i[45]));
- OAI22xp5_bottom U1693 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1693 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2332),
     .B1(FE_OFN76_n1123),
     .B2(n1877),
     .Y(keysched_last_key_i[44]));
- OAI22xp5_bottom U1696 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1696 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2333),
     .B1(FE_OFN76_n1123),
     .B2(n1878),
     .Y(keysched_last_key_i[43]));
- OAI22xp5_bottom U1699 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1699 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2334),
     .B1(FE_OFN76_n1123),
     .B2(n1879),
     .Y(keysched_last_key_i[42]));
- OAI22xp5_bottom U17 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U17 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2110),
     .B1(FE_OFN101_n11),
     .B2(n2397),
     .Y(subbytes_data_i[94]));
- OAI22xp5_bottom U1702 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1702 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2335),
     .B1(FE_OFN76_n1123),
     .B2(n1880),
@@ -5015,17 +5015,17 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1973),
     .Y(keysched_last_key_i[3]));
- OAI22xp5_bottom U171 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U171 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2084),
     .B1(FE_OFN102_n11),
     .B2(n2474),
     .Y(subbytes_data_i[24]));
- OAI22xp5_bottom U1711 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1711 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2337),
     .B1(FE_OFN76_n1123),
     .B2(n1956),
     .Y(keysched_last_key_i[39]));
- OAI22xp5_bottom U1714 (.A1(n1121),
+ OAI22xp5_upper U1714 (.A1(n1121),
     .A2(n2338),
     .B1(FE_OFN76_n1123),
     .B2(n1960),
@@ -5040,7 +5040,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1968),
     .Y(keysched_last_key_i[36]));
- OAI22xp5_bottom U1723 (.A1(FE_OFN40_n1121),
+ OAI22xp5_upper U1723 (.A1(FE_OFN40_n1121),
     .A2(n2341),
     .B1(FE_OFN76_n1123),
     .B2(n1972),
@@ -5065,12 +5065,12 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1984),
     .Y(keysched_last_key_i[32]));
- OAI22xp5_bottom U1735 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1735 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2345),
     .B1(FE_OFN76_n1123),
     .B2(n1893),
     .Y(keysched_last_key_i[31]));
- OAI22xp5_bottom U1738 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1738 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2346),
     .B1(FE_OFN76_n1123),
     .B2(n1897),
@@ -5085,7 +5085,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1901),
     .Y(keysched_last_key_i[29]));
- OAI22xp5_bottom U1747 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1747 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2348),
     .B1(FE_OFN76_n1123),
     .B2(n1905),
@@ -5095,17 +5095,17 @@ module aes (clk,
     .B1(n11),
     .B2(n2476),
     .Y(subbytes_data_i[22]));
- OAI22xp5_bottom U1750 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1750 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2349),
     .B1(FE_OFN76_n1123),
     .B2(n1909),
     .Y(keysched_last_key_i[27]));
- OAI22xp5_bottom U1753 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1753 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2350),
     .B1(FE_OFN76_n1123),
     .B2(n1913),
     .Y(keysched_last_key_i[26]));
- OAI22xp5_bottom U1756 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1756 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2351),
     .B1(FE_OFN76_n1123),
     .B2(n1917),
@@ -5125,12 +5125,12 @@ module aes (clk,
     .B1(n1123),
     .B2(n1929),
     .Y(keysched_last_key_i[22]));
- OAI22xp5_bottom U1768 (.A1(n1121),
+ OAI22xp5_upper U1768 (.A1(n1121),
     .A2(n2355),
     .B1(n1123),
     .B2(n1933),
     .Y(keysched_last_key_i[21]));
- OAI22xp5_bottom U177 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U177 (.A1(FE_DBTN89_n1665),
     .A2(n2072),
     .B1(FE_OFN99_n11),
     .B2(n2477),
@@ -5160,7 +5160,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1949),
     .Y(keysched_last_key_i[17]));
- OAI22xp5_bottom U1786 (.A1(FE_OFN40_n1121),
+ OAI22xp5_upper U1786 (.A1(FE_OFN40_n1121),
     .A2(n2360),
     .B1(FE_OFN76_n1123),
     .B2(n1953),
@@ -5185,7 +5185,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1884),
     .Y(keysched_last_key_i[13]));
- OAI22xp5_bottom U1798 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1798 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2364),
     .B1(FE_OFN76_n1123),
     .B2(n1885),
@@ -5195,7 +5195,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1890),
     .Y(keysched_last_key_i[127]));
- OAI22xp5_bottom U1804 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1804 (.A1(FE_OFN41_n1121),
     .A2(n2250),
     .B1(FE_OFN77_n1123),
     .B2(n1894),
@@ -5205,7 +5205,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1898),
     .Y(keysched_last_key_i[125]));
- OAI22xp5_bottom U181 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U181 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n1992),
     .B1(FE_OFN99_n11),
     .B2(n2479),
@@ -5220,7 +5220,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1906),
     .Y(keysched_last_key_i[123]));
- OAI22xp5_bottom U1816 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1816 (.A1(FE_OFN41_n1121),
     .A2(n2254),
     .B1(FE_OFN77_n1123),
     .B2(n1910),
@@ -5235,7 +5235,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1918),
     .Y(keysched_last_key_i[120]));
- OAI22xp5_bottom U1825 (.A1(FE_OFN119_FE_OFN40_n1121),
+ OAI22xp5_upper U1825 (.A1(FE_OFN119_FE_OFN40_n1121),
     .A2(n2365),
     .B1(FE_OFN76_n1123),
     .B2(n1886),
@@ -5265,7 +5265,7 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1934),
     .Y(keysched_last_key_i[116]));
- OAI22xp5_bottom U1840 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1840 (.A1(FE_OFN39_n1121),
     .A2(n2261),
     .B1(FE_OFN75_n1123),
     .B2(n1938),
@@ -5280,17 +5280,17 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1946),
     .Y(keysched_last_key_i[113]));
- OAI22xp5_bottom U1849 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1849 (.A1(FE_OFN39_n1121),
     .A2(n2264),
     .B1(FE_OFN75_n1123),
     .B2(n1950),
     .Y(keysched_last_key_i[112]));
- OAI22xp5_bottom U185 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U185 (.A1(FE_DBTN89_n1665),
     .A2(n2060),
     .B1(FE_OFN99_n11),
     .B2(n2481),
     .Y(subbytes_data_i[18]));
- OAI22xp5_bottom U1852 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1852 (.A1(FE_OFN41_n1121),
     .A2(n2265),
     .B1(FE_OFN77_n1123),
     .B2(n1858),
@@ -5305,7 +5305,7 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1887),
     .Y(keysched_last_key_i[10]));
- OAI22xp5_bottom U1861 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1861 (.A1(FE_OFN41_n1121),
     .A2(n2267),
     .B1(FE_OFN77_n1123),
     .B2(n1860),
@@ -5315,12 +5315,12 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1861),
     .Y(keysched_last_key_i[108]));
- OAI22xp5_bottom U1867 (.A1(FE_OFN41_n1121),
+ OAI22xp5_upper U1867 (.A1(FE_OFN41_n1121),
     .A2(n2269),
     .B1(FE_OFN77_n1123),
     .B2(n1862),
     .Y(keysched_last_key_i[107]));
- OAI22xp5_bottom U187 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U187 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2056),
     .B1(FE_OFN99_n11),
     .B2(n2482),
@@ -5340,7 +5340,7 @@ module aes (clk,
     .B1(FE_OFN77_n1123),
     .B2(n1865),
     .Y(keysched_last_key_i[104]));
- OAI22xp5_bottom U1879 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1879 (.A1(FE_OFN39_n1121),
     .A2(n2273),
     .B1(FE_OFN75_n1123),
     .B2(n1954),
@@ -5350,17 +5350,17 @@ module aes (clk,
     .B1(FE_OFN75_n1123),
     .B2(n1958),
     .Y(keysched_last_key_i[102]));
- OAI22xp5_bottom U1885 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1885 (.A1(FE_OFN39_n1121),
     .A2(n2275),
     .B1(FE_OFN75_n1123),
     .B2(n1962),
     .Y(keysched_last_key_i[101]));
- OAI22xp5_bottom U1888 (.A1(FE_OFN39_n1121),
+ OAI22xp5_upper U1888 (.A1(FE_OFN39_n1121),
     .A2(n2276),
     .B1(FE_OFN75_n1123),
     .B2(n1966),
     .Y(keysched_last_key_i[100]));
- OAI22xp5_bottom U189 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U189 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2052),
     .B1(FE_OFN99_n11),
     .B2(n2483),
@@ -5370,19 +5370,19 @@ module aes (clk,
     .B1(FE_OFN76_n1123),
     .B2(n1985),
     .Y(keysched_last_key_i[0]));
- OA21x2_bottom U1893 (.A1(n1379),
+ OA21x2_upper U1893 (.A1(n1379),
     .A2(n1118),
     .B(n1857),
     .Y(n1123));
- AND2x2_bottom U1899 (.A(n1380),
+ AND2x2_upper U1899 (.A(n1380),
     .B(n1075),
     .Y(n1121));
- OAI22xp5_bottom U19 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U19 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2106),
     .B1(FE_OFN101_n11),
     .B2(n2398),
     .Y(subbytes_data_i[93]));
- AOI21xp5_bottom U1902 (.A1(n1075),
+ AOI21xp5_upper U1902 (.A1(n1075),
     .A2(n1091),
     .B(n1666),
     .Y(n1118));
@@ -5409,7 +5409,7 @@ module aes (clk,
  NOR2x1_bottom U1917 (.A(n1066),
     .B(round[3]),
     .Y(n1112));
- NAND3xp33_bottom U1918 (.A(n2387),
+ NAND3xp33_upper U1918 (.A(n2387),
     .B(n2380),
     .C(n2386),
     .Y(n1066));
@@ -5418,7 +5418,7 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2485),
     .Y(subbytes_data_i[14]));
- OAI22xp5_bottom U195 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U195 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2040),
     .B1(FE_OFN102_n11),
     .B2(n2486),
@@ -5433,17 +5433,17 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2384),
     .Y(subbytes_data_i[127]));
- OAI22xp5_bottom U201 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U201 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2109),
     .B1(FE_OFN101_n11),
     .B2(n2488),
     .Y(subbytes_data_i[126]));
- OAI22xp5_bottom U203 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U203 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2105),
     .B1(FE_OFN101_n11),
     .B2(n2489),
     .Y(subbytes_data_i[125]));
- OAI22xp5_bottom U205 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U205 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2101),
     .B1(FE_OFN101_n11),
     .B2(n2490),
@@ -5457,7 +5457,7 @@ module aes (clk,
     .Y(n1850));
  INVx4_upper U2073 (.A(decrypt_i),
     .Y(n1851));
- OAI22xp5_bottom U209 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U209 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2093),
     .B1(FE_OFN101_n11),
     .B2(n2492),
@@ -5477,7 +5477,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2494),
     .Y(subbytes_data_i[120]));
- OAI22xp5_bottom U215 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U215 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2032),
     .B1(FE_OFN102_n11),
     .B2(n2495),
@@ -5514,22 +5514,22 @@ module aes (clk,
  AND2x2_bottom U2247 (.A(n1850),
     .B(n1103),
     .Y(n1665));
- OAI22xp5_bottom U225 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U225 (.A1(FE_DBTN89_n1665),
     .A2(n2065),
     .B1(FE_OFN100_n11),
     .B2(n2500),
     .Y(subbytes_data_i[115]));
- AOI31xp33_bottom U2252 (.A1(n1091),
+ AOI31xp33_upper U2252 (.A1(n1091),
     .A2(n1075),
     .A3(n1092),
     .B(n1666),
     .Y(n1042));
- O2A1O1Ixp33_bottom U2253 (.A1(n1047),
+ O2A1O1Ixp33_upper U2253 (.A1(n1047),
     .A2(n1048),
     .B(n1049),
     .C(n2387),
     .Y(n1045));
- AND2x2_bottom U2254 (.A(addroundkey_start_i),
+ AND2x2_upper U2254 (.A(addroundkey_start_i),
     .B(n1112),
     .Y(n1666));
  NAND4xp25_bottom U2255 (.A(round[3]),
@@ -5549,12 +5549,12 @@ module aes (clk,
     .C(n1105),
     .D(n1106),
     .Y(n1382));
- O2A1O1Ixp33_bottom U2259 (.A1(n1665),
+ O2A1O1Ixp33_upper U2259 (.A1(n1665),
     .A2(n2377),
     .B(n7),
     .C(n8),
     .Y(subbytes_start_i));
- O2A1O1Ixp33_bottom U2260 (.A1(n1850),
+ O2A1O1Ixp33_upper U2260 (.A1(n1850),
     .A2(n2116),
     .B(n1110),
     .C(n1093),
@@ -5563,7 +5563,7 @@ module aes (clk,
     .B(round[3]),
     .C(n2380),
     .Y(n1061));
- O2A1O1Ixp33_bottom U2262 (.A1(n1064),
+ O2A1O1Ixp33_upper U2262 (.A1(n1064),
     .A2(n1047),
     .B(n1049),
     .C(n2385),
@@ -5572,8 +5572,8 @@ module aes (clk,
     .B(state),
     .C(n1851),
     .Y(n1046));
- TIEHIx1_upper U2264 (.H(n1664));
- NOR2x2_bottom U2265 (.A(FE_OFN71_keysched_sbox_access_o),
+ TIEHIx1_bottom U2264 (.H(n1664));
+ NOR2x2_upper U2265 (.A(FE_OFN71_keysched_sbox_access_o),
     .B(n1851),
     .Y(sbox_decrypt_i));
  INVx1_bottom U2266 (.A(FE_OFN71_keysched_sbox_access_o),
@@ -5584,38 +5584,38 @@ module aes (clk,
     .Y(n1855));
  INVx1_bottom U2269 (.A(n1118),
     .Y(n1856));
- OAI22xp5_bottom U227 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U227 (.A1(FE_DBTN89_n1665),
     .A2(n2061),
     .B1(FE_OFN100_n11),
     .B2(n2501),
     .Y(subbytes_data_i[114]));
- INVx1_bottom U2270 (.A(FE_OFN38_n1037),
+ INVx1_upper U2270 (.A(FE_OFN38_n1037),
     .Y(n1857));
  INVx1_bottom U2271 (.A(keysched_new_key_o[111]),
     .Y(n1858));
- INVx1_upper U2272 (.A(keysched_new_key_o[110]),
+ INVx1_bottom U2272 (.A(keysched_new_key_o[110]),
     .Y(n1859));
  INVx1_bottom U2273 (.A(keysched_new_key_o[109]),
     .Y(n1860));
- INVx1_upper U2274 (.A(keysched_new_key_o[108]),
+ INVx1_bottom U2274 (.A(keysched_new_key_o[108]),
     .Y(n1861));
  INVx1_bottom U2275 (.A(keysched_new_key_o[107]),
     .Y(n1862));
- INVx1_upper U2276 (.A(keysched_new_key_o[106]),
+ INVx1_bottom U2276 (.A(keysched_new_key_o[106]),
     .Y(n1863));
- INVx1_upper U2277 (.A(keysched_new_key_o[105]),
+ INVx1_bottom U2277 (.A(keysched_new_key_o[105]),
     .Y(n1864));
- INVx1_upper U2278 (.A(keysched_new_key_o[104]),
+ INVx1_bottom U2278 (.A(keysched_new_key_o[104]),
     .Y(n1865));
  INVx1_bottom U2279 (.A(keysched_new_key_o[79]),
     .Y(n1866));
- INVx1_upper U2280 (.A(keysched_new_key_o[78]),
+ INVx1_bottom U2280 (.A(keysched_new_key_o[78]),
     .Y(n1867));
  INVx1_bottom U2281 (.A(keysched_new_key_o[77]),
     .Y(n1868));
  INVx1_upper U2282 (.A(keysched_new_key_o[76]),
     .Y(n1869));
- INVx1_bottom U2283 (.A(keysched_new_key_o[75]),
+ INVx1_upper U2283 (.A(keysched_new_key_o[75]),
     .Y(n1870));
  INVx1_bottom U2284 (.A(keysched_new_key_o[74]),
     .Y(n1871));
@@ -5625,9 +5625,9 @@ module aes (clk,
     .Y(n1873));
  INVx1_bottom U2287 (.A(keysched_new_key_o[47]),
     .Y(n1874));
- INVx1_upper U2288 (.A(keysched_new_key_o[46]),
+ INVx1_bottom U2288 (.A(keysched_new_key_o[46]),
     .Y(n1875));
- INVx1_upper U2289 (.A(keysched_new_key_o[45]),
+ INVx1_bottom U2289 (.A(keysched_new_key_o[45]),
     .Y(n1876));
  OAI22xp5_upper U229 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2057),
@@ -5640,7 +5640,7 @@ module aes (clk,
     .Y(n1878));
  INVx1_bottom U2292 (.A(keysched_new_key_o[42]),
     .Y(n1879));
- INVx1_bottom U2293 (.A(keysched_new_key_o[41]),
+ INVx1_upper U2293 (.A(keysched_new_key_o[41]),
     .Y(n1880));
  INVx1_upper U2294 (.A(keysched_new_key_o[40]),
     .Y(n1881));
@@ -5648,28 +5648,28 @@ module aes (clk,
     .Y(n1882));
  INVx1_upper U2296 (.A(keysched_new_key_o[14]),
     .Y(n1883));
- INVx1_upper U2297 (.A(keysched_new_key_o[13]),
+ INVx1_bottom U2297 (.A(keysched_new_key_o[13]),
     .Y(n1884));
  INVx1_bottom U2298 (.A(keysched_new_key_o[12]),
     .Y(n1885));
  INVx1_bottom U2299 (.A(keysched_new_key_o[11]),
     .Y(n1886));
- OAI22xp5_bottom U23 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U23 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2098),
     .B1(FE_OFN101_n11),
     .B2(n2400),
     .Y(subbytes_data_i[91]));
- INVx1_upper U2300 (.A(keysched_new_key_o[10]),
+ INVx1_bottom U2300 (.A(keysched_new_key_o[10]),
     .Y(n1887));
  INVx1_bottom U2301 (.A(keysched_new_key_o[9]),
     .Y(n1888));
- INVx1_upper U2302 (.A(keysched_new_key_o[8]),
+ INVx1_bottom U2302 (.A(keysched_new_key_o[8]),
     .Y(n1889));
- INVx1_upper U2303 (.A(keysched_new_key_o[127]),
+ INVx1_bottom U2303 (.A(keysched_new_key_o[127]),
     .Y(n1890));
- INVx1_upper U2304 (.A(keysched_new_key_o[95]),
+ INVx1_bottom U2304 (.A(keysched_new_key_o[95]),
     .Y(n1891));
- INVx1_upper U2305 (.A(keysched_new_key_o[63]),
+ INVx1_bottom U2305 (.A(keysched_new_key_o[63]),
     .Y(n1892));
  INVx1_bottom U2306 (.A(keysched_new_key_o[31]),
     .Y(n1893));
@@ -5677,93 +5677,93 @@ module aes (clk,
     .Y(n1894));
  INVx1_bottom U2308 (.A(keysched_new_key_o[94]),
     .Y(n1895));
- INVx1_upper U2309 (.A(keysched_new_key_o[62]),
+ INVx1_bottom U2309 (.A(keysched_new_key_o[62]),
     .Y(n1896));
- OAI22xp5_bottom U231 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U231 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2053),
     .B1(FE_OFN99_n11),
     .B2(n2503),
     .Y(subbytes_data_i[112]));
  INVx1_bottom U2310 (.A(keysched_new_key_o[30]),
     .Y(n1897));
- INVx1_upper U2311 (.A(keysched_new_key_o[125]),
+ INVx1_bottom U2311 (.A(keysched_new_key_o[125]),
     .Y(n1898));
- INVx1_upper U2312 (.A(keysched_new_key_o[93]),
+ INVx1_bottom U2312 (.A(keysched_new_key_o[93]),
     .Y(n1899));
- INVx1_upper U2313 (.A(keysched_new_key_o[61]),
+ INVx1_bottom U2313 (.A(keysched_new_key_o[61]),
     .Y(n1900));
- INVx1_upper U2314 (.A(keysched_new_key_o[29]),
+ INVx1_bottom U2314 (.A(keysched_new_key_o[29]),
     .Y(n1901));
- INVx1_upper U2315 (.A(keysched_new_key_o[124]),
+ INVx1_bottom U2315 (.A(keysched_new_key_o[124]),
     .Y(n1902));
- INVx1_upper U2316 (.A(keysched_new_key_o[92]),
+ INVx1_bottom U2316 (.A(keysched_new_key_o[92]),
     .Y(n1903));
- INVx1_bottom U2317 (.A(keysched_new_key_o[60]),
+ INVx1_upper U2317 (.A(keysched_new_key_o[60]),
     .Y(n1904));
- INVx1_bottom U2318 (.A(keysched_new_key_o[28]),
+ INVx1_upper U2318 (.A(keysched_new_key_o[28]),
     .Y(n1905));
  INVx1_upper U2319 (.A(keysched_new_key_o[123]),
     .Y(n1906));
- INVx1_bottom U2320 (.A(keysched_new_key_o[91]),
+ INVx1_upper U2320 (.A(keysched_new_key_o[91]),
     .Y(n1907));
- INVx1_bottom U2321 (.A(keysched_new_key_o[59]),
+ INVx1_upper U2321 (.A(keysched_new_key_o[59]),
     .Y(n1908));
- INVx1_bottom U2322 (.A(keysched_new_key_o[27]),
+ INVx1_upper U2322 (.A(keysched_new_key_o[27]),
     .Y(n1909));
- INVx1_bottom U2323 (.A(keysched_new_key_o[122]),
+ INVx1_upper U2323 (.A(keysched_new_key_o[122]),
     .Y(n1910));
- INVx1_bottom U2324 (.A(keysched_new_key_o[90]),
+ INVx1_upper U2324 (.A(keysched_new_key_o[90]),
     .Y(n1911));
  INVx1_upper U2325 (.A(keysched_new_key_o[58]),
     .Y(n1912));
  INVx1_bottom U2326 (.A(keysched_new_key_o[26]),
     .Y(n1913));
- INVx1_upper U2327 (.A(keysched_new_key_o[121]),
+ INVx1_bottom U2327 (.A(keysched_new_key_o[121]),
     .Y(n1914));
  INVx1_upper U2328 (.A(keysched_new_key_o[89]),
     .Y(n1915));
- INVx1_bottom U2329 (.A(keysched_new_key_o[57]),
+ INVx1_upper U2329 (.A(keysched_new_key_o[57]),
     .Y(n1916));
- OAI22xp5_bottom U233 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U233 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2049),
     .B1(FE_OFN101_n11),
     .B2(n2504),
     .Y(subbytes_data_i[111]));
- INVx1_bottom U2330 (.A(keysched_new_key_o[25]),
+ INVx1_upper U2330 (.A(keysched_new_key_o[25]),
     .Y(n1917));
- INVx1_upper U2331 (.A(keysched_new_key_o[120]),
+ INVx1_bottom U2331 (.A(keysched_new_key_o[120]),
     .Y(n1918));
  INVx1_bottom U2332 (.A(keysched_new_key_o[88]),
     .Y(n1919));
- INVx1_bottom U2333 (.A(keysched_new_key_o[56]),
+ INVx1_upper U2333 (.A(keysched_new_key_o[56]),
     .Y(n1920));
- INVx1_upper U2334 (.A(keysched_new_key_o[24]),
+ INVx1_bottom U2334 (.A(keysched_new_key_o[24]),
     .Y(n1921));
- INVx1_upper U2335 (.A(keysched_new_key_o[119]),
+ INVx1_bottom U2335 (.A(keysched_new_key_o[119]),
     .Y(n1922));
- INVx1_upper U2336 (.A(keysched_new_key_o[87]),
+ INVx1_bottom U2336 (.A(keysched_new_key_o[87]),
     .Y(n1923));
- INVx1_upper U2337 (.A(keysched_new_key_o[55]),
+ INVx1_bottom U2337 (.A(keysched_new_key_o[55]),
     .Y(n1924));
  INVx1_upper U2338 (.A(keysched_new_key_o[23]),
     .Y(n1925));
- INVx1_upper U2339 (.A(keysched_new_key_o[118]),
+ INVx1_bottom U2339 (.A(keysched_new_key_o[118]),
     .Y(n1926));
- INVx1_upper U2340 (.A(keysched_new_key_o[86]),
+ INVx1_bottom U2340 (.A(keysched_new_key_o[86]),
     .Y(n1927));
- INVx1_upper U2341 (.A(keysched_new_key_o[54]),
+ INVx1_bottom U2341 (.A(keysched_new_key_o[54]),
     .Y(n1928));
- INVx1_upper U2342 (.A(keysched_new_key_o[22]),
+ INVx1_bottom U2342 (.A(keysched_new_key_o[22]),
     .Y(n1929));
- INVx1_upper U2343 (.A(keysched_new_key_o[117]),
+ INVx1_bottom U2343 (.A(keysched_new_key_o[117]),
     .Y(n1930));
- INVx1_upper U2344 (.A(keysched_new_key_o[85]),
+ INVx1_bottom U2344 (.A(keysched_new_key_o[85]),
     .Y(n1931));
- INVx1_upper U2345 (.A(keysched_new_key_o[53]),
+ INVx1_bottom U2345 (.A(keysched_new_key_o[53]),
     .Y(n1932));
  INVx1_bottom U2346 (.A(keysched_new_key_o[21]),
     .Y(n1933));
- INVx1_upper U2347 (.A(keysched_new_key_o[116]),
+ INVx1_bottom U2347 (.A(keysched_new_key_o[116]),
     .Y(n1934));
  INVx1_bottom U2348 (.A(keysched_new_key_o[84]),
     .Y(n1935));
@@ -5784,58 +5784,58 @@ module aes (clk,
     .Y(n1940));
  INVx1_upper U2354 (.A(keysched_new_key_o[19]),
     .Y(n1941));
- INVx1_upper U2355 (.A(keysched_new_key_o[114]),
+ INVx1_bottom U2355 (.A(keysched_new_key_o[114]),
     .Y(n1942));
- INVx1_upper U2356 (.A(keysched_new_key_o[82]),
+ INVx1_bottom U2356 (.A(keysched_new_key_o[82]),
     .Y(n1943));
- INVx1_upper U2357 (.A(keysched_new_key_o[50]),
+ INVx1_bottom U2357 (.A(keysched_new_key_o[50]),
     .Y(n1944));
  INVx1_upper U2358 (.A(keysched_new_key_o[18]),
     .Y(n1945));
- INVx1_upper U2359 (.A(keysched_new_key_o[113]),
+ INVx1_bottom U2359 (.A(keysched_new_key_o[113]),
     .Y(n1946));
  INVx1_upper U2360 (.A(keysched_new_key_o[81]),
     .Y(n1947));
- INVx1_upper U2361 (.A(keysched_new_key_o[49]),
+ INVx1_bottom U2361 (.A(keysched_new_key_o[49]),
     .Y(n1948));
- INVx1_upper U2362 (.A(keysched_new_key_o[17]),
+ INVx1_bottom U2362 (.A(keysched_new_key_o[17]),
     .Y(n1949));
  INVx1_bottom U2363 (.A(keysched_new_key_o[112]),
     .Y(n1950));
  INVx1_upper U2364 (.A(keysched_new_key_o[80]),
     .Y(n1951));
- INVx1_upper U2365 (.A(keysched_new_key_o[48]),
+ INVx1_bottom U2365 (.A(keysched_new_key_o[48]),
     .Y(n1952));
  INVx1_bottom U2366 (.A(keysched_new_key_o[16]),
     .Y(n1953));
  INVx1_bottom U2367 (.A(keysched_new_key_o[103]),
     .Y(n1954));
- INVx1_bottom U2368 (.A(keysched_new_key_o[71]),
+ INVx1_upper U2368 (.A(keysched_new_key_o[71]),
     .Y(n1955));
  INVx1_bottom U2369 (.A(keysched_new_key_o[39]),
     .Y(n1956));
- OAI22xp5_bottom U237 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U237 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2028),
     .B1(FE_OFN102_n11),
     .B2(n2506),
     .Y(subbytes_data_i[10]));
- INVx1_upper U2370 (.A(keysched_new_key_o[7]),
+ INVx1_bottom U2370 (.A(keysched_new_key_o[7]),
     .Y(n1957));
- INVx1_upper U2371 (.A(keysched_new_key_o[102]),
+ INVx1_bottom U2371 (.A(keysched_new_key_o[102]),
     .Y(n1958));
  INVx1_bottom U2372 (.A(keysched_new_key_o[70]),
     .Y(n1959));
- INVx1_bottom U2373 (.A(keysched_new_key_o[38]),
+ INVx1_upper U2373 (.A(keysched_new_key_o[38]),
     .Y(n1960));
- INVx1_upper U2374 (.A(keysched_new_key_o[6]),
+ INVx1_bottom U2374 (.A(keysched_new_key_o[6]),
     .Y(n1961));
  INVx1_bottom U2375 (.A(keysched_new_key_o[101]),
     .Y(n1962));
- INVx1_upper U2376 (.A(keysched_new_key_o[69]),
+ INVx1_bottom U2376 (.A(keysched_new_key_o[69]),
     .Y(n1963));
  INVx1_upper U2377 (.A(keysched_new_key_o[37]),
     .Y(n1964));
- INVx1_upper U2378 (.A(keysched_new_key_o[5]),
+ INVx1_bottom U2378 (.A(keysched_new_key_o[5]),
     .Y(n1965));
  INVx1_bottom U2379 (.A(keysched_new_key_o[100]),
     .Y(n1966));
@@ -5845,13 +5845,13 @@ module aes (clk,
     .Y(n1968));
  INVx1_bottom U2382 (.A(keysched_new_key_o[4]),
     .Y(n1969));
- INVx1_upper U2383 (.A(keysched_new_key_o[99]),
+ INVx1_bottom U2383 (.A(keysched_new_key_o[99]),
     .Y(n1970));
- INVx1_bottom U2384 (.A(keysched_new_key_o[67]),
+ INVx1_upper U2384 (.A(keysched_new_key_o[67]),
     .Y(n1971));
- INVx1_bottom U2385 (.A(keysched_new_key_o[35]),
+ INVx1_upper U2385 (.A(keysched_new_key_o[35]),
     .Y(n1972));
- INVx1_upper U2386 (.A(keysched_new_key_o[3]),
+ INVx1_bottom U2386 (.A(keysched_new_key_o[3]),
     .Y(n1973));
  INVx1_bottom U2387 (.A(keysched_new_key_o[98]),
     .Y(n1974));
@@ -5859,50 +5859,50 @@ module aes (clk,
     .Y(n1975));
  INVx1_upper U2389 (.A(keysched_new_key_o[34]),
     .Y(n1976));
- OAI22xp5_bottom U239 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U239 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2041),
     .B1(FE_OFN101_n11),
     .B2(n2507),
     .Y(subbytes_data_i[109]));
- INVx1_upper U2390 (.A(keysched_new_key_o[2]),
+ INVx1_bottom U2390 (.A(keysched_new_key_o[2]),
     .Y(n1977));
- INVx1_upper U2391 (.A(keysched_new_key_o[97]),
+ INVx1_bottom U2391 (.A(keysched_new_key_o[97]),
     .Y(n1978));
- INVx1_upper U2392 (.A(keysched_new_key_o[65]),
+ INVx1_bottom U2392 (.A(keysched_new_key_o[65]),
     .Y(n1979));
- INVx1_upper U2393 (.A(keysched_new_key_o[33]),
+ INVx1_bottom U2393 (.A(keysched_new_key_o[33]),
     .Y(n1980));
- INVx1_upper U2394 (.A(keysched_new_key_o[1]),
+ INVx1_bottom U2394 (.A(keysched_new_key_o[1]),
     .Y(n1981));
- INVx1_upper U2395 (.A(keysched_new_key_o[96]),
+ INVx1_bottom U2395 (.A(keysched_new_key_o[96]),
     .Y(n1982));
- INVx1_upper U2396 (.A(keysched_new_key_o[64]),
+ INVx1_bottom U2396 (.A(keysched_new_key_o[64]),
     .Y(n1983));
- INVx1_upper U2397 (.A(keysched_new_key_o[32]),
+ INVx1_bottom U2397 (.A(keysched_new_key_o[32]),
     .Y(n1984));
  INVx1_upper U2398 (.A(keysched_new_key_o[0]),
     .Y(n1985));
- INVx1_bottom U2399 (.A(n1052),
+ INVx1_upper U2399 (.A(n1052),
     .Y(n1986));
- INVx1_bottom U2400 (.A(n1095),
+ INVx1_upper U2400 (.A(n1095),
     .Y(n1987));
- INVx1_upper U2401 (.A(mixcol_data_o[0]),
+ INVx1_bottom U2401 (.A(mixcol_data_o[0]),
     .Y(n1988));
- INVx1_upper U2402 (.A(mixcol_data_o[96]),
+ INVx1_bottom U2402 (.A(mixcol_data_o[96]),
     .Y(n1989));
- INVx1_upper U2403 (.A(mixcol_data_o[64]),
+ INVx1_bottom U2403 (.A(mixcol_data_o[64]),
     .Y(n1990));
- INVx1_upper U2404 (.A(mixcol_data_o[32]),
+ INVx1_bottom U2404 (.A(mixcol_data_o[32]),
     .Y(n1991));
- INVx1_bottom U2405 (.A(mixcol_data_o[1]),
+ INVx1_upper U2405 (.A(mixcol_data_o[1]),
     .Y(n1992));
- INVx1_upper U2406 (.A(mixcol_data_o[97]),
+ INVx1_bottom U2406 (.A(mixcol_data_o[97]),
     .Y(n1993));
  INVx1_bottom U2407 (.A(mixcol_data_o[65]),
     .Y(n1994));
- INVx1_upper U2408 (.A(mixcol_data_o[33]),
+ INVx1_bottom U2408 (.A(mixcol_data_o[33]),
     .Y(n1995));
- INVx1_bottom U2409 (.A(mixcol_data_o[2]),
+ INVx1_upper U2409 (.A(mixcol_data_o[2]),
     .Y(n1996));
  OAI22xp5_upper U241 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2037),
@@ -5913,11 +5913,11 @@ module aes (clk,
     .Y(n1997));
  INVx1_bottom U2411 (.A(mixcol_data_o[66]),
     .Y(n1998));
- INVx1_upper U2412 (.A(mixcol_data_o[34]),
+ INVx1_bottom U2412 (.A(mixcol_data_o[34]),
     .Y(n1999));
  INVx1_upper U2413 (.A(mixcol_data_o[3]),
     .Y(n2000));
- INVx1_upper U2414 (.A(mixcol_data_o[99]),
+ INVx1_bottom U2414 (.A(mixcol_data_o[99]),
     .Y(n2001));
  INVx1_bottom U2415 (.A(mixcol_data_o[67]),
     .Y(n2002));
@@ -5925,11 +5925,11 @@ module aes (clk,
     .Y(n2003));
  INVx1_bottom U2417 (.A(mixcol_data_o[4]),
     .Y(n2004));
- INVx1_upper U2418 (.A(mixcol_data_o[100]),
+ INVx1_bottom U2418 (.A(mixcol_data_o[100]),
     .Y(n2005));
- INVx1_upper U2419 (.A(mixcol_data_o[68]),
+ INVx1_bottom U2419 (.A(mixcol_data_o[68]),
     .Y(n2006));
- INVx1_upper U2420 (.A(mixcol_data_o[36]),
+ INVx1_bottom U2420 (.A(mixcol_data_o[36]),
     .Y(n2007));
  INVx1_bottom U2421 (.A(mixcol_data_o[5]),
     .Y(n2008));
@@ -5937,11 +5937,11 @@ module aes (clk,
     .Y(n2009));
  INVx1_bottom U2423 (.A(mixcol_data_o[69]),
     .Y(n2010));
- INVx1_upper U2424 (.A(mixcol_data_o[37]),
+ INVx1_bottom U2424 (.A(mixcol_data_o[37]),
     .Y(n2011));
- INVx1_upper U2425 (.A(mixcol_data_o[6]),
+ INVx1_bottom U2425 (.A(mixcol_data_o[6]),
     .Y(n2012));
- INVx1_upper U2426 (.A(mixcol_data_o[102]),
+ INVx1_bottom U2426 (.A(mixcol_data_o[102]),
     .Y(n2013));
  INVx1_bottom U2427 (.A(mixcol_data_o[70]),
     .Y(n2014));
@@ -5949,12 +5949,12 @@ module aes (clk,
     .Y(n2015));
  INVx1_upper U2429 (.A(mixcol_data_o[7]),
     .Y(n2016));
- OAI22xp5_bottom U243 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U243 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2033),
     .B1(FE_OFN101_n11),
     .B2(n2509),
     .Y(subbytes_data_i[107]));
- INVx1_upper U2430 (.A(mixcol_data_o[103]),
+ INVx1_bottom U2430 (.A(mixcol_data_o[103]),
     .Y(n2017));
  INVx1_bottom U2431 (.A(mixcol_data_o[71]),
     .Y(n2018));
@@ -5962,29 +5962,29 @@ module aes (clk,
     .Y(n2019));
  INVx1_bottom U2433 (.A(mixcol_data_o[8]),
     .Y(n2020));
- INVx1_upper U2434 (.A(mixcol_data_o[104]),
+ INVx1_bottom U2434 (.A(mixcol_data_o[104]),
     .Y(n2021));
  INVx1_bottom U2435 (.A(mixcol_data_o[72]),
     .Y(n2022));
- INVx1_upper U2436 (.A(mixcol_data_o[40]),
+ INVx1_bottom U2436 (.A(mixcol_data_o[40]),
     .Y(n2023));
- INVx1_bottom U2437 (.A(mixcol_data_o[9]),
+ INVx1_upper U2437 (.A(mixcol_data_o[9]),
     .Y(n2024));
- INVx1_upper U2438 (.A(mixcol_data_o[105]),
+ INVx1_bottom U2438 (.A(mixcol_data_o[105]),
     .Y(n2025));
- INVx1_upper U2439 (.A(mixcol_data_o[73]),
+ INVx1_bottom U2439 (.A(mixcol_data_o[73]),
     .Y(n2026));
  INVx1_bottom U2440 (.A(mixcol_data_o[41]),
     .Y(n2027));
  INVx1_bottom U2441 (.A(mixcol_data_o[10]),
     .Y(n2028));
- INVx1_upper U2442 (.A(mixcol_data_o[106]),
+ INVx1_bottom U2442 (.A(mixcol_data_o[106]),
     .Y(n2029));
  INVx1_bottom U2443 (.A(mixcol_data_o[74]),
     .Y(n2030));
  INVx1_bottom U2444 (.A(mixcol_data_o[42]),
     .Y(n2031));
- INVx1_upper U2445 (.A(mixcol_data_o[11]),
+ INVx1_bottom U2445 (.A(mixcol_data_o[11]),
     .Y(n2032));
  INVx1_bottom U2446 (.A(mixcol_data_o[107]),
     .Y(n2033));
@@ -5992,16 +5992,16 @@ module aes (clk,
     .Y(n2034));
  INVx1_bottom U2448 (.A(mixcol_data_o[43]),
     .Y(n2035));
- INVx1_upper U2449 (.A(mixcol_data_o[12]),
+ INVx1_bottom U2449 (.A(mixcol_data_o[12]),
     .Y(n2036));
  OAI22xp5_upper U245 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2029),
     .B1(FE_OFN101_n11),
     .B2(n2510),
     .Y(subbytes_data_i[106]));
- INVx1_upper U2450 (.A(mixcol_data_o[108]),
+ INVx1_bottom U2450 (.A(mixcol_data_o[108]),
     .Y(n2037));
- INVx1_upper U2451 (.A(mixcol_data_o[76]),
+ INVx1_bottom U2451 (.A(mixcol_data_o[76]),
     .Y(n2038));
  INVx1_bottom U2452 (.A(mixcol_data_o[44]),
     .Y(n2039));
@@ -6011,54 +6011,54 @@ module aes (clk,
     .Y(n2041));
  INVx1_bottom U2455 (.A(mixcol_data_o[77]),
     .Y(n2042));
- INVx1_upper U2456 (.A(mixcol_data_o[45]),
+ INVx1_bottom U2456 (.A(mixcol_data_o[45]),
     .Y(n2043));
  INVx1_upper U2457 (.A(mixcol_data_o[14]),
     .Y(n2044));
- INVx1_upper U2458 (.A(mixcol_data_o[110]),
+ INVx1_bottom U2458 (.A(mixcol_data_o[110]),
     .Y(n2045));
- INVx1_upper U2459 (.A(mixcol_data_o[78]),
+ INVx1_bottom U2459 (.A(mixcol_data_o[78]),
     .Y(n2046));
- INVx1_bottom U2460 (.A(mixcol_data_o[46]),
+ INVx1_upper U2460 (.A(mixcol_data_o[46]),
     .Y(n2047));
- INVx1_upper U2461 (.A(mixcol_data_o[15]),
+ INVx1_bottom U2461 (.A(mixcol_data_o[15]),
     .Y(n2048));
  INVx1_bottom U2462 (.A(mixcol_data_o[111]),
     .Y(n2049));
- INVx1_upper U2463 (.A(mixcol_data_o[79]),
+ INVx1_bottom U2463 (.A(mixcol_data_o[79]),
     .Y(n2050));
  INVx1_bottom U2464 (.A(mixcol_data_o[47]),
     .Y(n2051));
- INVx1_bottom U2465 (.A(mixcol_data_o[16]),
+ INVx1_upper U2465 (.A(mixcol_data_o[16]),
     .Y(n2052));
  INVx1_bottom U2466 (.A(mixcol_data_o[112]),
     .Y(n2053));
- INVx1_upper U2467 (.A(mixcol_data_o[80]),
+ INVx1_bottom U2467 (.A(mixcol_data_o[80]),
     .Y(n2054));
- INVx1_upper U2468 (.A(mixcol_data_o[48]),
+ INVx1_bottom U2468 (.A(mixcol_data_o[48]),
     .Y(n2055));
- INVx1_bottom U2469 (.A(mixcol_data_o[17]),
+ INVx1_upper U2469 (.A(mixcol_data_o[17]),
     .Y(n2056));
  OAI22xp5_upper U247 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2025),
     .B1(FE_OFN101_n11),
     .B2(n2511),
     .Y(subbytes_data_i[105]));
- INVx1_upper U2470 (.A(mixcol_data_o[113]),
+ INVx1_bottom U2470 (.A(mixcol_data_o[113]),
     .Y(n2057));
- INVx1_upper U2471 (.A(mixcol_data_o[81]),
+ INVx1_bottom U2471 (.A(mixcol_data_o[81]),
     .Y(n2058));
- INVx1_upper U2472 (.A(mixcol_data_o[49]),
+ INVx1_bottom U2472 (.A(mixcol_data_o[49]),
     .Y(n2059));
  INVx1_bottom U2473 (.A(mixcol_data_o[18]),
     .Y(n2060));
- INVx1_upper U2474 (.A(mixcol_data_o[114]),
+ INVx1_bottom U2474 (.A(mixcol_data_o[114]),
     .Y(n2061));
  INVx1_bottom U2475 (.A(mixcol_data_o[82]),
     .Y(n2062));
- INVx1_upper U2476 (.A(mixcol_data_o[50]),
+ INVx1_bottom U2476 (.A(mixcol_data_o[50]),
     .Y(n2063));
- INVx1_upper U2477 (.A(mixcol_data_o[19]),
+ INVx1_bottom U2477 (.A(mixcol_data_o[19]),
     .Y(n2064));
  INVx1_bottom U2478 (.A(mixcol_data_o[115]),
     .Y(n2065));
@@ -6066,9 +6066,9 @@ module aes (clk,
     .Y(n2066));
  INVx1_bottom U2480 (.A(mixcol_data_o[51]),
     .Y(n2067));
- INVx1_upper U2481 (.A(mixcol_data_o[20]),
+ INVx1_bottom U2481 (.A(mixcol_data_o[20]),
     .Y(n2068));
- INVx1_upper U2482 (.A(mixcol_data_o[116]),
+ INVx1_bottom U2482 (.A(mixcol_data_o[116]),
     .Y(n2069));
  INVx1_bottom U2483 (.A(mixcol_data_o[84]),
     .Y(n2070));
@@ -6076,61 +6076,61 @@ module aes (clk,
     .Y(n2071));
  INVx1_bottom U2485 (.A(mixcol_data_o[21]),
     .Y(n2072));
- INVx1_upper U2486 (.A(mixcol_data_o[117]),
+ INVx1_bottom U2486 (.A(mixcol_data_o[117]),
     .Y(n2073));
  INVx1_bottom U2487 (.A(mixcol_data_o[85]),
     .Y(n2074));
  INVx1_bottom U2488 (.A(mixcol_data_o[53]),
     .Y(n2075));
- INVx1_upper U2489 (.A(mixcol_data_o[22]),
+ INVx1_bottom U2489 (.A(mixcol_data_o[22]),
     .Y(n2076));
  OAI22xp5_upper U249 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2021),
     .B1(FE_OFN101_n11),
     .B2(n2512),
     .Y(subbytes_data_i[104]));
- INVx1_upper U2490 (.A(mixcol_data_o[118]),
+ INVx1_bottom U2490 (.A(mixcol_data_o[118]),
     .Y(n2077));
- INVx1_upper U2491 (.A(mixcol_data_o[86]),
+ INVx1_bottom U2491 (.A(mixcol_data_o[86]),
     .Y(n2078));
- INVx1_upper U2492 (.A(mixcol_data_o[54]),
+ INVx1_bottom U2492 (.A(mixcol_data_o[54]),
     .Y(n2079));
- INVx1_upper U2493 (.A(mixcol_data_o[23]),
+ INVx1_bottom U2493 (.A(mixcol_data_o[23]),
     .Y(n2080));
- INVx1_upper U2494 (.A(mixcol_data_o[119]),
+ INVx1_bottom U2494 (.A(mixcol_data_o[119]),
     .Y(n2081));
- INVx1_upper U2495 (.A(mixcol_data_o[87]),
+ INVx1_bottom U2495 (.A(mixcol_data_o[87]),
     .Y(n2082));
- INVx1_upper U2496 (.A(mixcol_data_o[55]),
+ INVx1_bottom U2496 (.A(mixcol_data_o[55]),
     .Y(n2083));
- INVx1_bottom U2497 (.A(mixcol_data_o[24]),
+ INVx1_upper U2497 (.A(mixcol_data_o[24]),
     .Y(n2084));
- INVx1_upper U2498 (.A(mixcol_data_o[120]),
+ INVx1_bottom U2498 (.A(mixcol_data_o[120]),
     .Y(n2085));
  INVx1_bottom U2499 (.A(mixcol_data_o[88]),
     .Y(n2086));
- OAI22xp5_bottom U25 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U25 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2094),
     .B1(FE_OFN101_n11),
     .B2(n2401),
     .Y(subbytes_data_i[90]));
  INVx1_bottom U2500 (.A(mixcol_data_o[56]),
     .Y(n2087));
- INVx1_bottom U2501 (.A(mixcol_data_o[25]),
+ INVx1_upper U2501 (.A(mixcol_data_o[25]),
     .Y(n2088));
- INVx1_upper U2502 (.A(mixcol_data_o[121]),
+ INVx1_bottom U2502 (.A(mixcol_data_o[121]),
     .Y(n2089));
- INVx1_upper U2503 (.A(mixcol_data_o[89]),
+ INVx1_bottom U2503 (.A(mixcol_data_o[89]),
     .Y(n2090));
- INVx1_bottom U2504 (.A(mixcol_data_o[57]),
+ INVx1_upper U2504 (.A(mixcol_data_o[57]),
     .Y(n2091));
- INVx1_bottom U2505 (.A(mixcol_data_o[26]),
+ INVx1_upper U2505 (.A(mixcol_data_o[26]),
     .Y(n2092));
  INVx1_bottom U2506 (.A(mixcol_data_o[122]),
     .Y(n2093));
  INVx1_bottom U2507 (.A(mixcol_data_o[90]),
     .Y(n2094));
- INVx1_upper U2508 (.A(mixcol_data_o[58]),
+ INVx1_bottom U2508 (.A(mixcol_data_o[58]),
     .Y(n2095));
  INVx1_upper U2509 (.A(mixcol_data_o[27]),
     .Y(n2096));
@@ -6153,13 +6153,13 @@ module aes (clk,
     .Y(n2102));
  INVx1_bottom U2516 (.A(mixcol_data_o[60]),
     .Y(n2103));
- INVx1_upper U2517 (.A(mixcol_data_o[29]),
+ INVx1_bottom U2517 (.A(mixcol_data_o[29]),
     .Y(n2104));
  INVx1_bottom U2518 (.A(mixcol_data_o[125]),
     .Y(n2105));
  INVx1_bottom U2519 (.A(mixcol_data_o[93]),
     .Y(n2106));
- INVx1_upper U2520 (.A(mixcol_data_o[61]),
+ INVx1_bottom U2520 (.A(mixcol_data_o[61]),
     .Y(n2107));
  INVx1_bottom U2521 (.A(mixcol_data_o[30]),
     .Y(n2108));
@@ -6167,15 +6167,15 @@ module aes (clk,
     .Y(n2109));
  INVx1_bottom U2523 (.A(mixcol_data_o[94]),
     .Y(n2110));
- INVx1_upper U2524 (.A(mixcol_data_o[62]),
+ INVx1_bottom U2524 (.A(mixcol_data_o[62]),
     .Y(n2111));
- INVx1_upper U2525 (.A(mixcol_data_o[31]),
+ INVx1_bottom U2525 (.A(mixcol_data_o[31]),
     .Y(n2112));
- INVx1_upper U2526 (.A(mixcol_data_o[127]),
+ INVx1_bottom U2526 (.A(mixcol_data_o[127]),
     .Y(n2113));
- INVx1_upper U2527 (.A(mixcol_data_o[95]),
+ INVx1_bottom U2527 (.A(mixcol_data_o[95]),
     .Y(n2114));
- INVx1_upper U2528 (.A(mixcol_data_o[63]),
+ INVx1_bottom U2528 (.A(mixcol_data_o[63]),
     .Y(n2115));
  INVx1_bottom U2529 (.A(subbytes_ready_o),
     .Y(n2116));
@@ -6186,25 +6186,25 @@ module aes (clk,
     .Y(subbytes_data_i[102]));
  INVx1_bottom U2530 (.A(n1079),
     .Y(n2117));
- INVx1_bottom U2531 (.A(n1087),
+ INVx1_upper U2531 (.A(n1087),
     .Y(n2118));
- INVx1_upper U2532 (.A(subbytes_data_o[127]),
+ INVx1_bottom U2532 (.A(subbytes_data_o[127]),
     .Y(n2119));
  INVx1_bottom U2533 (.A(subbytes_data_o[126]),
     .Y(n2120));
  INVx1_bottom U2534 (.A(subbytes_data_o[125]),
     .Y(n2121));
- INVx1_upper U2535 (.A(subbytes_data_o[124]),
+ INVx1_bottom U2535 (.A(subbytes_data_o[124]),
     .Y(n2122));
  INVx1_bottom U2536 (.A(subbytes_data_o[123]),
     .Y(n2123));
- INVx1_upper U2537 (.A(subbytes_data_o[122]),
+ INVx1_bottom U2537 (.A(subbytes_data_o[122]),
     .Y(n2124));
  INVx1_upper U2538 (.A(subbytes_data_o[121]),
     .Y(n2125));
- INVx1_upper U2539 (.A(subbytes_data_o[120]),
+ INVx1_bottom U2539 (.A(subbytes_data_o[120]),
     .Y(n2126));
- INVx1_upper U2540 (.A(subbytes_data_o[95]),
+ INVx1_bottom U2540 (.A(subbytes_data_o[95]),
     .Y(n2127));
  INVx1_bottom U2541 (.A(subbytes_data_o[94]),
     .Y(n2128));
@@ -6216,26 +6216,26 @@ module aes (clk,
     .Y(n2131));
  INVx1_bottom U2545 (.A(subbytes_data_o[90]),
     .Y(n2132));
- INVx1_upper U2546 (.A(subbytes_data_o[89]),
+ INVx1_bottom U2546 (.A(subbytes_data_o[89]),
     .Y(n2133));
  INVx1_bottom U2547 (.A(subbytes_data_o[88]),
     .Y(n2134));
- INVx1_upper U2548 (.A(subbytes_data_o[63]),
+ INVx1_bottom U2548 (.A(subbytes_data_o[63]),
     .Y(n2135));
  INVx1_bottom U2549 (.A(subbytes_data_o[62]),
     .Y(n2136));
- OAI22xp5_bottom U255 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U255 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2009),
     .B1(FE_OFN100_n11),
     .B2(n2515),
     .Y(subbytes_data_i[101]));
- INVx1_upper U2550 (.A(subbytes_data_o[61]),
+ INVx1_bottom U2550 (.A(subbytes_data_o[61]),
     .Y(n2137));
  INVx1_bottom U2551 (.A(subbytes_data_o[60]),
     .Y(n2138));
  INVx1_bottom U2552 (.A(subbytes_data_o[59]),
     .Y(n2139));
- INVx1_upper U2553 (.A(subbytes_data_o[58]),
+ INVx1_bottom U2553 (.A(subbytes_data_o[58]),
     .Y(n2140));
  INVx1_bottom U2554 (.A(subbytes_data_o[57]),
     .Y(n2141));
@@ -6251,15 +6251,15 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2517),
     .Y(subbytes_data_i[0]));
- INVx1_upper U2596 (.A(subbytes_data_o[31]),
+ INVx1_bottom U2596 (.A(subbytes_data_o[31]),
     .Y(n2183));
  INVx1_bottom U2597 (.A(subbytes_data_o[30]),
     .Y(n2184));
- INVx1_upper U2598 (.A(subbytes_data_o[29]),
+ INVx1_bottom U2598 (.A(subbytes_data_o[29]),
     .Y(n2185));
- INVx1_upper U2599 (.A(subbytes_data_o[28]),
+ INVx1_bottom U2599 (.A(subbytes_data_o[28]),
     .Y(n2186));
- INVx1_upper U2600 (.A(subbytes_data_o[27]),
+ INVx1_bottom U2600 (.A(subbytes_data_o[27]),
     .Y(n2187));
  INVx1_bottom U2601 (.A(subbytes_data_o[26]),
     .Y(n2188));
@@ -6267,162 +6267,162 @@ module aes (clk,
     .Y(n2189));
  INVx1_bottom U2603 (.A(subbytes_data_o[24]),
     .Y(n2190));
- AO22x1_bottom U262 (.A1(keysched_sbox_data_o[7]),
+ AO22x1_upper U262 (.A1(keysched_sbox_data_o[7]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[7]),
     .B2(n1853),
     .Y(sbox_data_i[7]));
- AO22x1_bottom U263 (.A1(keysched_sbox_data_o[6]),
+ AO22x1_upper U263 (.A1(keysched_sbox_data_o[6]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[6]),
     .B2(n1853),
     .Y(sbox_data_i[6]));
- AO22x1_bottom U264 (.A1(keysched_sbox_data_o[5]),
+ AO22x1_upper U264 (.A1(keysched_sbox_data_o[5]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[5]),
     .B2(n1853),
     .Y(sbox_data_i[5]));
- AO22x1_bottom U265 (.A1(keysched_sbox_data_o[4]),
+ AO22x1_upper U265 (.A1(keysched_sbox_data_o[4]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[4]),
     .B2(n1853),
     .Y(sbox_data_i[4]));
- INVx1_upper U2652 (.A(subbytes_data_o[7]),
+ INVx1_bottom U2652 (.A(subbytes_data_o[7]),
     .Y(n2239));
- INVx1_upper U2653 (.A(subbytes_data_o[6]),
+ INVx1_bottom U2653 (.A(subbytes_data_o[6]),
     .Y(n2240));
- INVx1_upper U2654 (.A(subbytes_data_o[5]),
+ INVx1_bottom U2654 (.A(subbytes_data_o[5]),
     .Y(n2241));
- INVx1_upper U2655 (.A(subbytes_data_o[4]),
+ INVx1_bottom U2655 (.A(subbytes_data_o[4]),
     .Y(n2242));
- INVx1_upper U2656 (.A(subbytes_data_o[3]),
+ INVx1_bottom U2656 (.A(subbytes_data_o[3]),
     .Y(n2243));
- INVx1_upper U2657 (.A(subbytes_data_o[2]),
+ INVx1_bottom U2657 (.A(subbytes_data_o[2]),
     .Y(n2244));
- INVx1_upper U2658 (.A(subbytes_data_o[1]),
+ INVx1_bottom U2658 (.A(subbytes_data_o[1]),
     .Y(n2245));
- INVx1_upper U2659 (.A(subbytes_data_o[0]),
+ INVx1_bottom U2659 (.A(subbytes_data_o[0]),
     .Y(n2246));
  AO22x1_bottom U266 (.A1(keysched_sbox_data_o[3]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[3]),
     .B2(n1853),
     .Y(sbox_data_i[3]));
- INVx1_bottom U2660 (.A(n1049),
+ INVx1_upper U2660 (.A(n1049),
     .Y(n2247));
- INVx1_bottom U2661 (.A(n1047),
+ INVx1_upper U2661 (.A(n1047),
     .Y(n2248));
- INVx1_upper U2662 (.A(key_i[127]),
+ INVx1_bottom U2662 (.A(key_i[127]),
     .Y(n2249));
  INVx1_bottom U2663 (.A(key_i[126]),
     .Y(n2250));
- INVx1_upper U2664 (.A(key_i[125]),
+ INVx1_bottom U2664 (.A(key_i[125]),
     .Y(n2251));
- INVx1_upper U2665 (.A(key_i[124]),
+ INVx1_bottom U2665 (.A(key_i[124]),
     .Y(n2252));
  INVx1_upper U2666 (.A(key_i[123]),
     .Y(n2253));
- INVx1_bottom U2667 (.A(key_i[122]),
+ INVx1_upper U2667 (.A(key_i[122]),
     .Y(n2254));
  INVx1_upper U2668 (.A(key_i[121]),
     .Y(n2255));
- INVx1_upper U2669 (.A(key_i[120]),
+ INVx1_bottom U2669 (.A(key_i[120]),
     .Y(n2256));
- AO22x1_bottom U267 (.A1(keysched_sbox_data_o[2]),
+ AO22x1_upper U267 (.A1(keysched_sbox_data_o[2]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[2]),
     .B2(n1853),
     .Y(sbox_data_i[2]));
- INVx1_upper U2670 (.A(key_i[119]),
+ INVx1_bottom U2670 (.A(key_i[119]),
     .Y(n2257));
- INVx1_upper U2671 (.A(key_i[118]),
+ INVx1_bottom U2671 (.A(key_i[118]),
     .Y(n2258));
- INVx1_upper U2672 (.A(key_i[117]),
+ INVx1_bottom U2672 (.A(key_i[117]),
     .Y(n2259));
- INVx1_upper U2673 (.A(key_i[116]),
+ INVx1_bottom U2673 (.A(key_i[116]),
     .Y(n2260));
  INVx1_bottom U2674 (.A(key_i[115]),
     .Y(n2261));
- INVx1_upper U2675 (.A(key_i[114]),
+ INVx1_bottom U2675 (.A(key_i[114]),
     .Y(n2262));
- INVx1_upper U2676 (.A(key_i[113]),
+ INVx1_bottom U2676 (.A(key_i[113]),
     .Y(n2263));
  INVx1_bottom U2677 (.A(key_i[112]),
     .Y(n2264));
  INVx1_bottom U2678 (.A(key_i[111]),
     .Y(n2265));
- INVx1_upper U2679 (.A(key_i[110]),
+ INVx1_bottom U2679 (.A(key_i[110]),
     .Y(n2266));
- AO22x1_bottom U268 (.A1(keysched_sbox_data_o[1]),
+ AO22x1_upper U268 (.A1(keysched_sbox_data_o[1]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[1]),
     .B2(n1853),
     .Y(sbox_data_i[1]));
  INVx1_bottom U2680 (.A(key_i[109]),
     .Y(n2267));
- INVx1_upper U2681 (.A(key_i[108]),
+ INVx1_bottom U2681 (.A(key_i[108]),
     .Y(n2268));
  INVx1_bottom U2682 (.A(key_i[107]),
     .Y(n2269));
- INVx1_upper U2683 (.A(key_i[106]),
+ INVx1_bottom U2683 (.A(key_i[106]),
     .Y(n2270));
- INVx1_upper U2684 (.A(key_i[105]),
+ INVx1_bottom U2684 (.A(key_i[105]),
     .Y(n2271));
- INVx1_upper U2685 (.A(key_i[104]),
+ INVx1_bottom U2685 (.A(key_i[104]),
     .Y(n2272));
  INVx1_bottom U2686 (.A(key_i[103]),
     .Y(n2273));
- INVx1_upper U2687 (.A(key_i[102]),
+ INVx1_bottom U2687 (.A(key_i[102]),
     .Y(n2274));
  INVx1_bottom U2688 (.A(key_i[101]),
     .Y(n2275));
- INVx1_upper U2689 (.A(key_i[100]),
+ INVx1_bottom U2689 (.A(key_i[100]),
     .Y(n2276));
- AO22x1_bottom U269 (.A1(keysched_sbox_data_o[0]),
+ AO22x1_upper U269 (.A1(keysched_sbox_data_o[0]),
     .A2(FE_OFN71_keysched_sbox_access_o),
     .B1(subbytes_sbox_data_o[0]),
     .B2(n1853),
     .Y(sbox_data_i[0]));
- INVx1_upper U2690 (.A(key_i[99]),
+ INVx1_bottom U2690 (.A(key_i[99]),
     .Y(n2277));
  INVx1_bottom U2691 (.A(key_i[98]),
     .Y(n2278));
  INVx1_upper U2692 (.A(key_i[97]),
     .Y(n2279));
- INVx1_upper U2693 (.A(key_i[96]),
+ INVx1_bottom U2693 (.A(key_i[96]),
     .Y(n2280));
- INVx1_upper U2694 (.A(key_i[95]),
+ INVx1_bottom U2694 (.A(key_i[95]),
     .Y(n2281));
  INVx1_bottom U2695 (.A(key_i[94]),
     .Y(n2282));
- INVx1_upper U2696 (.A(key_i[93]),
+ INVx1_bottom U2696 (.A(key_i[93]),
     .Y(n2283));
  INVx1_upper U2697 (.A(key_i[92]),
     .Y(n2284));
- INVx1_bottom U2698 (.A(key_i[91]),
+ INVx1_upper U2698 (.A(key_i[91]),
     .Y(n2285));
- INVx1_bottom U2699 (.A(key_i[90]),
+ INVx1_upper U2699 (.A(key_i[90]),
     .Y(n2286));
- OAI22xp5_bottom U27 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U27 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2020),
     .B1(FE_OFN102_n11),
     .B2(n2402),
     .Y(subbytes_data_i[8]));
  INVx1_upper U2700 (.A(key_i[89]),
     .Y(n2287));
- INVx1_bottom U2701 (.A(key_i[88]),
+ INVx1_upper U2701 (.A(key_i[88]),
     .Y(n2288));
- INVx1_upper U2702 (.A(key_i[87]),
+ INVx1_bottom U2702 (.A(key_i[87]),
     .Y(n2289));
- INVx1_upper U2703 (.A(key_i[86]),
+ INVx1_bottom U2703 (.A(key_i[86]),
     .Y(n2290));
- INVx1_upper U2704 (.A(key_i[85]),
+ INVx1_bottom U2704 (.A(key_i[85]),
     .Y(n2291));
  INVx1_bottom U2705 (.A(key_i[84]),
     .Y(n2292));
  INVx1_bottom U2706 (.A(key_i[83]),
     .Y(n2293));
- INVx1_upper U2707 (.A(key_i[82]),
+ INVx1_bottom U2707 (.A(key_i[82]),
     .Y(n2294));
  INVx1_upper U2708 (.A(key_i[81]),
     .Y(n2295));
@@ -6434,13 +6434,13 @@ module aes (clk,
     .Y(n1383));
  INVx1_bottom U2710 (.A(key_i[79]),
     .Y(n2297));
- INVx1_upper U2711 (.A(key_i[78]),
+ INVx1_bottom U2711 (.A(key_i[78]),
     .Y(n2298));
  INVx1_bottom U2712 (.A(key_i[77]),
     .Y(n2299));
  INVx1_upper U2713 (.A(key_i[76]),
     .Y(n2300));
- INVx1_bottom U2714 (.A(key_i[75]),
+ INVx1_upper U2714 (.A(key_i[75]),
     .Y(n2301));
  INVx1_bottom U2715 (.A(key_i[74]),
     .Y(n2302));
@@ -6461,57 +6461,57 @@ module aes (clk,
     .Y(n2307));
  INVx1_bottom U2721 (.A(key_i[68]),
     .Y(n2308));
- INVx1_bottom U2722 (.A(key_i[67]),
+ INVx1_upper U2722 (.A(key_i[67]),
     .Y(n2309));
  INVx1_bottom U2723 (.A(key_i[66]),
     .Y(n2310));
- INVx1_upper U2724 (.A(key_i[65]),
+ INVx1_bottom U2724 (.A(key_i[65]),
     .Y(n2311));
- INVx1_upper U2725 (.A(key_i[64]),
+ INVx1_bottom U2725 (.A(key_i[64]),
     .Y(n2312));
- INVx1_upper U2726 (.A(key_i[63]),
+ INVx1_bottom U2726 (.A(key_i[63]),
     .Y(n2313));
- INVx1_upper U2727 (.A(key_i[62]),
+ INVx1_bottom U2727 (.A(key_i[62]),
     .Y(n2314));
  INVx1_upper U2728 (.A(key_i[61]),
     .Y(n2315));
- INVx1_bottom U2729 (.A(key_i[60]),
+ INVx1_upper U2729 (.A(key_i[60]),
     .Y(n2316));
  XOR2xp5_upper U273 (.A(keysched_new_key_o[0]),
     .B(n274),
     .Y(n273));
- INVx1_bottom U2730 (.A(key_i[59]),
+ INVx1_upper U2730 (.A(key_i[59]),
     .Y(n2317));
  INVx1_upper U2731 (.A(key_i[58]),
     .Y(n2318));
- INVx1_bottom U2732 (.A(key_i[57]),
+ INVx1_upper U2732 (.A(key_i[57]),
     .Y(n2319));
- INVx1_bottom U2733 (.A(key_i[56]),
+ INVx1_upper U2733 (.A(key_i[56]),
     .Y(n2320));
- INVx1_upper U2734 (.A(key_i[55]),
+ INVx1_bottom U2734 (.A(key_i[55]),
     .Y(n2321));
- INVx1_upper U2735 (.A(key_i[54]),
+ INVx1_bottom U2735 (.A(key_i[54]),
     .Y(n2322));
- INVx1_upper U2736 (.A(key_i[53]),
+ INVx1_bottom U2736 (.A(key_i[53]),
     .Y(n2323));
  INVx1_bottom U2737 (.A(key_i[52]),
     .Y(n2324));
  INVx1_bottom U2738 (.A(key_i[51]),
     .Y(n2325));
- INVx1_upper U2739 (.A(key_i[50]),
+ INVx1_bottom U2739 (.A(key_i[50]),
     .Y(n2326));
  XOR2xp5_upper U274 (.A(key_i[0]),
     .B(n274),
     .Y(n271));
- INVx1_upper U2740 (.A(key_i[49]),
+ INVx1_bottom U2740 (.A(key_i[49]),
     .Y(n2327));
- INVx1_upper U2741 (.A(key_i[48]),
+ INVx1_bottom U2741 (.A(key_i[48]),
     .Y(n2328));
- INVx1_bottom U2742 (.A(key_i[47]),
+ INVx1_upper U2742 (.A(key_i[47]),
     .Y(n2329));
  INVx1_upper U2743 (.A(key_i[46]),
     .Y(n2330));
- INVx1_upper U2744 (.A(key_i[45]),
+ INVx1_bottom U2744 (.A(key_i[45]),
     .Y(n2331));
  INVx1_bottom U2745 (.A(key_i[44]),
     .Y(n2332));
@@ -6519,7 +6519,7 @@ module aes (clk,
     .Y(n2333));
  INVx1_bottom U2747 (.A(key_i[42]),
     .Y(n2334));
- INVx1_bottom U2748 (.A(key_i[41]),
+ INVx1_upper U2748 (.A(key_i[41]),
     .Y(n2335));
  INVx1_upper U2749 (.A(key_i[40]),
     .Y(n2336));
@@ -6529,19 +6529,19 @@ module aes (clk,
     .Y(n274));
  INVx1_bottom U2750 (.A(key_i[39]),
     .Y(n2337));
- INVx1_bottom U2751 (.A(key_i[38]),
+ INVx1_upper U2751 (.A(key_i[38]),
     .Y(n2338));
  INVx1_upper U2752 (.A(key_i[37]),
     .Y(n2339));
  INVx1_upper U2753 (.A(key_i[36]),
     .Y(n2340));
- INVx1_bottom U2754 (.A(key_i[35]),
+ INVx1_upper U2754 (.A(key_i[35]),
     .Y(n2341));
  INVx1_upper U2755 (.A(key_i[34]),
     .Y(n2342));
- INVx1_upper U2756 (.A(key_i[33]),
+ INVx1_bottom U2756 (.A(key_i[33]),
     .Y(n2343));
- INVx1_upper U2757 (.A(key_i[32]),
+ INVx1_bottom U2757 (.A(key_i[32]),
     .Y(n2344));
  INVx1_bottom U2758 (.A(key_i[31]),
     .Y(n2345));
@@ -6552,7 +6552,7 @@ module aes (clk,
     .B1(mixcol_data_o[0]),
     .B2(FE_OFN86_n279),
     .Y(n277));
- INVx1_upper U2760 (.A(key_i[29]),
+ INVx1_bottom U2760 (.A(key_i[29]),
     .Y(n2347));
  INVx1_upper U2761 (.A(key_i[28]),
     .Y(n2348));
@@ -6560,15 +6560,15 @@ module aes (clk,
     .Y(n2349));
  INVx1_bottom U2763 (.A(key_i[26]),
     .Y(n2350));
- INVx1_bottom U2764 (.A(key_i[25]),
+ INVx1_upper U2764 (.A(key_i[25]),
     .Y(n2351));
  INVx1_upper U2765 (.A(key_i[24]),
     .Y(n2352));
  INVx1_upper U2766 (.A(key_i[23]),
     .Y(n2353));
- INVx1_upper U2767 (.A(key_i[22]),
+ INVx1_bottom U2767 (.A(key_i[22]),
     .Y(n2354));
- INVx1_bottom U2768 (.A(key_i[21]),
+ INVx1_upper U2768 (.A(key_i[21]),
     .Y(n2355));
  INVx1_upper U2769 (.A(key_i[20]),
     .Y(n2356));
@@ -6580,13 +6580,13 @@ module aes (clk,
     .Y(n2357));
  INVx1_upper U2771 (.A(key_i[18]),
     .Y(n2358));
- INVx1_upper U2772 (.A(key_i[17]),
+ INVx1_bottom U2772 (.A(key_i[17]),
     .Y(n2359));
  INVx1_bottom U2773 (.A(key_i[16]),
     .Y(n2360));
  INVx1_upper U2774 (.A(key_i[15]),
     .Y(n2361));
- INVx1_upper U2775 (.A(key_i[14]),
+ INVx1_bottom U2775 (.A(key_i[14]),
     .Y(n2362));
  INVx1_bottom U2776 (.A(key_i[13]),
     .Y(n2363));
@@ -6594,22 +6594,22 @@ module aes (clk,
     .Y(n2364));
  INVx1_bottom U2778 (.A(key_i[11]),
     .Y(n2365));
- INVx1_upper U2779 (.A(key_i[10]),
+ INVx1_bottom U2779 (.A(key_i[10]),
     .Y(n2366));
  OAI22xp5_upper U278 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n281),
     .B1(FE_OFN72_n272),
     .B2(n282),
     .Y(n280));
- INVx1_bottom U2780 (.A(key_i[9]),
+ INVx1_upper U2780 (.A(key_i[9]),
     .Y(n2367));
  INVx1_upper U2781 (.A(key_i[8]),
     .Y(n2368));
  INVx1_upper U2782 (.A(key_i[7]),
     .Y(n2369));
- INVx1_upper U2783 (.A(key_i[6]),
+ INVx1_bottom U2783 (.A(key_i[6]),
     .Y(n2370));
- INVx1_upper U2784 (.A(key_i[5]),
+ INVx1_bottom U2784 (.A(key_i[5]),
     .Y(n2371));
  INVx1_bottom U2785 (.A(key_i[4]),
     .Y(n2372));
@@ -6621,33 +6621,33 @@ module aes (clk,
     .Y(n2375));
  INVx1_upper U2789 (.A(key_i[0]),
     .Y(n2376));
- XOR2xp5_upper U279 (.A(keysched_new_key_o[100]),
+ XOR2xp5_bottom U279 (.A(keysched_new_key_o[100]),
     .B(n283),
     .Y(n282));
  INVx1_bottom U2790 (.A(addroundkey_ready_o),
     .Y(n2377));
  INVx1_bottom U2791 (.A(n1075),
     .Y(n2378));
- INVx1_bottom U2792 (.A(n1112),
+ INVx1_upper U2792 (.A(n1112),
     .Y(n2379));
  INVx1_bottom U2793 (.A(round[2]),
     .Y(n2380));
- INVx1_bottom U2794 (.A(state),
+ INVx1_upper U2794 (.A(state),
     .Y(n2381));
  INVx1_bottom U2795 (.A(addroundkey_round[0]),
     .Y(n2382));
- INVx1_bottom U2796 (.A(n1041),
+ INVx1_upper U2796 (.A(n1041),
     .Y(n2383));
- INVx1_upper U2797 (.A(data_o[127]),
+ INVx1_bottom U2797 (.A(data_o[127]),
     .Y(n2384));
- INVx1_bottom U2798 (.A(round[3]),
+ INVx1_upper U2798 (.A(round[3]),
     .Y(n2385));
- INVx1_bottom U2799 (.A(round[0]),
+ INVx1_upper U2799 (.A(round[0]),
     .Y(n2386));
- XOR2xp5_upper U280 (.A(key_i[100]),
+ XOR2xp5_bottom U280 (.A(key_i[100]),
     .B(n283),
     .Y(n281));
- INVx1_bottom U2800 (.A(round[1]),
+ INVx1_upper U2800 (.A(round[1]),
     .Y(n2387));
  INVx1_bottom U2801 (.A(addroundkey_round[1]),
     .Y(n2388));
@@ -6661,11 +6661,11 @@ module aes (clk,
     .Y(n2392));
  INVx1_bottom U2806 (.A(data_o[98]),
     .Y(n2393));
- INVx1_upper U2807 (.A(data_o[97]),
+ INVx1_bottom U2807 (.A(data_o[97]),
     .Y(n2394));
- INVx1_upper U2808 (.A(data_o[96]),
+ INVx1_bottom U2808 (.A(data_o[96]),
     .Y(n2395));
- INVx1_upper U2809 (.A(data_o[95]),
+ INVx1_bottom U2809 (.A(data_o[95]),
     .Y(n2396));
  OA21x2_upper U281 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[100]),
@@ -6675,7 +6675,7 @@ module aes (clk,
     .Y(n2397));
  INVx1_bottom U2811 (.A(data_o[93]),
     .Y(n2398));
- INVx1_upper U2812 (.A(data_o[92]),
+ INVx1_bottom U2812 (.A(data_o[92]),
     .Y(n2399));
  INVx1_bottom U2813 (.A(data_o[91]),
     .Y(n2400));
@@ -6683,13 +6683,13 @@ module aes (clk,
     .Y(n2401));
  INVx1_bottom U2815 (.A(data_o[8]),
     .Y(n2402));
- INVx1_upper U2816 (.A(data_o[89]),
+ INVx1_bottom U2816 (.A(data_o[89]),
     .Y(n2403));
  INVx1_bottom U2817 (.A(data_o[88]),
     .Y(n2404));
- INVx1_upper U2818 (.A(data_o[87]),
+ INVx1_bottom U2818 (.A(data_o[87]),
     .Y(n2405));
- INVx1_upper U2819 (.A(data_o[86]),
+ INVx1_bottom U2819 (.A(data_o[86]),
     .Y(n2406));
  AOI22xp5_upper U282 (.A1(data_i[100]),
     .A2(FE_OFN106_n278),
@@ -6704,29 +6704,29 @@ module aes (clk,
     .Y(n2409));
  INVx1_bottom U2823 (.A(data_o[82]),
     .Y(n2410));
- INVx1_upper U2824 (.A(data_o[81]),
+ INVx1_bottom U2824 (.A(data_o[81]),
     .Y(n2411));
- INVx1_upper U2825 (.A(data_o[80]),
+ INVx1_bottom U2825 (.A(data_o[80]),
     .Y(n2412));
- INVx1_upper U2826 (.A(data_o[7]),
+ INVx1_bottom U2826 (.A(data_o[7]),
     .Y(n2413));
- INVx1_bottom U2827 (.A(data_o[79]),
+ INVx1_upper U2827 (.A(data_o[79]),
     .Y(n2414));
- INVx1_upper U2828 (.A(data_o[78]),
+ INVx1_bottom U2828 (.A(data_o[78]),
     .Y(n2415));
  INVx1_bottom U2829 (.A(data_o[77]),
     .Y(n2416));
- AOI21xp5_bottom U283 (.A1(data_o[101]),
+ AOI21xp5_upper U283 (.A1(data_o[101]),
     .A2(FE_OFN35_n268),
     .B(n286),
     .Y(n1387));
- INVx1_upper U2830 (.A(data_o[76]),
+ INVx1_bottom U2830 (.A(data_o[76]),
     .Y(n2417));
  INVx1_bottom U2831 (.A(data_o[75]),
     .Y(n2418));
  INVx1_bottom U2832 (.A(data_o[74]),
     .Y(n2419));
- INVx1_upper U2833 (.A(data_o[73]),
+ INVx1_bottom U2833 (.A(data_o[73]),
     .Y(n2420));
  INVx1_bottom U2834 (.A(data_o[72]),
     .Y(n2421));
@@ -6740,7 +6740,7 @@ module aes (clk,
     .Y(n2425));
  INVx1_bottom U2839 (.A(data_o[68]),
     .Y(n2426));
- OAI22xp5_bottom U284 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U284 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n287),
     .B1(FE_OFN72_n272),
     .B2(n288),
@@ -6749,15 +6749,15 @@ module aes (clk,
     .Y(n2427));
  INVx1_bottom U2841 (.A(data_o[66]),
     .Y(n2428));
- INVx1_bottom U2842 (.A(data_o[65]),
+ INVx1_upper U2842 (.A(data_o[65]),
     .Y(n2429));
  INVx1_upper U2843 (.A(data_o[64]),
     .Y(n2430));
- INVx1_upper U2844 (.A(data_o[63]),
+ INVx1_bottom U2844 (.A(data_o[63]),
     .Y(n2431));
  INVx1_bottom U2845 (.A(data_o[62]),
     .Y(n2432));
- INVx1_upper U2846 (.A(data_o[61]),
+ INVx1_bottom U2846 (.A(data_o[61]),
     .Y(n2433));
  INVx1_bottom U2847 (.A(data_o[60]),
     .Y(n2434));
@@ -6768,40 +6768,40 @@ module aes (clk,
  XOR2xp5_bottom U285 (.A(keysched_new_key_o[101]),
     .B(n289),
     .Y(n288));
- INVx1_upper U2850 (.A(data_o[58]),
+ INVx1_bottom U2850 (.A(data_o[58]),
     .Y(n2437));
  INVx1_bottom U2851 (.A(data_o[57]),
     .Y(n2438));
  INVx1_bottom U2852 (.A(data_o[56]),
     .Y(n2439));
- INVx1_upper U2853 (.A(data_o[55]),
+ INVx1_bottom U2853 (.A(data_o[55]),
     .Y(n2440));
- INVx1_upper U2854 (.A(data_o[54]),
+ INVx1_bottom U2854 (.A(data_o[54]),
     .Y(n2441));
- INVx1_bottom U2855 (.A(data_o[53]),
+ INVx1_upper U2855 (.A(data_o[53]),
     .Y(n2442));
- INVx1_bottom U2856 (.A(data_o[52]),
+ INVx1_upper U2856 (.A(data_o[52]),
     .Y(n2443));
  INVx1_bottom U2857 (.A(data_o[51]),
     .Y(n2444));
- INVx1_upper U2858 (.A(data_o[50]),
+ INVx1_bottom U2858 (.A(data_o[50]),
     .Y(n2445));
- INVx1_bottom U2859 (.A(data_o[4]),
+ INVx1_upper U2859 (.A(data_o[4]),
     .Y(n2446));
  XOR2xp5_bottom U286 (.A(key_i[101]),
     .B(n289),
     .Y(n287));
- INVx1_upper U2860 (.A(data_o[49]),
+ INVx1_bottom U2860 (.A(data_o[49]),
     .Y(n2447));
- INVx1_upper U2861 (.A(data_o[48]),
+ INVx1_bottom U2861 (.A(data_o[48]),
     .Y(n2448));
  INVx1_bottom U2862 (.A(data_o[47]),
     .Y(n2449));
- INVx1_upper U2863 (.A(data_o[46]),
+ INVx1_bottom U2863 (.A(data_o[46]),
     .Y(n2450));
- INVx1_upper U2864 (.A(data_o[45]),
+ INVx1_bottom U2864 (.A(data_o[45]),
     .Y(n2451));
- INVx1_upper U2865 (.A(data_o[44]),
+ INVx1_bottom U2865 (.A(data_o[44]),
     .Y(n2452));
  INVx1_bottom U2866 (.A(data_o[43]),
     .Y(n2453));
@@ -6811,7 +6811,7 @@ module aes (clk,
     .Y(n2455));
  INVx1_bottom U2869 (.A(data_o[40]),
     .Y(n2456));
- OA21x2_bottom U287 (.A1(FE_OFN104_n275),
+ OA21x2_upper U287 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[101]),
     .B(n291),
     .Y(n289));
@@ -6821,30 +6821,30 @@ module aes (clk,
     .Y(n2458));
  INVx1_bottom U2872 (.A(data_o[38]),
     .Y(n2459));
- INVx1_upper U2873 (.A(data_o[37]),
+ INVx1_bottom U2873 (.A(data_o[37]),
     .Y(n2460));
- INVx1_upper U2874 (.A(data_o[36]),
+ INVx1_bottom U2874 (.A(data_o[36]),
     .Y(n2461));
  INVx1_bottom U2875 (.A(data_o[35]),
     .Y(n2462));
- INVx1_upper U2876 (.A(data_o[34]),
+ INVx1_bottom U2876 (.A(data_o[34]),
     .Y(n2463));
- INVx1_upper U2877 (.A(data_o[33]),
+ INVx1_bottom U2877 (.A(data_o[33]),
     .Y(n2464));
- INVx1_upper U2878 (.A(data_o[32]),
+ INVx1_bottom U2878 (.A(data_o[32]),
     .Y(n2465));
- INVx1_bottom U2879 (.A(data_o[31]),
+ INVx1_upper U2879 (.A(data_o[31]),
     .Y(n2466));
- AOI22xp5_bottom U288 (.A1(data_i[101]),
+ AOI22xp5_upper U288 (.A1(data_i[101]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[101]),
     .B2(FE_OFN86_n279),
     .Y(n291));
  INVx1_bottom U2880 (.A(data_o[30]),
     .Y(n2467));
- INVx1_bottom U2881 (.A(data_o[2]),
+ INVx1_upper U2881 (.A(data_o[2]),
     .Y(n2468));
- INVx1_upper U2882 (.A(data_o[29]),
+ INVx1_bottom U2882 (.A(data_o[29]),
     .Y(n2469));
  INVx1_upper U2883 (.A(data_o[28]),
     .Y(n2470));
@@ -6856,7 +6856,7 @@ module aes (clk,
     .Y(n2473));
  INVx1_bottom U2887 (.A(data_o[24]),
     .Y(n2474));
- INVx1_upper U2888 (.A(data_o[23]),
+ INVx1_bottom U2888 (.A(data_o[23]),
     .Y(n2475));
  INVx1_upper U2889 (.A(data_o[22]),
     .Y(n2476));
@@ -6864,7 +6864,7 @@ module aes (clk,
     .A2(FE_OFN35_n268),
     .B(n292),
     .Y(n1389));
- INVx1_bottom U2890 (.A(data_o[21]),
+ INVx1_upper U2890 (.A(data_o[21]),
     .Y(n2477));
  INVx1_upper U2891 (.A(data_o[20]),
     .Y(n2478));
@@ -6874,13 +6874,13 @@ module aes (clk,
     .Y(n2480));
  INVx1_upper U2894 (.A(data_o[18]),
     .Y(n2481));
- INVx1_upper U2895 (.A(data_o[17]),
+ INVx1_bottom U2895 (.A(data_o[17]),
     .Y(n2482));
  INVx1_bottom U2896 (.A(data_o[16]),
     .Y(n2483));
- INVx1_upper U2897 (.A(data_o[15]),
+ INVx1_bottom U2897 (.A(data_o[15]),
     .Y(n2484));
- INVx1_upper U2898 (.A(data_o[14]),
+ INVx1_bottom U2898 (.A(data_o[14]),
     .Y(n2485));
  INVx1_bottom U2899 (.A(data_o[13]),
     .Y(n2486));
@@ -6894,88 +6894,88 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n294),
     .Y(n292));
- INVx1_upper U2900 (.A(data_o[12]),
+ INVx1_bottom U2900 (.A(data_o[12]),
     .Y(n2487));
  INVx1_bottom U2901 (.A(data_o[126]),
     .Y(n2488));
- INVx1_upper U2902 (.A(data_o[125]),
+ INVx1_bottom U2902 (.A(data_o[125]),
     .Y(n2489));
  INVx1_bottom U2903 (.A(data_o[124]),
     .Y(n2490));
- INVx1_upper U2904 (.A(data_o[123]),
+ INVx1_bottom U2904 (.A(data_o[123]),
     .Y(n2491));
  INVx1_bottom U2905 (.A(data_o[122]),
     .Y(n2492));
- INVx1_upper U2906 (.A(data_o[121]),
+ INVx1_bottom U2906 (.A(data_o[121]),
     .Y(n2493));
- INVx1_upper U2907 (.A(data_o[120]),
+ INVx1_bottom U2907 (.A(data_o[120]),
     .Y(n2494));
  INVx1_bottom U2908 (.A(data_o[11]),
     .Y(n2495));
- INVx1_upper U2909 (.A(data_o[119]),
+ INVx1_bottom U2909 (.A(data_o[119]),
     .Y(n2496));
- XOR2xp5_upper U291 (.A(keysched_new_key_o[102]),
+ XOR2xp5_bottom U291 (.A(keysched_new_key_o[102]),
     .B(n295),
     .Y(n294));
- INVx1_upper U2910 (.A(data_o[118]),
+ INVx1_bottom U2910 (.A(data_o[118]),
     .Y(n2497));
- INVx1_upper U2911 (.A(data_o[117]),
+ INVx1_bottom U2911 (.A(data_o[117]),
     .Y(n2498));
- INVx1_upper U2912 (.A(data_o[116]),
+ INVx1_bottom U2912 (.A(data_o[116]),
     .Y(n2499));
  INVx1_bottom U2913 (.A(data_o[115]),
     .Y(n2500));
- INVx1_upper U2914 (.A(data_o[114]),
+ INVx1_bottom U2914 (.A(data_o[114]),
     .Y(n2501));
- INVx1_upper U2915 (.A(data_o[113]),
+ INVx1_bottom U2915 (.A(data_o[113]),
     .Y(n2502));
  INVx1_bottom U2916 (.A(data_o[112]),
     .Y(n2503));
  INVx1_bottom U2917 (.A(data_o[111]),
     .Y(n2504));
- INVx1_upper U2918 (.A(data_o[110]),
+ INVx1_bottom U2918 (.A(data_o[110]),
     .Y(n2505));
- INVx1_upper U2919 (.A(data_o[10]),
+ INVx1_bottom U2919 (.A(data_o[10]),
     .Y(n2506));
- XOR2xp5_upper U292 (.A(key_i[102]),
+ XOR2xp5_bottom U292 (.A(key_i[102]),
     .B(n295),
     .Y(n293));
  INVx1_bottom U2920 (.A(data_o[109]),
     .Y(n2507));
- INVx1_upper U2921 (.A(data_o[108]),
+ INVx1_bottom U2921 (.A(data_o[108]),
     .Y(n2508));
  INVx1_bottom U2922 (.A(data_o[107]),
     .Y(n2509));
- INVx1_upper U2923 (.A(data_o[106]),
+ INVx1_bottom U2923 (.A(data_o[106]),
     .Y(n2510));
- INVx1_upper U2924 (.A(data_o[105]),
+ INVx1_bottom U2924 (.A(data_o[105]),
     .Y(n2511));
- INVx1_upper U2925 (.A(data_o[104]),
+ INVx1_bottom U2925 (.A(data_o[104]),
     .Y(n2512));
  INVx1_bottom U2926 (.A(data_o[103]),
     .Y(n2513));
- INVx1_upper U2927 (.A(data_o[102]),
+ INVx1_bottom U2927 (.A(data_o[102]),
     .Y(n2514));
  INVx1_bottom U2928 (.A(data_o[101]),
     .Y(n2515));
- INVx1_upper U2929 (.A(data_o[100]),
+ INVx1_bottom U2929 (.A(data_o[100]),
     .Y(n2516));
  OA21x2_upper U293 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[102]),
     .B(n297),
     .Y(n295));
- INVx1_upper U2930 (.A(data_o[0]),
+ INVx1_bottom U2930 (.A(data_o[0]),
     .Y(n2517));
  AOI22xp5_upper U294 (.A1(data_i[102]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[102]),
     .B2(FE_OFN86_n279),
     .Y(n297));
- AOI21xp5_bottom U295 (.A1(data_o[103]),
+ AOI21xp5_upper U295 (.A1(data_o[103]),
     .A2(FE_OFN35_n268),
     .B(n298),
     .Y(n1391));
- OAI22xp5_bottom U296 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U296 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n299),
     .B1(FE_OFN72_n272),
     .B2(n300),
@@ -6986,7 +6986,7 @@ module aes (clk,
  XOR2xp5_bottom U298 (.A(key_i[103]),
     .B(n301),
     .Y(n299));
- OA21x2_bottom U299 (.A1(FE_OFN104_n275),
+ OA21x2_upper U299 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[103]),
     .B(n303),
     .Y(n301));
@@ -7004,10 +7004,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n306),
     .Y(n304));
- XOR2xp5_upper U303 (.A(keysched_new_key_o[104]),
+ XOR2xp5_bottom U303 (.A(keysched_new_key_o[104]),
     .B(n307),
     .Y(n306));
- XOR2xp5_upper U304 (.A(key_i[104]),
+ XOR2xp5_bottom U304 (.A(key_i[104]),
     .B(n307),
     .Y(n305));
  OA21x2_upper U305 (.A1(FE_OFN104_n275),
@@ -7028,15 +7028,15 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n312),
     .Y(n310));
- XOR2xp5_upper U309 (.A(keysched_new_key_o[105]),
+ XOR2xp5_bottom U309 (.A(keysched_new_key_o[105]),
     .B(n313),
     .Y(n312));
- OAI22xp5_bottom U31 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U31 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2086),
     .B1(FE_OFN101_n11),
     .B2(n2404),
     .Y(subbytes_data_i[88]));
- XOR2xp5_upper U310 (.A(key_i[105]),
+ XOR2xp5_bottom U310 (.A(key_i[105]),
     .B(n313),
     .Y(n311));
  OA21x2_upper U311 (.A1(FE_OFN104_n275),
@@ -7057,10 +7057,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n318),
     .Y(n316));
- XOR2xp5_upper U315 (.A(keysched_new_key_o[106]),
+ XOR2xp5_bottom U315 (.A(keysched_new_key_o[106]),
     .B(n319),
     .Y(n318));
- XOR2xp5_upper U316 (.A(key_i[106]),
+ XOR2xp5_bottom U316 (.A(key_i[106]),
     .B(n319),
     .Y(n317));
  OA21x2_upper U317 (.A1(FE_OFN104_n275),
@@ -7072,11 +7072,11 @@ module aes (clk,
     .B1(mixcol_data_o[106]),
     .B2(FE_OFN87_n279),
     .Y(n321));
- AOI21xp5_bottom U319 (.A1(data_o[107]),
+ AOI21xp5_upper U319 (.A1(data_o[107]),
     .A2(FE_OFN37_n268),
     .B(n322),
     .Y(n1399));
- OAI22xp5_bottom U320 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U320 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n323),
     .B1(FE_OFN73_n272),
     .B2(n324),
@@ -7087,11 +7087,11 @@ module aes (clk,
  XOR2xp5_bottom U322 (.A(key_i[107]),
     .B(n325),
     .Y(n323));
- OA21x2_bottom U323 (.A1(FE_OFN104_n275),
+ OA21x2_upper U323 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[107]),
     .B(n327),
     .Y(n325));
- AOI22xp5_bottom U324 (.A1(data_i[107]),
+ AOI22xp5_upper U324 (.A1(data_i[107]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[107]),
     .B2(FE_OFN87_n279),
@@ -7105,10 +7105,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n330),
     .Y(n328));
- XOR2xp5_upper U327 (.A(keysched_new_key_o[108]),
+ XOR2xp5_bottom U327 (.A(keysched_new_key_o[108]),
     .B(n331),
     .Y(n330));
- XOR2xp5_upper U328 (.A(key_i[108]),
+ XOR2xp5_bottom U328 (.A(key_i[108]),
     .B(n331),
     .Y(n329));
  OA21x2_upper U329 (.A1(FE_OFN104_n275),
@@ -7125,11 +7125,11 @@ module aes (clk,
     .B1(mixcol_data_o[108]),
     .B2(FE_OFN87_n279),
     .Y(n333));
- AOI21xp5_bottom U331 (.A1(data_o[109]),
+ AOI21xp5_upper U331 (.A1(data_o[109]),
     .A2(FE_OFN37_n268),
     .B(n334),
     .Y(n1403));
- OAI22xp5_bottom U332 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U332 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n335),
     .B1(FE_OFN73_n272),
     .B2(n336),
@@ -7140,11 +7140,11 @@ module aes (clk,
  XOR2xp5_bottom U334 (.A(key_i[109]),
     .B(n337),
     .Y(n335));
- OA21x2_bottom U335 (.A1(FE_OFN104_n275),
+ OA21x2_upper U335 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[109]),
     .B(n339),
     .Y(n337));
- AOI22xp5_bottom U336 (.A1(data_i[109]),
+ AOI22xp5_upper U336 (.A1(data_i[109]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[109]),
     .B2(FE_OFN87_n279),
@@ -7158,7 +7158,7 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n342),
     .Y(n340));
- XOR2xp5_upper U339 (.A(keysched_new_key_o[10]),
+ XOR2xp5_bottom U339 (.A(keysched_new_key_o[10]),
     .B(n343),
     .Y(n342));
  XOR2xp5_upper U340 (.A(key_i[10]),
@@ -7168,7 +7168,7 @@ module aes (clk,
     .A2(subbytes_data_o[10]),
     .B(n345),
     .Y(n343));
- AOI22xp5_bottom U342 (.A1(data_i[10]),
+ AOI22xp5_upper U342 (.A1(data_i[10]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[10]),
     .B2(FE_OFN86_n279),
@@ -7182,10 +7182,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n348),
     .Y(n346));
- XOR2xp5_upper U345 (.A(keysched_new_key_o[110]),
+ XOR2xp5_bottom U345 (.A(keysched_new_key_o[110]),
     .B(n349),
     .Y(n348));
- XOR2xp5_upper U346 (.A(key_i[110]),
+ XOR2xp5_bottom U346 (.A(key_i[110]),
     .B(n349),
     .Y(n347));
  OA21x2_upper U347 (.A1(FE_OFN104_n275),
@@ -7197,7 +7197,7 @@ module aes (clk,
     .B1(mixcol_data_o[110]),
     .B2(FE_OFN87_n279),
     .Y(n351));
- AOI21xp5_bottom U349 (.A1(data_o[111]),
+ AOI21xp5_upper U349 (.A1(data_o[111]),
     .A2(FE_OFN36_n268),
     .B(n352),
     .Y(n1409));
@@ -7206,7 +7206,7 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(n2406),
     .Y(subbytes_data_i[86]));
- OAI22xp5_bottom U350 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U350 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n353),
     .B1(FE_OFN73_n272),
     .B2(n354),
@@ -7217,20 +7217,20 @@ module aes (clk,
  XOR2xp5_bottom U352 (.A(key_i[111]),
     .B(n355),
     .Y(n353));
- OA21x2_bottom U353 (.A1(FE_OFN104_n275),
+ OA21x2_upper U353 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[111]),
     .B(n357),
     .Y(n355));
- AOI22xp5_bottom U354 (.A1(data_i[111]),
+ AOI22xp5_upper U354 (.A1(data_i[111]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[111]),
     .B2(FE_OFN87_n279),
     .Y(n357));
- AOI21xp5_bottom U355 (.A1(data_o[112]),
+ AOI21xp5_upper U355 (.A1(data_o[112]),
     .A2(FE_OFN35_n268),
     .B(n358),
     .Y(n1411));
- OAI22xp5_bottom U356 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U356 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n359),
     .B1(FE_OFN72_n272),
     .B2(n360),
@@ -7241,11 +7241,11 @@ module aes (clk,
  XOR2xp5_bottom U358 (.A(key_i[112]),
     .B(n361),
     .Y(n359));
- OA21x2_bottom U359 (.A1(FE_OFN104_n275),
+ OA21x2_upper U359 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[112]),
     .B(n363),
     .Y(n361));
- AOI22xp5_bottom U360 (.A1(data_i[112]),
+ AOI22xp5_upper U360 (.A1(data_i[112]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[112]),
     .B2(FE_OFN87_n279),
@@ -7259,10 +7259,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n366),
     .Y(n364));
- XOR2xp5_upper U363 (.A(keysched_new_key_o[113]),
+ XOR2xp5_bottom U363 (.A(keysched_new_key_o[113]),
     .B(n367),
     .Y(n366));
- XOR2xp5_upper U364 (.A(key_i[113]),
+ XOR2xp5_bottom U364 (.A(key_i[113]),
     .B(n367),
     .Y(n365));
  OA21x2_upper U365 (.A1(FE_OFN104_n275),
@@ -7283,15 +7283,15 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n372),
     .Y(n370));
- XOR2xp5_upper U369 (.A(keysched_new_key_o[114]),
+ XOR2xp5_bottom U369 (.A(keysched_new_key_o[114]),
     .B(n373),
     .Y(n372));
- OAI22xp5_bottom U37 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U37 (.A1(FE_DBTN89_n1665),
     .A2(n2074),
     .B1(FE_OFN100_n11),
     .B2(n2407),
     .Y(subbytes_data_i[85]));
- XOR2xp5_upper U370 (.A(key_i[114]),
+ XOR2xp5_bottom U370 (.A(key_i[114]),
     .B(n373),
     .Y(n371));
  OA21x2_upper U371 (.A1(FE_OFN103_n275),
@@ -7303,11 +7303,11 @@ module aes (clk,
     .B1(mixcol_data_o[114]),
     .B2(FE_OFN86_n279),
     .Y(n375));
- AOI21xp5_bottom U373 (.A1(data_o[115]),
+ AOI21xp5_upper U373 (.A1(data_o[115]),
     .A2(FE_OFN35_n268),
     .B(n376),
     .Y(n1417));
- OAI22xp5_bottom U374 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U374 (.A1(FE_DBTN88_n1666),
     .A2(n377),
     .B1(FE_OFN72_n272),
     .B2(n378),
@@ -7318,11 +7318,11 @@ module aes (clk,
  XOR2xp5_bottom U376 (.A(key_i[115]),
     .B(n379),
     .Y(n377));
- OA21x2_bottom U377 (.A1(FE_OFN103_n275),
+ OA21x2_upper U377 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[115]),
     .B(n381),
     .Y(n379));
- AOI22xp5_bottom U378 (.A1(data_i[115]),
+ AOI22xp5_upper U378 (.A1(data_i[115]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[115]),
     .B2(FE_OFN86_n279),
@@ -7336,10 +7336,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n384),
     .Y(n382));
- XOR2xp5_upper U381 (.A(keysched_new_key_o[116]),
+ XOR2xp5_bottom U381 (.A(keysched_new_key_o[116]),
     .B(n385),
     .Y(n384));
- XOR2xp5_upper U382 (.A(key_i[116]),
+ XOR2xp5_bottom U382 (.A(key_i[116]),
     .B(n385),
     .Y(n383));
  OA21x2_upper U383 (.A1(FE_OFN103_n275),
@@ -7360,17 +7360,17 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n390),
     .Y(n388));
- XOR2xp5_upper U387 (.A(keysched_new_key_o[117]),
+ XOR2xp5_bottom U387 (.A(keysched_new_key_o[117]),
     .B(n391),
     .Y(n390));
- XOR2xp5_upper U388 (.A(key_i[117]),
+ XOR2xp5_bottom U388 (.A(key_i[117]),
     .B(n391),
     .Y(n389));
  OA21x2_upper U389 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[117]),
     .B(n393),
     .Y(n391));
- OAI22xp5_bottom U39 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U39 (.A1(FE_DBTN89_n1665),
     .A2(n2070),
     .B1(FE_OFN100_n11),
     .B2(n2408),
@@ -7389,10 +7389,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n396),
     .Y(n394));
- XOR2xp5_upper U393 (.A(keysched_new_key_o[118]),
+ XOR2xp5_bottom U393 (.A(keysched_new_key_o[118]),
     .B(n397),
     .Y(n396));
- XOR2xp5_upper U394 (.A(key_i[118]),
+ XOR2xp5_bottom U394 (.A(key_i[118]),
     .B(n397),
     .Y(n395));
  OA21x2_upper U395 (.A1(FE_OFN103_n275),
@@ -7413,13 +7413,13 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n402),
     .Y(n400));
- XOR2xp5_upper U399 (.A(keysched_new_key_o[119]),
+ XOR2xp5_bottom U399 (.A(keysched_new_key_o[119]),
     .B(n403),
     .Y(n402));
  NAND2xp5_bottom U4 (.A(mixcol_ready_o),
     .B(n1850),
     .Y(n7));
- XOR2xp5_upper U400 (.A(key_i[119]),
+ XOR2xp5_bottom U400 (.A(key_i[119]),
     .B(n403),
     .Y(n401));
  OA21x2_upper U401 (.A1(FE_OFN103_n275),
@@ -7431,11 +7431,11 @@ module aes (clk,
     .B1(mixcol_data_o[119]),
     .B2(FE_OFN86_n279),
     .Y(n405));
- AOI21xp5_bottom U403 (.A1(data_o[11]),
+ AOI21xp5_upper U403 (.A1(data_o[11]),
     .A2(FE_OFN36_n268),
     .B(n406),
     .Y(n1427));
- OAI22xp5_bottom U404 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U404 (.A1(FE_DBTN88_n1666),
     .A2(n407),
     .B1(FE_OFN72_n272),
     .B2(n408),
@@ -7446,7 +7446,7 @@ module aes (clk,
  XOR2xp5_bottom U406 (.A(key_i[11]),
     .B(n409),
     .Y(n407));
- OA21x2_bottom U407 (.A1(FE_OFN105_n275),
+ OA21x2_upper U407 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[11]),
     .B(n411),
     .Y(n409));
@@ -7459,7 +7459,7 @@ module aes (clk,
     .A2(FE_OFN37_n268),
     .B(n412),
     .Y(n1429));
- OAI22xp5_bottom U41 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U41 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2066),
     .B1(FE_OFN100_n11),
     .B2(n2409),
@@ -7469,10 +7469,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n414),
     .Y(n412));
- XOR2xp5_upper U411 (.A(keysched_new_key_o[120]),
+ XOR2xp5_bottom U411 (.A(keysched_new_key_o[120]),
     .B(n415),
     .Y(n414));
- XOR2xp5_upper U412 (.A(key_i[120]),
+ XOR2xp5_bottom U412 (.A(key_i[120]),
     .B(n415),
     .Y(n413));
  OA21x2_upper U413 (.A1(FE_OFN104_n275),
@@ -7508,26 +7508,26 @@ module aes (clk,
     .B1(mixcol_data_o[121]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n423));
- AOI21xp5_bottom U421 (.A1(data_o[122]),
+ AOI21xp5_upper U421 (.A1(data_o[122]),
     .A2(FE_OFN37_n268),
     .B(n424),
     .Y(n1433));
- OAI22xp5_bottom U422 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U422 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n425),
     .B1(FE_OFN73_n272),
     .B2(n426),
     .Y(n424));
- XOR2xp5_bottom U423 (.A(keysched_new_key_o[122]),
+ XOR2xp5_upper U423 (.A(keysched_new_key_o[122]),
     .B(n427),
     .Y(n426));
- XOR2xp5_bottom U424 (.A(key_i[122]),
+ XOR2xp5_upper U424 (.A(key_i[122]),
     .B(n427),
     .Y(n425));
- OA21x2_bottom U425 (.A1(FE_OFN104_n275),
+ OA21x2_upper U425 (.A1(FE_OFN104_n275),
     .A2(n2124),
     .B(n429),
     .Y(n427));
- AOI22xp5_bottom U426 (.A1(data_i[122]),
+ AOI22xp5_upper U426 (.A1(data_i[122]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[122]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -7544,7 +7544,7 @@ module aes (clk,
  XOR2xp5_upper U429 (.A(keysched_new_key_o[123]),
     .B(n433),
     .Y(n432));
- OAI22xp5_bottom U43 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U43 (.A1(FE_DBTN89_n1665),
     .A2(n2062),
     .B1(FE_OFN100_n11),
     .B2(n2410),
@@ -7552,20 +7552,20 @@ module aes (clk,
  XOR2xp5_upper U430 (.A(key_i[123]),
     .B(n433),
     .Y(n431));
- OA21x2_bottom U431 (.A1(FE_OFN104_n275),
+ OA21x2_upper U431 (.A1(FE_OFN104_n275),
     .A2(n2123),
     .B(n435),
     .Y(n433));
- AOI22xp5_bottom U432 (.A1(data_i[123]),
+ AOI22xp5_upper U432 (.A1(data_i[123]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[123]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n435));
- AOI21xp5_bottom U433 (.A1(data_o[124]),
+ AOI21xp5_upper U433 (.A1(data_o[124]),
     .A2(FE_OFN37_n268),
     .B(n436),
     .Y(n1437));
- OAI22xp5_bottom U434 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U434 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n437),
     .B1(FE_OFN73_n272),
     .B2(n438),
@@ -7576,11 +7576,11 @@ module aes (clk,
  XOR2xp5_bottom U436 (.A(key_i[124]),
     .B(n439),
     .Y(n437));
- OA21x2_bottom U437 (.A1(FE_OFN104_n275),
+ OA21x2_upper U437 (.A1(FE_OFN104_n275),
     .A2(n2122),
     .B(n441),
     .Y(n439));
- AOI22xp5_bottom U438 (.A1(data_i[124]),
+ AOI22xp5_upper U438 (.A1(data_i[124]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[124]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -7594,37 +7594,37 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n444),
     .Y(n442));
- XOR2xp5_upper U441 (.A(keysched_new_key_o[125]),
+ XOR2xp5_bottom U441 (.A(keysched_new_key_o[125]),
     .B(n445),
     .Y(n444));
- XOR2xp5_upper U442 (.A(key_i[125]),
+ XOR2xp5_bottom U442 (.A(key_i[125]),
     .B(n445),
     .Y(n443));
- OA21x2_bottom U443 (.A1(FE_OFN104_n275),
+ OA21x2_upper U443 (.A1(FE_OFN104_n275),
     .A2(n2121),
     .B(n447),
     .Y(n445));
- AOI22xp5_bottom U444 (.A1(data_i[125]),
+ AOI22xp5_upper U444 (.A1(data_i[125]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[125]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n447));
- AOI21xp5_bottom U445 (.A1(data_o[126]),
+ AOI21xp5_upper U445 (.A1(data_o[126]),
     .A2(FE_OFN37_n268),
     .B(n448),
     .Y(n1441));
- OAI22xp5_bottom U446 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U446 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n449),
     .B1(FE_OFN73_n272),
     .B2(n450),
     .Y(n448));
- XOR2xp5_bottom U447 (.A(keysched_new_key_o[126]),
+ XOR2xp5_upper U447 (.A(keysched_new_key_o[126]),
     .B(n451),
     .Y(n450));
  XOR2xp5_bottom U448 (.A(key_i[126]),
     .B(n451),
     .Y(n449));
- OA21x2_bottom U449 (.A1(FE_OFN104_n275),
+ OA21x2_upper U449 (.A1(FE_OFN104_n275),
     .A2(n2120),
     .B(n453),
     .Y(n451));
@@ -7633,7 +7633,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2411),
     .Y(subbytes_data_i[81]));
- AOI22xp5_bottom U450 (.A1(data_i[126]),
+ AOI22xp5_upper U450 (.A1(data_i[126]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[126]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -7642,7 +7642,7 @@ module aes (clk,
     .A2(FE_OFN36_n268),
     .B(n454),
     .Y(n1443));
- OAI22xp5_bottom U452 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U452 (.A1(FE_DBTN88_n1666),
     .A2(n455),
     .B1(FE_OFN72_n272),
     .B2(n456),
@@ -7662,11 +7662,11 @@ module aes (clk,
     .B1(mixcol_data_o[12]),
     .B2(FE_OFN86_n279),
     .Y(n459));
- AOI21xp5_bottom U457 (.A1(data_o[13]),
+ AOI21xp5_upper U457 (.A1(data_o[13]),
     .A2(FE_OFN36_n268),
     .B(n460),
     .Y(n1445));
- OAI22xp5_bottom U458 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U458 (.A1(FE_DBTN88_n1666),
     .A2(n461),
     .B1(FE_OFN72_n272),
     .B2(n462),
@@ -7677,11 +7677,11 @@ module aes (clk,
  XOR2xp5_bottom U460 (.A(key_i[13]),
     .B(n463),
     .Y(n461));
- OA21x2_bottom U461 (.A1(FE_OFN121_FE_OFN103_n275),
+ OA21x2_upper U461 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(subbytes_data_o[13]),
     .B(n465),
     .Y(n463));
- AOI22xp5_bottom U462 (.A1(data_i[13]),
+ AOI22xp5_upper U462 (.A1(data_i[13]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[13]),
     .B2(FE_OFN86_n279),
@@ -7695,10 +7695,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n468),
     .Y(n466));
- XOR2xp5_upper U465 (.A(keysched_new_key_o[14]),
+ XOR2xp5_bottom U465 (.A(keysched_new_key_o[14]),
     .B(n469),
     .Y(n468));
- XOR2xp5_upper U466 (.A(key_i[14]),
+ XOR2xp5_bottom U466 (.A(key_i[14]),
     .B(n469),
     .Y(n467));
  OA21x2_upper U467 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -7724,10 +7724,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n474),
     .Y(n472));
- XOR2xp5_upper U471 (.A(keysched_new_key_o[15]),
+ XOR2xp5_bottom U471 (.A(keysched_new_key_o[15]),
     .B(n475),
     .Y(n474));
- XOR2xp5_upper U472 (.A(key_i[15]),
+ XOR2xp5_bottom U472 (.A(key_i[15]),
     .B(n475),
     .Y(n473));
  OA21x2_upper U473 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -7739,11 +7739,11 @@ module aes (clk,
     .B1(mixcol_data_o[15]),
     .B2(FE_OFN86_n279),
     .Y(n477));
- AOI21xp5_bottom U475 (.A1(data_o[16]),
+ AOI21xp5_upper U475 (.A1(data_o[16]),
     .A2(FE_OFN36_n268),
     .B(n478),
     .Y(n1451));
- OAI22xp5_bottom U476 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U476 (.A1(FE_DBTN88_n1666),
     .A2(n479),
     .B1(FE_OFN72_n272),
     .B2(n480),
@@ -7754,11 +7754,11 @@ module aes (clk,
  XOR2xp5_bottom U478 (.A(key_i[16]),
     .B(n481),
     .Y(n479));
- OA21x2_bottom U479 (.A1(FE_OFN104_n275),
+ OA21x2_upper U479 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[16]),
     .B(n483),
     .Y(n481));
- AOI22xp5_bottom U480 (.A1(data_i[16]),
+ AOI22xp5_upper U480 (.A1(data_i[16]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[16]),
     .B2(FE_OFN86_n279),
@@ -7772,17 +7772,17 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n486),
     .Y(n484));
- XOR2xp5_upper U483 (.A(keysched_new_key_o[17]),
+ XOR2xp5_bottom U483 (.A(keysched_new_key_o[17]),
     .B(n487),
     .Y(n486));
- XOR2xp5_upper U484 (.A(key_i[17]),
+ XOR2xp5_bottom U484 (.A(key_i[17]),
     .B(n487),
     .Y(n485));
  OA21x2_upper U485 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[17]),
     .B(n489),
     .Y(n487));
- AOI22xp5_bottom U486 (.A1(data_i[17]),
+ AOI22xp5_upper U486 (.A1(data_i[17]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[17]),
     .B2(FE_OFN86_n279),
@@ -7796,7 +7796,7 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n492),
     .Y(n490));
- XOR2xp5_upper U489 (.A(keysched_new_key_o[18]),
+ XOR2xp5_bottom U489 (.A(keysched_new_key_o[18]),
     .B(n493),
     .Y(n492));
  OAI22xp5_upper U49 (.A1(FE_OFN83_FE_DBTN89_n1665),
@@ -7804,14 +7804,14 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2413),
     .Y(subbytes_data_i[7]));
- XOR2xp5_upper U490 (.A(key_i[18]),
+ XOR2xp5_bottom U490 (.A(key_i[18]),
     .B(n493),
     .Y(n491));
- OA21x2_bottom U491 (.A1(FE_OFN103_n275),
+ OA21x2_upper U491 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[18]),
     .B(n495),
     .Y(n493));
- AOI22xp5_bottom U492 (.A1(data_i[18]),
+ AOI22xp5_upper U492 (.A1(data_i[18]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[18]),
     .B2(FE_OFN86_n279),
@@ -7825,10 +7825,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n498),
     .Y(n496));
- XOR2xp5_upper U495 (.A(keysched_new_key_o[19]),
+ XOR2xp5_bottom U495 (.A(keysched_new_key_o[19]),
     .B(n499),
     .Y(n498));
- XOR2xp5_upper U496 (.A(key_i[19]),
+ XOR2xp5_bottom U496 (.A(key_i[19]),
     .B(n499),
     .Y(n497));
  OA21x2_upper U497 (.A1(FE_OFN103_n275),
@@ -7840,11 +7840,11 @@ module aes (clk,
     .B1(mixcol_data_o[19]),
     .B2(FE_OFN86_n279),
     .Y(n501));
- AOI21xp5_bottom U499 (.A1(data_o[1]),
+ AOI21xp5_upper U499 (.A1(data_o[1]),
     .A2(FE_OFN36_n268),
     .B(n502),
     .Y(n1459));
- OAI22xp5_bottom U5 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U5 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2024),
     .B1(FE_OFN102_n11),
     .B2(n2391),
@@ -7864,7 +7864,7 @@ module aes (clk,
     .A2(n2245),
     .B(n507),
     .Y(n505));
- AOI22xp5_bottom U504 (.A1(data_i[1]),
+ AOI22xp5_upper U504 (.A1(data_i[1]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[1]),
     .B2(FE_OFN86_n279),
@@ -7878,10 +7878,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n510),
     .Y(n508));
- XOR2xp5_upper U507 (.A(keysched_new_key_o[20]),
+ XOR2xp5_bottom U507 (.A(keysched_new_key_o[20]),
     .B(n511),
     .Y(n510));
- XOR2xp5_upper U508 (.A(key_i[20]),
+ XOR2xp5_bottom U508 (.A(key_i[20]),
     .B(n511),
     .Y(n509));
  OA21x2_upper U509 (.A1(FE_OFN103_n275),
@@ -7898,11 +7898,11 @@ module aes (clk,
     .B1(mixcol_data_o[20]),
     .B2(FE_OFN86_n279),
     .Y(n513));
- AOI21xp5_bottom U511 (.A1(data_o[21]),
+ AOI21xp5_upper U511 (.A1(data_o[21]),
     .A2(FE_OFN35_n268),
     .B(n514),
     .Y(n1463));
- OAI22xp5_bottom U512 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U512 (.A1(FE_DBTN88_n1666),
     .A2(n515),
     .B1(FE_OFN72_n272),
     .B2(n516),
@@ -7913,11 +7913,11 @@ module aes (clk,
  XOR2xp5_bottom U514 (.A(key_i[21]),
     .B(n517),
     .Y(n515));
- OA21x2_bottom U515 (.A1(FE_OFN103_n275),
+ OA21x2_upper U515 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[21]),
     .B(n519),
     .Y(n517));
- AOI22xp5_bottom U516 (.A1(data_i[21]),
+ AOI22xp5_upper U516 (.A1(data_i[21]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[21]),
     .B2(FE_OFN86_n279),
@@ -7931,10 +7931,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n522),
     .Y(n520));
- XOR2xp5_upper U519 (.A(keysched_new_key_o[22]),
+ XOR2xp5_bottom U519 (.A(keysched_new_key_o[22]),
     .B(n523),
     .Y(n522));
- XOR2xp5_upper U520 (.A(key_i[22]),
+ XOR2xp5_bottom U520 (.A(key_i[22]),
     .B(n523),
     .Y(n521));
  OA21x2_upper U521 (.A1(FE_OFN103_n275),
@@ -7955,10 +7955,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n528),
     .Y(n526));
- XOR2xp5_upper U525 (.A(keysched_new_key_o[23]),
+ XOR2xp5_bottom U525 (.A(keysched_new_key_o[23]),
     .B(n529),
     .Y(n528));
- XOR2xp5_upper U526 (.A(key_i[23]),
+ XOR2xp5_bottom U526 (.A(key_i[23]),
     .B(n529),
     .Y(n527));
  OA21x2_upper U527 (.A1(FE_OFN104_n275),
@@ -7984,50 +7984,50 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n534),
     .Y(n532));
- XOR2xp5_upper U531 (.A(keysched_new_key_o[24]),
+ XOR2xp5_bottom U531 (.A(keysched_new_key_o[24]),
     .B(n535),
     .Y(n534));
- XOR2xp5_upper U532 (.A(key_i[24]),
+ XOR2xp5_bottom U532 (.A(key_i[24]),
     .B(n535),
     .Y(n533));
- OA21x2_bottom U533 (.A1(FE_OFN105_n275),
+ OA21x2_upper U533 (.A1(FE_OFN105_n275),
     .A2(n2190),
     .B(n537),
     .Y(n535));
- AOI22xp5_bottom U534 (.A1(data_i[24]),
+ AOI22xp5_upper U534 (.A1(data_i[24]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[24]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n537));
- AOI21xp5_bottom U535 (.A1(data_o[25]),
+ AOI21xp5_upper U535 (.A1(data_o[25]),
     .A2(FE_OFN36_n268),
     .B(n538),
     .Y(n1471));
- OAI22xp5_bottom U536 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U536 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n539),
     .B1(FE_OFN74_n272),
     .B2(n540),
     .Y(n538));
- XOR2xp5_bottom U537 (.A(keysched_new_key_o[25]),
+ XOR2xp5_upper U537 (.A(keysched_new_key_o[25]),
     .B(n541),
     .Y(n540));
  XOR2xp5_bottom U538 (.A(key_i[25]),
     .B(n541),
     .Y(n539));
- OA21x2_bottom U539 (.A1(FE_OFN105_n275),
+ OA21x2_upper U539 (.A1(FE_OFN105_n275),
     .A2(n2189),
     .B(n543),
     .Y(n541));
- AOI22xp5_bottom U540 (.A1(data_i[25]),
+ AOI22xp5_upper U540 (.A1(data_i[25]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[25]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n543));
- AOI21xp5_bottom U541 (.A1(data_o[26]),
+ AOI21xp5_upper U541 (.A1(data_o[26]),
     .A2(FE_OFN36_n268),
     .B(n544),
     .Y(n1473));
- OAI22xp5_bottom U542 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U542 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n545),
     .B1(FE_OFN74_n272),
     .B2(n546),
@@ -8038,20 +8038,20 @@ module aes (clk,
  XOR2xp5_bottom U544 (.A(key_i[26]),
     .B(n547),
     .Y(n545));
- OA21x2_bottom U545 (.A1(FE_OFN105_n275),
+ OA21x2_upper U545 (.A1(FE_OFN105_n275),
     .A2(n2188),
     .B(n549),
     .Y(n547));
- AOI22xp5_bottom U546 (.A1(data_i[26]),
+ AOI22xp5_upper U546 (.A1(data_i[26]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[26]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n549));
- AOI21xp5_bottom U547 (.A1(data_o[27]),
+ AOI21xp5_upper U547 (.A1(data_o[27]),
     .A2(FE_OFN36_n268),
     .B(n550),
     .Y(n1475));
- OAI22xp5_bottom U548 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U548 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n551),
     .B1(FE_OFN74_n272),
     .B2(n552),
@@ -8059,7 +8059,7 @@ module aes (clk,
  XOR2xp5_bottom U549 (.A(keysched_new_key_o[27]),
     .B(n553),
     .Y(n552));
- OAI22xp5_bottom U55 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U55 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2042),
     .B1(FE_OFN101_n11),
     .B2(n2416),
@@ -8067,7 +8067,7 @@ module aes (clk,
  XOR2xp5_bottom U550 (.A(key_i[27]),
     .B(n553),
     .Y(n551));
- OA21x2_bottom U551 (.A1(FE_OFN105_n275),
+ OA21x2_upper U551 (.A1(FE_OFN105_n275),
     .A2(n2187),
     .B(n555),
     .Y(n553));
@@ -8085,10 +8085,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n558),
     .Y(n556));
- XOR2xp5_upper U555 (.A(keysched_new_key_o[28]),
+ XOR2xp5_bottom U555 (.A(keysched_new_key_o[28]),
     .B(n559),
     .Y(n558));
- XOR2xp5_upper U556 (.A(key_i[28]),
+ XOR2xp5_bottom U556 (.A(key_i[28]),
     .B(n559),
     .Y(n557));
  OA21x2_upper U557 (.A1(FE_OFN105_n275),
@@ -8109,10 +8109,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n564),
     .Y(n562));
- XOR2xp5_upper U561 (.A(keysched_new_key_o[29]),
+ XOR2xp5_bottom U561 (.A(keysched_new_key_o[29]),
     .B(n565),
     .Y(n564));
- XOR2xp5_upper U562 (.A(key_i[29]),
+ XOR2xp5_bottom U562 (.A(key_i[29]),
     .B(n565),
     .Y(n563));
  OA21x2_upper U563 (.A1(FE_OFN105_n275),
@@ -8124,11 +8124,11 @@ module aes (clk,
     .B1(mixcol_data_o[29]),
     .B2(FE_OFN86_n279),
     .Y(n567));
- AOI21xp5_bottom U565 (.A1(data_o[2]),
+ AOI21xp5_upper U565 (.A1(data_o[2]),
     .A2(FE_OFN36_n268),
     .B(n568),
     .Y(n1481));
- OAI22xp5_bottom U566 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U566 (.A1(FE_DBTN88_n1666),
     .A2(n569),
     .B1(FE_OFN72_n272),
     .B2(n570),
@@ -8136,10 +8136,10 @@ module aes (clk,
  XOR2xp5_bottom U567 (.A(keysched_new_key_o[2]),
     .B(n571),
     .Y(n570));
- XOR2xp5_bottom U568 (.A(key_i[2]),
+ XOR2xp5_upper U568 (.A(key_i[2]),
     .B(n571),
     .Y(n569));
- OA21x2_bottom U569 (.A1(FE_OFN121_FE_OFN103_n275),
+ OA21x2_upper U569 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(n2244),
     .B(n573),
     .Y(n571));
@@ -8148,16 +8148,16 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2417),
     .Y(subbytes_data_i[76]));
- AOI22xp5_bottom U570 (.A1(data_i[2]),
+ AOI22xp5_upper U570 (.A1(data_i[2]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[2]),
     .B2(FE_OFN86_n279),
     .Y(n573));
- AOI21xp5_bottom U571 (.A1(data_o[30]),
+ AOI21xp5_upper U571 (.A1(data_o[30]),
     .A2(FE_OFN36_n268),
     .B(n574),
     .Y(n1483));
- OAI22xp5_bottom U572 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U572 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n575),
     .B1(FE_OFN74_n272),
     .B2(n576),
@@ -8168,20 +8168,20 @@ module aes (clk,
  XOR2xp5_bottom U574 (.A(key_i[30]),
     .B(n577),
     .Y(n575));
- OA21x2_bottom U575 (.A1(FE_OFN105_n275),
+ OA21x2_upper U575 (.A1(FE_OFN105_n275),
     .A2(n2184),
     .B(n579),
     .Y(n577));
- AOI22xp5_bottom U576 (.A1(data_i[30]),
+ AOI22xp5_upper U576 (.A1(data_i[30]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[30]),
     .B2(FE_OFN86_n279),
     .Y(n579));
- AOI21xp5_bottom U577 (.A1(data_o[31]),
+ AOI21xp5_upper U577 (.A1(data_o[31]),
     .A2(FE_OFN36_n268),
     .B(n580),
     .Y(n1485));
- OAI22xp5_bottom U578 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U578 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n581),
     .B1(FE_OFN74_n272),
     .B2(n582),
@@ -8210,10 +8210,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n588),
     .Y(n586));
- XOR2xp5_upper U585 (.A(keysched_new_key_o[32]),
+ XOR2xp5_bottom U585 (.A(keysched_new_key_o[32]),
     .B(n589),
     .Y(n588));
- XOR2xp5_upper U586 (.A(key_i[32]),
+ XOR2xp5_bottom U586 (.A(key_i[32]),
     .B(n589),
     .Y(n587));
  OA21x2_upper U587 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -8229,7 +8229,7 @@ module aes (clk,
     .A2(FE_OFN36_n268),
     .B(n592),
     .Y(n1489));
- OAI22xp5_bottom U59 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U59 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2034),
     .B1(FE_OFN101_n11),
     .B2(n2418),
@@ -8239,10 +8239,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n594),
     .Y(n592));
- XOR2xp5_upper U591 (.A(keysched_new_key_o[33]),
+ XOR2xp5_bottom U591 (.A(keysched_new_key_o[33]),
     .B(n595),
     .Y(n594));
- XOR2xp5_upper U592 (.A(key_i[33]),
+ XOR2xp5_bottom U592 (.A(key_i[33]),
     .B(n595),
     .Y(n593));
  OA21x2_upper U593 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -8263,10 +8263,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n600),
     .Y(n598));
- XOR2xp5_upper U597 (.A(keysched_new_key_o[34]),
+ XOR2xp5_bottom U597 (.A(keysched_new_key_o[34]),
     .B(n601),
     .Y(n600));
- XOR2xp5_upper U598 (.A(key_i[34]),
+ XOR2xp5_bottom U598 (.A(key_i[34]),
     .B(n601),
     .Y(n599));
  OA21x2_upper U599 (.A1(FE_OFN103_n275),
@@ -8278,11 +8278,11 @@ module aes (clk,
     .B1(mixcol_data_o[34]),
     .B2(FE_OFN86_n279),
     .Y(n603));
- AOI21xp5_bottom U601 (.A1(data_o[35]),
+ AOI21xp5_upper U601 (.A1(data_o[35]),
     .A2(FE_OFN36_n268),
     .B(n604),
     .Y(n1493));
- OAI22xp5_bottom U602 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U602 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n605),
     .B1(FE_OFN72_n272),
     .B2(n606),
@@ -8293,11 +8293,11 @@ module aes (clk,
  XOR2xp5_bottom U604 (.A(key_i[35]),
     .B(n607),
     .Y(n605));
- OA21x2_bottom U605 (.A1(FE_OFN121_FE_OFN103_n275),
+ OA21x2_upper U605 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(subbytes_data_o[35]),
     .B(n609),
     .Y(n607));
- AOI22xp5_bottom U606 (.A1(data_i[35]),
+ AOI22xp5_upper U606 (.A1(data_i[35]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[35]),
     .B2(FE_OFN86_n279),
@@ -8311,15 +8311,15 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n612),
     .Y(n610));
- XOR2xp5_upper U609 (.A(keysched_new_key_o[36]),
+ XOR2xp5_bottom U609 (.A(keysched_new_key_o[36]),
     .B(n613),
     .Y(n612));
- OAI22xp5_bottom U61 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U61 (.A1(FE_OFN126_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2030),
     .B1(FE_OFN101_n11),
     .B2(n2419),
     .Y(subbytes_data_i[74]));
- XOR2xp5_upper U610 (.A(key_i[36]),
+ XOR2xp5_bottom U610 (.A(key_i[36]),
     .B(n613),
     .Y(n611));
  OA21x2_upper U611 (.A1(FE_OFN103_n275),
@@ -8340,10 +8340,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n618),
     .Y(n616));
- XOR2xp5_upper U615 (.A(keysched_new_key_o[37]),
+ XOR2xp5_bottom U615 (.A(keysched_new_key_o[37]),
     .B(n619),
     .Y(n618));
- XOR2xp5_upper U616 (.A(key_i[37]),
+ XOR2xp5_bottom U616 (.A(key_i[37]),
     .B(n619),
     .Y(n617));
  OA21x2_upper U617 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -8355,11 +8355,11 @@ module aes (clk,
     .B1(mixcol_data_o[37]),
     .B2(FE_OFN86_n279),
     .Y(n621));
- AOI21xp5_bottom U619 (.A1(data_o[38]),
+ AOI21xp5_upper U619 (.A1(data_o[38]),
     .A2(FE_OFN36_n268),
     .B(n622),
     .Y(n1499));
- OAI22xp5_bottom U620 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U620 (.A1(FE_DBTN88_n1666),
     .A2(n623),
     .B1(FE_OFN72_n272),
     .B2(n624),
@@ -8370,20 +8370,20 @@ module aes (clk,
  XOR2xp5_bottom U622 (.A(key_i[38]),
     .B(n625),
     .Y(n623));
- OA21x2_bottom U623 (.A1(FE_OFN103_n275),
+ OA21x2_upper U623 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[38]),
     .B(n627),
     .Y(n625));
- AOI22xp5_bottom U624 (.A1(data_i[38]),
+ AOI22xp5_upper U624 (.A1(data_i[38]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[38]),
     .B2(FE_OFN86_n279),
     .Y(n627));
- AOI21xp5_bottom U625 (.A1(data_o[39]),
+ AOI21xp5_upper U625 (.A1(data_o[39]),
     .A2(FE_OFN36_n268),
     .B(n628),
     .Y(n1501));
- OAI22xp5_bottom U626 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U626 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n629),
     .B1(FE_OFN72_n272),
     .B2(n630),
@@ -8394,7 +8394,7 @@ module aes (clk,
  XOR2xp5_bottom U628 (.A(key_i[39]),
     .B(n631),
     .Y(n629));
- OA21x2_bottom U629 (.A1(FE_OFN121_FE_OFN103_n275),
+ OA21x2_upper U629 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(subbytes_data_o[39]),
     .B(n633),
     .Y(n631));
@@ -8403,7 +8403,7 @@ module aes (clk,
     .B1(FE_OFN101_n11),
     .B2(n2420),
     .Y(subbytes_data_i[73]));
- AOI22xp5_bottom U630 (.A1(data_i[39]),
+ AOI22xp5_upper U630 (.A1(data_i[39]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[39]),
     .B2(FE_OFN87_n279),
@@ -8432,7 +8432,7 @@ module aes (clk,
     .B1(mixcol_data_o[3]),
     .B2(FE_OFN86_n279),
     .Y(n639));
- AOI21xp5_bottom U637 (.A1(data_o[40]),
+ AOI21xp5_upper U637 (.A1(data_o[40]),
     .A2(FE_OFN36_n268),
     .B(n640),
     .Y(n1505));
@@ -8441,10 +8441,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n642),
     .Y(n640));
- XOR2xp5_upper U639 (.A(keysched_new_key_o[40]),
+ XOR2xp5_bottom U639 (.A(keysched_new_key_o[40]),
     .B(n643),
     .Y(n642));
- XOR2xp5_upper U640 (.A(key_i[40]),
+ XOR2xp5_bottom U640 (.A(key_i[40]),
     .B(n643),
     .Y(n641));
  OA21x2_upper U641 (.A1(FE_OFN105_n275),
@@ -8456,11 +8456,11 @@ module aes (clk,
     .B1(mixcol_data_o[40]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n645));
- AOI21xp5_bottom U643 (.A1(data_o[41]),
+ AOI21xp5_upper U643 (.A1(data_o[41]),
     .A2(FE_OFN36_n268),
     .B(n646),
     .Y(n1507));
- OAI22xp5_bottom U644 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U644 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n647),
     .B1(FE_OFN74_n272),
     .B2(n648),
@@ -8471,25 +8471,25 @@ module aes (clk,
  XOR2xp5_bottom U646 (.A(key_i[41]),
     .B(n649),
     .Y(n647));
- OA21x2_bottom U647 (.A1(FE_OFN105_n275),
+ OA21x2_upper U647 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[41]),
     .B(n651),
     .Y(n649));
- AOI22xp5_bottom U648 (.A1(data_i[41]),
+ AOI22xp5_upper U648 (.A1(data_i[41]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[41]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n651));
- AOI21xp5_bottom U649 (.A1(data_o[42]),
+ AOI21xp5_upper U649 (.A1(data_o[42]),
     .A2(FE_OFN36_n268),
     .B(n652),
     .Y(n1509));
- OAI22xp5_bottom U65 (.A1(FE_OFN85_FE_DBTN89_n1665),
+ OAI22xp5_upper U65 (.A1(FE_OFN85_FE_DBTN89_n1665),
     .A2(n2022),
     .B1(FE_OFN101_n11),
     .B2(n2421),
     .Y(subbytes_data_i[72]));
- OAI22xp5_bottom U650 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U650 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n653),
     .B1(FE_OFN74_n272),
     .B2(n654),
@@ -8500,20 +8500,20 @@ module aes (clk,
  XOR2xp5_bottom U652 (.A(key_i[42]),
     .B(n655),
     .Y(n653));
- OA21x2_bottom U653 (.A1(FE_OFN105_n275),
+ OA21x2_upper U653 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[42]),
     .B(n657),
     .Y(n655));
- AOI22xp5_bottom U654 (.A1(data_i[42]),
+ AOI22xp5_upper U654 (.A1(data_i[42]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[42]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n657));
- AOI21xp5_bottom U655 (.A1(data_o[43]),
+ AOI21xp5_upper U655 (.A1(data_o[43]),
     .A2(FE_OFN36_n268),
     .B(n658),
     .Y(n1511));
- OAI22xp5_bottom U656 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U656 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n659),
     .B1(FE_OFN74_n272),
     .B2(n660),
@@ -8524,11 +8524,11 @@ module aes (clk,
  XOR2xp5_bottom U658 (.A(key_i[43]),
     .B(n661),
     .Y(n659));
- OA21x2_bottom U659 (.A1(FE_OFN105_n275),
+ OA21x2_upper U659 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[43]),
     .B(n663),
     .Y(n661));
- AOI22xp5_bottom U660 (.A1(data_i[43]),
+ AOI22xp5_upper U660 (.A1(data_i[43]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[43]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -8537,7 +8537,7 @@ module aes (clk,
     .A2(FE_OFN36_n268),
     .B(n664),
     .Y(n1513));
- OAI22xp5_bottom U662 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U662 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n665),
     .B1(FE_OFN74_n272),
     .B2(n666),
@@ -8548,11 +8548,11 @@ module aes (clk,
  XOR2xp5_bottom U664 (.A(key_i[44]),
     .B(n667),
     .Y(n665));
- OA21x2_bottom U665 (.A1(FE_OFN105_n275),
+ OA21x2_upper U665 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[44]),
     .B(n669),
     .Y(n667));
- AOI22xp5_bottom U666 (.A1(data_i[44]),
+ AOI22xp5_upper U666 (.A1(data_i[44]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[44]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -8566,15 +8566,15 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n672),
     .Y(n670));
- XOR2xp5_upper U669 (.A(keysched_new_key_o[45]),
+ XOR2xp5_bottom U669 (.A(keysched_new_key_o[45]),
     .B(n673),
     .Y(n672));
- OAI22xp5_bottom U67 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U67 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2018),
     .B1(n11),
     .B2(n2422),
     .Y(subbytes_data_i[71]));
- XOR2xp5_upper U670 (.A(key_i[45]),
+ XOR2xp5_bottom U670 (.A(key_i[45]),
     .B(n673),
     .Y(n671));
  OA21x2_upper U671 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -8595,26 +8595,26 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n678),
     .Y(n676));
- XOR2xp5_upper U675 (.A(keysched_new_key_o[46]),
+ XOR2xp5_bottom U675 (.A(keysched_new_key_o[46]),
     .B(n679),
     .Y(n678));
- XOR2xp5_upper U676 (.A(key_i[46]),
+ XOR2xp5_bottom U676 (.A(key_i[46]),
     .B(n679),
     .Y(n677));
  OA21x2_upper U677 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(subbytes_data_o[46]),
     .B(n681),
     .Y(n679));
- AOI22xp5_bottom U678 (.A1(data_i[46]),
+ AOI22xp5_upper U678 (.A1(data_i[46]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[46]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n681));
- AOI21xp5_bottom U679 (.A1(data_o[47]),
+ AOI21xp5_upper U679 (.A1(data_o[47]),
     .A2(FE_OFN36_n268),
     .B(n682),
     .Y(n1519));
- OAI22xp5_bottom U680 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U680 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n683),
     .B1(FE_OFN72_n272),
     .B2(n684),
@@ -8625,11 +8625,11 @@ module aes (clk,
  XOR2xp5_bottom U682 (.A(key_i[47]),
     .B(n685),
     .Y(n683));
- OA21x2_bottom U683 (.A1(FE_OFN121_FE_OFN103_n275),
+ OA21x2_upper U683 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(subbytes_data_o[47]),
     .B(n687),
     .Y(n685));
- AOI22xp5_bottom U684 (.A1(data_i[47]),
+ AOI22xp5_upper U684 (.A1(data_i[47]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[47]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -8643,17 +8643,17 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n690),
     .Y(n688));
- XOR2xp5_upper U687 (.A(keysched_new_key_o[48]),
+ XOR2xp5_bottom U687 (.A(keysched_new_key_o[48]),
     .B(n691),
     .Y(n690));
- XOR2xp5_upper U688 (.A(key_i[48]),
+ XOR2xp5_bottom U688 (.A(key_i[48]),
     .B(n691),
     .Y(n689));
  OA21x2_upper U689 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[48]),
     .B(n693),
     .Y(n691));
- OAI22xp5_bottom U69 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U69 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2014),
     .B1(FE_OFN100_n11),
     .B2(n2423),
@@ -8672,10 +8672,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n696),
     .Y(n694));
- XOR2xp5_upper U693 (.A(keysched_new_key_o[49]),
+ XOR2xp5_bottom U693 (.A(keysched_new_key_o[49]),
     .B(n697),
     .Y(n696));
- XOR2xp5_upper U694 (.A(key_i[49]),
+ XOR2xp5_bottom U694 (.A(key_i[49]),
     .B(n697),
     .Y(n695));
  OA21x2_upper U695 (.A1(FE_OFN104_n275),
@@ -8687,11 +8687,11 @@ module aes (clk,
     .B1(mixcol_data_o[49]),
     .B2(FE_OFN87_n279),
     .Y(n699));
- AOI21xp5_bottom U697 (.A1(data_o[4]),
+ AOI21xp5_upper U697 (.A1(data_o[4]),
     .A2(FE_OFN36_n268),
     .B(n700),
     .Y(n1525));
- OAI22xp5_bottom U698 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U698 (.A1(FE_DBTN88_n1666),
     .A2(n701),
     .B1(FE_OFN72_n272),
     .B2(n702),
@@ -8707,11 +8707,11 @@ module aes (clk,
  XOR2xp5_bottom U700 (.A(key_i[4]),
     .B(n703),
     .Y(n701));
- OA21x2_bottom U701 (.A1(FE_OFN121_FE_OFN103_n275),
+ OA21x2_upper U701 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(n2242),
     .B(n705),
     .Y(n703));
- AOI22xp5_bottom U702 (.A1(data_i[4]),
+ AOI22xp5_upper U702 (.A1(data_i[4]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[4]),
     .B2(FE_OFN86_n279),
@@ -8725,10 +8725,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n708),
     .Y(n706));
- XOR2xp5_upper U705 (.A(keysched_new_key_o[50]),
+ XOR2xp5_bottom U705 (.A(keysched_new_key_o[50]),
     .B(n709),
     .Y(n708));
- XOR2xp5_upper U706 (.A(key_i[50]),
+ XOR2xp5_bottom U706 (.A(key_i[50]),
     .B(n709),
     .Y(n707));
  OA21x2_upper U707 (.A1(FE_OFN103_n275),
@@ -8740,7 +8740,7 @@ module aes (clk,
     .B1(mixcol_data_o[50]),
     .B2(FE_OFN86_n279),
     .Y(n711));
- AOI21xp5_bottom U709 (.A1(data_o[51]),
+ AOI21xp5_upper U709 (.A1(data_o[51]),
     .A2(FE_OFN35_n268),
     .B(n712),
     .Y(n1529));
@@ -8749,7 +8749,7 @@ module aes (clk,
     .B1(FE_OFN99_n11),
     .B2(n2424),
     .Y(subbytes_data_i[6]));
- OAI22xp5_bottom U710 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U710 (.A1(FE_DBTN88_n1666),
     .A2(n713),
     .B1(FE_OFN72_n272),
     .B2(n714),
@@ -8760,20 +8760,20 @@ module aes (clk,
  XOR2xp5_bottom U712 (.A(key_i[51]),
     .B(n715),
     .Y(n713));
- OA21x2_bottom U713 (.A1(FE_OFN103_n275),
+ OA21x2_upper U713 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[51]),
     .B(n717),
     .Y(n715));
- AOI22xp5_bottom U714 (.A1(data_i[51]),
+ AOI22xp5_upper U714 (.A1(data_i[51]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[51]),
     .B2(FE_OFN86_n279),
     .Y(n717));
- AOI21xp5_bottom U715 (.A1(data_o[52]),
+ AOI21xp5_upper U715 (.A1(data_o[52]),
     .A2(FE_OFN35_n268),
     .B(n718),
     .Y(n1531));
- OAI22xp5_bottom U716 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U716 (.A1(FE_DBTN88_n1666),
     .A2(n719),
     .B1(FE_OFN72_n272),
     .B2(n720),
@@ -8784,20 +8784,20 @@ module aes (clk,
  XOR2xp5_bottom U718 (.A(key_i[52]),
     .B(n721),
     .Y(n719));
- OA21x2_bottom U719 (.A1(FE_OFN103_n275),
+ OA21x2_upper U719 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[52]),
     .B(n723),
     .Y(n721));
- AOI22xp5_bottom U720 (.A1(data_i[52]),
+ AOI22xp5_upper U720 (.A1(data_i[52]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[52]),
     .B2(FE_OFN86_n279),
     .Y(n723));
- AOI21xp5_bottom U721 (.A1(data_o[53]),
+ AOI21xp5_upper U721 (.A1(data_o[53]),
     .A2(FE_OFN35_n268),
     .B(n724),
     .Y(n1533));
- OAI22xp5_bottom U722 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U722 (.A1(FE_DBTN88_n1666),
     .A2(n725),
     .B1(FE_OFN72_n272),
     .B2(n726),
@@ -8808,11 +8808,11 @@ module aes (clk,
  XOR2xp5_bottom U724 (.A(key_i[53]),
     .B(n727),
     .Y(n725));
- OA21x2_bottom U725 (.A1(FE_OFN103_n275),
+ OA21x2_upper U725 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[53]),
     .B(n729),
     .Y(n727));
- AOI22xp5_bottom U726 (.A1(data_i[53]),
+ AOI22xp5_upper U726 (.A1(data_i[53]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[53]),
     .B2(FE_OFN86_n279),
@@ -8826,15 +8826,15 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n732),
     .Y(n730));
- XOR2xp5_upper U729 (.A(keysched_new_key_o[54]),
+ XOR2xp5_bottom U729 (.A(keysched_new_key_o[54]),
     .B(n733),
     .Y(n732));
- OAI22xp5_bottom U73 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U73 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2010),
     .B1(FE_OFN100_n11),
     .B2(n2425),
     .Y(subbytes_data_i[69]));
- XOR2xp5_upper U730 (.A(key_i[54]),
+ XOR2xp5_bottom U730 (.A(key_i[54]),
     .B(n733),
     .Y(n731));
  OA21x2_upper U731 (.A1(FE_OFN103_n275),
@@ -8855,10 +8855,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n738),
     .Y(n736));
- XOR2xp5_upper U735 (.A(keysched_new_key_o[55]),
+ XOR2xp5_bottom U735 (.A(keysched_new_key_o[55]),
     .B(n739),
     .Y(n738));
- XOR2xp5_upper U736 (.A(key_i[55]),
+ XOR2xp5_bottom U736 (.A(key_i[55]),
     .B(n739),
     .Y(n737));
  OA21x2_upper U737 (.A1(FE_OFN103_n275),
@@ -8870,11 +8870,11 @@ module aes (clk,
     .B1(mixcol_data_o[55]),
     .B2(FE_OFN86_n279),
     .Y(n741));
- AOI21xp5_bottom U739 (.A1(data_o[56]),
+ AOI21xp5_upper U739 (.A1(data_o[56]),
     .A2(FE_OFN36_n268),
     .B(n742),
     .Y(n1539));
- OAI22xp5_bottom U740 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U740 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n743),
     .B1(FE_OFN74_n272),
     .B2(n744),
@@ -8885,20 +8885,20 @@ module aes (clk,
  XOR2xp5_bottom U742 (.A(key_i[56]),
     .B(n745),
     .Y(n743));
- OA21x2_bottom U743 (.A1(FE_OFN105_n275),
+ OA21x2_upper U743 (.A1(FE_OFN105_n275),
     .A2(n2142),
     .B(n747),
     .Y(n745));
- AOI22xp5_bottom U744 (.A1(data_i[56]),
+ AOI22xp5_upper U744 (.A1(data_i[56]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[56]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n747));
- AOI21xp5_bottom U745 (.A1(data_o[57]),
+ AOI21xp5_upper U745 (.A1(data_o[57]),
     .A2(FE_OFN36_n268),
     .B(n748),
     .Y(n1541));
- OAI22xp5_bottom U746 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U746 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n749),
     .B1(FE_OFN74_n272),
     .B2(n750),
@@ -8909,7 +8909,7 @@ module aes (clk,
  XOR2xp5_bottom U748 (.A(key_i[57]),
     .B(n751),
     .Y(n749));
- OA21x2_bottom U749 (.A1(FE_OFN105_n275),
+ OA21x2_upper U749 (.A1(FE_OFN105_n275),
     .A2(n2141),
     .B(n753),
     .Y(n751));
@@ -8918,7 +8918,7 @@ module aes (clk,
     .B1(FE_OFN100_n11),
     .B2(n2426),
     .Y(subbytes_data_i[68]));
- AOI22xp5_bottom U750 (.A1(data_i[57]),
+ AOI22xp5_upper U750 (.A1(data_i[57]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[57]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -8932,10 +8932,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n756),
     .Y(n754));
- XOR2xp5_upper U753 (.A(keysched_new_key_o[58]),
+ XOR2xp5_bottom U753 (.A(keysched_new_key_o[58]),
     .B(n757),
     .Y(n756));
- XOR2xp5_upper U754 (.A(key_i[58]),
+ XOR2xp5_bottom U754 (.A(key_i[58]),
     .B(n757),
     .Y(n755));
  OA21x2_upper U755 (.A1(FE_OFN105_n275),
@@ -8947,11 +8947,11 @@ module aes (clk,
     .B1(mixcol_data_o[58]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n759));
- AOI21xp5_bottom U757 (.A1(data_o[59]),
+ AOI21xp5_upper U757 (.A1(data_o[59]),
     .A2(FE_OFN36_n268),
     .B(n760),
     .Y(n1545));
- OAI22xp5_bottom U758 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U758 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n761),
     .B1(FE_OFN74_n272),
     .B2(n762),
@@ -8962,11 +8962,11 @@ module aes (clk,
  XOR2xp5_bottom U760 (.A(key_i[59]),
     .B(n763),
     .Y(n761));
- OA21x2_bottom U761 (.A1(FE_OFN105_n275),
+ OA21x2_upper U761 (.A1(FE_OFN105_n275),
     .A2(n2139),
     .B(n765),
     .Y(n763));
- AOI22xp5_bottom U762 (.A1(data_i[59]),
+ AOI22xp5_upper U762 (.A1(data_i[59]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[59]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -8980,31 +8980,31 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n768),
     .Y(n766));
- XOR2xp5_upper U765 (.A(keysched_new_key_o[5]),
+ XOR2xp5_bottom U765 (.A(keysched_new_key_o[5]),
     .B(n769),
     .Y(n768));
- XOR2xp5_upper U766 (.A(key_i[5]),
+ XOR2xp5_bottom U766 (.A(key_i[5]),
     .B(n769),
     .Y(n767));
  OA21x2_upper U767 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(n2241),
     .B(n771),
     .Y(n769));
- AOI22xp5_bottom U768 (.A1(data_i[5]),
+ AOI22xp5_upper U768 (.A1(data_i[5]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[5]),
     .B2(FE_OFN86_n279),
     .Y(n771));
- AOI21xp5_bottom U769 (.A1(data_o[60]),
+ AOI21xp5_upper U769 (.A1(data_o[60]),
     .A2(FE_OFN36_n268),
     .B(n772),
     .Y(n1549));
- OAI22xp5_bottom U77 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U77 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n2002),
     .B1(n11),
     .B2(n2427),
     .Y(subbytes_data_i[67]));
- OAI22xp5_bottom U770 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U770 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n773),
     .B1(FE_OFN74_n272),
     .B2(n774),
@@ -9015,11 +9015,11 @@ module aes (clk,
  XOR2xp5_bottom U772 (.A(key_i[60]),
     .B(n775),
     .Y(n773));
- OA21x2_bottom U773 (.A1(FE_OFN105_n275),
+ OA21x2_upper U773 (.A1(FE_OFN105_n275),
     .A2(n2138),
     .B(n777),
     .Y(n775));
- AOI22xp5_bottom U774 (.A1(data_i[60]),
+ AOI22xp5_upper U774 (.A1(data_i[60]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[60]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -9033,10 +9033,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n780),
     .Y(n778));
- XOR2xp5_upper U777 (.A(keysched_new_key_o[61]),
+ XOR2xp5_bottom U777 (.A(keysched_new_key_o[61]),
     .B(n781),
     .Y(n780));
- XOR2xp5_upper U778 (.A(key_i[61]),
+ XOR2xp5_bottom U778 (.A(key_i[61]),
     .B(n781),
     .Y(n779));
  OA21x2_upper U779 (.A1(FE_OFN105_n275),
@@ -9048,7 +9048,7 @@ module aes (clk,
     .B1(mixcol_data_o[61]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n783));
- AOI21xp5_bottom U781 (.A1(data_o[62]),
+ AOI21xp5_upper U781 (.A1(data_o[62]),
     .A2(FE_OFN36_n268),
     .B(n784),
     .Y(n1553));
@@ -9057,10 +9057,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n786),
     .Y(n784));
- XOR2xp5_upper U783 (.A(keysched_new_key_o[62]),
+ XOR2xp5_bottom U783 (.A(keysched_new_key_o[62]),
     .B(n787),
     .Y(n786));
- XOR2xp5_upper U784 (.A(key_i[62]),
+ XOR2xp5_bottom U784 (.A(key_i[62]),
     .B(n787),
     .Y(n785));
  OA21x2_upper U785 (.A1(FE_OFN105_n275),
@@ -9081,10 +9081,10 @@ module aes (clk,
     .B1(FE_OFN74_n272),
     .B2(n792),
     .Y(n790));
- XOR2xp5_upper U789 (.A(keysched_new_key_o[63]),
+ XOR2xp5_bottom U789 (.A(keysched_new_key_o[63]),
     .B(n793),
     .Y(n792));
- OAI22xp5_bottom U79 (.A1(FE_OFN82_FE_DBTN89_n1665),
+ OAI22xp5_upper U79 (.A1(FE_OFN82_FE_DBTN89_n1665),
     .A2(n1998),
     .B1(FE_OFN100_n11),
     .B2(n2428),
@@ -9110,10 +9110,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n798),
     .Y(n796));
- XOR2xp5_upper U795 (.A(keysched_new_key_o[64]),
+ XOR2xp5_bottom U795 (.A(keysched_new_key_o[64]),
     .B(n799),
     .Y(n798));
- XOR2xp5_upper U796 (.A(key_i[64]),
+ XOR2xp5_bottom U796 (.A(key_i[64]),
     .B(n799),
     .Y(n797));
  OA21x2_upper U797 (.A1(FE_OFN104_n275),
@@ -9125,7 +9125,7 @@ module aes (clk,
     .B1(mixcol_data_o[64]),
     .B2(FE_OFN87_n279),
     .Y(n801));
- AOI21xp5_bottom U799 (.A1(data_o[65]),
+ AOI21xp5_upper U799 (.A1(data_o[65]),
     .A2(FE_OFN36_n268),
     .B(n802),
     .Y(n1559));
@@ -9134,26 +9134,26 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n804),
     .Y(n802));
- XOR2xp5_upper U801 (.A(keysched_new_key_o[65]),
+ XOR2xp5_bottom U801 (.A(keysched_new_key_o[65]),
     .B(n805),
     .Y(n804));
- XOR2xp5_upper U802 (.A(key_i[65]),
+ XOR2xp5_bottom U802 (.A(key_i[65]),
     .B(n805),
     .Y(n803));
  OA21x2_upper U803 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[65]),
     .B(n807),
     .Y(n805));
- AOI22xp5_bottom U804 (.A1(data_i[65]),
+ AOI22xp5_upper U804 (.A1(data_i[65]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[65]),
     .B2(FE_OFN87_n279),
     .Y(n807));
- AOI21xp5_bottom U805 (.A1(data_o[66]),
+ AOI21xp5_upper U805 (.A1(data_o[66]),
     .A2(FE_OFN35_n268),
     .B(n808),
     .Y(n1561));
- OAI22xp5_bottom U806 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U806 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n809),
     .B1(FE_OFN72_n272),
     .B2(n810),
@@ -9164,25 +9164,25 @@ module aes (clk,
  XOR2xp5_bottom U808 (.A(key_i[66]),
     .B(n811),
     .Y(n809));
- OA21x2_bottom U809 (.A1(FE_OFN103_n275),
+ OA21x2_upper U809 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[66]),
     .B(n813),
     .Y(n811));
- OAI22xp5_bottom U81 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U81 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n1994),
     .B1(FE_OFN99_n11),
     .B2(n2429),
     .Y(subbytes_data_i[65]));
- AOI22xp5_bottom U810 (.A1(data_i[66]),
+ AOI22xp5_upper U810 (.A1(data_i[66]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[66]),
     .B2(FE_OFN86_n279),
     .Y(n813));
- AOI21xp5_bottom U811 (.A1(data_o[67]),
+ AOI21xp5_upper U811 (.A1(data_o[67]),
     .A2(FE_OFN35_n268),
     .B(n814),
     .Y(n1563));
- OAI22xp5_bottom U812 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U812 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n815),
     .B1(FE_OFN72_n272),
     .B2(n816),
@@ -9193,20 +9193,20 @@ module aes (clk,
  XOR2xp5_bottom U814 (.A(key_i[67]),
     .B(n817),
     .Y(n815));
- OA21x2_bottom U815 (.A1(FE_OFN104_n275),
+ OA21x2_upper U815 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[67]),
     .B(n819),
     .Y(n817));
- AOI22xp5_bottom U816 (.A1(data_i[67]),
+ AOI22xp5_upper U816 (.A1(data_i[67]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[67]),
     .B2(FE_OFN86_n279),
     .Y(n819));
- AOI21xp5_bottom U817 (.A1(data_o[68]),
+ AOI21xp5_upper U817 (.A1(data_o[68]),
     .A2(FE_OFN35_n268),
     .B(n820),
     .Y(n1565));
- OAI22xp5_bottom U818 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U818 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n821),
     .B1(FE_OFN72_n272),
     .B2(n822),
@@ -9235,17 +9235,17 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n828),
     .Y(n826));
- XOR2xp5_upper U825 (.A(keysched_new_key_o[69]),
+ XOR2xp5_bottom U825 (.A(keysched_new_key_o[69]),
     .B(n829),
     .Y(n828));
- XOR2xp5_upper U826 (.A(key_i[69]),
+ XOR2xp5_bottom U826 (.A(key_i[69]),
     .B(n829),
     .Y(n827));
- OA21x2_bottom U827 (.A1(FE_OFN104_n275),
+ OA21x2_upper U827 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[69]),
     .B(n831),
     .Y(n829));
- AOI22xp5_bottom U828 (.A1(data_i[69]),
+ AOI22xp5_upper U828 (.A1(data_i[69]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[69]),
     .B2(FE_OFN86_n279),
@@ -9279,11 +9279,11 @@ module aes (clk,
     .B1(mixcol_data_o[6]),
     .B2(FE_OFN86_n279),
     .Y(n837));
- AOI21xp5_bottom U835 (.A1(data_o[70]),
+ AOI21xp5_upper U835 (.A1(data_o[70]),
     .A2(FE_OFN35_n268),
     .B(n838),
     .Y(n1571));
- OAI22xp5_bottom U836 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U836 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n839),
     .B1(FE_OFN72_n272),
     .B2(n840),
@@ -9294,20 +9294,20 @@ module aes (clk,
  XOR2xp5_bottom U838 (.A(key_i[70]),
     .B(n841),
     .Y(n839));
- OA21x2_bottom U839 (.A1(FE_OFN104_n275),
+ OA21x2_upper U839 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[70]),
     .B(n843),
     .Y(n841));
- AOI22xp5_bottom U840 (.A1(data_i[70]),
+ AOI22xp5_upper U840 (.A1(data_i[70]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[70]),
     .B2(FE_OFN86_n279),
     .Y(n843));
- AOI21xp5_bottom U841 (.A1(data_o[71]),
+ AOI21xp5_upper U841 (.A1(data_o[71]),
     .A2(FE_OFN35_n268),
     .B(n844),
     .Y(n1573));
- OAI22xp5_bottom U842 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U842 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n845),
     .B1(FE_OFN72_n272),
     .B2(n846),
@@ -9318,16 +9318,16 @@ module aes (clk,
  XOR2xp5_bottom U844 (.A(key_i[71]),
     .B(n847),
     .Y(n845));
- OA21x2_bottom U845 (.A1(FE_OFN104_n275),
+ OA21x2_upper U845 (.A1(FE_OFN104_n275),
     .A2(subbytes_data_o[71]),
     .B(n849),
     .Y(n847));
- AOI22xp5_bottom U846 (.A1(data_i[71]),
+ AOI22xp5_upper U846 (.A1(data_i[71]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[71]),
     .B2(FE_OFN86_n279),
     .Y(n849));
- AOI21xp5_bottom U847 (.A1(data_o[72]),
+ AOI21xp5_upper U847 (.A1(data_o[72]),
     .A2(FE_OFN36_n268),
     .B(n850),
     .Y(n1575));
@@ -9336,7 +9336,7 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n852),
     .Y(n850));
- XOR2xp5_upper U849 (.A(keysched_new_key_o[72]),
+ XOR2xp5_bottom U849 (.A(keysched_new_key_o[72]),
     .B(n853),
     .Y(n852));
  OAI22xp5_upper U85 (.A1(FE_OFN84_FE_DBTN89_n1665),
@@ -9344,14 +9344,14 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2431),
     .Y(subbytes_data_i[63]));
- XOR2xp5_upper U850 (.A(key_i[72]),
+ XOR2xp5_bottom U850 (.A(key_i[72]),
     .B(n853),
     .Y(n851));
  OA21x2_upper U851 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[72]),
     .B(n855),
     .Y(n853));
- AOI22xp5_bottom U852 (.A1(data_i[72]),
+ AOI22xp5_upper U852 (.A1(data_i[72]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[72]),
     .B2(FE_OFN87_n279),
@@ -9365,10 +9365,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n858),
     .Y(n856));
- XOR2xp5_upper U855 (.A(keysched_new_key_o[73]),
+ XOR2xp5_bottom U855 (.A(keysched_new_key_o[73]),
     .B(n859),
     .Y(n858));
- XOR2xp5_upper U856 (.A(key_i[73]),
+ XOR2xp5_bottom U856 (.A(key_i[73]),
     .B(n859),
     .Y(n857));
  OA21x2_upper U857 (.A1(FE_OFN105_n275),
@@ -9380,11 +9380,11 @@ module aes (clk,
     .B1(mixcol_data_o[73]),
     .B2(FE_OFN87_n279),
     .Y(n861));
- AOI21xp5_bottom U859 (.A1(data_o[74]),
+ AOI21xp5_upper U859 (.A1(data_o[74]),
     .A2(FE_OFN36_n268),
     .B(n862),
     .Y(n1579));
- OAI22xp5_bottom U860 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U860 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n863),
     .B1(FE_OFN72_n272),
     .B2(n864),
@@ -9395,20 +9395,20 @@ module aes (clk,
  XOR2xp5_bottom U862 (.A(key_i[74]),
     .B(n865),
     .Y(n863));
- OA21x2_bottom U863 (.A1(FE_OFN105_n275),
+ OA21x2_upper U863 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[74]),
     .B(n867),
     .Y(n865));
- AOI22xp5_bottom U864 (.A1(data_i[74]),
+ AOI22xp5_upper U864 (.A1(data_i[74]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[74]),
     .B2(FE_OFN87_n279),
     .Y(n867));
- AOI21xp5_bottom U865 (.A1(data_o[75]),
+ AOI21xp5_upper U865 (.A1(data_o[75]),
     .A2(FE_OFN36_n268),
     .B(n868),
     .Y(n1581));
- OAI22xp5_bottom U866 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U866 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n869),
     .B1(FE_OFN72_n272),
     .B2(n870),
@@ -9419,16 +9419,16 @@ module aes (clk,
  XOR2xp5_bottom U868 (.A(key_i[75]),
     .B(n871),
     .Y(n869));
- OA21x2_bottom U869 (.A1(FE_OFN105_n275),
+ OA21x2_upper U869 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[75]),
     .B(n873),
     .Y(n871));
- OAI22xp5_bottom U87 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U87 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2111),
     .B1(FE_OFN102_n11),
     .B2(n2432),
     .Y(subbytes_data_i[62]));
- AOI22xp5_bottom U870 (.A1(data_i[75]),
+ AOI22xp5_upper U870 (.A1(data_i[75]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[75]),
     .B2(FE_OFN87_n279),
@@ -9442,10 +9442,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n876),
     .Y(n874));
- XOR2xp5_upper U873 (.A(keysched_new_key_o[76]),
+ XOR2xp5_bottom U873 (.A(keysched_new_key_o[76]),
     .B(n877),
     .Y(n876));
- XOR2xp5_upper U874 (.A(key_i[76]),
+ XOR2xp5_bottom U874 (.A(key_i[76]),
     .B(n877),
     .Y(n875));
  OA21x2_upper U875 (.A1(FE_OFN105_n275),
@@ -9457,11 +9457,11 @@ module aes (clk,
     .B1(mixcol_data_o[76]),
     .B2(FE_OFN87_n279),
     .Y(n879));
- AOI21xp5_bottom U877 (.A1(data_o[77]),
+ AOI21xp5_upper U877 (.A1(data_o[77]),
     .A2(FE_OFN36_n268),
     .B(n880),
     .Y(n1585));
- OAI22xp5_bottom U878 (.A1(FE_OFN34_FE_DBTN88_n1666),
+ OAI22xp5_upper U878 (.A1(FE_OFN34_FE_DBTN88_n1666),
     .A2(n881),
     .B1(FE_OFN72_n272),
     .B2(n882),
@@ -9472,11 +9472,11 @@ module aes (clk,
  XOR2xp5_bottom U880 (.A(key_i[77]),
     .B(n883),
     .Y(n881));
- OA21x2_bottom U881 (.A1(FE_OFN105_n275),
+ OA21x2_upper U881 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[77]),
     .B(n885),
     .Y(n883));
- AOI22xp5_bottom U882 (.A1(data_i[77]),
+ AOI22xp5_upper U882 (.A1(data_i[77]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[77]),
     .B2(FE_OFN87_n279),
@@ -9490,10 +9490,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n888),
     .Y(n886));
- XOR2xp5_upper U885 (.A(keysched_new_key_o[78]),
+ XOR2xp5_bottom U885 (.A(keysched_new_key_o[78]),
     .B(n889),
     .Y(n888));
- XOR2xp5_upper U886 (.A(key_i[78]),
+ XOR2xp5_bottom U886 (.A(key_i[78]),
     .B(n889),
     .Y(n887));
  OA21x2_upper U887 (.A1(FE_OFN121_FE_OFN103_n275),
@@ -9505,7 +9505,7 @@ module aes (clk,
     .B1(mixcol_data_o[78]),
     .B2(FE_OFN87_n279),
     .Y(n891));
- AOI21xp5_bottom U889 (.A1(data_o[79]),
+ AOI21xp5_upper U889 (.A1(data_o[79]),
     .A2(FE_OFN36_n268),
     .B(n892),
     .Y(n1589));
@@ -9514,7 +9514,7 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2433),
     .Y(subbytes_data_i[61]));
- OAI22xp5_bottom U890 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U890 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n893),
     .B1(FE_OFN73_n272),
     .B2(n894),
@@ -9543,17 +9543,17 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n900),
     .Y(n898));
- XOR2xp5_upper U897 (.A(keysched_new_key_o[7]),
+ XOR2xp5_bottom U897 (.A(keysched_new_key_o[7]),
     .B(n901),
     .Y(n900));
- XOR2xp5_upper U898 (.A(key_i[7]),
+ XOR2xp5_bottom U898 (.A(key_i[7]),
     .B(n901),
     .Y(n899));
  OA21x2_upper U899 (.A1(FE_OFN121_FE_OFN103_n275),
     .A2(n2239),
     .B(n903),
     .Y(n901));
- OAI22xp5_bottom U9 (.A1(FE_DBTN89_n1665),
+ OAI22xp5_upper U9 (.A1(FE_DBTN89_n1665),
     .A2(n1997),
     .B1(FE_OFN100_n11),
     .B2(n2393),
@@ -9572,10 +9572,10 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n906),
     .Y(n904));
- XOR2xp5_upper U903 (.A(keysched_new_key_o[80]),
+ XOR2xp5_bottom U903 (.A(keysched_new_key_o[80]),
     .B(n907),
     .Y(n906));
- XOR2xp5_upper U904 (.A(key_i[80]),
+ XOR2xp5_bottom U904 (.A(key_i[80]),
     .B(n907),
     .Y(n905));
  OA21x2_upper U905 (.A1(FE_OFN104_n275),
@@ -9596,15 +9596,15 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n912),
     .Y(n910));
- XOR2xp5_upper U909 (.A(keysched_new_key_o[81]),
+ XOR2xp5_bottom U909 (.A(keysched_new_key_o[81]),
     .B(n913),
     .Y(n912));
- OAI22xp5_bottom U91 (.A1(FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U91 (.A1(FE_OFN84_FE_DBTN89_n1665),
     .A2(n2103),
     .B1(FE_OFN102_n11),
     .B2(n2434),
     .Y(subbytes_data_i[60]));
- XOR2xp5_upper U910 (.A(key_i[81]),
+ XOR2xp5_bottom U910 (.A(key_i[81]),
     .B(n913),
     .Y(n911));
  OA21x2_upper U911 (.A1(FE_OFN104_n275),
@@ -9625,26 +9625,26 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n918),
     .Y(n916));
- XOR2xp5_upper U915 (.A(keysched_new_key_o[82]),
+ XOR2xp5_bottom U915 (.A(keysched_new_key_o[82]),
     .B(n919),
     .Y(n918));
- XOR2xp5_upper U916 (.A(key_i[82]),
+ XOR2xp5_bottom U916 (.A(key_i[82]),
     .B(n919),
     .Y(n917));
- OA21x2_bottom U917 (.A1(FE_OFN103_n275),
+ OA21x2_upper U917 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[82]),
     .B(n921),
     .Y(n919));
- AOI22xp5_bottom U918 (.A1(data_i[82]),
+ AOI22xp5_upper U918 (.A1(data_i[82]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[82]),
     .B2(FE_OFN86_n279),
     .Y(n921));
- AOI21xp5_bottom U919 (.A1(data_o[83]),
+ AOI21xp5_upper U919 (.A1(data_o[83]),
     .A2(FE_OFN35_n268),
     .B(n922),
     .Y(n1599));
- OAI22xp5_bottom U920 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U920 (.A1(FE_DBTN88_n1666),
     .A2(n923),
     .B1(FE_OFN72_n272),
     .B2(n924),
@@ -9655,20 +9655,20 @@ module aes (clk,
  XOR2xp5_bottom U922 (.A(key_i[83]),
     .B(n925),
     .Y(n923));
- OA21x2_bottom U923 (.A1(FE_OFN103_n275),
+ OA21x2_upper U923 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[83]),
     .B(n927),
     .Y(n925));
- AOI22xp5_bottom U924 (.A1(data_i[83]),
+ AOI22xp5_upper U924 (.A1(data_i[83]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[83]),
     .B2(FE_OFN86_n279),
     .Y(n927));
- AOI21xp5_bottom U925 (.A1(data_o[84]),
+ AOI21xp5_upper U925 (.A1(data_o[84]),
     .A2(FE_OFN35_n268),
     .B(n928),
     .Y(n1601));
- OAI22xp5_bottom U926 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U926 (.A1(FE_DBTN88_n1666),
     .A2(n929),
     .B1(FE_OFN72_n272),
     .B2(n930),
@@ -9679,21 +9679,21 @@ module aes (clk,
  XOR2xp5_bottom U928 (.A(key_i[84]),
     .B(n931),
     .Y(n929));
- OA21x2_bottom U929 (.A1(FE_OFN103_n275),
+ OA21x2_upper U929 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[84]),
     .B(n933),
     .Y(n931));
- OAI22xp5_bottom U93 (.A1(FE_OFN83_FE_DBTN89_n1665),
+ OAI22xp5_upper U93 (.A1(FE_OFN83_FE_DBTN89_n1665),
     .A2(n2008),
     .B1(FE_OFN99_n11),
     .B2(n2435),
     .Y(subbytes_data_i[5]));
- AOI22xp5_bottom U930 (.A1(data_i[84]),
+ AOI22xp5_upper U930 (.A1(data_i[84]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[84]),
     .B2(FE_OFN86_n279),
     .Y(n933));
- AOI21xp5_bottom U931 (.A1(data_o[85]),
+ AOI21xp5_upper U931 (.A1(data_o[85]),
     .A2(FE_OFN35_n268),
     .B(n934),
     .Y(n1603));
@@ -9702,17 +9702,17 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n936),
     .Y(n934));
- XOR2xp5_upper U933 (.A(keysched_new_key_o[85]),
+ XOR2xp5_bottom U933 (.A(keysched_new_key_o[85]),
     .B(n937),
     .Y(n936));
- XOR2xp5_upper U934 (.A(key_i[85]),
+ XOR2xp5_bottom U934 (.A(key_i[85]),
     .B(n937),
     .Y(n935));
  OA21x2_upper U935 (.A1(FE_OFN103_n275),
     .A2(subbytes_data_o[85]),
     .B(n939),
     .Y(n937));
- AOI22xp5_bottom U936 (.A1(data_i[85]),
+ AOI22xp5_upper U936 (.A1(data_i[85]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[85]),
     .B2(FE_OFN86_n279),
@@ -9729,7 +9729,7 @@ module aes (clk,
  XOR2xp5_upper U939 (.A(keysched_new_key_o[86]),
     .B(n943),
     .Y(n942));
- XOR2xp5_upper U940 (.A(key_i[86]),
+ XOR2xp5_bottom U940 (.A(key_i[86]),
     .B(n943),
     .Y(n941));
  OA21x2_upper U941 (.A1(FE_OFN103_n275),
@@ -9750,10 +9750,10 @@ module aes (clk,
     .B1(FE_OFN72_n272),
     .B2(n948),
     .Y(n946));
- XOR2xp5_upper U945 (.A(keysched_new_key_o[87]),
+ XOR2xp5_bottom U945 (.A(keysched_new_key_o[87]),
     .B(n949),
     .Y(n948));
- XOR2xp5_upper U946 (.A(key_i[87]),
+ XOR2xp5_bottom U946 (.A(key_i[87]),
     .B(n949),
     .Y(n947));
  OA21x2_upper U947 (.A1(FE_OFN103_n275),
@@ -9765,31 +9765,31 @@ module aes (clk,
     .B1(mixcol_data_o[87]),
     .B2(FE_OFN86_n279),
     .Y(n951));
- AOI21xp5_bottom U949 (.A1(data_o[88]),
+ AOI21xp5_upper U949 (.A1(data_o[88]),
     .A2(FE_OFN37_n268),
     .B(n952),
     .Y(n1609));
- OAI22xp5_bottom U95 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U95 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2099),
     .B1(FE_OFN102_n11),
     .B2(n2436),
     .Y(subbytes_data_i[59]));
- OAI22xp5_bottom U950 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U950 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n953),
     .B1(FE_OFN73_n272),
     .B2(n954),
     .Y(n952));
- XOR2xp5_bottom U951 (.A(keysched_new_key_o[88]),
+ XOR2xp5_upper U951 (.A(keysched_new_key_o[88]),
     .B(n955),
     .Y(n954));
- XOR2xp5_bottom U952 (.A(key_i[88]),
+ XOR2xp5_upper U952 (.A(key_i[88]),
     .B(n955),
     .Y(n953));
- OA21x2_bottom U953 (.A1(FE_OFN104_n275),
+ OA21x2_upper U953 (.A1(FE_OFN104_n275),
     .A2(n2134),
     .B(n957),
     .Y(n955));
- AOI22xp5_bottom U954 (.A1(data_i[88]),
+ AOI22xp5_upper U954 (.A1(data_i[88]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[88]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -9818,40 +9818,40 @@ module aes (clk,
     .B1(mixcol_data_o[89]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n963));
- AOI21xp5_bottom U961 (.A1(data_o[8]),
+ AOI21xp5_upper U961 (.A1(data_o[8]),
     .A2(FE_OFN36_n268),
     .B(n964),
     .Y(n1613));
- OAI22xp5_bottom U962 (.A1(FE_DBTN88_n1666),
+ OAI22xp5_upper U962 (.A1(FE_DBTN88_n1666),
     .A2(n965),
     .B1(FE_OFN72_n272),
     .B2(n966),
     .Y(n964));
- XOR2xp5_bottom U963 (.A(keysched_new_key_o[8]),
+ XOR2xp5_upper U963 (.A(keysched_new_key_o[8]),
     .B(n967),
     .Y(n966));
- XOR2xp5_bottom U964 (.A(key_i[8]),
+ XOR2xp5_upper U964 (.A(key_i[8]),
     .B(n967),
     .Y(n965));
- OA21x2_bottom U965 (.A1(FE_OFN105_n275),
+ OA21x2_upper U965 (.A1(FE_OFN105_n275),
     .A2(subbytes_data_o[8]),
     .B(n969),
     .Y(n967));
- AOI22xp5_bottom U966 (.A1(data_i[8]),
+ AOI22xp5_upper U966 (.A1(data_i[8]),
     .A2(FE_OFN106_n278),
     .B1(mixcol_data_o[8]),
     .B2(FE_OFN86_n279),
     .Y(n969));
- AOI21xp5_bottom U967 (.A1(data_o[90]),
+ AOI21xp5_upper U967 (.A1(data_o[90]),
     .A2(FE_OFN37_n268),
     .B(n970),
     .Y(n1615));
- OAI22xp5_bottom U968 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U968 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n971),
     .B1(FE_OFN73_n272),
     .B2(n972),
     .Y(n970));
- XOR2xp5_bottom U969 (.A(keysched_new_key_o[90]),
+ XOR2xp5_upper U969 (.A(keysched_new_key_o[90]),
     .B(n973),
     .Y(n972));
  OAI22xp5_upper U97 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
@@ -9859,38 +9859,38 @@ module aes (clk,
     .B1(FE_OFN102_n11),
     .B2(n2437),
     .Y(subbytes_data_i[58]));
- XOR2xp5_bottom U970 (.A(key_i[90]),
+ XOR2xp5_upper U970 (.A(key_i[90]),
     .B(n973),
     .Y(n971));
- OA21x2_bottom U971 (.A1(FE_OFN104_n275),
+ OA21x2_upper U971 (.A1(FE_OFN104_n275),
     .A2(n2132),
     .B(n975),
     .Y(n973));
- AOI22xp5_bottom U972 (.A1(data_i[90]),
+ AOI22xp5_upper U972 (.A1(data_i[90]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[90]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n975));
- AOI21xp5_bottom U973 (.A1(data_o[91]),
+ AOI21xp5_upper U973 (.A1(data_o[91]),
     .A2(FE_OFN37_n268),
     .B(n976),
     .Y(n1617));
- OAI22xp5_bottom U974 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U974 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n977),
     .B1(FE_OFN73_n272),
     .B2(n978),
     .Y(n976));
- XOR2xp5_bottom U975 (.A(keysched_new_key_o[91]),
+ XOR2xp5_upper U975 (.A(keysched_new_key_o[91]),
     .B(n979),
     .Y(n978));
- XOR2xp5_bottom U976 (.A(key_i[91]),
+ XOR2xp5_upper U976 (.A(key_i[91]),
     .B(n979),
     .Y(n977));
- OA21x2_bottom U977 (.A1(FE_OFN104_n275),
+ OA21x2_upper U977 (.A1(FE_OFN104_n275),
     .A2(n2131),
     .B(n981),
     .Y(n979));
- AOI22xp5_bottom U978 (.A1(data_i[91]),
+ AOI22xp5_upper U978 (.A1(data_i[91]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[91]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -9904,26 +9904,26 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n984),
     .Y(n982));
- XOR2xp5_upper U981 (.A(keysched_new_key_o[92]),
+ XOR2xp5_bottom U981 (.A(keysched_new_key_o[92]),
     .B(n985),
     .Y(n984));
  XOR2xp5_upper U982 (.A(key_i[92]),
     .B(n985),
     .Y(n983));
- OA21x2_bottom U983 (.A1(FE_OFN104_n275),
+ OA21x2_upper U983 (.A1(FE_OFN104_n275),
     .A2(n2130),
     .B(n987),
     .Y(n985));
- AOI22xp5_bottom U984 (.A1(data_i[92]),
+ AOI22xp5_upper U984 (.A1(data_i[92]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[92]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n987));
- AOI21xp5_bottom U985 (.A1(data_o[93]),
+ AOI21xp5_upper U985 (.A1(data_o[93]),
     .A2(FE_OFN37_n268),
     .B(n988),
     .Y(n1621));
- OAI22xp5_bottom U986 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U986 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n989),
     .B1(FE_OFN73_n272),
     .B2(n990),
@@ -9934,25 +9934,25 @@ module aes (clk,
  XOR2xp5_bottom U988 (.A(key_i[93]),
     .B(n991),
     .Y(n989));
- OA21x2_bottom U989 (.A1(FE_OFN104_n275),
+ OA21x2_upper U989 (.A1(FE_OFN104_n275),
     .A2(n2129),
     .B(n993),
     .Y(n991));
- OAI22xp5_bottom U99 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
+ OAI22xp5_upper U99 (.A1(FE_OFN127_FE_OFN84_FE_DBTN89_n1665),
     .A2(n2091),
     .B1(FE_OFN102_n11),
     .B2(n2438),
     .Y(subbytes_data_i[57]));
- AOI22xp5_bottom U990 (.A1(data_i[93]),
+ AOI22xp5_upper U990 (.A1(data_i[93]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[93]),
     .B2(FE_OFN123_FE_OFN87_n279),
     .Y(n993));
- AOI21xp5_bottom U991 (.A1(data_o[94]),
+ AOI21xp5_upper U991 (.A1(data_o[94]),
     .A2(FE_OFN37_n268),
     .B(n994),
     .Y(n1623));
- OAI22xp5_bottom U992 (.A1(FE_OFN33_FE_DBTN88_n1666),
+ OAI22xp5_upper U992 (.A1(FE_OFN33_FE_DBTN88_n1666),
     .A2(n995),
     .B1(FE_OFN73_n272),
     .B2(n996),
@@ -9963,11 +9963,11 @@ module aes (clk,
  XOR2xp5_bottom U994 (.A(key_i[94]),
     .B(n997),
     .Y(n995));
- OA21x2_bottom U995 (.A1(FE_OFN104_n275),
+ OA21x2_upper U995 (.A1(FE_OFN104_n275),
     .A2(n2128),
     .B(n999),
     .Y(n997));
- AOI22xp5_bottom U996 (.A1(data_i[94]),
+ AOI22xp5_upper U996 (.A1(data_i[94]),
     .A2(FE_OFN107_n278),
     .B1(mixcol_data_o[94]),
     .B2(FE_OFN123_FE_OFN87_n279),
@@ -9981,7 +9981,7 @@ module aes (clk,
     .B1(FE_OFN73_n272),
     .B2(n1002),
     .Y(n1000));
- XOR2xp5_upper U999 (.A(keysched_new_key_o[95]),
+ XOR2xp5_bottom U999 (.A(keysched_new_key_o[95]),
     .B(n1003),
     .Y(n1002));
  DFFASRHQNx1_upper addroundkey_data_reg_reg_0_ (.CLK(clknet_leaf_6_clk),
@@ -9994,12 +9994,12 @@ module aes (clk,
     .QN(data_o[100]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_101_ (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_101_ (.CLK(clknet_leaf_14_clk),
     .D(n1387),
     .QN(data_o[101]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_102_ (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_102_ (.CLK(clknet_leaf_14_clk),
     .D(n1389),
     .QN(data_o[102]),
     .RESETN(FE_OFN43_n1664),
@@ -10029,7 +10029,7 @@ module aes (clk,
     .QN(data_o[107]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_108_ (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_108_ (.CLK(clknet_leaf_19_clk),
     .D(n1401),
     .QN(data_o[108]),
     .RESETN(FE_OFN44_n1664),
@@ -10049,12 +10049,12 @@ module aes (clk,
     .QN(data_o[110]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_111_ (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_111_ (.CLK(clknet_leaf_18_clk),
     .D(n1409),
     .QN(data_o[111]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_112_ (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_112_ (.CLK(clknet_leaf_18_clk),
     .D(n1411),
     .QN(data_o[112]),
     .RESETN(FE_OFN43_n1664),
@@ -10064,12 +10064,12 @@ module aes (clk,
     .QN(data_o[113]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_114_ (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_114_ (.CLK(clknet_leaf_15_clk),
     .D(n1415),
     .QN(data_o[114]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_115_ (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_115_ (.CLK(clknet_leaf_14_clk),
     .D(n1417),
     .QN(data_o[115]),
     .RESETN(FE_OFN43_n1664),
@@ -10094,7 +10094,7 @@ module aes (clk,
     .QN(data_o[119]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_11_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_11_ (.CLK(clknet_leaf_6_clk),
     .D(n1427),
     .QN(data_o[11]),
     .RESETN(FE_OFN42_n1664),
@@ -10109,7 +10109,7 @@ module aes (clk,
     .QN(data_o[121]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_122_ (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_122_ (.CLK(clknet_leaf_0_clk),
     .D(n1433),
     .QN(data_o[122]),
     .RESETN(FE_OFN44_n1664),
@@ -10119,7 +10119,7 @@ module aes (clk,
     .QN(data_o[123]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_124_ (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_124_ (.CLK(clknet_leaf_0_clk),
     .D(n1437),
     .QN(data_o[124]),
     .RESETN(FE_OFN44_n1664),
@@ -10129,7 +10129,7 @@ module aes (clk,
     .QN(data_o[125]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_126_ (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_126_ (.CLK(clknet_leaf_0_clk),
     .D(n1441),
     .QN(data_o[126]),
     .RESETN(FE_OFN44_n1664),
@@ -10144,7 +10144,7 @@ module aes (clk,
     .QN(data_o[12]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_13_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_13_ (.CLK(clknet_leaf_6_clk),
     .D(n1445),
     .QN(data_o[13]),
     .RESETN(FE_OFN42_n1664),
@@ -10164,7 +10164,7 @@ module aes (clk,
     .QN(data_o[16]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_17_ (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_17_ (.CLK(clknet_leaf_9_clk),
     .D(n1453),
     .QN(data_o[17]),
     .RESETN(FE_OFN42_n1664),
@@ -10179,7 +10179,7 @@ module aes (clk,
     .QN(data_o[19]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_1_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_1_ (.CLK(clknet_leaf_6_clk),
     .D(n1459),
     .QN(data_o[1]),
     .RESETN(FE_OFN42_n1664),
@@ -10189,7 +10189,7 @@ module aes (clk,
     .QN(data_o[20]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_21_ (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_21_ (.CLK(clknet_leaf_10_clk),
     .D(n1463),
     .QN(data_o[21]),
     .RESETN(n1664),
@@ -10209,17 +10209,17 @@ module aes (clk,
     .QN(data_o[24]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_25_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_25_ (.CLK(clknet_leaf_5_clk),
     .D(n1471),
     .QN(data_o[25]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_26_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_26_ (.CLK(clknet_leaf_5_clk),
     .D(n1473),
     .QN(data_o[26]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_27_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_27_ (.CLK(clknet_leaf_5_clk),
     .D(n1475),
     .QN(data_o[27]),
     .RESETN(FE_OFN42_n1664),
@@ -10234,17 +10234,17 @@ module aes (clk,
     .QN(data_o[29]),
     .RESETN(n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_2_ (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_2_ (.CLK(clknet_leaf_9_clk),
     .D(n1481),
     .QN(data_o[2]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_30_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_30_ (.CLK(clknet_leaf_6_clk),
     .D(n1483),
     .QN(data_o[30]),
     .RESETN(n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_31_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_31_ (.CLK(clknet_leaf_5_clk),
     .D(n1485),
     .QN(data_o[31]),
     .RESETN(n1664),
@@ -10264,7 +10264,7 @@ module aes (clk,
     .QN(data_o[34]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_35_ (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_35_ (.CLK(clknet_leaf_8_clk),
     .D(n1493),
     .QN(data_o[35]),
     .RESETN(n1664),
@@ -10279,12 +10279,12 @@ module aes (clk,
     .QN(data_o[37]),
     .RESETN(n1664),
     .SETN(FE_OFN25_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_38_ (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_38_ (.CLK(clknet_leaf_9_clk),
     .D(n1499),
     .QN(data_o[38]),
     .RESETN(n1664),
     .SETN(FE_OFN14_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_39_ (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_39_ (.CLK(clknet_leaf_8_clk),
     .D(n1501),
     .QN(data_o[39]),
     .RESETN(n1664),
@@ -10294,22 +10294,22 @@ module aes (clk,
     .QN(data_o[3]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_40_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_40_ (.CLK(clknet_leaf_5_clk),
     .D(n1505),
     .QN(data_o[40]),
     .RESETN(n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_41_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_41_ (.CLK(clknet_leaf_5_clk),
     .D(n1507),
     .QN(data_o[41]),
     .RESETN(n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_42_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_42_ (.CLK(clknet_leaf_6_clk),
     .D(n1509),
     .QN(data_o[42]),
     .RESETN(n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_43_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_43_ (.CLK(clknet_leaf_6_clk),
     .D(n1511),
     .QN(data_o[43]),
     .RESETN(n1664),
@@ -10329,7 +10329,7 @@ module aes (clk,
     .QN(data_o[46]),
     .RESETN(n1664),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_47_ (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_47_ (.CLK(clknet_leaf_7_clk),
     .D(n1519),
     .QN(data_o[47]),
     .RESETN(n1664),
@@ -10344,7 +10344,7 @@ module aes (clk,
     .QN(data_o[49]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_4_ (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_4_ (.CLK(clknet_leaf_9_clk),
     .D(n1525),
     .QN(data_o[4]),
     .RESETN(FE_OFN42_n1664),
@@ -10354,17 +10354,17 @@ module aes (clk,
     .QN(data_o[50]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_51_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_51_ (.CLK(clknet_leaf_11_clk),
     .D(n1529),
     .QN(data_o[51]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_52_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_52_ (.CLK(clknet_leaf_11_clk),
     .D(n1531),
     .QN(data_o[52]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_53_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_53_ (.CLK(clknet_leaf_11_clk),
     .D(n1533),
     .QN(data_o[53]),
     .RESETN(n1664),
@@ -10379,12 +10379,12 @@ module aes (clk,
     .QN(data_o[55]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_56_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_56_ (.CLK(clknet_leaf_5_clk),
     .D(n1539),
     .QN(data_o[56]),
     .RESETN(n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_57_ (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_57_ (.CLK(clknet_leaf_4_clk),
     .D(n1541),
     .QN(data_o[57]),
     .RESETN(n1664),
@@ -10394,7 +10394,7 @@ module aes (clk,
     .QN(data_o[58]),
     .RESETN(n1664),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_59_ (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_59_ (.CLK(clknet_leaf_4_clk),
     .D(n1545),
     .QN(data_o[59]),
     .RESETN(n1664),
@@ -10404,7 +10404,7 @@ module aes (clk,
     .QN(data_o[5]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_60_ (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_60_ (.CLK(clknet_leaf_4_clk),
     .D(n1549),
     .QN(data_o[60]),
     .RESETN(n1664),
@@ -10414,7 +10414,7 @@ module aes (clk,
     .QN(data_o[61]),
     .RESETN(n1664),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_62_ (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_62_ (.CLK(clknet_leaf_2_clk),
     .D(n1553),
     .QN(data_o[62]),
     .RESETN(n1664),
@@ -10429,22 +10429,22 @@ module aes (clk,
     .QN(data_o[64]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_65_ (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_65_ (.CLK(clknet_leaf_7_clk),
     .D(n1559),
     .QN(data_o[65]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_66_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_66_ (.CLK(clknet_leaf_11_clk),
     .D(n1561),
     .QN(data_o[66]),
     .RESETN(n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_67_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_67_ (.CLK(clknet_leaf_11_clk),
     .D(n1563),
     .QN(data_o[67]),
     .RESETN(n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_68_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_68_ (.CLK(clknet_leaf_11_clk),
     .D(n1565),
     .QN(data_o[68]),
     .RESETN(n1664),
@@ -10459,17 +10459,17 @@ module aes (clk,
     .QN(data_o[6]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_70_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_70_ (.CLK(clknet_leaf_11_clk),
     .D(n1571),
     .QN(data_o[70]),
     .RESETN(n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_71_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_71_ (.CLK(clknet_leaf_11_clk),
     .D(n1573),
     .QN(data_o[71]),
     .RESETN(n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_72_ (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_72_ (.CLK(clknet_leaf_2_clk),
     .D(n1575),
     .QN(data_o[72]),
     .RESETN(n1664),
@@ -10479,12 +10479,12 @@ module aes (clk,
     .QN(data_o[73]),
     .RESETN(n1664),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_74_ (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_74_ (.CLK(clknet_leaf_2_clk),
     .D(n1579),
     .QN(data_o[74]),
     .RESETN(n1664),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_75_ (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_75_ (.CLK(clknet_leaf_2_clk),
     .D(n1581),
     .QN(data_o[75]),
     .RESETN(n1664),
@@ -10494,7 +10494,7 @@ module aes (clk,
     .QN(data_o[76]),
     .RESETN(n1664),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_77_ (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_77_ (.CLK(clknet_leaf_7_clk),
     .D(n1585),
     .QN(data_o[77]),
     .RESETN(n1664),
@@ -10504,7 +10504,7 @@ module aes (clk,
     .QN(data_o[78]),
     .RESETN(n1664),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_79_ (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_79_ (.CLK(clknet_leaf_7_clk),
     .D(n1589),
     .QN(data_o[79]),
     .RESETN(n1664),
@@ -10529,17 +10529,17 @@ module aes (clk,
     .QN(data_o[82]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_83_ (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_83_ (.CLK(clknet_leaf_13_clk),
     .D(n1599),
     .QN(data_o[83]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_84_ (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_84_ (.CLK(clknet_leaf_13_clk),
     .D(n1601),
     .QN(data_o[84]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_85_ (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_85_ (.CLK(clknet_leaf_14_clk),
     .D(n1603),
     .QN(data_o[85]),
     .RESETN(FE_OFN43_n1664),
@@ -10554,17 +10554,17 @@ module aes (clk,
     .QN(data_o[87]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN7_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_88_ (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_88_ (.CLK(clknet_leaf_1_clk),
     .D(n1609),
     .QN(data_o[88]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_89_ (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_89_ (.CLK(clknet_leaf_1_clk),
     .D(n1611),
     .QN(data_o[89]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_8_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_8_ (.CLK(clknet_leaf_6_clk),
     .D(n1613),
     .QN(data_o[8]),
     .RESETN(FE_OFN42_n1664),
@@ -10579,7 +10579,7 @@ module aes (clk,
     .QN(data_o[91]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_92_ (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_92_ (.CLK(clknet_leaf_0_clk),
     .D(n1619),
     .QN(data_o[92]),
     .RESETN(FE_OFN44_n1664),
@@ -10589,7 +10589,7 @@ module aes (clk,
     .QN(data_o[93]),
     .RESETN(FE_OFN44_n1664),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_94_ (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_94_ (.CLK(clknet_leaf_1_clk),
     .D(n1623),
     .QN(data_o[94]),
     .RESETN(FE_OFN44_n1664),
@@ -10604,52 +10604,52 @@ module aes (clk,
     .QN(data_o[96]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_97_ (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_97_ (.CLK(clknet_leaf_18_clk),
     .D(n1629),
     .QN(data_o[97]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_98_ (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_98_ (.CLK(clknet_leaf_14_clk),
     .D(n1631),
     .QN(data_o[98]),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_upper addroundkey_data_reg_reg_99_ (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_bottom addroundkey_data_reg_reg_99_ (.CLK(clknet_leaf_13_clk),
     .D(n1633),
     .QN(data_o[99]),
     .RESETN(FE_OFN43_n1664),
     .SETN(reset));
- DFFASRHQNx1_bottom addroundkey_data_reg_reg_9_ (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper addroundkey_data_reg_reg_9_ (.CLK(clknet_leaf_6_clk),
     .D(n1635),
     .QN(data_o[9]),
     .RESETN(FE_OFN42_n1664),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom addroundkey_ready_o_reg (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_ready_o_reg (.CLK(clknet_leaf_11_clk),
     .D(n1663),
     .QN(addroundkey_ready_o),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom addroundkey_round_reg_0_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_round_reg_0_ (.CLK(clknet_leaf_11_clk),
     .D(n1651),
     .QN(addroundkey_round[0]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_round_reg_1_ (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper addroundkey_round_reg_1_ (.CLK(clknet_leaf_10_clk),
     .D(n1641),
     .QN(addroundkey_round[1]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_round_reg_2_ (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper addroundkey_round_reg_2_ (.CLK(clknet_leaf_10_clk),
     .D(n1639),
     .QN(addroundkey_round[2]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_round_reg_3_ (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper addroundkey_round_reg_3_ (.CLK(clknet_leaf_10_clk),
     .D(n1637),
     .QN(addroundkey_round[3]),
     .RESETN(n1664),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom addroundkey_start_i_reg (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper addroundkey_start_i_reg (.CLK(clknet_leaf_11_clk),
     .D(n1653),
     .QN(addroundkey_start_i),
     .RESETN(n1664),
@@ -10708,46 +10708,44 @@ module aes (clk,
     .Y(clknet_leaf_9_clk));
  BUFx24_bottom clkload0 (.A(clknet_1_1__leaf_clk));
  INVxp5_upper clkload1 (.A(clknet_leaf_0_clk));
- INVxp5_upper clkload10 (.A(clknet_leaf_21_clk));
- CKINVDCx16_bottom clkload11 (.A(clknet_leaf_22_clk));
- INVxp33_bottom clkload12 (.A(clknet_leaf_8_clk));
- INVxp5_upper clkload13 (.A(clknet_leaf_9_clk));
- INVxp5_upper clkload14 (.A(clknet_leaf_10_clk));
- INVxp33_bottom clkload15 (.A(clknet_leaf_11_clk));
- INVxp5_upper clkload16 (.A(clknet_leaf_13_clk));
- INVxp5_upper clkload17 (.A(clknet_leaf_14_clk));
- INVxp5_upper clkload18 (.A(clknet_leaf_15_clk));
- INVxp5_upper clkload19 (.A(clknet_leaf_16_clk));
+ INVxp5_upper clkload10 (.A(clknet_leaf_9_clk));
+ INVxp5_upper clkload11 (.A(clknet_leaf_10_clk));
+ INVxp5_upper clkload12 (.A(clknet_leaf_11_clk));
+ INVxp5_upper clkload13 (.A(clknet_leaf_12_clk));
+ INVxp5_upper clkload14 (.A(clknet_leaf_13_clk));
+ INVxp33_bottom clkload15 (.A(clknet_leaf_14_clk));
+ INVxp33_bottom clkload16 (.A(clknet_leaf_15_clk));
+ INVxp5_upper clkload17 (.A(clknet_leaf_16_clk));
+ INVxp5_upper clkload18 (.A(clknet_leaf_17_clk));
+ INVxp5_upper clkload19 (.A(clknet_leaf_18_clk));
  INVxp5_upper clkload2 (.A(clknet_leaf_1_clk));
- INVxp5_upper clkload20 (.A(clknet_leaf_17_clk));
- INVxp5_upper clkload21 (.A(clknet_leaf_18_clk));
- INVxp5_upper clkload3 (.A(clknet_leaf_3_clk));
- INVxp5_upper clkload4 (.A(clknet_leaf_4_clk));
- INVxp33_bottom clkload5 (.A(clknet_leaf_5_clk));
- INVxp5_upper clkload6 (.A(clknet_leaf_6_clk));
- INVxp5_upper clkload7 (.A(clknet_leaf_7_clk));
- INVxp5_upper clkload8 (.A(clknet_leaf_19_clk));
- INVxp5_upper clkload9 (.A(clknet_leaf_20_clk));
- DFFASRHQNx1_bottom first_round_reg_reg (.CLK(clknet_leaf_11_clk),
+ INVxp5_upper clkload3 (.A(clknet_leaf_2_clk));
+ INVxp5_upper clkload4 (.A(clknet_leaf_3_clk));
+ INVxp5_upper clkload5 (.A(clknet_leaf_7_clk));
+ INVxp33_bottom clkload6 (.A(clknet_leaf_19_clk));
+ INVxp67_bottom clkload7 (.A(clknet_leaf_20_clk));
+ INVxp33_bottom clkload8 (.A(clknet_leaf_21_clk));
+ CKINVDCx16_bottom clkload9 (.A(clknet_leaf_22_clk));
+ DFFASRHQNx1_upper first_round_reg_reg (.CLK(clknet_leaf_11_clk),
     .D(n1655),
     .QN(first_round_reg),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
  INVx5_upper \ks1/FE_DBTC90_n14  (.A(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/FE_DBTN90_n14 ));
- BUFx3_bottom \ks1/FE_OFC117_FE_OFN65_n14  (.A(\ks1/FE_OFN65_n14 ),
+ BUFx3_upper \ks1/FE_OFC117_FE_OFN65_n14  (.A(\ks1/FE_OFN65_n14 ),
     .Y(\ks1/FE_OFN120_FE_OFN65_n14 ));
- BUFx5_bottom \ks1/FE_OFC119_FE_OFN63_n488  (.A(\ks1/FE_OFN63_n488 ),
+ BUFx5_upper \ks1/FE_OFC119_FE_OFN63_n488  (.A(\ks1/FE_OFN63_n488 ),
     .Y(\ks1/FE_OFN122_FE_OFN63_n488 ));
  INVx1_bottom \ks1/FE_OFC20_reset  (.A(FE_OFN17_reset),
     .Y(\ks1/FE_OFN23_reset ));
  BUFx2_upper \ks1/FE_OFC2_reset  (.A(reset),
     .Y(\ks1/FE_OFN2_reset ));
- BUFx2_bottom \ks1/FE_OFC57_n2  (.A(\ks1/n2 ),
+ BUFx2_upper \ks1/FE_OFC57_n2  (.A(\ks1/n2 ),
     .Y(\ks1/FE_OFN60_n2 ));
- BUFx2_bottom \ks1/FE_OFC58_n4  (.A(\ks1/n4 ),
+ BUFx2_upper \ks1/FE_OFC58_n4  (.A(\ks1/n4 ),
     .Y(\ks1/FE_OFN61_n4 ));
- BUFx2_bottom \ks1/FE_OFC59_n5  (.A(\ks1/n5 ),
+ BUFx2_upper \ks1/FE_OFC59_n5  (.A(\ks1/n5 ),
     .Y(\ks1/FE_OFN62_n5 ));
  BUFx3_upper \ks1/FE_OFC60_n488  (.A(\ks1/n488 ),
     .Y(\ks1/FE_OFN63_n488 ));
@@ -10755,21 +10753,21 @@ module aes (clk,
     .Y(\ks1/FE_OFN64_n488 ));
  BUFx2_upper \ks1/FE_OFC62_n14  (.A(\ks1/n14 ),
     .Y(\ks1/FE_OFN65_n14 ));
- BUFx4_bottom \ks1/FE_OFC63_n14  (.A(\ks1/FE_OFN65_n14 ),
+ BUFx4_upper \ks1/FE_OFC63_n14  (.A(\ks1/FE_OFN65_n14 ),
     .Y(\ks1/FE_OFN66_n14 ));
- BUFx4_bottom \ks1/FE_OFC66_FE_DBTN90_n14  (.A(\ks1/FE_DBTN90_n14 ),
+ BUFx4_upper \ks1/FE_OFC66_FE_DBTN90_n14  (.A(\ks1/FE_DBTN90_n14 ),
     .Y(\ks1/FE_OFN69_FE_DBTN90_n14 ));
- BUFx4_bottom \ks1/FE_OFC67_FE_DBTN90_n14  (.A(\ks1/FE_DBTN90_n14 ),
+ BUFx4_upper \ks1/FE_OFC67_FE_DBTN90_n14  (.A(\ks1/FE_DBTN90_n14 ),
     .Y(\ks1/FE_OFN70_FE_DBTN90_n14 ));
- AO22x1_bottom \ks1/U10  (.A1(\ks1/FE_OFN61_n4 ),
+ AO22x1_upper \ks1/U10  (.A1(\ks1/FE_OFN61_n4 ),
     .A2(keysched_last_key_i[12]),
     .B1(\ks1/FE_OFN62_n5 ),
     .B2(keysched_last_key_i[4]),
     .Y(\ks1/n8 ));
- XOR2xp5_upper \ks1/U100  (.A(\ks1/n69 ),
+ XOR2xp5_bottom \ks1/U100  (.A(\ks1/n69 ),
     .B(keysched_last_key_i[69]),
     .Y(\ks1/n68 ));
- OAI22xp5_bottom \ks1/U101  (.A1(keysched_new_key_o[101]),
+ OAI22xp5_upper \ks1/U101  (.A1(keysched_new_key_o[101]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n69 ),
@@ -10777,7 +10775,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U102  (.A(\ks1/col_5 ),
     .B(keysched_last_key_i[101]),
     .Y(\ks1/n69 ));
- OAI22xp5_bottom \ks1/U103  (.A1(FE_OFN110_sbox_data_o_5),
+ OAI22xp5_upper \ks1/U103  (.A1(FE_OFN110_sbox_data_o_5),
     .A2(\ks1/n232 ),
     .B1(\ks1/col_5 ),
     .B2(\ks1/FE_OFN60_n2 ),
@@ -10787,10 +10785,10 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n70 ),
     .Y(\ks1/n237 ));
- XOR2xp5_upper \ks1/U105  (.A(keysched_last_key_i[6]),
+ XOR2xp5_bottom \ks1/U105  (.A(keysched_last_key_i[6]),
     .B(\ks1/n71 ),
     .Y(\ks1/n70 ));
- OAI22xp5_bottom \ks1/U106  (.A1(keysched_new_key_o[38]),
+ OAI22xp5_upper \ks1/U106  (.A1(keysched_new_key_o[38]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n71 ),
@@ -10798,7 +10796,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U107  (.A(\ks1/n72 ),
     .B(keysched_last_key_i[38]),
     .Y(\ks1/n71 ));
- OAI22xp5_bottom \ks1/U108  (.A1(keysched_new_key_o[70]),
+ OAI22xp5_upper \ks1/U108  (.A1(keysched_new_key_o[70]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n72 ),
@@ -10806,13 +10804,13 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U109  (.A(\ks1/n73 ),
     .B(keysched_last_key_i[70]),
     .Y(\ks1/n72 ));
- AO221x1_bottom \ks1/U11  (.A1(keysched_last_key_i[27]),
+ AO221x1_upper \ks1/U11  (.A1(keysched_last_key_i[27]),
     .A2(\ks1/n242 ),
     .B1(keysched_last_key_i[19]),
     .B2(\ks1/FE_OFN60_n2 ),
     .C(\ks1/n9 ),
     .Y(keysched_sbox_data_o[3]));
- OAI22xp5_bottom \ks1/U110  (.A1(keysched_new_key_o[102]),
+ OAI22xp5_upper \ks1/U110  (.A1(keysched_new_key_o[102]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n73 ),
@@ -10820,7 +10818,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U111  (.A(\ks1/col_6 ),
     .B(keysched_last_key_i[102]),
     .Y(\ks1/n73 ));
- OAI22xp5_bottom \ks1/U112  (.A1(FE_OFN109_sbox_data_o_6),
+ OAI22xp5_upper \ks1/U112  (.A1(FE_OFN109_sbox_data_o_6),
     .A2(\ks1/n232 ),
     .B1(\ks1/col_6 ),
     .B2(\ks1/FE_OFN60_n2 ),
@@ -10830,10 +10828,10 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n74 ),
     .Y(\ks1/n247 ));
- XOR2xp5_upper \ks1/U114  (.A(keysched_last_key_i[7]),
+ XOR2xp5_bottom \ks1/U114  (.A(keysched_last_key_i[7]),
     .B(\ks1/n75 ),
     .Y(\ks1/n74 ));
- OAI22xp5_bottom \ks1/U115  (.A1(keysched_new_key_o[39]),
+ OAI22xp5_upper \ks1/U115  (.A1(keysched_new_key_o[39]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n75 ),
@@ -10841,7 +10839,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U116  (.A(\ks1/n76 ),
     .B(keysched_last_key_i[39]),
     .Y(\ks1/n75 ));
- OAI22xp5_bottom \ks1/U117  (.A1(keysched_new_key_o[71]),
+ OAI22xp5_upper \ks1/U117  (.A1(keysched_new_key_o[71]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n76 ),
@@ -10849,12 +10847,12 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U118  (.A(\ks1/n77 ),
     .B(keysched_last_key_i[71]),
     .Y(\ks1/n76 ));
- OAI22xp5_bottom \ks1/U119  (.A1(keysched_new_key_o[103]),
+ OAI22xp5_upper \ks1/U119  (.A1(keysched_new_key_o[103]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n77 ),
     .Y(\ks1/n253 ));
- AO22x1_bottom \ks1/U12  (.A1(\ks1/FE_OFN61_n4 ),
+ AO22x1_upper \ks1/U12  (.A1(\ks1/FE_OFN61_n4 ),
     .A2(keysched_last_key_i[11]),
     .B1(\ks1/FE_OFN62_n5 ),
     .B2(keysched_last_key_i[3]),
@@ -10862,12 +10860,12 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U120  (.A(\ks1/col_7 ),
     .B(keysched_last_key_i[103]),
     .Y(\ks1/n77 ));
- OAI22xp5_bottom \ks1/U121  (.A1(FE_OFN108_sbox_data_o_7),
+ OAI22xp5_upper \ks1/U121  (.A1(FE_OFN108_sbox_data_o_7),
     .A2(\ks1/n232 ),
     .B1(\ks1/col_7 ),
     .B2(\ks1/FE_OFN60_n2 ),
     .Y(\ks1/n255 ));
- OAI22xp5_bottom \ks1/U124  (.A1(keysched_new_key_o[16]),
+ OAI22xp5_upper \ks1/U124  (.A1(keysched_new_key_o[16]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n78 ),
@@ -10880,7 +10878,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n79 ),
     .Y(\ks1/n259 ));
- XOR2xp5_upper \ks1/U127  (.A(\ks1/n80 ),
+ XOR2xp5_bottom \ks1/U127  (.A(\ks1/n80 ),
     .B(keysched_last_key_i[48]),
     .Y(\ks1/n79 ));
  OAI22xp5_upper \ks1/U128  (.A1(keysched_new_key_o[80]),
@@ -10888,7 +10886,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n80 ),
     .Y(\ks1/n261 ));
- XOR2xp5_upper \ks1/U129  (.A(\ks1/n81 ),
+ XOR2xp5_bottom \ks1/U129  (.A(\ks1/n81 ),
     .B(keysched_last_key_i[80]),
     .Y(\ks1/n80 ));
  AO221x1_upper \ks1/U13  (.A1(keysched_last_key_i[26]),
@@ -10897,7 +10895,7 @@ module aes (clk,
     .B2(\ks1/FE_OFN60_n2 ),
     .C(\ks1/n10 ),
     .Y(keysched_sbox_data_o[2]));
- OAI22xp5_bottom \ks1/U130  (.A1(keysched_new_key_o[112]),
+ OAI22xp5_upper \ks1/U130  (.A1(keysched_new_key_o[112]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n81 ),
@@ -10905,7 +10903,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U131  (.A(\ks1/col [16]),
     .B(keysched_last_key_i[112]),
     .Y(\ks1/n81 ));
- OAI22xp5_bottom \ks1/U132  (.A1(FE_OFN115_sbox_data_o_0),
+ OAI22xp5_upper \ks1/U132  (.A1(FE_OFN115_sbox_data_o_0),
     .A2(\ks1/n234 ),
     .B1(\ks1/col [16]),
     .B2(\ks1/FE_OFN62_n5 ),
@@ -10915,7 +10913,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n82 ),
     .Y(\ks1/n267 ));
- XOR2xp5_upper \ks1/U134  (.A(keysched_last_key_i[17]),
+ XOR2xp5_bottom \ks1/U134  (.A(keysched_last_key_i[17]),
     .B(\ks1/n83 ),
     .Y(\ks1/n82 ));
  OAI22xp5_upper \ks1/U135  (.A1(keysched_new_key_o[49]),
@@ -10923,7 +10921,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n83 ),
     .Y(\ks1/n269 ));
- XOR2xp5_upper \ks1/U136  (.A(\ks1/n84 ),
+ XOR2xp5_bottom \ks1/U136  (.A(\ks1/n84 ),
     .B(keysched_last_key_i[49]),
     .Y(\ks1/n83 ));
  OAI22xp5_upper \ks1/U137  (.A1(keysched_new_key_o[81]),
@@ -10931,7 +10929,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n84 ),
     .Y(\ks1/n271 ));
- XOR2xp5_upper \ks1/U138  (.A(\ks1/n85 ),
+ XOR2xp5_bottom \ks1/U138  (.A(\ks1/n85 ),
     .B(keysched_last_key_i[81]),
     .Y(\ks1/n84 ));
  OAI22xp5_upper \ks1/U139  (.A1(keysched_new_key_o[113]),
@@ -10944,7 +10942,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN62_n5 ),
     .B2(keysched_last_key_i[2]),
     .Y(\ks1/n10 ));
- XOR2xp5_upper \ks1/U140  (.A(\ks1/col [17]),
+ XOR2xp5_bottom \ks1/U140  (.A(\ks1/col [17]),
     .B(keysched_last_key_i[113]),
     .Y(\ks1/n85 ));
  OAI22xp5_upper \ks1/U141  (.A1(FE_OFN114_sbox_data_o_1),
@@ -10957,7 +10955,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n86 ),
     .Y(\ks1/n277 ));
- XOR2xp5_upper \ks1/U143  (.A(keysched_last_key_i[18]),
+ XOR2xp5_bottom \ks1/U143  (.A(keysched_last_key_i[18]),
     .B(\ks1/n87 ),
     .Y(\ks1/n86 ));
  OAI22xp5_upper \ks1/U144  (.A1(keysched_new_key_o[50]),
@@ -10965,7 +10963,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n87 ),
     .Y(\ks1/n279 ));
- XOR2xp5_upper \ks1/U145  (.A(\ks1/n88 ),
+ XOR2xp5_bottom \ks1/U145  (.A(\ks1/n88 ),
     .B(keysched_last_key_i[50]),
     .Y(\ks1/n87 ));
  OAI22xp5_upper \ks1/U146  (.A1(keysched_new_key_o[82]),
@@ -10973,7 +10971,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n88 ),
     .Y(\ks1/n281 ));
- XOR2xp5_upper \ks1/U147  (.A(\ks1/n89 ),
+ XOR2xp5_bottom \ks1/U147  (.A(\ks1/n89 ),
     .B(keysched_last_key_i[82]),
     .Y(\ks1/n88 ));
  OAI22xp5_upper \ks1/U148  (.A1(keysched_new_key_o[114]),
@@ -10981,10 +10979,10 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n89 ),
     .Y(\ks1/n283 ));
- XOR2xp5_upper \ks1/U149  (.A(\ks1/col [18]),
+ XOR2xp5_bottom \ks1/U149  (.A(\ks1/col [18]),
     .B(keysched_last_key_i[114]),
     .Y(\ks1/n89 ));
- AO221x1_bottom \ks1/U15  (.A1(keysched_last_key_i[25]),
+ AO221x1_upper \ks1/U15  (.A1(keysched_last_key_i[25]),
     .A2(\ks1/n242 ),
     .B1(keysched_last_key_i[17]),
     .B2(\ks1/FE_OFN60_n2 ),
@@ -11000,10 +10998,10 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n90 ),
     .Y(\ks1/n287 ));
- XOR2xp5_upper \ks1/U152  (.A(keysched_last_key_i[19]),
+ XOR2xp5_bottom \ks1/U152  (.A(keysched_last_key_i[19]),
     .B(\ks1/n91 ),
     .Y(\ks1/n90 ));
- OAI22xp5_bottom \ks1/U153  (.A1(keysched_new_key_o[51]),
+ OAI22xp5_upper \ks1/U153  (.A1(keysched_new_key_o[51]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n91 ),
@@ -11011,7 +11009,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U154  (.A(\ks1/n92 ),
     .B(keysched_last_key_i[51]),
     .Y(\ks1/n91 ));
- OAI22xp5_bottom \ks1/U155  (.A1(keysched_new_key_o[83]),
+ OAI22xp5_upper \ks1/U155  (.A1(keysched_new_key_o[83]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n92 ),
@@ -11019,7 +11017,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U156  (.A(\ks1/n93 ),
     .B(keysched_last_key_i[83]),
     .Y(\ks1/n92 ));
- OAI22xp5_bottom \ks1/U157  (.A1(keysched_new_key_o[115]),
+ OAI22xp5_upper \ks1/U157  (.A1(keysched_new_key_o[115]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n93 ),
@@ -11027,12 +11025,12 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U158  (.A(\ks1/col [19]),
     .B(keysched_last_key_i[115]),
     .Y(\ks1/n93 ));
- OAI22xp5_bottom \ks1/U159  (.A1(FE_OFN112_sbox_data_o_3),
+ OAI22xp5_upper \ks1/U159  (.A1(FE_OFN112_sbox_data_o_3),
     .A2(\ks1/n234 ),
     .B1(\ks1/col [19]),
     .B2(\ks1/FE_OFN62_n5 ),
     .Y(\ks1/n295 ));
- AO22x1_bottom \ks1/U16  (.A1(\ks1/FE_OFN61_n4 ),
+ AO22x1_upper \ks1/U16  (.A1(\ks1/FE_OFN61_n4 ),
     .A2(keysched_last_key_i[9]),
     .B1(\ks1/FE_OFN62_n5 ),
     .B2(keysched_last_key_i[1]),
@@ -11042,10 +11040,10 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n94 ),
     .Y(\ks1/n297 ));
- XOR2xp5_upper \ks1/U161  (.A(keysched_last_key_i[20]),
+ XOR2xp5_bottom \ks1/U161  (.A(keysched_last_key_i[20]),
     .B(\ks1/n95 ),
     .Y(\ks1/n94 ));
- OAI22xp5_bottom \ks1/U162  (.A1(keysched_new_key_o[52]),
+ OAI22xp5_upper \ks1/U162  (.A1(keysched_new_key_o[52]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n95 ),
@@ -11053,7 +11051,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U163  (.A(\ks1/n96 ),
     .B(keysched_last_key_i[52]),
     .Y(\ks1/n95 ));
- OAI22xp5_bottom \ks1/U164  (.A1(keysched_new_key_o[84]),
+ OAI22xp5_upper \ks1/U164  (.A1(keysched_new_key_o[84]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n96 ),
@@ -11066,7 +11064,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n97 ),
     .Y(\ks1/n303 ));
- XOR2xp5_upper \ks1/U167  (.A(\ks1/col [20]),
+ XOR2xp5_bottom \ks1/U167  (.A(\ks1/col [20]),
     .B(keysched_last_key_i[116]),
     .Y(\ks1/n97 ));
  OAI22xp5_upper \ks1/U168  (.A1(FE_OFN111_sbox_data_o_4),
@@ -11079,13 +11077,13 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n98 ),
     .Y(\ks1/n307 ));
- AO221x1_bottom \ks1/U17  (.A1(keysched_last_key_i[24]),
+ AO221x1_upper \ks1/U17  (.A1(keysched_last_key_i[24]),
     .A2(\ks1/n242 ),
     .B1(keysched_last_key_i[16]),
     .B2(\ks1/FE_OFN60_n2 ),
     .C(\ks1/n12 ),
     .Y(keysched_sbox_data_o[0]));
- XOR2xp5_upper \ks1/U170  (.A(keysched_last_key_i[21]),
+ XOR2xp5_bottom \ks1/U170  (.A(keysched_last_key_i[21]),
     .B(\ks1/n99 ),
     .Y(\ks1/n98 ));
  OAI22xp5_upper \ks1/U171  (.A1(keysched_new_key_o[53]),
@@ -11093,7 +11091,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n99 ),
     .Y(\ks1/n309 ));
- XOR2xp5_upper \ks1/U172  (.A(\ks1/n100 ),
+ XOR2xp5_bottom \ks1/U172  (.A(\ks1/n100 ),
     .B(keysched_last_key_i[53]),
     .Y(\ks1/n99 ));
  OAI22xp5_upper \ks1/U173  (.A1(keysched_new_key_o[85]),
@@ -11101,7 +11099,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n100 ),
     .Y(\ks1/n311 ));
- XOR2xp5_upper \ks1/U174  (.A(\ks1/n101 ),
+ XOR2xp5_bottom \ks1/U174  (.A(\ks1/n101 ),
     .B(keysched_last_key_i[85]),
     .Y(\ks1/n100 ));
  OAI22xp5_upper \ks1/U175  (.A1(keysched_new_key_o[117]),
@@ -11109,7 +11107,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n101 ),
     .Y(\ks1/n313 ));
- XOR2xp5_upper \ks1/U176  (.A(\ks1/col [21]),
+ XOR2xp5_bottom \ks1/U176  (.A(\ks1/col [21]),
     .B(keysched_last_key_i[117]),
     .Y(\ks1/n101 ));
  OAI22xp5_upper \ks1/U177  (.A1(FE_OFN110_sbox_data_o_5),
@@ -11122,7 +11120,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n102 ),
     .Y(\ks1/n317 ));
- XOR2xp5_upper \ks1/U179  (.A(keysched_last_key_i[22]),
+ XOR2xp5_bottom \ks1/U179  (.A(keysched_last_key_i[22]),
     .B(\ks1/n103 ),
     .Y(\ks1/n102 ));
  AO22x1_upper \ks1/U18  (.A1(\ks1/FE_OFN61_n4 ),
@@ -11135,7 +11133,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n103 ),
     .Y(\ks1/n319 ));
- XOR2xp5_upper \ks1/U181  (.A(\ks1/n104 ),
+ XOR2xp5_bottom \ks1/U181  (.A(\ks1/n104 ),
     .B(keysched_last_key_i[54]),
     .Y(\ks1/n103 ));
  OAI22xp5_upper \ks1/U182  (.A1(keysched_new_key_o[86]),
@@ -11143,7 +11141,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n104 ),
     .Y(\ks1/n321 ));
- XOR2xp5_upper \ks1/U183  (.A(\ks1/n105 ),
+ XOR2xp5_bottom \ks1/U183  (.A(\ks1/n105 ),
     .B(keysched_last_key_i[86]),
     .Y(\ks1/n104 ));
  OAI22xp5_upper \ks1/U184  (.A1(keysched_new_key_o[118]),
@@ -11151,7 +11149,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n105 ),
     .Y(\ks1/n323 ));
- XOR2xp5_upper \ks1/U185  (.A(\ks1/col [22]),
+ XOR2xp5_bottom \ks1/U185  (.A(\ks1/col [22]),
     .B(keysched_last_key_i[118]),
     .Y(\ks1/n105 ));
  OAI22xp5_upper \ks1/U186  (.A1(FE_OFN109_sbox_data_o_6),
@@ -11164,7 +11162,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n106 ),
     .Y(\ks1/n327 ));
- XOR2xp5_upper \ks1/U188  (.A(keysched_last_key_i[23]),
+ XOR2xp5_bottom \ks1/U188  (.A(keysched_last_key_i[23]),
     .B(\ks1/n107 ),
     .Y(\ks1/n106 ));
  OAI22xp5_upper \ks1/U189  (.A1(keysched_new_key_o[55]),
@@ -11176,7 +11174,7 @@ module aes (clk,
     .B(\ks1/state [2]),
     .C(\ks1/n236 ),
     .Y(\ks1/n2 ));
- XOR2xp5_upper \ks1/U190  (.A(\ks1/n108 ),
+ XOR2xp5_bottom \ks1/U190  (.A(\ks1/n108 ),
     .B(keysched_last_key_i[55]),
     .Y(\ks1/n107 ));
  OAI22xp5_upper \ks1/U191  (.A1(keysched_new_key_o[87]),
@@ -11184,7 +11182,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n108 ),
     .Y(\ks1/n331 ));
- XOR2xp5_upper \ks1/U192  (.A(\ks1/n109 ),
+ XOR2xp5_bottom \ks1/U192  (.A(\ks1/n109 ),
     .B(keysched_last_key_i[87]),
     .Y(\ks1/n108 ));
  OAI22xp5_upper \ks1/U193  (.A1(keysched_new_key_o[119]),
@@ -11192,7 +11190,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n109 ),
     .Y(\ks1/n333 ));
- XOR2xp5_upper \ks1/U194  (.A(\ks1/col [23]),
+ XOR2xp5_bottom \ks1/U194  (.A(\ks1/col [23]),
     .B(keysched_last_key_i[119]),
     .Y(\ks1/n109 ));
  OAI22xp5_upper \ks1/U195  (.A1(FE_OFN108_sbox_data_o_7),
@@ -11211,10 +11209,10 @@ module aes (clk,
     .D(\ks1/n481 ),
     .E(\ks1/n13 ),
     .Y(keysched_sbox_access_o));
- XOR2xp5_upper \ks1/U200  (.A(keysched_last_key_i[24]),
+ XOR2xp5_bottom \ks1/U200  (.A(keysched_last_key_i[24]),
     .B(\ks1/n111 ),
     .Y(\ks1/n110 ));
- OAI22xp5_bottom \ks1/U201  (.A1(keysched_new_key_o[56]),
+ OAI22xp5_upper \ks1/U201  (.A1(keysched_new_key_o[56]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n111 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11222,7 +11220,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U202  (.A(\ks1/n112 ),
     .B(keysched_last_key_i[56]),
     .Y(\ks1/n111 ));
- OAI22xp5_bottom \ks1/U203  (.A1(keysched_new_key_o[88]),
+ OAI22xp5_upper \ks1/U203  (.A1(keysched_new_key_o[88]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n112 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11238,10 +11236,10 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U206  (.A(\ks1/n114 ),
     .B(\ks1/n115 ),
     .Y(\ks1/n113 ));
- XOR2xp5_upper \ks1/U207  (.A(keysched_last_key_i[120]),
+ XOR2xp5_bottom \ks1/U207  (.A(keysched_last_key_i[120]),
     .B(\ks1/col [24]),
     .Y(\ks1/n115 ));
- OAI21xp5_bottom \ks1/U208  (.A1(\ks1/n116 ),
+ OAI21xp5_upper \ks1/U208  (.A1(\ks1/n116 ),
     .A2(\ks1/n117 ),
     .B(\ks1/n118 ),
     .Y(\ks1/n114 ));
@@ -11253,7 +11251,7 @@ module aes (clk,
  NAND2xp5_bottom \ks1/U21  (.A(keysched_start_i),
     .B(\ks1/n16 ),
     .Y(\ks1/n13 ));
- OAI22xp5_bottom \ks1/U210  (.A1(keysched_new_key_o[25]),
+ OAI22xp5_upper \ks1/U210  (.A1(keysched_new_key_o[25]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n119 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11261,12 +11259,12 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U211  (.A(keysched_last_key_i[25]),
     .B(\ks1/n120 ),
     .Y(\ks1/n119 ));
- OAI22xp5_bottom \ks1/U212  (.A1(keysched_new_key_o[57]),
+ OAI22xp5_upper \ks1/U212  (.A1(keysched_new_key_o[57]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n120 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n349 ));
- XOR2xp5_bottom \ks1/U213  (.A(\ks1/n121 ),
+ XOR2xp5_upper \ks1/U213  (.A(\ks1/n121 ),
     .B(keysched_last_key_i[57]),
     .Y(\ks1/n120 ));
  OAI22xp5_upper \ks1/U214  (.A1(keysched_new_key_o[89]),
@@ -11274,7 +11272,7 @@ module aes (clk,
     .B1(\ks1/n121 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n351 ));
- XOR2xp5_upper \ks1/U215  (.A(\ks1/n122 ),
+ XOR2xp5_bottom \ks1/U215  (.A(\ks1/n122 ),
     .B(keysched_last_key_i[89]),
     .Y(\ks1/n121 ));
  OAI22xp5_upper \ks1/U216  (.A1(keysched_new_key_o[121]),
@@ -11282,15 +11280,15 @@ module aes (clk,
     .B1(\ks1/n122 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n353 ));
- XOR2xp5_upper \ks1/U217  (.A(\ks1/n123 ),
+ XOR2xp5_bottom \ks1/U217  (.A(\ks1/n123 ),
     .B(\ks1/n124 ),
     .Y(\ks1/n122 ));
- OA211x2_bottom \ks1/U218  (.A1(\ks1/n125 ),
+ OA211x2_upper \ks1/U218  (.A1(\ks1/n125 ),
     .A2(\ks1/n117 ),
     .B(\ks1/n126 ),
     .C(\ks1/n118 ),
     .Y(\ks1/n124 ));
- XNOR2xp5_upper \ks1/U219  (.A(\ks1/col [25]),
+ XNOR2xp5_bottom \ks1/U219  (.A(\ks1/col [25]),
     .B(keysched_last_key_i[121]),
     .Y(\ks1/n123 ));
  OAI22xp5_upper \ks1/U22  (.A1(keysched_new_key_o[40]),
@@ -11308,7 +11306,7 @@ module aes (clk,
     .B1(\ks1/n127 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n357 ));
- XOR2xp5_upper \ks1/U222  (.A(keysched_last_key_i[26]),
+ XOR2xp5_bottom \ks1/U222  (.A(keysched_last_key_i[26]),
     .B(\ks1/n128 ),
     .Y(\ks1/n127 ));
  OAI22xp5_upper \ks1/U223  (.A1(keysched_new_key_o[58]),
@@ -11319,15 +11317,15 @@ module aes (clk,
  XOR2xp5_upper \ks1/U224  (.A(\ks1/n129 ),
     .B(keysched_last_key_i[58]),
     .Y(\ks1/n128 ));
- OAI22xp5_bottom \ks1/U225  (.A1(keysched_new_key_o[90]),
+ OAI22xp5_upper \ks1/U225  (.A1(keysched_new_key_o[90]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n129 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n361 ));
- XOR2xp5_bottom \ks1/U226  (.A(\ks1/n130 ),
+ XOR2xp5_upper \ks1/U226  (.A(\ks1/n130 ),
     .B(keysched_last_key_i[90]),
     .Y(\ks1/n129 ));
- OAI22xp5_bottom \ks1/U227  (.A1(keysched_new_key_o[122]),
+ OAI22xp5_upper \ks1/U227  (.A1(keysched_new_key_o[122]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n130 ),
     .B2(\ks1/FE_OFN120_FE_OFN65_n14 ),
@@ -11338,24 +11336,24 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U229  (.A(keysched_last_key_i[122]),
     .B(\ks1/col [26]),
     .Y(\ks1/n132 ));
- OAI22xp5_bottom \ks1/U23  (.A1(keysched_new_key_o[41]),
+ OAI22xp5_upper \ks1/U23  (.A1(keysched_new_key_o[41]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n20 ),
     .Y(\ks1/n435 ));
- OAI21xp5_bottom \ks1/U230  (.A1(\ks1/n117 ),
+ OAI21xp5_upper \ks1/U230  (.A1(\ks1/n117 ),
     .A2(\ks1/n133 ),
     .B(\ks1/n126 ),
     .Y(\ks1/n131 ));
- OR2x2_bottom \ks1/U231  (.A(keysched_round_i[2]),
+ OR2x2_upper \ks1/U231  (.A(keysched_round_i[2]),
     .B(keysched_round_i[3]),
     .Y(\ks1/n117 ));
- OAI22xp5_bottom \ks1/U232  (.A1(FE_OFN113_sbox_data_o_2),
+ OAI22xp5_upper \ks1/U232  (.A1(FE_OFN113_sbox_data_o_2),
     .A2(\ks1/n238 ),
     .B1(\ks1/col [26]),
     .B2(\ks1/FE_OFN61_n4 ),
     .Y(\ks1/n365 ));
- OAI22xp5_bottom \ks1/U233  (.A1(keysched_new_key_o[27]),
+ OAI22xp5_upper \ks1/U233  (.A1(keysched_new_key_o[27]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n134 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11363,7 +11361,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U234  (.A(keysched_last_key_i[27]),
     .B(\ks1/n135 ),
     .Y(\ks1/n134 ));
- OAI22xp5_bottom \ks1/U235  (.A1(keysched_new_key_o[59]),
+ OAI22xp5_upper \ks1/U235  (.A1(keysched_new_key_o[59]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n135 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11371,12 +11369,12 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U236  (.A(\ks1/n136 ),
     .B(keysched_last_key_i[59]),
     .Y(\ks1/n135 ));
- OAI22xp5_bottom \ks1/U237  (.A1(keysched_new_key_o[91]),
+ OAI22xp5_upper \ks1/U237  (.A1(keysched_new_key_o[91]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n136 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n371 ));
- XOR2xp5_bottom \ks1/U238  (.A(\ks1/n137 ),
+ XOR2xp5_upper \ks1/U238  (.A(\ks1/n137 ),
     .B(keysched_last_key_i[91]),
     .Y(\ks1/n136 ));
  OAI22xp5_upper \ks1/U239  (.A1(keysched_new_key_o[123]),
@@ -11384,7 +11382,7 @@ module aes (clk,
     .B1(\ks1/n137 ),
     .B2(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .Y(\ks1/n373 ));
- OAI22xp5_bottom \ks1/U24  (.A1(keysched_new_key_o[42]),
+ OAI22xp5_upper \ks1/U24  (.A1(keysched_new_key_o[42]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n21 ),
@@ -11392,10 +11390,10 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U240  (.A(\ks1/n138 ),
     .B(\ks1/n139 ),
     .Y(\ks1/n137 ));
- XOR2xp5_upper \ks1/U241  (.A(keysched_last_key_i[123]),
+ XOR2xp5_bottom \ks1/U241  (.A(keysched_last_key_i[123]),
     .B(\ks1/col [27]),
     .Y(\ks1/n139 ));
- OAI21xp5_bottom \ks1/U242  (.A1(\ks1/n140 ),
+ OAI21xp5_upper \ks1/U242  (.A1(\ks1/n140 ),
     .A2(\ks1/n141 ),
     .B(\ks1/n118 ),
     .Y(\ks1/n138 ));
@@ -11404,7 +11402,7 @@ module aes (clk,
     .B1(\ks1/col [27]),
     .B2(\ks1/FE_OFN61_n4 ),
     .Y(\ks1/n375 ));
- OAI22xp5_bottom \ks1/U244  (.A1(keysched_new_key_o[28]),
+ OAI22xp5_upper \ks1/U244  (.A1(keysched_new_key_o[28]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n142 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11412,7 +11410,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U245  (.A(keysched_last_key_i[28]),
     .B(\ks1/n143 ),
     .Y(\ks1/n142 ));
- OAI22xp5_bottom \ks1/U246  (.A1(keysched_new_key_o[60]),
+ OAI22xp5_upper \ks1/U246  (.A1(keysched_new_key_o[60]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/n143 ),
     .B2(\ks1/FE_OFN66_n14 ),
@@ -11425,10 +11423,10 @@ module aes (clk,
     .B1(\ks1/n144 ),
     .B2(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .Y(\ks1/n381 ));
- XOR2xp5_upper \ks1/U249  (.A(\ks1/n145 ),
+ XOR2xp5_bottom \ks1/U249  (.A(\ks1/n145 ),
     .B(keysched_last_key_i[92]),
     .Y(\ks1/n144 ));
- OAI22xp5_bottom \ks1/U25  (.A1(keysched_new_key_o[43]),
+ OAI22xp5_upper \ks1/U25  (.A1(keysched_new_key_o[43]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n22 ),
@@ -11438,22 +11436,22 @@ module aes (clk,
     .B1(\ks1/n145 ),
     .B2(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .Y(\ks1/n383 ));
- XOR2xp5_upper \ks1/U251  (.A(\ks1/n146 ),
+ XOR2xp5_bottom \ks1/U251  (.A(\ks1/n146 ),
     .B(\ks1/n147 ),
     .Y(\ks1/n145 ));
- OA211x2_bottom \ks1/U252  (.A1(\ks1/n141 ),
+ OA211x2_upper \ks1/U252  (.A1(\ks1/n141 ),
     .A2(\ks1/n116 ),
     .B(\ks1/n126 ),
     .C(\ks1/n118 ),
     .Y(\ks1/n147 ));
- OR3x1_bottom \ks1/U253  (.A(\ks1/n116 ),
+ OR3x1_upper \ks1/U253  (.A(\ks1/n116 ),
     .B(keysched_round_i[2]),
     .C(\ks1/n246 ),
     .Y(\ks1/n118 ));
  NAND2xp5_bottom \ks1/U254  (.A(keysched_round_i[0]),
     .B(\ks1/n250 ),
     .Y(\ks1/n116 ));
- XNOR2xp5_upper \ks1/U255  (.A(\ks1/col [28]),
+ XNOR2xp5_bottom \ks1/U255  (.A(\ks1/col [28]),
     .B(keysched_last_key_i[124]),
     .Y(\ks1/n146 ));
  OAI22xp5_upper \ks1/U256  (.A1(FE_OFN111_sbox_data_o_4),
@@ -11466,7 +11464,7 @@ module aes (clk,
     .B1(\ks1/n150 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n387 ));
- XOR2xp5_upper \ks1/U258  (.A(keysched_last_key_i[29]),
+ XOR2xp5_bottom \ks1/U258  (.A(keysched_last_key_i[29]),
     .B(\ks1/n151 ),
     .Y(\ks1/n150 ));
  OAI22xp5_upper \ks1/U259  (.A1(keysched_new_key_o[61]),
@@ -11474,12 +11472,12 @@ module aes (clk,
     .B1(\ks1/n151 ),
     .B2(\ks1/FE_OFN66_n14 ),
     .Y(\ks1/n389 ));
- OAI22xp5_bottom \ks1/U26  (.A1(keysched_new_key_o[44]),
+ OAI22xp5_upper \ks1/U26  (.A1(keysched_new_key_o[44]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n23 ),
     .Y(\ks1/n441 ));
- XOR2xp5_upper \ks1/U260  (.A(\ks1/n152 ),
+ XOR2xp5_bottom \ks1/U260  (.A(\ks1/n152 ),
     .B(keysched_last_key_i[61]),
     .Y(\ks1/n151 ));
  OAI22xp5_upper \ks1/U261  (.A1(keysched_new_key_o[93]),
@@ -11487,7 +11485,7 @@ module aes (clk,
     .B1(\ks1/n152 ),
     .B2(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .Y(\ks1/n391 ));
- XOR2xp5_upper \ks1/U262  (.A(\ks1/n153 ),
+ XOR2xp5_bottom \ks1/U262  (.A(\ks1/n153 ),
     .B(keysched_last_key_i[93]),
     .Y(\ks1/n152 ));
  OAI22xp5_upper \ks1/U263  (.A1(keysched_new_key_o[125]),
@@ -11495,17 +11493,17 @@ module aes (clk,
     .B1(\ks1/n153 ),
     .B2(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .Y(\ks1/n393 ));
- XOR2xp5_upper \ks1/U264  (.A(\ks1/n154 ),
+ XOR2xp5_bottom \ks1/U264  (.A(\ks1/n154 ),
     .B(\ks1/n155 ),
     .Y(\ks1/n153 ));
- XOR2xp5_upper \ks1/U265  (.A(keysched_last_key_i[125]),
+ XOR2xp5_bottom \ks1/U265  (.A(keysched_last_key_i[125]),
     .B(\ks1/col [29]),
     .Y(\ks1/n155 ));
- OAI21xp5_bottom \ks1/U266  (.A1(\ks1/n125 ),
+ OAI21xp5_upper \ks1/U266  (.A1(\ks1/n125 ),
     .A2(\ks1/n141 ),
     .B(\ks1/n126 ),
     .Y(\ks1/n154 ));
- OR3x1_bottom \ks1/U267  (.A(\ks1/n246 ),
+ OR3x1_upper \ks1/U267  (.A(\ks1/n246 ),
     .B(keysched_round_i[2]),
     .C(\ks1/n125 ),
     .Y(\ks1/n126 ));
@@ -11522,7 +11520,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n24 ),
     .Y(\ks1/n443 ));
- OAI22xp5_bottom \ks1/U270  (.A1(keysched_new_key_o[30]),
+ OAI22xp5_upper \ks1/U270  (.A1(keysched_new_key_o[30]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n157 ),
@@ -11538,7 +11536,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U273  (.A(\ks1/n159 ),
     .B(keysched_last_key_i[62]),
     .Y(\ks1/n158 ));
- OAI22xp5_bottom \ks1/U274  (.A1(keysched_new_key_o[94]),
+ OAI22xp5_upper \ks1/U274  (.A1(keysched_new_key_o[94]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n159 ),
@@ -11546,7 +11544,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U275  (.A(\ks1/n160 ),
     .B(keysched_last_key_i[94]),
     .Y(\ks1/n159 ));
- OAI22xp5_bottom \ks1/U276  (.A1(keysched_new_key_o[126]),
+ OAI22xp5_upper \ks1/U276  (.A1(keysched_new_key_o[126]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n160 ),
@@ -11557,7 +11555,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U278  (.A(keysched_last_key_i[126]),
     .B(\ks1/col [30]),
     .Y(\ks1/n162 ));
- OR2x2_bottom \ks1/U279  (.A(\ks1/n141 ),
+ OR2x2_upper \ks1/U279  (.A(\ks1/n141 ),
     .B(\ks1/n133 ),
     .Y(\ks1/n161 ));
  OAI22xp5_upper \ks1/U28  (.A1(keysched_new_key_o[46]),
@@ -11571,12 +11569,12 @@ module aes (clk,
  NAND2xp5_bottom \ks1/U281  (.A(keysched_round_i[2]),
     .B(\ks1/n246 ),
     .Y(\ks1/n141 ));
- OAI22xp5_bottom \ks1/U282  (.A1(FE_OFN109_sbox_data_o_6),
+ OAI22xp5_upper \ks1/U282  (.A1(FE_OFN109_sbox_data_o_6),
     .A2(\ks1/n238 ),
     .B1(\ks1/col [30]),
     .B2(\ks1/FE_OFN61_n4 ),
     .Y(\ks1/n405 ));
- OAI22xp5_bottom \ks1/U283  (.A1(keysched_new_key_o[31]),
+ OAI22xp5_upper \ks1/U283  (.A1(keysched_new_key_o[31]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n163 ),
@@ -11589,7 +11587,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n164 ),
     .Y(\ks1/n409 ));
- XOR2xp5_upper \ks1/U286  (.A(\ks1/n165 ),
+ XOR2xp5_bottom \ks1/U286  (.A(\ks1/n165 ),
     .B(keysched_last_key_i[63]),
     .Y(\ks1/n164 ));
  OAI22xp5_upper \ks1/U287  (.A1(keysched_new_key_o[95]),
@@ -11597,7 +11595,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n165 ),
     .Y(\ks1/n411 ));
- XOR2xp5_upper \ks1/U288  (.A(\ks1/n166 ),
+ XOR2xp5_bottom \ks1/U288  (.A(\ks1/n166 ),
     .B(keysched_last_key_i[95]),
     .Y(\ks1/n165 ));
  OAI22xp5_upper \ks1/U289  (.A1(keysched_new_key_o[127]),
@@ -11605,15 +11603,15 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n166 ),
     .Y(\ks1/n413 ));
- OAI22xp5_bottom \ks1/U29  (.A1(keysched_new_key_o[47]),
+ OAI22xp5_upper \ks1/U29  (.A1(keysched_new_key_o[47]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n26 ),
     .Y(\ks1/n447 ));
- XNOR2xp5_upper \ks1/U290  (.A(\ks1/n167 ),
+ XNOR2xp5_bottom \ks1/U290  (.A(\ks1/n167 ),
     .B(\ks1/n168 ),
     .Y(\ks1/n166 ));
- XOR2xp5_upper \ks1/U291  (.A(keysched_last_key_i[127]),
+ XOR2xp5_bottom \ks1/U291  (.A(keysched_last_key_i[127]),
     .B(\ks1/col [31]),
     .Y(\ks1/n168 ));
  OR3x1_bottom \ks1/U292  (.A(\ks1/n246 ),
@@ -11628,7 +11626,7 @@ module aes (clk,
     .B1(\ks1/col [31]),
     .B2(\ks1/FE_OFN61_n4 ),
     .Y(\ks1/n415 ));
- AO221x1_bottom \ks1/U3  (.A1(keysched_last_key_i[31]),
+ AO221x1_upper \ks1/U3  (.A1(keysched_last_key_i[31]),
     .A2(\ks1/n242 ),
     .B1(keysched_last_key_i[23]),
     .B2(\ks1/FE_OFN60_n2 ),
@@ -11644,19 +11642,19 @@ module aes (clk,
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n169 ),
     .Y(\ks1/n417 ));
- XOR2xp5_upper \ks1/U302  (.A(keysched_last_key_i[8]),
+ XOR2xp5_bottom \ks1/U302  (.A(keysched_last_key_i[8]),
     .B(\ks1/n18 ),
     .Y(\ks1/n169 ));
- XOR2xp5_upper \ks1/U303  (.A(\ks1/n27 ),
+ XOR2xp5_bottom \ks1/U303  (.A(\ks1/n27 ),
     .B(keysched_last_key_i[40]),
     .Y(\ks1/n18 ));
  XOR2xp5_upper \ks1/U304  (.A(\ks1/n35 ),
     .B(keysched_last_key_i[72]),
     .Y(\ks1/n27 ));
- XOR2xp5_upper \ks1/U305  (.A(FE_OFN115_sbox_data_o_0),
+ XOR2xp5_bottom \ks1/U305  (.A(FE_OFN115_sbox_data_o_0),
     .B(keysched_last_key_i[104]),
     .Y(\ks1/n35 ));
- OAI22xp5_bottom \ks1/U306  (.A1(keysched_new_key_o[9]),
+ OAI22xp5_upper \ks1/U306  (.A1(keysched_new_key_o[9]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n170 ),
@@ -11667,15 +11665,15 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U308  (.A(\ks1/n28 ),
     .B(keysched_last_key_i[41]),
     .Y(\ks1/n20 ));
- XOR2xp5_bottom \ks1/U309  (.A(\ks1/n36 ),
+ XOR2xp5_upper \ks1/U309  (.A(\ks1/n36 ),
     .B(keysched_last_key_i[73]),
     .Y(\ks1/n28 ));
- OAI22xp5_bottom \ks1/U31  (.A1(keysched_new_key_o[73]),
+ OAI22xp5_upper \ks1/U31  (.A1(keysched_new_key_o[73]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n28 ),
     .Y(\ks1/n451 ));
- XOR2xp5_upper \ks1/U310  (.A(FE_OFN114_sbox_data_o_1),
+ XOR2xp5_bottom \ks1/U310  (.A(FE_OFN114_sbox_data_o_1),
     .B(keysched_last_key_i[105]),
     .Y(\ks1/n36 ));
  OAI22xp5_upper \ks1/U311  (.A1(keysched_new_key_o[10]),
@@ -11683,7 +11681,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n171 ),
     .Y(\ks1/n421 ));
- XOR2xp5_upper \ks1/U312  (.A(keysched_last_key_i[10]),
+ XOR2xp5_bottom \ks1/U312  (.A(keysched_last_key_i[10]),
     .B(\ks1/n21 ),
     .Y(\ks1/n171 ));
  XOR2xp5_bottom \ks1/U313  (.A(\ks1/n29 ),
@@ -11692,10 +11690,10 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U314  (.A(\ks1/n37 ),
     .B(keysched_last_key_i[74]),
     .Y(\ks1/n29 ));
- XOR2xp5_upper \ks1/U315  (.A(FE_OFN113_sbox_data_o_2),
+ XOR2xp5_bottom \ks1/U315  (.A(FE_OFN113_sbox_data_o_2),
     .B(keysched_last_key_i[106]),
     .Y(\ks1/n37 ));
- OAI22xp5_bottom \ks1/U316  (.A1(keysched_new_key_o[11]),
+ OAI22xp5_upper \ks1/U316  (.A1(keysched_new_key_o[11]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n172 ),
@@ -11709,7 +11707,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U319  (.A(\ks1/n38 ),
     .B(keysched_last_key_i[75]),
     .Y(\ks1/n30 ));
- OAI22xp5_bottom \ks1/U32  (.A1(keysched_new_key_o[74]),
+ OAI22xp5_upper \ks1/U32  (.A1(keysched_new_key_o[74]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n29 ),
@@ -11717,7 +11715,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U320  (.A(FE_OFN112_sbox_data_o_3),
     .B(keysched_last_key_i[107]),
     .Y(\ks1/n38 ));
- OAI22xp5_bottom \ks1/U321  (.A1(keysched_new_key_o[12]),
+ OAI22xp5_upper \ks1/U321  (.A1(keysched_new_key_o[12]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n173 ),
@@ -11728,10 +11726,10 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U323  (.A(\ks1/n31 ),
     .B(keysched_last_key_i[44]),
     .Y(\ks1/n23 ));
- XOR2xp5_upper \ks1/U324  (.A(\ks1/n39 ),
+ XOR2xp5_bottom \ks1/U324  (.A(\ks1/n39 ),
     .B(keysched_last_key_i[76]),
     .Y(\ks1/n31 ));
- XOR2xp5_upper \ks1/U325  (.A(FE_OFN111_sbox_data_o_4),
+ XOR2xp5_bottom \ks1/U325  (.A(FE_OFN111_sbox_data_o_4),
     .B(keysched_last_key_i[108]),
     .Y(\ks1/n39 ));
  OAI22xp5_upper \ks1/U326  (.A1(keysched_new_key_o[13]),
@@ -11739,16 +11737,16 @@ module aes (clk,
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n174 ),
     .Y(\ks1/n427 ));
- XOR2xp5_upper \ks1/U327  (.A(keysched_last_key_i[13]),
+ XOR2xp5_bottom \ks1/U327  (.A(keysched_last_key_i[13]),
     .B(\ks1/n24 ),
     .Y(\ks1/n174 ));
- XOR2xp5_upper \ks1/U328  (.A(\ks1/n32 ),
+ XOR2xp5_bottom \ks1/U328  (.A(\ks1/n32 ),
     .B(keysched_last_key_i[45]),
     .Y(\ks1/n24 ));
  XOR2xp5_bottom \ks1/U329  (.A(\ks1/n40 ),
     .B(keysched_last_key_i[77]),
     .Y(\ks1/n32 ));
- OAI22xp5_bottom \ks1/U33  (.A1(keysched_new_key_o[75]),
+ OAI22xp5_upper \ks1/U33  (.A1(keysched_new_key_o[75]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n30 ),
@@ -11761,19 +11759,19 @@ module aes (clk,
     .B1(\ks1/FE_OFN66_n14 ),
     .B2(\ks1/n175 ),
     .Y(\ks1/n429 ));
- XOR2xp5_upper \ks1/U332  (.A(keysched_last_key_i[14]),
+ XOR2xp5_bottom \ks1/U332  (.A(keysched_last_key_i[14]),
     .B(\ks1/n25 ),
     .Y(\ks1/n175 ));
- XOR2xp5_upper \ks1/U333  (.A(\ks1/n33 ),
+ XOR2xp5_bottom \ks1/U333  (.A(\ks1/n33 ),
     .B(keysched_last_key_i[46]),
     .Y(\ks1/n25 ));
- XOR2xp5_upper \ks1/U334  (.A(\ks1/n41 ),
+ XOR2xp5_bottom \ks1/U334  (.A(\ks1/n41 ),
     .B(keysched_last_key_i[78]),
     .Y(\ks1/n33 ));
- XOR2xp5_upper \ks1/U335  (.A(FE_OFN109_sbox_data_o_6),
+ XOR2xp5_bottom \ks1/U335  (.A(FE_OFN109_sbox_data_o_6),
     .B(keysched_last_key_i[110]),
     .Y(\ks1/n41 ));
- OAI22xp5_bottom \ks1/U336  (.A1(keysched_new_key_o[15]),
+ OAI22xp5_upper \ks1/U336  (.A1(keysched_new_key_o[15]),
     .A2(\ks1/FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n176 ),
@@ -11797,11 +11795,11 @@ module aes (clk,
     .Y(\ks1/n42 ));
  INVx1_bottom \ks1/U346  (.A(\ks1/FE_OFN60_n2 ),
     .Y(\ks1/n232 ));
- INVx1_upper \ks1/U347  (.A(\ks1/FE_OFN61_n4 ),
+ INVx1_bottom \ks1/U347  (.A(\ks1/FE_OFN61_n4 ),
     .Y(\ks1/n238 ));
  INVx1_upper \ks1/U348  (.A(\ks1/FE_OFN62_n5 ),
     .Y(\ks1/n234 ));
- OAI22xp5_bottom \ks1/U35  (.A1(keysched_new_key_o[77]),
+ OAI22xp5_upper \ks1/U35  (.A1(keysched_new_key_o[77]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n32 ),
@@ -11823,16 +11821,16 @@ module aes (clk,
     .B(\ks1/state [2]),
     .C(\ks1/state [0]),
     .Y(\ks1/n16 ));
- OR3x4_bottom \ks1/U366  (.A(\ks1/state [0]),
+ OR3x4_upper \ks1/U366  (.A(\ks1/state [0]),
     .B(\ks1/state [1]),
     .C(\ks1/n16 ),
     .Y(\ks1/n14 ));
- OAI22xp5_bottom \ks1/U37  (.A1(keysched_new_key_o[79]),
+ OAI22xp5_upper \ks1/U37  (.A1(keysched_new_key_o[79]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n34 ),
     .Y(\ks1/n463 ));
- TIEHIx1_upper \ks1/U374  (.H(\ks1/n488 ));
+ TIEHIx1_bottom \ks1/U374  (.H(\ks1/n488 ));
  INVx1_bottom \ks1/U375  (.A(\ks1/state [0]),
     .Y(\ks1/n236 ));
  INVx1_bottom \ks1/U376  (.A(\ks1/n16 ),
@@ -11841,7 +11839,7 @@ module aes (clk,
     .Y(\ks1/n242 ));
  INVx1_bottom \ks1/U378  (.A(\ks1/state [1]),
     .Y(\ks1/n244 ));
- INVx1_bottom \ks1/U379  (.A(keysched_round_i[3]),
+ INVx1_upper \ks1/U379  (.A(keysched_round_i[3]),
     .Y(\ks1/n246 ));
  OAI22xp5_upper \ks1/U38  (.A1(keysched_new_key_o[104]),
     .A2(\ks1/FE_DBTN90_n14 ),
@@ -11867,7 +11865,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n37 ),
     .Y(\ks1/n469 ));
- OAI22xp5_bottom \ks1/U41  (.A1(keysched_new_key_o[107]),
+ OAI22xp5_upper \ks1/U41  (.A1(keysched_new_key_o[107]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n38 ),
@@ -11877,7 +11875,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n39 ),
     .Y(\ks1/n473 ));
- OAI22xp5_bottom \ks1/U43  (.A1(keysched_new_key_o[109]),
+ OAI22xp5_upper \ks1/U43  (.A1(keysched_new_key_o[109]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n40 ),
@@ -11887,7 +11885,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n41 ),
     .Y(\ks1/n477 ));
- OAI22xp5_bottom \ks1/U45  (.A1(keysched_new_key_o[111]),
+ OAI22xp5_upper \ks1/U45  (.A1(keysched_new_key_o[111]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n42 ),
@@ -11899,7 +11897,7 @@ module aes (clk,
  NOR2x1_bottom \ks1/U47  (.A(\ks1/FE_OFN60_n2 ),
     .B(\ks1/FE_OFN61_n4 ),
     .Y(\ks1/n485 ));
- OAI22xp5_bottom \ks1/U48  (.A1(\ks1/n16 ),
+ OAI22xp5_upper \ks1/U48  (.A1(\ks1/n16 ),
     .A2(\ks1/FE_OFN61_n4 ),
     .B1(keysched_start_i),
     .B2(\ks1/n240 ),
@@ -11915,7 +11913,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n46 ),
     .Y(\ks1/n177 ));
- XOR2xp5_upper \ks1/U51  (.A(keysched_last_key_i[0]),
+ XOR2xp5_bottom \ks1/U51  (.A(keysched_last_key_i[0]),
     .B(\ks1/n47 ),
     .Y(\ks1/n46 ));
  OAI22xp5_upper \ks1/U52  (.A1(keysched_new_key_o[32]),
@@ -11923,7 +11921,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n47 ),
     .Y(\ks1/n179 ));
- XOR2xp5_upper \ks1/U53  (.A(\ks1/n48 ),
+ XOR2xp5_bottom \ks1/U53  (.A(\ks1/n48 ),
     .B(keysched_last_key_i[32]),
     .Y(\ks1/n47 ));
  OAI22xp5_upper \ks1/U54  (.A1(keysched_new_key_o[64]),
@@ -11931,7 +11929,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n48 ),
     .Y(\ks1/n181 ));
- XOR2xp5_upper \ks1/U55  (.A(\ks1/n49 ),
+ XOR2xp5_bottom \ks1/U55  (.A(\ks1/n49 ),
     .B(keysched_last_key_i[64]),
     .Y(\ks1/n48 ));
  OAI22xp5_upper \ks1/U56  (.A1(keysched_new_key_o[96]),
@@ -11939,7 +11937,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n49 ),
     .Y(\ks1/n183 ));
- XOR2xp5_upper \ks1/U57  (.A(\ks1/col_0 ),
+ XOR2xp5_bottom \ks1/U57  (.A(\ks1/col_0 ),
     .B(keysched_last_key_i[96]),
     .Y(\ks1/n49 ));
  OAI22xp5_upper \ks1/U58  (.A1(FE_OFN115_sbox_data_o_0),
@@ -11957,7 +11955,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN62_n5 ),
     .B2(keysched_last_key_i[6]),
     .Y(\ks1/n6 ));
- XOR2xp5_upper \ks1/U60  (.A(keysched_last_key_i[1]),
+ XOR2xp5_bottom \ks1/U60  (.A(keysched_last_key_i[1]),
     .B(\ks1/n51 ),
     .Y(\ks1/n50 ));
  OAI22xp5_upper \ks1/U61  (.A1(keysched_new_key_o[33]),
@@ -11965,7 +11963,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n51 ),
     .Y(\ks1/n189 ));
- XOR2xp5_upper \ks1/U62  (.A(\ks1/n52 ),
+ XOR2xp5_bottom \ks1/U62  (.A(\ks1/n52 ),
     .B(keysched_last_key_i[33]),
     .Y(\ks1/n51 ));
  OAI22xp5_upper \ks1/U63  (.A1(keysched_new_key_o[65]),
@@ -11973,7 +11971,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n52 ),
     .Y(\ks1/n191 ));
- XOR2xp5_upper \ks1/U64  (.A(\ks1/n53 ),
+ XOR2xp5_bottom \ks1/U64  (.A(\ks1/n53 ),
     .B(keysched_last_key_i[65]),
     .Y(\ks1/n52 ));
  OAI22xp5_upper \ks1/U65  (.A1(keysched_new_key_o[97]),
@@ -11981,7 +11979,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN120_FE_OFN65_n14 ),
     .B2(\ks1/n53 ),
     .Y(\ks1/n193 ));
- XOR2xp5_upper \ks1/U66  (.A(\ks1/col_1 ),
+ XOR2xp5_bottom \ks1/U66  (.A(\ks1/col_1 ),
     .B(keysched_last_key_i[97]),
     .Y(\ks1/n53 ));
  OAI22xp5_upper \ks1/U67  (.A1(FE_OFN114_sbox_data_o_1),
@@ -11994,7 +11992,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n54 ),
     .Y(\ks1/n197 ));
- XOR2xp5_upper \ks1/U69  (.A(keysched_last_key_i[2]),
+ XOR2xp5_bottom \ks1/U69  (.A(keysched_last_key_i[2]),
     .B(\ks1/n55 ),
     .Y(\ks1/n54 ));
  AO221x1_upper \ks1/U7  (.A1(keysched_last_key_i[29]),
@@ -12008,10 +12006,10 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n55 ),
     .Y(\ks1/n199 ));
- XOR2xp5_upper \ks1/U71  (.A(\ks1/n56 ),
+ XOR2xp5_bottom \ks1/U71  (.A(\ks1/n56 ),
     .B(keysched_last_key_i[34]),
     .Y(\ks1/n55 ));
- OAI22xp5_bottom \ks1/U72  (.A1(keysched_new_key_o[66]),
+ OAI22xp5_upper \ks1/U72  (.A1(keysched_new_key_o[66]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n56 ),
@@ -12019,7 +12017,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U73  (.A(\ks1/n57 ),
     .B(keysched_last_key_i[66]),
     .Y(\ks1/n56 ));
- OAI22xp5_bottom \ks1/U74  (.A1(keysched_new_key_o[98]),
+ OAI22xp5_upper \ks1/U74  (.A1(keysched_new_key_o[98]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n57 ),
@@ -12027,7 +12025,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U75  (.A(\ks1/col_2 ),
     .B(keysched_last_key_i[98]),
     .Y(\ks1/n57 ));
- OAI22xp5_bottom \ks1/U76  (.A1(FE_OFN113_sbox_data_o_2),
+ OAI22xp5_upper \ks1/U76  (.A1(FE_OFN113_sbox_data_o_2),
     .A2(\ks1/n232 ),
     .B1(\ks1/col_2 ),
     .B2(\ks1/FE_OFN60_n2 ),
@@ -12037,10 +12035,10 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n58 ),
     .Y(\ks1/n207 ));
- XOR2xp5_upper \ks1/U78  (.A(keysched_last_key_i[3]),
+ XOR2xp5_bottom \ks1/U78  (.A(keysched_last_key_i[3]),
     .B(\ks1/n59 ),
     .Y(\ks1/n58 ));
- OAI22xp5_bottom \ks1/U79  (.A1(keysched_new_key_o[35]),
+ OAI22xp5_upper \ks1/U79  (.A1(keysched_new_key_o[35]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n59 ),
@@ -12053,7 +12051,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U80  (.A(\ks1/n60 ),
     .B(keysched_last_key_i[35]),
     .Y(\ks1/n59 ));
- OAI22xp5_bottom \ks1/U81  (.A1(keysched_new_key_o[67]),
+ OAI22xp5_upper \ks1/U81  (.A1(keysched_new_key_o[67]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n60 ),
@@ -12069,12 +12067,12 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U84  (.A(\ks1/col_3 ),
     .B(keysched_last_key_i[99]),
     .Y(\ks1/n61 ));
- OAI22xp5_bottom \ks1/U85  (.A1(FE_OFN112_sbox_data_o_3),
+ OAI22xp5_upper \ks1/U85  (.A1(FE_OFN112_sbox_data_o_3),
     .A2(\ks1/n232 ),
     .B1(\ks1/col_3 ),
     .B2(\ks1/FE_OFN60_n2 ),
     .Y(\ks1/n215 ));
- OAI22xp5_bottom \ks1/U86  (.A1(keysched_new_key_o[4]),
+ OAI22xp5_upper \ks1/U86  (.A1(keysched_new_key_o[4]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n62 ),
@@ -12087,16 +12085,16 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n63 ),
     .Y(\ks1/n219 ));
- XOR2xp5_upper \ks1/U89  (.A(\ks1/n64 ),
+ XOR2xp5_bottom \ks1/U89  (.A(\ks1/n64 ),
     .B(keysched_last_key_i[36]),
     .Y(\ks1/n63 ));
- AO221x1_bottom \ks1/U9  (.A1(keysched_last_key_i[28]),
+ AO221x1_upper \ks1/U9  (.A1(keysched_last_key_i[28]),
     .A2(\ks1/n242 ),
     .B1(keysched_last_key_i[20]),
     .B2(\ks1/FE_OFN60_n2 ),
     .C(\ks1/n8 ),
     .Y(keysched_sbox_data_o[4]));
- OAI22xp5_bottom \ks1/U90  (.A1(keysched_new_key_o[68]),
+ OAI22xp5_upper \ks1/U90  (.A1(keysched_new_key_o[68]),
     .A2(\ks1/FE_OFN70_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n64 ),
@@ -12104,7 +12102,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U91  (.A(\ks1/n65 ),
     .B(keysched_last_key_i[68]),
     .Y(\ks1/n64 ));
- OAI22xp5_bottom \ks1/U92  (.A1(keysched_new_key_o[100]),
+ OAI22xp5_upper \ks1/U92  (.A1(keysched_new_key_o[100]),
     .A2(\ks1/FE_OFN69_FE_DBTN90_n14 ),
     .B1(\ks1/n14 ),
     .B2(\ks1/n65 ),
@@ -12112,7 +12110,7 @@ module aes (clk,
  XOR2xp5_bottom \ks1/U93  (.A(\ks1/col_4 ),
     .B(keysched_last_key_i[100]),
     .Y(\ks1/n65 ));
- OAI22xp5_bottom \ks1/U94  (.A1(FE_OFN111_sbox_data_o_4),
+ OAI22xp5_upper \ks1/U94  (.A1(FE_OFN111_sbox_data_o_4),
     .A2(\ks1/n232 ),
     .B1(\ks1/col_4 ),
     .B2(\ks1/FE_OFN60_n2 ),
@@ -12122,7 +12120,7 @@ module aes (clk,
     .B1(\ks1/FE_OFN65_n14 ),
     .B2(\ks1/n66 ),
     .Y(\ks1/n227 ));
- XOR2xp5_upper \ks1/U96  (.A(keysched_last_key_i[5]),
+ XOR2xp5_bottom \ks1/U96  (.A(keysched_last_key_i[5]),
     .B(\ks1/n67 ),
     .Y(\ks1/n66 ));
  OAI22xp5_upper \ks1/U97  (.A1(keysched_new_key_o[37]),
@@ -12130,7 +12128,7 @@ module aes (clk,
     .B1(\ks1/n14 ),
     .B2(\ks1/n67 ),
     .Y(\ks1/n229 ));
- XOR2xp5_upper \ks1/U98  (.A(\ks1/n68 ),
+ XOR2xp5_bottom \ks1/U98  (.A(\ks1/n68 ),
     .B(keysched_last_key_i[37]),
     .Y(\ks1/n67 ));
  OAI22xp5_upper \ks1/U99  (.A1(keysched_new_key_o[69]),
@@ -12143,7 +12141,7 @@ module aes (clk,
     .QN(\ks1/col_0 ),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_16_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_16_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n265 ),
     .QN(\ks1/col [16]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12158,7 +12156,7 @@ module aes (clk,
     .QN(\ks1/col [18]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN25_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_19_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_19_  (.CLK(clknet_leaf_12_clk),
     .D(\ks1/n295 ),
     .QN(\ks1/col [19]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12198,7 +12196,7 @@ module aes (clk,
     .QN(\ks1/col [25]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_26_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_26_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n365 ),
     .QN(\ks1/col [26]),
     .RESETN(\ks1/n488 ),
@@ -12218,12 +12216,12 @@ module aes (clk,
     .QN(\ks1/col [29]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_2_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_2_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n205 ),
     .QN(\ks1/col_2 ),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_30_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_30_  (.CLK(clknet_leaf_2_clk),
     .D(\ks1/n405 ),
     .QN(\ks1/col [30]),
     .RESETN(\ks1/n488 ),
@@ -12233,27 +12231,27 @@ module aes (clk,
     .QN(\ks1/col [31]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_3_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_3_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n215 ),
     .QN(\ks1/col_3 ),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_4_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_4_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n225 ),
     .QN(\ks1/col_4 ),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_5_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_5_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n235 ),
     .QN(\ks1/col_5 ),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_6_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_6_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n245 ),
     .QN(\ks1/col_6 ),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/col_reg_7_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/col_reg_7_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n255 ),
     .QN(\ks1/col_7 ),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12263,22 +12261,22 @@ module aes (clk,
     .QN(keysched_new_key_o[0]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_100_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_100_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n223 ),
     .QN(keysched_new_key_o[100]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_101_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_101_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n233 ),
     .QN(keysched_new_key_o[101]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_102_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_102_  (.CLK(clknet_leaf_12_clk),
     .D(\ks1/n243 ),
     .QN(keysched_new_key_o[102]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN25_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_103_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_103_  (.CLK(clknet_leaf_7_clk),
     .D(\ks1/n253 ),
     .QN(keysched_new_key_o[103]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
@@ -12298,7 +12296,7 @@ module aes (clk,
     .QN(keysched_new_key_o[106]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_107_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_107_  (.CLK(clknet_leaf_2_clk),
     .D(\ks1/n471 ),
     .QN(keysched_new_key_o[107]),
     .RESETN(\ks1/n488 ),
@@ -12308,7 +12306,7 @@ module aes (clk,
     .QN(keysched_new_key_o[108]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_109_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_109_  (.CLK(clknet_leaf_2_clk),
     .D(\ks1/n475 ),
     .QN(keysched_new_key_o[109]),
     .RESETN(\ks1/n488 ),
@@ -12323,12 +12321,12 @@ module aes (clk,
     .QN(keysched_new_key_o[110]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_111_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_111_  (.CLK(clknet_leaf_7_clk),
     .D(\ks1/n479 ),
     .QN(keysched_new_key_o[111]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_112_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_112_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n263 ),
     .QN(keysched_new_key_o[112]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
@@ -12343,7 +12341,7 @@ module aes (clk,
     .QN(keysched_new_key_o[114]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_115_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_115_  (.CLK(clknet_leaf_12_clk),
     .D(\ks1/n293 ),
     .QN(keysched_new_key_o[115]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12368,7 +12366,7 @@ module aes (clk,
     .QN(keysched_new_key_o[119]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_11_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_11_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n423 ),
     .QN(keysched_new_key_o[11]),
     .RESETN(\ks1/n488 ),
@@ -12383,7 +12381,7 @@ module aes (clk,
     .QN(keysched_new_key_o[121]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_122_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_122_  (.CLK(clknet_leaf_3_clk),
     .D(\ks1/n363 ),
     .QN(keysched_new_key_o[122]),
     .RESETN(\ks1/n488 ),
@@ -12393,17 +12391,17 @@ module aes (clk,
     .QN(keysched_new_key_o[123]),
     .RESETN(\ks1/n488 ),
     .SETN(\ks1/FE_OFN2_reset ));
- DFFASRHQNx1_upper \ks1/key_reg_reg_124_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_bottom \ks1/key_reg_reg_124_  (.CLK(clknet_leaf_3_clk),
     .D(\ks1/n383 ),
     .QN(keysched_new_key_o[124]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_upper \ks1/key_reg_reg_125_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_bottom \ks1/key_reg_reg_125_  (.CLK(clknet_leaf_3_clk),
     .D(\ks1/n393 ),
     .QN(keysched_new_key_o[125]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_126_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_126_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n403 ),
     .QN(keysched_new_key_o[126]),
     .RESETN(\ks1/n488 ),
@@ -12413,7 +12411,7 @@ module aes (clk,
     .QN(keysched_new_key_o[127]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_12_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_12_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n425 ),
     .QN(keysched_new_key_o[12]),
     .RESETN(\ks1/FE_OFN63_n488 ),
@@ -12428,12 +12426,12 @@ module aes (clk,
     .QN(keysched_new_key_o[14]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_15_  (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_15_  (.CLK(clknet_leaf_6_clk),
     .D(\ks1/n431 ),
     .QN(keysched_new_key_o[15]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_16_  (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_16_  (.CLK(clknet_leaf_6_clk),
     .D(\ks1/n257 ),
     .QN(keysched_new_key_o[16]),
     .RESETN(\ks1/FE_OFN63_n488 ),
@@ -12483,7 +12481,7 @@ module aes (clk,
     .QN(keysched_new_key_o[24]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_25_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_25_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n347 ),
     .QN(keysched_new_key_o[25]),
     .RESETN(\ks1/n488 ),
@@ -12493,12 +12491,12 @@ module aes (clk,
     .QN(keysched_new_key_o[26]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_27_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_27_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n367 ),
     .QN(keysched_new_key_o[27]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_28_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_28_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n377 ),
     .QN(keysched_new_key_o[28]),
     .RESETN(\ks1/FE_OFN63_n488 ),
@@ -12513,12 +12511,12 @@ module aes (clk,
     .QN(keysched_new_key_o[2]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_30_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_30_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n397 ),
     .QN(keysched_new_key_o[30]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_31_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_31_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n407 ),
     .QN(keysched_new_key_o[31]),
     .RESETN(\ks1/FE_OFN63_n488 ),
@@ -12553,7 +12551,7 @@ module aes (clk,
     .QN(keysched_new_key_o[37]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_38_  (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_38_  (.CLK(clknet_leaf_9_clk),
     .D(\ks1/n239 ),
     .QN(keysched_new_key_o[38]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
@@ -12573,22 +12571,22 @@ module aes (clk,
     .QN(keysched_new_key_o[40]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_41_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_41_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n435 ),
     .QN(keysched_new_key_o[41]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_42_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_42_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n437 ),
     .QN(keysched_new_key_o[42]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_43_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_43_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n439 ),
     .QN(keysched_new_key_o[43]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_44_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_44_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n441 ),
     .QN(keysched_new_key_o[44]),
     .RESETN(\ks1/FE_OFN63_n488 ),
@@ -12603,7 +12601,7 @@ module aes (clk,
     .QN(keysched_new_key_o[46]),
     .RESETN(\ks1/FE_OFN63_n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_47_  (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_47_  (.CLK(clknet_leaf_6_clk),
     .D(\ks1/n447 ),
     .QN(keysched_new_key_o[47]),
     .RESETN(\ks1/FE_OFN63_n488 ),
@@ -12618,7 +12616,7 @@ module aes (clk,
     .QN(keysched_new_key_o[49]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_4_  (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_4_  (.CLK(clknet_leaf_9_clk),
     .D(\ks1/n217 ),
     .QN(keysched_new_key_o[4]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
@@ -12628,12 +12626,12 @@ module aes (clk,
     .QN(keysched_new_key_o[50]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_51_  (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_51_  (.CLK(clknet_leaf_9_clk),
     .D(\ks1/n289 ),
     .QN(keysched_new_key_o[51]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_52_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_52_  (.CLK(clknet_leaf_10_clk),
     .D(\ks1/n299 ),
     .QN(keysched_new_key_o[52]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
@@ -12653,12 +12651,12 @@ module aes (clk,
     .QN(keysched_new_key_o[55]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_56_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_56_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n339 ),
     .QN(keysched_new_key_o[56]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_57_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_57_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n349 ),
     .QN(keysched_new_key_o[57]),
     .RESETN(\ks1/n488 ),
@@ -12668,7 +12666,7 @@ module aes (clk,
     .QN(keysched_new_key_o[58]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_59_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_59_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n369 ),
     .QN(keysched_new_key_o[59]),
     .RESETN(\ks1/n488 ),
@@ -12678,7 +12676,7 @@ module aes (clk,
     .QN(keysched_new_key_o[5]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_60_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_60_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n379 ),
     .QN(keysched_new_key_o[60]),
     .RESETN(\ks1/n488 ),
@@ -12708,17 +12706,17 @@ module aes (clk,
     .QN(keysched_new_key_o[65]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_66_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_66_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n201 ),
     .QN(keysched_new_key_o[66]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_67_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_67_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n211 ),
     .QN(keysched_new_key_o[67]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_68_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_68_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n221 ),
     .QN(keysched_new_key_o[68]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12733,12 +12731,12 @@ module aes (clk,
     .QN(keysched_new_key_o[6]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_70_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_70_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n241 ),
     .QN(keysched_new_key_o[70]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN25_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_71_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_71_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n251 ),
     .QN(keysched_new_key_o[71]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12748,17 +12746,17 @@ module aes (clk,
     .QN(keysched_new_key_o[72]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_73_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_73_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n451 ),
     .QN(keysched_new_key_o[73]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_74_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_74_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n453 ),
     .QN(keysched_new_key_o[74]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_75_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_75_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n455 ),
     .QN(keysched_new_key_o[75]),
     .RESETN(\ks1/n488 ),
@@ -12768,7 +12766,7 @@ module aes (clk,
     .QN(keysched_new_key_o[76]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_77_  (.CLK(clknet_leaf_6_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_77_  (.CLK(clknet_leaf_6_clk),
     .D(\ks1/n459 ),
     .QN(keysched_new_key_o[77]),
     .RESETN(\ks1/n488 ),
@@ -12778,7 +12776,7 @@ module aes (clk,
     .QN(keysched_new_key_o[78]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_79_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_79_  (.CLK(clknet_leaf_7_clk),
     .D(\ks1/n463 ),
     .QN(keysched_new_key_o[79]),
     .RESETN(\ks1/n488 ),
@@ -12803,12 +12801,12 @@ module aes (clk,
     .QN(keysched_new_key_o[82]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_83_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_83_  (.CLK(clknet_leaf_12_clk),
     .D(\ks1/n291 ),
     .QN(keysched_new_key_o[83]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_84_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_84_  (.CLK(clknet_leaf_10_clk),
     .D(\ks1/n301 ),
     .QN(keysched_new_key_o[84]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12828,7 +12826,7 @@ module aes (clk,
     .QN(keysched_new_key_o[87]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_88_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_88_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n341 ),
     .QN(keysched_new_key_o[88]),
     .RESETN(\ks1/n488 ),
@@ -12843,12 +12841,12 @@ module aes (clk,
     .QN(keysched_new_key_o[8]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_90_  (.CLK(clknet_leaf_4_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_90_  (.CLK(clknet_leaf_4_clk),
     .D(\ks1/n361 ),
     .QN(keysched_new_key_o[90]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_91_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_91_  (.CLK(clknet_leaf_3_clk),
     .D(\ks1/n371 ),
     .QN(keysched_new_key_o[91]),
     .RESETN(\ks1/n488 ),
@@ -12858,12 +12856,12 @@ module aes (clk,
     .QN(keysched_new_key_o[92]),
     .RESETN(\ks1/n488 ),
     .SETN(\ks1/FE_OFN2_reset ));
- DFFASRHQNx1_upper \ks1/key_reg_reg_93_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_bottom \ks1/key_reg_reg_93_  (.CLK(clknet_leaf_3_clk),
     .D(\ks1/n391 ),
     .QN(keysched_new_key_o[93]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_94_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_94_  (.CLK(clknet_leaf_3_clk),
     .D(\ks1/n401 ),
     .QN(keysched_new_key_o[94]),
     .RESETN(\ks1/n488 ),
@@ -12883,7 +12881,7 @@ module aes (clk,
     .QN(keysched_new_key_o[97]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN14_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_98_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_98_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n203 ),
     .QN(keysched_new_key_o[98]),
     .RESETN(\ks1/FE_OFN64_n488 ),
@@ -12893,12 +12891,12 @@ module aes (clk,
     .QN(keysched_new_key_o[99]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/key_reg_reg_9_  (.CLK(clknet_leaf_5_clk),
+ DFFASRHQNx1_upper \ks1/key_reg_reg_9_  (.CLK(clknet_leaf_5_clk),
     .D(\ks1/n419 ),
     .QN(keysched_new_key_o[9]),
     .RESETN(\ks1/n488 ),
     .SETN(FE_OFN6_reset));
- DFFASRHQNx1_bottom \ks1/ready_o_reg  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \ks1/ready_o_reg  (.CLK(clknet_leaf_10_clk),
     .D(\ks1/n481 ),
     .QN(keysched_ready_o),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
@@ -12913,14 +12911,14 @@ module aes (clk,
     .QN(\ks1/state [1]),
     .RESETN(\ks1/FE_OFN122_FE_OFN63_n488 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \ks1/state_reg_2_  (.CLK(clknet_leaf_8_clk),
+ DFFASRHQNx1_upper \ks1/state_reg_2_  (.CLK(clknet_leaf_8_clk),
     .D(\ks1/n234 ),
     .QN(\ks1/state [2]),
     .RESETN(\ks1/FE_OFN64_n488 ),
     .SETN(FE_OFN22_reset));
  INVx1_bottom \mix1/FE_DBTC91_n9  (.A(\mix1/FE_OFN94_n9 ),
     .Y(\mix1/FE_DBTN91_n9 ));
- INVx8_bottom \mix1/FE_DBTC92_n7  (.A(\mix1/FE_OFN55_n7 ),
+ INVx8_upper \mix1/FE_DBTC92_n7  (.A(\mix1/FE_OFN55_n7 ),
     .Y(\mix1/FE_DBTN92_n7 ));
  INVx2_upper \mix1/FE_DBTC93_n5  (.A(\mix1/FE_OFN54_n5 ),
     .Y(\mix1/FE_DBTN93_n5 ));
@@ -12938,13 +12936,13 @@ module aes (clk,
     .Y(\mix1/FE_OFN58_n564 ));
  BUFx4_upper \mix1/FE_OFC56_n564  (.A(\mix1/FE_OFN58_n564 ),
     .Y(\mix1/FE_OFN59_n564 ));
- BUFx3_bottom \mix1/FE_OFC64_FE_DBTN93_n5  (.A(\mix1/FE_DBTN93_n5 ),
+ BUFx3_upper \mix1/FE_OFC64_FE_DBTN93_n5  (.A(\mix1/FE_DBTN93_n5 ),
     .Y(\mix1/FE_OFN67_FE_DBTN93_n5 ));
  BUFx2_upper \mix1/FE_OFC65_FE_DBTN93_n5  (.A(\mix1/FE_DBTN93_n5 ),
     .Y(\mix1/FE_OFN68_FE_DBTN93_n5 ));
  BUFx4_upper \mix1/FE_OFC76_n1  (.A(\mix1/n1 ),
     .Y(\mix1/FE_OFN79_n1 ));
- BUFx5_bottom \mix1/FE_OFC77_n1  (.A(\mix1/FE_OFN79_n1 ),
+ BUFx5_upper \mix1/FE_OFC77_n1  (.A(\mix1/FE_OFN79_n1 ),
     .Y(\mix1/FE_OFN80_n1 ));
  BUFx4_upper \mix1/FE_OFC78_n1  (.A(\mix1/FE_OFN80_n1 ),
     .Y(\mix1/FE_OFN81_n1 ));
@@ -12956,24 +12954,24 @@ module aes (clk,
     .Y(\mix1/FE_OFN95_n226 ));
  BUFx8_upper \mix1/FE_OFC93_n226  (.A(\mix1/n226 ),
     .Y(\mix1/FE_OFN96_n226 ));
- BUFx8_bottom \mix1/FE_OFC94_FE_DBTN91_n9  (.A(\mix1/FE_DBTN91_n9 ),
+ BUFx8_upper \mix1/FE_OFC94_FE_DBTN91_n9  (.A(\mix1/FE_DBTN91_n9 ),
     .Y(\mix1/FE_OFN97_FE_DBTN91_n9 ));
  AO22x1_upper \mix1/U10  (.A1(\mix1/outy [31]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [31]),
     .B2(n1851),
     .Y(\mix1/n4 ));
- OAI22xp5_bottom \mix1/U100  (.A1(\mix1/data_reg [51]),
+ OAI22xp5_upper \mix1/U100  (.A1(\mix1/data_reg [51]),
     .A2(\mix1/FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n22 ),
     .Y(\mix1/n281 ));
- OAI22xp5_bottom \mix1/U101  (.A1(\mix1/data_reg [83]),
+ OAI22xp5_upper \mix1/U101  (.A1(\mix1/data_reg [83]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[83]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n283 ));
- OAI22xp5_bottom \mix1/U102  (.A1(\mix1/data_reg [83]),
+ OAI22xp5_upper \mix1/U102  (.A1(\mix1/data_reg [83]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n22 ),
@@ -12993,7 +12991,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN79_n1 ),
     .B2(\mix1/n22 ),
     .Y(\mix1/n291 ));
- AO22x1_bottom \mix1/U106  (.A1(\mix1/outy [19]),
+ AO22x1_upper \mix1/U106  (.A1(\mix1/outy [19]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [19]),
     .B2(n1851),
@@ -13008,7 +13006,7 @@ module aes (clk,
     .B1(\mix1/n5 ),
     .B2(\mix1/n23 ),
     .Y(\mix1/n295 ));
- OAI22xp5_bottom \mix1/U109  (.A1(\mix1/data_reg [82]),
+ OAI22xp5_upper \mix1/U109  (.A1(\mix1/data_reg [82]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[82]),
     .B2(\mix1/FE_OFN95_n226 ),
@@ -13018,7 +13016,7 @@ module aes (clk,
     .B1(mixcol_data_o[62]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n125 ));
- OAI22xp5_bottom \mix1/U110  (.A1(\mix1/data_reg [82]),
+ OAI22xp5_upper \mix1/U110  (.A1(\mix1/data_reg [82]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n23 ),
@@ -13033,12 +13031,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n23 ),
     .Y(\mix1/n303 ));
- OAI22xp5_bottom \mix1/U113  (.A1(mixcol_data_o[18]),
+ OAI22xp5_upper \mix1/U113  (.A1(mixcol_data_o[18]),
     .A2(\mix1/FE_OFN95_n226 ),
     .B1(\mix1/FE_OFN79_n1 ),
     .B2(\mix1/n23 ),
     .Y(\mix1/n305 ));
- AO22x1_bottom \mix1/U114  (.A1(\mix1/outy [18]),
+ AO22x1_upper \mix1/U114  (.A1(\mix1/outy [18]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [18]),
     .B2(n1851),
@@ -13078,12 +13076,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n24 ),
     .Y(\mix1/n317 ));
- OAI22xp5_bottom \mix1/U121  (.A1(mixcol_data_o[17]),
+ OAI22xp5_upper \mix1/U121  (.A1(mixcol_data_o[17]),
     .A2(\mix1/n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n24 ),
     .Y(\mix1/n319 ));
- AO22x1_bottom \mix1/U122  (.A1(\mix1/outy [17]),
+ AO22x1_upper \mix1/U122  (.A1(\mix1/outy [17]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [17]),
     .B2(n1851),
@@ -13118,7 +13116,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n25 ),
     .Y(\mix1/n331 ));
- OAI22xp5_bottom \mix1/U129  (.A1(mixcol_data_o[16]),
+ OAI22xp5_upper \mix1/U129  (.A1(mixcol_data_o[16]),
     .A2(\mix1/n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n25 ),
@@ -13128,17 +13126,17 @@ module aes (clk,
     .B1(mixcol_data_o[94]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n129 ));
- AO22x1_bottom \mix1/U130  (.A1(\mix1/outy [16]),
+ AO22x1_upper \mix1/U130  (.A1(\mix1/outy [16]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [16]),
     .B2(n1851),
     .Y(\mix1/n25 ));
- OAI22xp5_bottom \mix1/U131  (.A1(\mix1/data_reg [47]),
+ OAI22xp5_upper \mix1/U131  (.A1(\mix1/data_reg [47]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[47]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n335 ));
- OAI22xp5_bottom \mix1/U132  (.A1(\mix1/data_reg [47]),
+ OAI22xp5_upper \mix1/U132  (.A1(\mix1/data_reg [47]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n26 ),
@@ -13153,12 +13151,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n26 ),
     .Y(\mix1/n341 ));
- OAI22xp5_bottom \mix1/U135  (.A1(\mix1/data_reg [111]),
+ OAI22xp5_upper \mix1/U135  (.A1(\mix1/data_reg [111]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[111]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n343 ));
- OAI22xp5_bottom \mix1/U136  (.A1(\mix1/data_reg [111]),
+ OAI22xp5_upper \mix1/U136  (.A1(\mix1/data_reg [111]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n26 ),
@@ -13173,7 +13171,7 @@ module aes (clk,
     .B1(\mix1/outx [15]),
     .B2(n1851),
     .Y(\mix1/n26 ));
- OAI22xp5_bottom \mix1/U139  (.A1(\mix1/data_reg [46]),
+ OAI22xp5_upper \mix1/U139  (.A1(\mix1/data_reg [46]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[46]),
     .B2(\mix1/FE_OFN96_n226 ),
@@ -13183,7 +13181,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n11 ),
     .Y(\mix1/n131 ));
- OAI22xp5_bottom \mix1/U140  (.A1(\mix1/data_reg [46]),
+ OAI22xp5_upper \mix1/U140  (.A1(\mix1/data_reg [46]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n27 ),
@@ -13228,17 +13226,17 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n28 ),
     .Y(\mix1/n365 ));
- OAI22xp5_bottom \mix1/U149  (.A1(\mix1/data_reg [77]),
+ OAI22xp5_upper \mix1/U149  (.A1(\mix1/data_reg [77]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[77]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n367 ));
- OAI22xp5_bottom \mix1/U15  (.A1(\mix1/data_reg [126]),
+ OAI22xp5_upper \mix1/U15  (.A1(\mix1/data_reg [126]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[126]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n133 ));
- OAI22xp5_bottom \mix1/U150  (.A1(\mix1/data_reg [77]),
+ OAI22xp5_upper \mix1/U150  (.A1(\mix1/data_reg [77]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n28 ),
@@ -13253,7 +13251,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n28 ),
     .Y(\mix1/n373 ));
- OAI22xp5_bottom \mix1/U153  (.A1(mixcol_data_o[13]),
+ OAI22xp5_upper \mix1/U153  (.A1(mixcol_data_o[13]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n28 ),
@@ -13263,12 +13261,12 @@ module aes (clk,
     .B1(\mix1/outx [13]),
     .B2(n1851),
     .Y(\mix1/n28 ));
- OAI22xp5_bottom \mix1/U155  (.A1(\mix1/data_reg [44]),
+ OAI22xp5_upper \mix1/U155  (.A1(\mix1/data_reg [44]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[44]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n377 ));
- OAI22xp5_bottom \mix1/U156  (.A1(\mix1/data_reg [44]),
+ OAI22xp5_upper \mix1/U156  (.A1(\mix1/data_reg [44]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n29 ),
@@ -13288,7 +13286,7 @@ module aes (clk,
     .B1(mixcol_data_o[108]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n385 ));
- OAI22xp5_bottom \mix1/U16  (.A1(\mix1/data_reg [126]),
+ OAI22xp5_upper \mix1/U16  (.A1(\mix1/data_reg [126]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n11 ),
@@ -13318,22 +13316,22 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n30 ),
     .Y(\mix1/n393 ));
- OAI22xp5_bottom \mix1/U165  (.A1(\mix1/data_reg [75]),
+ OAI22xp5_upper \mix1/U165  (.A1(\mix1/data_reg [75]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[75]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n395 ));
- OAI22xp5_bottom \mix1/U166  (.A1(\mix1/data_reg [75]),
+ OAI22xp5_upper \mix1/U166  (.A1(\mix1/data_reg [75]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n30 ),
     .Y(\mix1/n397 ));
- OAI22xp5_bottom \mix1/U167  (.A1(\mix1/data_reg [107]),
+ OAI22xp5_upper \mix1/U167  (.A1(\mix1/data_reg [107]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[107]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n399 ));
- OAI22xp5_bottom \mix1/U168  (.A1(\mix1/data_reg [107]),
+ OAI22xp5_upper \mix1/U168  (.A1(\mix1/data_reg [107]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n30 ),
@@ -13343,67 +13341,67 @@ module aes (clk,
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n30 ),
     .Y(\mix1/n403 ));
- OAI22xp5_bottom \mix1/U17  (.A1(mixcol_data_o[30]),
+ OAI22xp5_upper \mix1/U17  (.A1(mixcol_data_o[30]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n11 ),
     .Y(\mix1/n137 ));
- AO22x1_bottom \mix1/U170  (.A1(\mix1/outy [11]),
+ AO22x1_upper \mix1/U170  (.A1(\mix1/outy [11]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [11]),
     .B2(n1851),
     .Y(\mix1/n30 ));
- OAI22xp5_bottom \mix1/U171  (.A1(\mix1/data_reg [42]),
+ OAI22xp5_upper \mix1/U171  (.A1(\mix1/data_reg [42]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[42]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n405 ));
- OAI22xp5_bottom \mix1/U172  (.A1(\mix1/data_reg [42]),
+ OAI22xp5_upper \mix1/U172  (.A1(\mix1/data_reg [42]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n31 ),
     .Y(\mix1/n407 ));
- OAI22xp5_bottom \mix1/U173  (.A1(\mix1/data_reg [74]),
+ OAI22xp5_upper \mix1/U173  (.A1(\mix1/data_reg [74]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[74]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n409 ));
- OAI22xp5_bottom \mix1/U174  (.A1(\mix1/data_reg [74]),
+ OAI22xp5_upper \mix1/U174  (.A1(\mix1/data_reg [74]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n31 ),
     .Y(\mix1/n411 ));
- OAI22xp5_bottom \mix1/U175  (.A1(\mix1/data_reg [106]),
+ OAI22xp5_upper \mix1/U175  (.A1(\mix1/data_reg [106]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[106]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n413 ));
- OAI22xp5_bottom \mix1/U176  (.A1(\mix1/data_reg [106]),
+ OAI22xp5_upper \mix1/U176  (.A1(\mix1/data_reg [106]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n31 ),
     .Y(\mix1/n415 ));
- OAI22xp5_bottom \mix1/U177  (.A1(mixcol_data_o[10]),
+ OAI22xp5_upper \mix1/U177  (.A1(mixcol_data_o[10]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n31 ),
     .Y(\mix1/n417 ));
- AO22x1_bottom \mix1/U178  (.A1(\mix1/outy [10]),
+ AO22x1_upper \mix1/U178  (.A1(\mix1/outy [10]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [10]),
     .B2(n1851),
     .Y(\mix1/n31 ));
- OAI22xp5_bottom \mix1/U179  (.A1(\mix1/data_reg [41]),
+ OAI22xp5_upper \mix1/U179  (.A1(\mix1/data_reg [41]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[41]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n419 ));
- AO22x1_bottom \mix1/U18  (.A1(\mix1/outy [30]),
+ AO22x1_upper \mix1/U18  (.A1(\mix1/outy [30]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [30]),
     .B2(n1851),
     .Y(\mix1/n11 ));
- OAI22xp5_bottom \mix1/U180  (.A1(\mix1/data_reg [41]),
+ OAI22xp5_upper \mix1/U180  (.A1(\mix1/data_reg [41]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n32 ),
@@ -13428,12 +13426,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n32 ),
     .Y(\mix1/n429 ));
- OAI22xp5_bottom \mix1/U185  (.A1(mixcol_data_o[9]),
+ OAI22xp5_upper \mix1/U185  (.A1(mixcol_data_o[9]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n32 ),
     .Y(\mix1/n431 ));
- AO22x1_bottom \mix1/U186  (.A1(\mix1/outy [9]),
+ AO22x1_upper \mix1/U186  (.A1(\mix1/outy [9]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [9]),
     .B2(n1851),
@@ -13448,7 +13446,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n33 ),
     .Y(\mix1/n435 ));
- OAI22xp5_bottom \mix1/U189  (.A1(\mix1/data_reg [72]),
+ OAI22xp5_upper \mix1/U189  (.A1(\mix1/data_reg [72]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[72]),
     .B2(\mix1/FE_OFN96_n226 ),
@@ -13458,7 +13456,7 @@ module aes (clk,
     .B1(mixcol_data_o[61]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n139 ));
- OAI22xp5_bottom \mix1/U190  (.A1(\mix1/data_reg [72]),
+ OAI22xp5_upper \mix1/U190  (.A1(\mix1/data_reg [72]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n33 ),
@@ -13473,32 +13471,32 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n33 ),
     .Y(\mix1/n443 ));
- OAI22xp5_bottom \mix1/U193  (.A1(mixcol_data_o[8]),
+ OAI22xp5_upper \mix1/U193  (.A1(mixcol_data_o[8]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n33 ),
     .Y(\mix1/n445 ));
- AO22x1_bottom \mix1/U194  (.A1(\mix1/outy [8]),
+ AO22x1_upper \mix1/U194  (.A1(\mix1/outy [8]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [8]),
     .B2(n1851),
     .Y(\mix1/n33 ));
- OAI22xp5_bottom \mix1/U195  (.A1(\mix1/data_reg [39]),
+ OAI22xp5_upper \mix1/U195  (.A1(\mix1/data_reg [39]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[39]),
     .B2(\mix1/n226 ),
     .Y(\mix1/n447 ));
- OAI22xp5_bottom \mix1/U196  (.A1(\mix1/data_reg [39]),
+ OAI22xp5_upper \mix1/U196  (.A1(\mix1/data_reg [39]),
     .A2(\mix1/FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n34 ),
     .Y(\mix1/n449 ));
- OAI22xp5_bottom \mix1/U197  (.A1(\mix1/data_reg [71]),
+ OAI22xp5_upper \mix1/U197  (.A1(\mix1/data_reg [71]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[71]),
     .B2(\mix1/n226 ),
     .Y(\mix1/n451 ));
- OAI22xp5_bottom \mix1/U198  (.A1(\mix1/data_reg [71]),
+ OAI22xp5_upper \mix1/U198  (.A1(\mix1/data_reg [71]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n34 ),
@@ -13518,32 +13516,32 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n34 ),
     .Y(\mix1/n457 ));
- OAI22xp5_bottom \mix1/U201  (.A1(mixcol_data_o[7]),
+ OAI22xp5_upper \mix1/U201  (.A1(mixcol_data_o[7]),
     .A2(\mix1/n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n34 ),
     .Y(\mix1/n459 ));
- AO22x1_bottom \mix1/U202  (.A1(\mix1/outy [7]),
+ AO22x1_upper \mix1/U202  (.A1(\mix1/outy [7]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [7]),
     .B2(n1851),
     .Y(\mix1/n34 ));
- OAI22xp5_bottom \mix1/U203  (.A1(\mix1/data_reg [38]),
+ OAI22xp5_upper \mix1/U203  (.A1(\mix1/data_reg [38]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[38]),
     .B2(\mix1/n226 ),
     .Y(\mix1/n461 ));
- OAI22xp5_bottom \mix1/U204  (.A1(\mix1/data_reg [38]),
+ OAI22xp5_upper \mix1/U204  (.A1(\mix1/data_reg [38]),
     .A2(\mix1/FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n35 ),
     .Y(\mix1/n463 ));
- OAI22xp5_bottom \mix1/U205  (.A1(\mix1/data_reg [70]),
+ OAI22xp5_upper \mix1/U205  (.A1(\mix1/data_reg [70]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[70]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n465 ));
- OAI22xp5_bottom \mix1/U206  (.A1(\mix1/data_reg [70]),
+ OAI22xp5_upper \mix1/U206  (.A1(\mix1/data_reg [70]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n35 ),
@@ -13563,12 +13561,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN79_n1 ),
     .B2(\mix1/n35 ),
     .Y(\mix1/n473 ));
- OAI22xp5_bottom \mix1/U21  (.A1(\mix1/data_reg [93]),
+ OAI22xp5_upper \mix1/U21  (.A1(\mix1/data_reg [93]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[93]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n143 ));
- AO22x1_bottom \mix1/U210  (.A1(\mix1/outy [6]),
+ AO22x1_upper \mix1/U210  (.A1(\mix1/outy [6]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [6]),
     .B2(n1851),
@@ -13583,12 +13581,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n36 ),
     .Y(\mix1/n477 ));
- OAI22xp5_bottom \mix1/U213  (.A1(\mix1/data_reg [69]),
+ OAI22xp5_upper \mix1/U213  (.A1(\mix1/data_reg [69]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[69]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n479 ));
- OAI22xp5_bottom \mix1/U214  (.A1(\mix1/data_reg [69]),
+ OAI22xp5_upper \mix1/U214  (.A1(\mix1/data_reg [69]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n36 ),
@@ -13603,12 +13601,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n36 ),
     .Y(\mix1/n485 ));
- OAI22xp5_bottom \mix1/U217  (.A1(mixcol_data_o[5]),
+ OAI22xp5_upper \mix1/U217  (.A1(mixcol_data_o[5]),
     .A2(\mix1/n226 ),
     .B1(\mix1/FE_OFN79_n1 ),
     .B2(\mix1/n36 ),
     .Y(\mix1/n487 ));
- AO22x1_bottom \mix1/U218  (.A1(\mix1/outy [5]),
+ AO22x1_upper \mix1/U218  (.A1(\mix1/outy [5]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [5]),
     .B2(n1851),
@@ -13618,7 +13616,7 @@ module aes (clk,
     .B1(mixcol_data_o[36]),
     .B2(\mix1/n226 ),
     .Y(\mix1/n489 ));
- OAI22xp5_bottom \mix1/U22  (.A1(\mix1/data_reg [93]),
+ OAI22xp5_upper \mix1/U22  (.A1(\mix1/data_reg [93]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n12 ),
@@ -13648,37 +13646,37 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n37 ),
     .Y(\mix1/n499 ));
- OAI22xp5_bottom \mix1/U225  (.A1(mixcol_data_o[4]),
+ OAI22xp5_upper \mix1/U225  (.A1(mixcol_data_o[4]),
     .A2(\mix1/n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n37 ),
     .Y(\mix1/n501 ));
- AO22x1_bottom \mix1/U226  (.A1(\mix1/outy [4]),
+ AO22x1_upper \mix1/U226  (.A1(\mix1/outy [4]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [4]),
     .B2(n1851),
     .Y(\mix1/n37 ));
- OAI22xp5_bottom \mix1/U227  (.A1(\mix1/data_reg [35]),
+ OAI22xp5_upper \mix1/U227  (.A1(\mix1/data_reg [35]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[35]),
     .B2(\mix1/n226 ),
     .Y(\mix1/n503 ));
- OAI22xp5_bottom \mix1/U228  (.A1(\mix1/data_reg [35]),
+ OAI22xp5_upper \mix1/U228  (.A1(\mix1/data_reg [35]),
     .A2(\mix1/FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n38 ),
     .Y(\mix1/n505 ));
- OAI22xp5_bottom \mix1/U229  (.A1(\mix1/data_reg [67]),
+ OAI22xp5_upper \mix1/U229  (.A1(\mix1/data_reg [67]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[67]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n507 ));
- OAI22xp5_bottom \mix1/U23  (.A1(\mix1/data_reg [125]),
+ OAI22xp5_upper \mix1/U23  (.A1(\mix1/data_reg [125]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[125]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n147 ));
- OAI22xp5_bottom \mix1/U230  (.A1(\mix1/data_reg [67]),
+ OAI22xp5_upper \mix1/U230  (.A1(\mix1/data_reg [67]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n38 ),
@@ -13698,52 +13696,52 @@ module aes (clk,
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n38 ),
     .Y(\mix1/n515 ));
- AO22x1_bottom \mix1/U234  (.A1(\mix1/outy [3]),
+ AO22x1_upper \mix1/U234  (.A1(\mix1/outy [3]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [3]),
     .B2(n1851),
     .Y(\mix1/n38 ));
- OAI22xp5_bottom \mix1/U235  (.A1(\mix1/data_reg [34]),
+ OAI22xp5_upper \mix1/U235  (.A1(\mix1/data_reg [34]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[34]),
     .B2(\mix1/n226 ),
     .Y(\mix1/n517 ));
- OAI22xp5_bottom \mix1/U236  (.A1(\mix1/data_reg [34]),
+ OAI22xp5_upper \mix1/U236  (.A1(\mix1/data_reg [34]),
     .A2(\mix1/FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n39 ),
     .Y(\mix1/n519 ));
- OAI22xp5_bottom \mix1/U237  (.A1(\mix1/data_reg [66]),
+ OAI22xp5_upper \mix1/U237  (.A1(\mix1/data_reg [66]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[66]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n521 ));
- OAI22xp5_bottom \mix1/U238  (.A1(\mix1/data_reg [66]),
+ OAI22xp5_upper \mix1/U238  (.A1(\mix1/data_reg [66]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n39 ),
     .Y(\mix1/n523 ));
- OAI22xp5_bottom \mix1/U239  (.A1(\mix1/data_reg [98]),
+ OAI22xp5_upper \mix1/U239  (.A1(\mix1/data_reg [98]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[98]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n525 ));
- OAI22xp5_bottom \mix1/U24  (.A1(\mix1/data_reg [125]),
+ OAI22xp5_upper \mix1/U24  (.A1(\mix1/data_reg [125]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n12 ),
     .Y(\mix1/n149 ));
- OAI22xp5_bottom \mix1/U240  (.A1(\mix1/data_reg [98]),
+ OAI22xp5_upper \mix1/U240  (.A1(\mix1/data_reg [98]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n39 ),
     .Y(\mix1/n527 ));
- OAI22xp5_bottom \mix1/U241  (.A1(mixcol_data_o[2]),
+ OAI22xp5_upper \mix1/U241  (.A1(mixcol_data_o[2]),
     .A2(\mix1/n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n39 ),
     .Y(\mix1/n529 ));
- AO22x1_bottom \mix1/U242  (.A1(\mix1/outy [2]),
+ AO22x1_upper \mix1/U242  (.A1(\mix1/outy [2]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [2]),
     .B2(n1851),
@@ -13758,12 +13756,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n40 ),
     .Y(\mix1/n533 ));
- OAI22xp5_bottom \mix1/U245  (.A1(\mix1/data_reg [65]),
+ OAI22xp5_upper \mix1/U245  (.A1(\mix1/data_reg [65]),
     .A2(\mix1/FE_OFN80_n1 ),
     .B1(mixcol_data_o[65]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n535 ));
- OAI22xp5_bottom \mix1/U246  (.A1(\mix1/data_reg [65]),
+ OAI22xp5_upper \mix1/U246  (.A1(\mix1/data_reg [65]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n40 ),
@@ -13778,7 +13776,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n40 ),
     .Y(\mix1/n541 ));
- OAI22xp5_bottom \mix1/U249  (.A1(mixcol_data_o[1]),
+ OAI22xp5_upper \mix1/U249  (.A1(mixcol_data_o[1]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n40 ),
@@ -13788,7 +13786,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n12 ),
     .Y(\mix1/n151 ));
- AO22x1_bottom \mix1/U250  (.A1(\mix1/outy [1]),
+ AO22x1_upper \mix1/U250  (.A1(\mix1/outy [1]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [1]),
     .B2(n1851),
@@ -13828,21 +13826,21 @@ module aes (clk,
     .B1(\mix1/FE_OFN80_n1 ),
     .B2(\mix1/n41 ),
     .Y(\mix1/n557 ));
- AO22x1_bottom \mix1/U258  (.A1(\mix1/outy [0]),
+ AO22x1_upper \mix1/U258  (.A1(\mix1/outy [0]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [0]),
     .B2(n1851),
     .Y(\mix1/n41 ));
- AO22x1_bottom \mix1/U26  (.A1(\mix1/outy [29]),
+ AO22x1_upper \mix1/U26  (.A1(\mix1/outy [29]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [29]),
     .B2(n1851),
     .Y(\mix1/n12 ));
- NAND3xp33_upper \mix1/U261  (.A(\mix1/n5 ),
+ NAND3xp33_bottom \mix1/U261  (.A(\mix1/n5 ),
     .B(\mix1/FE_OFN55_n7 ),
     .C(\mix1/n42 ),
     .Y(\mix1/n1 ));
- NOR2x1_upper \mix1/U262  (.A(\mix1/FE_DBTN92_n7 ),
+ NOR2x1_bottom \mix1/U262  (.A(\mix1/FE_DBTN92_n7 ),
     .B(\mix1/FE_DBTN93_n5 ),
     .Y(\mix1/n561 ));
  OAI22xp5_upper \mix1/U263  (.A1(\mix1/FE_DBTN93_n5 ),
@@ -13853,7 +13851,7 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U264  (.A(\mix1/n44 ),
     .B(\mix1/n45 ),
     .Y(\mix1/mix_word [9]));
- AOI22xp5_bottom \mix1/U265  (.A1(mixcol_data_i[41]),
+ AOI22xp5_upper \mix1/U265  (.A1(mixcol_data_i[41]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[9]),
     .B2(\mix1/n240 ),
@@ -13866,7 +13864,7 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U267  (.A(\mix1/n47 ),
     .B(\mix1/n48 ),
     .Y(\mix1/mix_word [8]));
- AOI22xp5_bottom \mix1/U268  (.A1(mixcol_data_i[40]),
+ AOI22xp5_upper \mix1/U268  (.A1(mixcol_data_i[40]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[8]),
     .B2(\mix1/n240 ),
@@ -13876,25 +13874,25 @@ module aes (clk,
     .B1(mixcol_data_i[72]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n47 ));
- OAI22xp5_bottom \mix1/U27  (.A1(\mix1/data_reg [60]),
+ OAI22xp5_upper \mix1/U27  (.A1(\mix1/data_reg [60]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[60]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n153 ));
- NAND2x1p5_bottom \mix1/U270  (.A(\mix1/n49 ),
+ NAND2x1p5_upper \mix1/U270  (.A(\mix1/n49 ),
     .B(\mix1/n50 ),
     .Y(\mix1/mix_word [7]));
- AOI22xp5_bottom \mix1/U271  (.A1(mixcol_data_i[39]),
+ AOI22xp5_upper \mix1/U271  (.A1(mixcol_data_i[39]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[7]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n50 ));
- AOI22xp5_bottom \mix1/U272  (.A1(mixcol_data_i[103]),
+ AOI22xp5_upper \mix1/U272  (.A1(mixcol_data_i[103]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[71]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n49 ));
- NAND2x1p5_upper \mix1/U273  (.A(\mix1/n51 ),
+ NAND2x1p5_bottom \mix1/U273  (.A(\mix1/n51 ),
     .B(\mix1/n52 ),
     .Y(\mix1/mix_word [6]));
  AOI22xp5_upper \mix1/U274  (.A1(mixcol_data_i[38]),
@@ -13907,7 +13905,7 @@ module aes (clk,
     .B1(mixcol_data_i[70]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n51 ));
- NAND2x1p5_bottom \mix1/U276  (.A(\mix1/n53 ),
+ NAND2x1p5_upper \mix1/U276  (.A(\mix1/n53 ),
     .B(\mix1/n54 ),
     .Y(\mix1/mix_word [5]));
  AOI22xp5_upper \mix1/U277  (.A1(mixcol_data_i[37]),
@@ -13915,15 +13913,15 @@ module aes (clk,
     .B1(mixcol_data_i[5]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n54 ));
- AOI22xp5_bottom \mix1/U278  (.A1(mixcol_data_i[101]),
+ AOI22xp5_upper \mix1/U278  (.A1(mixcol_data_i[101]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[69]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n53 ));
- NAND2x1p5_upper \mix1/U279  (.A(\mix1/n55 ),
+ NAND2x1p5_bottom \mix1/U279  (.A(\mix1/n55 ),
     .B(\mix1/n56 ),
     .Y(\mix1/mix_word [4]));
- OAI22xp5_bottom \mix1/U28  (.A1(\mix1/data_reg [60]),
+ OAI22xp5_upper \mix1/U28  (.A1(\mix1/data_reg [60]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n13 ),
@@ -13938,20 +13936,20 @@ module aes (clk,
     .B1(mixcol_data_i[68]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n55 ));
- NAND2x1p5_bottom \mix1/U282  (.A(\mix1/n57 ),
+ NAND2x1p5_upper \mix1/U282  (.A(\mix1/n57 ),
     .B(\mix1/n58 ),
     .Y(\mix1/mix_word [3]));
- AOI22xp5_bottom \mix1/U283  (.A1(mixcol_data_i[35]),
+ AOI22xp5_upper \mix1/U283  (.A1(mixcol_data_i[35]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[3]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n58 ));
- AOI22xp5_bottom \mix1/U284  (.A1(mixcol_data_i[99]),
+ AOI22xp5_upper \mix1/U284  (.A1(mixcol_data_i[99]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[67]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n57 ));
- NAND2x1p5_upper \mix1/U285  (.A(\mix1/n59 ),
+ NAND2x1p5_bottom \mix1/U285  (.A(\mix1/n59 ),
     .B(\mix1/n60 ),
     .Y(\mix1/mix_word [31]));
  AOI22xp5_upper \mix1/U286  (.A1(mixcol_data_i[63]),
@@ -13967,17 +13965,17 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U288  (.A(\mix1/n61 ),
     .B(\mix1/n62 ),
     .Y(\mix1/mix_word [30]));
- AOI22xp5_bottom \mix1/U289  (.A1(mixcol_data_i[62]),
+ AOI22xp5_upper \mix1/U289  (.A1(mixcol_data_i[62]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[30]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n62 ));
- OAI22xp5_bottom \mix1/U29  (.A1(\mix1/data_reg [92]),
+ OAI22xp5_upper \mix1/U29  (.A1(\mix1/data_reg [92]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[92]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n157 ));
- AOI22xp5_bottom \mix1/U290  (.A1(mixcol_data_i[126]),
+ AOI22xp5_upper \mix1/U290  (.A1(mixcol_data_i[126]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[94]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -13985,12 +13983,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U291  (.A(\mix1/n63 ),
     .B(\mix1/n64 ),
     .Y(\mix1/mix_word [2]));
- AOI22xp5_bottom \mix1/U292  (.A1(mixcol_data_i[34]),
+ AOI22xp5_upper \mix1/U292  (.A1(mixcol_data_i[34]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[2]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n64 ));
- AOI22xp5_bottom \mix1/U293  (.A1(mixcol_data_i[98]),
+ AOI22xp5_upper \mix1/U293  (.A1(mixcol_data_i[98]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[66]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14003,7 +14001,7 @@ module aes (clk,
     .B1(mixcol_data_i[29]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n66 ));
- AOI22xp5_bottom \mix1/U296  (.A1(mixcol_data_i[125]),
+ AOI22xp5_upper \mix1/U296  (.A1(mixcol_data_i[125]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[93]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14011,12 +14009,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U297  (.A(\mix1/n67 ),
     .B(\mix1/n68 ),
     .Y(\mix1/mix_word [28]));
- AOI22xp5_bottom \mix1/U298  (.A1(mixcol_data_i[60]),
+ AOI22xp5_upper \mix1/U298  (.A1(mixcol_data_i[60]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[28]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n68 ));
- AOI22xp5_bottom \mix1/U299  (.A1(mixcol_data_i[124]),
+ AOI22xp5_upper \mix1/U299  (.A1(mixcol_data_i[124]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[92]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14026,7 +14024,7 @@ module aes (clk,
     .B1(mixcol_data_o[63]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n111 ));
- OAI22xp5_bottom \mix1/U30  (.A1(\mix1/data_reg [92]),
+ OAI22xp5_upper \mix1/U30  (.A1(\mix1/data_reg [92]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n13 ),
@@ -14034,12 +14032,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U300  (.A(\mix1/n69 ),
     .B(\mix1/n70 ),
     .Y(\mix1/mix_word [27]));
- AOI22xp5_bottom \mix1/U301  (.A1(mixcol_data_i[59]),
+ AOI22xp5_upper \mix1/U301  (.A1(mixcol_data_i[59]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[27]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n70 ));
- AOI22xp5_bottom \mix1/U302  (.A1(mixcol_data_i[123]),
+ AOI22xp5_upper \mix1/U302  (.A1(mixcol_data_i[123]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[91]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14047,12 +14045,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U303  (.A(\mix1/n71 ),
     .B(\mix1/n72 ),
     .Y(\mix1/mix_word [26]));
- AOI22xp5_bottom \mix1/U304  (.A1(mixcol_data_i[58]),
+ AOI22xp5_upper \mix1/U304  (.A1(mixcol_data_i[58]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[26]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n72 ));
- AOI22xp5_bottom \mix1/U305  (.A1(mixcol_data_i[122]),
+ AOI22xp5_upper \mix1/U305  (.A1(mixcol_data_i[122]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[90]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14060,7 +14058,7 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U306  (.A(\mix1/n73 ),
     .B(\mix1/n74 ),
     .Y(\mix1/mix_word [25]));
- AOI22xp5_bottom \mix1/U307  (.A1(mixcol_data_i[57]),
+ AOI22xp5_upper \mix1/U307  (.A1(mixcol_data_i[57]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[25]),
     .B2(\mix1/n240 ),
@@ -14078,17 +14076,17 @@ module aes (clk,
     .B1(mixcol_data_o[124]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n161 ));
- AOI22xp5_bottom \mix1/U310  (.A1(mixcol_data_i[56]),
+ AOI22xp5_upper \mix1/U310  (.A1(mixcol_data_i[56]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[24]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n76 ));
- AOI22xp5_bottom \mix1/U311  (.A1(mixcol_data_i[120]),
+ AOI22xp5_upper \mix1/U311  (.A1(mixcol_data_i[120]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[88]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n75 ));
- NAND2x1p5_upper \mix1/U312  (.A(\mix1/n77 ),
+ NAND2x1p5_bottom \mix1/U312  (.A(\mix1/n77 ),
     .B(\mix1/n78 ),
     .Y(\mix1/mix_word [23]));
  AOI22xp5_upper \mix1/U313  (.A1(mixcol_data_i[55]),
@@ -14101,7 +14099,7 @@ module aes (clk,
     .B1(mixcol_data_i[87]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n77 ));
- NAND2x1p5_upper \mix1/U315  (.A(\mix1/n79 ),
+ NAND2x1p5_bottom \mix1/U315  (.A(\mix1/n79 ),
     .B(\mix1/n80 ),
     .Y(\mix1/mix_word [22]));
  AOI22xp5_upper \mix1/U316  (.A1(mixcol_data_i[54]),
@@ -14117,7 +14115,7 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U318  (.A(\mix1/n81 ),
     .B(\mix1/n82 ),
     .Y(\mix1/mix_word [21]));
- AOI22xp5_bottom \mix1/U319  (.A1(mixcol_data_i[53]),
+ AOI22xp5_upper \mix1/U319  (.A1(mixcol_data_i[53]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[21]),
     .B2(\mix1/n240 ),
@@ -14127,7 +14125,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n13 ),
     .Y(\mix1/n163 ));
- AOI22xp5_bottom \mix1/U320  (.A1(mixcol_data_i[117]),
+ AOI22xp5_upper \mix1/U320  (.A1(mixcol_data_i[117]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[85]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14135,12 +14133,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U321  (.A(\mix1/n83 ),
     .B(\mix1/n84 ),
     .Y(\mix1/mix_word [20]));
- AOI22xp5_bottom \mix1/U322  (.A1(mixcol_data_i[52]),
+ AOI22xp5_upper \mix1/U322  (.A1(mixcol_data_i[52]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[20]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n84 ));
- AOI22xp5_bottom \mix1/U323  (.A1(mixcol_data_i[116]),
+ AOI22xp5_upper \mix1/U323  (.A1(mixcol_data_i[116]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[84]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14148,12 +14146,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U324  (.A(\mix1/n85 ),
     .B(\mix1/n86 ),
     .Y(\mix1/mix_word [1]));
- AOI22xp5_bottom \mix1/U325  (.A1(mixcol_data_i[33]),
+ AOI22xp5_upper \mix1/U325  (.A1(mixcol_data_i[33]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[1]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n86 ));
- AOI22xp5_bottom \mix1/U326  (.A1(mixcol_data_i[97]),
+ AOI22xp5_upper \mix1/U326  (.A1(mixcol_data_i[97]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[65]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14161,12 +14159,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U327  (.A(\mix1/n87 ),
     .B(\mix1/n88 ),
     .Y(\mix1/mix_word [19]));
- AOI22xp5_bottom \mix1/U328  (.A1(mixcol_data_i[51]),
+ AOI22xp5_upper \mix1/U328  (.A1(mixcol_data_i[51]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[19]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n88 ));
- AOI22xp5_bottom \mix1/U329  (.A1(mixcol_data_i[115]),
+ AOI22xp5_upper \mix1/U329  (.A1(mixcol_data_i[115]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[83]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14179,17 +14177,17 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U330  (.A(\mix1/n89 ),
     .B(\mix1/n90 ),
     .Y(\mix1/mix_word [18]));
- AOI22xp5_bottom \mix1/U331  (.A1(mixcol_data_i[50]),
+ AOI22xp5_upper \mix1/U331  (.A1(mixcol_data_i[50]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[18]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n90 ));
- AOI22xp5_bottom \mix1/U332  (.A1(mixcol_data_i[114]),
+ AOI22xp5_upper \mix1/U332  (.A1(mixcol_data_i[114]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[82]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n89 ));
- NAND2x1p5_upper \mix1/U333  (.A(\mix1/n91 ),
+ NAND2x1p5_bottom \mix1/U333  (.A(\mix1/n91 ),
     .B(\mix1/n92 ),
     .Y(\mix1/mix_word [17]));
  AOI22xp5_upper \mix1/U334  (.A1(mixcol_data_i[49]),
@@ -14205,35 +14203,35 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U336  (.A(\mix1/n93 ),
     .B(\mix1/n94 ),
     .Y(\mix1/mix_word [16]));
- AOI22xp5_bottom \mix1/U337  (.A1(mixcol_data_i[48]),
+ AOI22xp5_upper \mix1/U337  (.A1(mixcol_data_i[48]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[16]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n94 ));
- AOI22xp5_bottom \mix1/U338  (.A1(mixcol_data_i[112]),
+ AOI22xp5_upper \mix1/U338  (.A1(mixcol_data_i[112]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[80]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n93 ));
- NAND2x1p5_bottom \mix1/U339  (.A(\mix1/n95 ),
+ NAND2x1p5_upper \mix1/U339  (.A(\mix1/n95 ),
     .B(\mix1/n96 ),
     .Y(\mix1/mix_word [15]));
- AO22x1_bottom \mix1/U34  (.A1(\mix1/outy [28]),
+ AO22x1_upper \mix1/U34  (.A1(\mix1/outy [28]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [28]),
     .B2(n1851),
     .Y(\mix1/n13 ));
- AOI22xp5_bottom \mix1/U340  (.A1(mixcol_data_i[47]),
+ AOI22xp5_upper \mix1/U340  (.A1(mixcol_data_i[47]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[15]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n96 ));
- AOI22xp5_bottom \mix1/U341  (.A1(mixcol_data_i[111]),
+ AOI22xp5_upper \mix1/U341  (.A1(mixcol_data_i[111]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[79]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n95 ));
- NAND2x1p5_upper \mix1/U342  (.A(\mix1/n97 ),
+ NAND2x1p5_bottom \mix1/U342  (.A(\mix1/n97 ),
     .B(\mix1/n98 ),
     .Y(\mix1/mix_word [14]));
  AOI22xp5_upper \mix1/U343  (.A1(mixcol_data_i[46]),
@@ -14249,17 +14247,17 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U345  (.A(\mix1/n99 ),
     .B(\mix1/n100 ),
     .Y(\mix1/mix_word [13]));
- AOI22xp5_bottom \mix1/U346  (.A1(mixcol_data_i[45]),
+ AOI22xp5_upper \mix1/U346  (.A1(mixcol_data_i[45]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[13]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n100 ));
- AOI22xp5_bottom \mix1/U347  (.A1(mixcol_data_i[109]),
+ AOI22xp5_upper \mix1/U347  (.A1(mixcol_data_i[109]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[77]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n99 ));
- NAND2x1p5_upper \mix1/U348  (.A(\mix1/n101 ),
+ NAND2x1p5_bottom \mix1/U348  (.A(\mix1/n101 ),
     .B(\mix1/n102 ),
     .Y(\mix1/mix_word [12]));
  AOI22xp5_upper \mix1/U349  (.A1(mixcol_data_i[44]),
@@ -14267,7 +14265,7 @@ module aes (clk,
     .B1(mixcol_data_i[12]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n102 ));
- OAI22xp5_bottom \mix1/U35  (.A1(\mix1/data_reg [59]),
+ OAI22xp5_upper \mix1/U35  (.A1(\mix1/data_reg [59]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[59]),
     .B2(\mix1/FE_OFN96_n226 ),
@@ -14280,12 +14278,12 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U351  (.A(\mix1/n103 ),
     .B(\mix1/n104 ),
     .Y(\mix1/mix_word [11]));
- AOI22xp5_bottom \mix1/U352  (.A1(mixcol_data_i[43]),
+ AOI22xp5_upper \mix1/U352  (.A1(mixcol_data_i[43]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[11]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n104 ));
- AOI22xp5_bottom \mix1/U353  (.A1(mixcol_data_i[107]),
+ AOI22xp5_upper \mix1/U353  (.A1(mixcol_data_i[107]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[75]),
     .B2(\mix1/FE_DBTN92_n7 ),
@@ -14293,17 +14291,17 @@ module aes (clk,
  NAND2x1p5_bottom \mix1/U354  (.A(\mix1/n105 ),
     .B(\mix1/n106 ),
     .Y(\mix1/mix_word [10]));
- AOI22xp5_bottom \mix1/U355  (.A1(mixcol_data_i[42]),
+ AOI22xp5_upper \mix1/U355  (.A1(mixcol_data_i[42]),
     .A2(\mix1/FE_OFN67_FE_DBTN93_n5 ),
     .B1(mixcol_data_i[10]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n106 ));
- AOI22xp5_bottom \mix1/U356  (.A1(mixcol_data_i[106]),
+ AOI22xp5_upper \mix1/U356  (.A1(mixcol_data_i[106]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(mixcol_data_i[74]),
     .B2(\mix1/FE_DBTN92_n7 ),
     .Y(\mix1/n105 ));
- NAND2x1p5_upper \mix1/U357  (.A(\mix1/n107 ),
+ NAND2x1p5_bottom \mix1/U357  (.A(\mix1/n107 ),
     .B(\mix1/n108 ),
     .Y(\mix1/mix_word [0]));
  AOI22xp5_upper \mix1/U358  (.A1(mixcol_data_i[32]),
@@ -14311,7 +14309,7 @@ module aes (clk,
     .B1(mixcol_data_i[0]),
     .B2(\mix1/n240 ),
     .Y(\mix1/n108 ));
- OAI22xp5_bottom \mix1/U36  (.A1(\mix1/data_reg [59]),
+ OAI22xp5_upper \mix1/U36  (.A1(\mix1/data_reg [59]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n14 ),
@@ -14336,17 +14334,17 @@ module aes (clk,
  NAND2xp5_upper \mix1/U369  (.A(\mix1/n242 ),
     .B(\mix1/n238 ),
     .Y(\mix1/n42 ));
- OAI22xp5_bottom \mix1/U37  (.A1(\mix1/data_reg [91]),
+ OAI22xp5_upper \mix1/U37  (.A1(\mix1/data_reg [91]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[91]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n171 ));
- OAI22xp5_bottom \mix1/U38  (.A1(\mix1/data_reg [91]),
+ OAI22xp5_upper \mix1/U38  (.A1(\mix1/data_reg [91]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n14 ),
     .Y(\mix1/n173 ));
- OAI22xp5_bottom \mix1/U39  (.A1(\mix1/data_reg [123]),
+ OAI22xp5_upper \mix1/U39  (.A1(\mix1/data_reg [123]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[123]),
     .B2(\mix1/FE_OFN96_n226 ),
@@ -14356,7 +14354,7 @@ module aes (clk,
     .B1(\mix1/n4 ),
     .B2(\mix1/FE_OFN54_n5 ),
     .Y(\mix1/n113 ));
- OAI22xp5_bottom \mix1/U40  (.A1(\mix1/data_reg [123]),
+ OAI22xp5_upper \mix1/U40  (.A1(\mix1/data_reg [123]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n14 ),
@@ -14368,7 +14366,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n14 ),
     .Y(\mix1/n179 ));
- AO22x1_bottom \mix1/U42  (.A1(\mix1/outy [27]),
+ AO22x1_upper \mix1/U42  (.A1(\mix1/outy [27]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [27]),
     .B2(n1851),
@@ -14383,7 +14381,7 @@ module aes (clk,
     .Y(\mix1/n236 ));
  INVx1_upper \mix1/U436  (.A(\mix1/state [0]),
     .Y(\mix1/n238 ));
- INVx3_bottom \mix1/U437  (.A(\mix1/n559 ),
+ INVx3_upper \mix1/U437  (.A(\mix1/n559 ),
     .Y(\mix1/n240 ));
  INVx1_upper \mix1/U438  (.A(\mix1/state [1]),
     .Y(\mix1/n242 ));
@@ -14392,12 +14390,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n15 ),
     .Y(\mix1/n183 ));
- OAI22xp5_bottom \mix1/U45  (.A1(\mix1/data_reg [90]),
+ OAI22xp5_upper \mix1/U45  (.A1(\mix1/data_reg [90]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[90]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n185 ));
- OAI22xp5_bottom \mix1/U46  (.A1(\mix1/data_reg [90]),
+ OAI22xp5_upper \mix1/U46  (.A1(\mix1/data_reg [90]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n15 ),
@@ -14412,7 +14410,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n15 ),
     .Y(\mix1/n191 ));
- OAI22xp5_bottom \mix1/U49  (.A1(mixcol_data_o[26]),
+ OAI22xp5_upper \mix1/U49  (.A1(mixcol_data_o[26]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n15 ),
@@ -14422,27 +14420,27 @@ module aes (clk,
     .B1(mixcol_data_o[95]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n115 ));
- AO22x1_bottom \mix1/U50  (.A1(\mix1/outy [26]),
+ AO22x1_upper \mix1/U50  (.A1(\mix1/outy [26]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [26]),
     .B2(n1851),
     .Y(\mix1/n15 ));
- OAI22xp5_bottom \mix1/U51  (.A1(\mix1/data_reg [57]),
+ OAI22xp5_upper \mix1/U51  (.A1(\mix1/data_reg [57]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[57]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n195 ));
- OAI22xp5_bottom \mix1/U52  (.A1(\mix1/data_reg [57]),
+ OAI22xp5_upper \mix1/U52  (.A1(\mix1/data_reg [57]),
     .A2(\mix1/FE_OFN68_FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n16 ),
     .Y(\mix1/n197 ));
- OAI22xp5_bottom \mix1/U53  (.A1(\mix1/data_reg [89]),
+ OAI22xp5_upper \mix1/U53  (.A1(\mix1/data_reg [89]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[89]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n199 ));
- OAI22xp5_bottom \mix1/U54  (.A1(\mix1/data_reg [89]),
+ OAI22xp5_upper \mix1/U54  (.A1(\mix1/data_reg [89]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n16 ),
@@ -14457,12 +14455,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n16 ),
     .Y(\mix1/n205 ));
- OAI22xp5_bottom \mix1/U57  (.A1(mixcol_data_o[25]),
+ OAI22xp5_upper \mix1/U57  (.A1(mixcol_data_o[25]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n16 ),
     .Y(\mix1/n207 ));
- AO22x1_bottom \mix1/U58  (.A1(\mix1/outy [25]),
+ AO22x1_upper \mix1/U58  (.A1(\mix1/outy [25]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [25]),
     .B2(n1851),
@@ -14482,12 +14480,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n17 ),
     .Y(\mix1/n211 ));
- OAI22xp5_bottom \mix1/U61  (.A1(\mix1/data_reg [88]),
+ OAI22xp5_upper \mix1/U61  (.A1(\mix1/data_reg [88]),
     .A2(\mix1/FE_OFN81_n1 ),
     .B1(mixcol_data_o[88]),
     .B2(\mix1/FE_OFN96_n226 ),
     .Y(\mix1/n213 ));
- OAI22xp5_bottom \mix1/U62  (.A1(\mix1/data_reg [88]),
+ OAI22xp5_upper \mix1/U62  (.A1(\mix1/data_reg [88]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n17 ),
@@ -14502,12 +14500,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n17 ),
     .Y(\mix1/n219 ));
- OAI22xp5_bottom \mix1/U65  (.A1(mixcol_data_o[24]),
+ OAI22xp5_upper \mix1/U65  (.A1(mixcol_data_o[24]),
     .A2(\mix1/FE_OFN96_n226 ),
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n17 ),
     .Y(\mix1/n221 ));
- AO22x1_bottom \mix1/U66  (.A1(\mix1/outy [24]),
+ AO22x1_upper \mix1/U66  (.A1(\mix1/outy [24]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [24]),
     .B2(n1851),
@@ -14537,12 +14535,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n18 ),
     .Y(\mix1/n229 ));
- OAI22xp5_bottom \mix1/U71  (.A1(\mix1/data_reg [119]),
+ OAI22xp5_upper \mix1/U71  (.A1(\mix1/data_reg [119]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[119]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n231 ));
- OAI22xp5_bottom \mix1/U72  (.A1(\mix1/data_reg [119]),
+ OAI22xp5_upper \mix1/U72  (.A1(\mix1/data_reg [119]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n18 ),
@@ -14552,7 +14550,7 @@ module aes (clk,
     .B1(\mix1/FE_OFN79_n1 ),
     .B2(\mix1/n18 ),
     .Y(\mix1/n235 ));
- AO22x1_bottom \mix1/U74  (.A1(\mix1/outy [23]),
+ AO22x1_upper \mix1/U74  (.A1(\mix1/outy [23]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [23]),
     .B2(n1851),
@@ -14602,22 +14600,22 @@ module aes (clk,
     .B1(\mix1/outx [22]),
     .B2(n1851),
     .Y(\mix1/n19 ));
- OAI22xp5_bottom \mix1/U83  (.A1(\mix1/data_reg [53]),
+ OAI22xp5_upper \mix1/U83  (.A1(\mix1/data_reg [53]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[53]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n251 ));
- OAI22xp5_bottom \mix1/U84  (.A1(\mix1/data_reg [53]),
+ OAI22xp5_upper \mix1/U84  (.A1(\mix1/data_reg [53]),
     .A2(\mix1/FE_DBTN93_n5 ),
     .B1(\mix1/FE_OFN54_n5 ),
     .B2(\mix1/n20 ),
     .Y(\mix1/n253 ));
- OAI22xp5_bottom \mix1/U85  (.A1(\mix1/data_reg [85]),
+ OAI22xp5_upper \mix1/U85  (.A1(\mix1/data_reg [85]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[85]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n255 ));
- OAI22xp5_bottom \mix1/U86  (.A1(\mix1/data_reg [85]),
+ OAI22xp5_upper \mix1/U86  (.A1(\mix1/data_reg [85]),
     .A2(\mix1/FE_DBTN92_n7 ),
     .B1(\mix1/FE_OFN55_n7 ),
     .B2(\mix1/n20 ),
@@ -14627,12 +14625,12 @@ module aes (clk,
     .B1(mixcol_data_o[117]),
     .B2(\mix1/FE_OFN95_n226 ),
     .Y(\mix1/n259 ));
- OAI22xp5_bottom \mix1/U88  (.A1(\mix1/data_reg [117]),
+ OAI22xp5_upper \mix1/U88  (.A1(\mix1/data_reg [117]),
     .A2(\mix1/FE_OFN97_FE_DBTN91_n9 ),
     .B1(\mix1/FE_OFN94_n9 ),
     .B2(\mix1/n20 ),
     .Y(\mix1/n261 ));
- OAI22xp5_bottom \mix1/U89  (.A1(mixcol_data_o[21]),
+ OAI22xp5_upper \mix1/U89  (.A1(mixcol_data_o[21]),
     .A2(\mix1/FE_OFN95_n226 ),
     .B1(\mix1/FE_OFN79_n1 ),
     .B2(\mix1/n20 ),
@@ -14642,12 +14640,12 @@ module aes (clk,
     .B1(\mix1/FE_OFN81_n1 ),
     .B2(\mix1/n4 ),
     .Y(\mix1/n123 ));
- AO22x1_bottom \mix1/U90  (.A1(\mix1/outy [21]),
+ AO22x1_upper \mix1/U90  (.A1(\mix1/outy [21]),
     .A2(subbytes_sbox_decrypt_o),
     .B1(\mix1/outx [21]),
     .B2(n1851),
     .Y(\mix1/n20 ));
- OAI22xp5_bottom \mix1/U91  (.A1(\mix1/data_reg [52]),
+ OAI22xp5_upper \mix1/U91  (.A1(\mix1/data_reg [52]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[52]),
     .B2(\mix1/FE_OFN95_n226 ),
@@ -14687,7 +14685,7 @@ module aes (clk,
     .B1(\mix1/outx [20]),
     .B2(n1851),
     .Y(\mix1/n21 ));
- OAI22xp5_bottom \mix1/U99  (.A1(\mix1/data_reg [51]),
+ OAI22xp5_upper \mix1/U99  (.A1(\mix1/data_reg [51]),
     .A2(\mix1/FE_OFN79_n1 ),
     .B1(mixcol_data_o[51]),
     .B2(\mix1/FE_OFN95_n226 ),
@@ -14722,7 +14720,7 @@ module aes (clk,
     .QN(mixcol_data_o[104]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_105_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_105_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n427 ),
     .QN(mixcol_data_o[105]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -14737,12 +14735,12 @@ module aes (clk,
     .QN(mixcol_data_o[107]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_108_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_108_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n385 ),
     .QN(mixcol_data_o[108]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_109_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_109_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n371 ),
     .QN(mixcol_data_o[109]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -14762,7 +14760,7 @@ module aes (clk,
     .QN(mixcol_data_o[111]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_112_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_112_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n329 ),
     .QN(mixcol_data_o[112]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -14787,22 +14785,22 @@ module aes (clk,
     .QN(mixcol_data_o[116]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_117_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_117_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n259 ),
     .QN(mixcol_data_o[117]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_118_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_118_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n245 ),
     .QN(mixcol_data_o[118]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_119_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_119_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n231 ),
     .QN(mixcol_data_o[119]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_11_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_11_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n403 ),
     .QN(mixcol_data_o[11]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -14817,7 +14815,7 @@ module aes (clk,
     .QN(mixcol_data_o[121]),
     .RESETN(\mix1/n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_122_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_122_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n189 ),
     .QN(mixcol_data_o[122]),
     .RESETN(\mix1/n564 ),
@@ -14827,12 +14825,12 @@ module aes (clk,
     .QN(mixcol_data_o[123]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_124_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_124_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n161 ),
     .QN(mixcol_data_o[124]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_125_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_125_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n147 ),
     .QN(mixcol_data_o[125]),
     .RESETN(\mix1/n564 ),
@@ -14842,12 +14840,12 @@ module aes (clk,
     .QN(mixcol_data_o[126]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_127_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_127_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n119 ),
     .QN(mixcol_data_o[127]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_12_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_12_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n389 ),
     .QN(mixcol_data_o[12]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -14857,7 +14855,7 @@ module aes (clk,
     .QN(mixcol_data_o[13]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_14_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_14_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n361 ),
     .QN(mixcol_data_o[14]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -14867,12 +14865,12 @@ module aes (clk,
     .QN(mixcol_data_o[15]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_16_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_16_  (.CLK(clknet_leaf_18_clk),
     .D(\mix1/n333 ),
     .QN(mixcol_data_o[16]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_17_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_17_  (.CLK(clknet_leaf_18_clk),
     .D(\mix1/n319 ),
     .QN(mixcol_data_o[17]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -14882,17 +14880,17 @@ module aes (clk,
     .QN(mixcol_data_o[18]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_19_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_19_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n291 ),
     .QN(mixcol_data_o[19]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_1_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_1_  (.CLK(clknet_leaf_18_clk),
     .D(\mix1/n543 ),
     .QN(mixcol_data_o[1]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_20_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_20_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n277 ),
     .QN(mixcol_data_o[20]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -14902,27 +14900,27 @@ module aes (clk,
     .QN(mixcol_data_o[21]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_22_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_22_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n249 ),
     .QN(mixcol_data_o[22]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_23_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_23_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n235 ),
     .QN(mixcol_data_o[23]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_24_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_24_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n221 ),
     .QN(mixcol_data_o[24]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_25_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_25_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n207 ),
     .QN(mixcol_data_o[25]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_26_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_26_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n193 ),
     .QN(mixcol_data_o[26]),
     .RESETN(\mix1/n564 ),
@@ -14967,12 +14965,12 @@ module aes (clk,
     .QN(mixcol_data_o[33]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_34_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_34_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n517 ),
     .QN(mixcol_data_o[34]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_35_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_35_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n503 ),
     .QN(mixcol_data_o[35]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -14987,7 +14985,7 @@ module aes (clk,
     .QN(mixcol_data_o[37]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_38_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_38_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n461 ),
     .QN(mixcol_data_o[38]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -14997,22 +14995,22 @@ module aes (clk,
     .QN(mixcol_data_o[39]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_3_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_3_  (.CLK(clknet_leaf_18_clk),
     .D(\mix1/n515 ),
     .QN(mixcol_data_o[3]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_40_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_40_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n433 ),
     .QN(mixcol_data_o[40]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_41_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_41_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n419 ),
     .QN(mixcol_data_o[41]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_42_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_42_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n405 ),
     .QN(mixcol_data_o[42]),
     .RESETN(\mix1/n564 ),
@@ -15027,12 +15025,12 @@ module aes (clk,
     .QN(mixcol_data_o[44]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_45_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_45_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n363 ),
     .QN(mixcol_data_o[45]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_46_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_46_  (.CLK(clknet_leaf_18_clk),
     .D(\mix1/n349 ),
     .QN(mixcol_data_o[46]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -15057,7 +15055,7 @@ module aes (clk,
     .QN(mixcol_data_o[4]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_50_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_50_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n293 ),
     .QN(mixcol_data_o[50]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15077,12 +15075,12 @@ module aes (clk,
     .QN(mixcol_data_o[53]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_54_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_54_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n237 ),
     .QN(mixcol_data_o[54]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_55_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_55_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n223 ),
     .QN(mixcol_data_o[55]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15092,7 +15090,7 @@ module aes (clk,
     .QN(mixcol_data_o[56]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_57_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_57_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n195 ),
     .QN(mixcol_data_o[57]),
     .RESETN(\mix1/n564 ),
@@ -15102,12 +15100,12 @@ module aes (clk,
     .QN(mixcol_data_o[58]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_59_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_59_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n167 ),
     .QN(mixcol_data_o[59]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_5_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_5_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n487 ),
     .QN(mixcol_data_o[5]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15117,7 +15115,7 @@ module aes (clk,
     .QN(mixcol_data_o[60]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_61_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_61_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n139 ),
     .QN(mixcol_data_o[61]),
     .RESETN(\mix1/n564 ),
@@ -15127,7 +15125,7 @@ module aes (clk,
     .QN(mixcol_data_o[62]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_63_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_63_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n111 ),
     .QN(mixcol_data_o[63]),
     .RESETN(\mix1/n564 ),
@@ -15137,7 +15135,7 @@ module aes (clk,
     .QN(mixcol_data_o[64]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_65_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_65_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n535 ),
     .QN(mixcol_data_o[65]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -15147,7 +15145,7 @@ module aes (clk,
     .QN(mixcol_data_o[66]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_67_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_67_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n507 ),
     .QN(mixcol_data_o[67]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15167,17 +15165,17 @@ module aes (clk,
     .QN(mixcol_data_o[6]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_70_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_70_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n465 ),
     .QN(mixcol_data_o[70]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_71_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_71_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n451 ),
     .QN(mixcol_data_o[71]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_72_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_72_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n437 ),
     .QN(mixcol_data_o[72]),
     .RESETN(\mix1/n564 ),
@@ -15187,7 +15185,7 @@ module aes (clk,
     .QN(mixcol_data_o[73]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_74_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_74_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n409 ),
     .QN(mixcol_data_o[74]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15197,7 +15195,7 @@ module aes (clk,
     .QN(mixcol_data_o[75]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_76_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_76_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n381 ),
     .QN(mixcol_data_o[76]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15207,12 +15205,12 @@ module aes (clk,
     .QN(mixcol_data_o[77]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_78_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_78_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n353 ),
     .QN(mixcol_data_o[78]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_79_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_79_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n339 ),
     .QN(mixcol_data_o[79]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -15222,12 +15220,12 @@ module aes (clk,
     .QN(mixcol_data_o[7]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_80_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_80_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n325 ),
     .QN(mixcol_data_o[80]),
     .RESETN(\mix1/FE_OFN57_n564 ),
     .SETN(\mix1/FE_OFN20_reset ));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_81_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_81_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n311 ),
     .QN(mixcol_data_o[81]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -15242,7 +15240,7 @@ module aes (clk,
     .QN(mixcol_data_o[83]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_84_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_84_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n269 ),
     .QN(mixcol_data_o[84]),
     .RESETN(\mix1/FE_OFN59_n564 ),
@@ -15257,32 +15255,32 @@ module aes (clk,
     .QN(mixcol_data_o[86]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_o_reg_reg_87_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_bottom \mix1/data_o_reg_reg_87_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n227 ),
     .QN(mixcol_data_o[87]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_88_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_88_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n213 ),
     .QN(mixcol_data_o[88]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_89_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_89_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n199 ),
     .QN(mixcol_data_o[89]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_8_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_8_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n445 ),
     .QN(mixcol_data_o[8]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_90_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_90_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n185 ),
     .QN(mixcol_data_o[90]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_91_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_91_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n171 ),
     .QN(mixcol_data_o[91]),
     .RESETN(\mix1/n564 ),
@@ -15317,7 +15315,7 @@ module aes (clk,
     .QN(mixcol_data_o[97]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_98_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_98_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n525 ),
     .QN(mixcol_data_o[98]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15327,7 +15325,7 @@ module aes (clk,
     .QN(mixcol_data_o[99]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_o_reg_reg_9_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_o_reg_reg_9_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n431 ),
     .QN(mixcol_data_o[9]),
     .RESETN(\mix1/n564 ),
@@ -15342,7 +15340,7 @@ module aes (clk,
     .QN(\mix1/data_reg [101]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_102_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_102_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n471 ),
     .QN(\mix1/data_reg [102]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15352,17 +15350,17 @@ module aes (clk,
     .QN(\mix1/data_reg [103]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_104_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_104_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n443 ),
     .QN(\mix1/data_reg [104]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_reg_reg_105_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_105_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n429 ),
     .QN(\mix1/data_reg [105]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_106_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_106_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n415 ),
     .QN(\mix1/data_reg [106]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15372,12 +15370,12 @@ module aes (clk,
     .QN(\mix1/data_reg [107]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_reg_reg_108_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_108_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n387 ),
     .QN(\mix1/data_reg [108]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_109_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_109_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n373 ),
     .QN(\mix1/data_reg [109]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15387,7 +15385,7 @@ module aes (clk,
     .QN(\mix1/data_reg [110]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN4_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_111_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_111_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n345 ),
     .QN(\mix1/data_reg [111]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15417,17 +15415,17 @@ module aes (clk,
     .QN(\mix1/data_reg [116]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_117_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_117_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n261 ),
     .QN(\mix1/data_reg [117]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_118_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_118_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n247 ),
     .QN(\mix1/data_reg [118]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_119_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_119_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n233 ),
     .QN(\mix1/data_reg [119]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15447,7 +15445,7 @@ module aes (clk,
     .QN(\mix1/data_reg [122]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_123_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_123_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n177 ),
     .QN(\mix1/data_reg [123]),
     .RESETN(\mix1/n564 ),
@@ -15457,12 +15455,12 @@ module aes (clk,
     .QN(\mix1/data_reg [124]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_125_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_125_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n149 ),
     .QN(\mix1/data_reg [125]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_126_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_126_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n135 ),
     .QN(\mix1/data_reg [126]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15487,12 +15485,12 @@ module aes (clk,
     .QN(\mix1/data_reg [34]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_35_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_35_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n505 ),
     .QN(\mix1/data_reg [35]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_36_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_36_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n491 ),
     .QN(\mix1/data_reg [36]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15507,7 +15505,7 @@ module aes (clk,
     .QN(\mix1/data_reg [38]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_39_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_39_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n449 ),
     .QN(\mix1/data_reg [39]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15517,17 +15515,17 @@ module aes (clk,
     .QN(\mix1/data_reg [40]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_41_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_41_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n421 ),
     .QN(\mix1/data_reg [41]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_42_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_42_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n407 ),
     .QN(\mix1/data_reg [42]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_43_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_43_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n393 ),
     .QN(\mix1/data_reg [43]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15537,22 +15535,22 @@ module aes (clk,
     .QN(\mix1/data_reg [44]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_45_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_45_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n365 ),
     .QN(\mix1/data_reg [45]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_46_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_46_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n351 ),
     .QN(\mix1/data_reg [46]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_47_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_47_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n337 ),
     .QN(\mix1/data_reg [47]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_48_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_48_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n323 ),
     .QN(\mix1/data_reg [48]),
     .RESETN(\mix1/FE_OFN57_n564 ),
@@ -15567,12 +15565,12 @@ module aes (clk,
     .QN(\mix1/data_reg [50]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_51_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_51_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n281 ),
     .QN(\mix1/data_reg [51]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_52_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_52_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n267 ),
     .QN(\mix1/data_reg [52]),
     .RESETN(\mix1/FE_OFN59_n564 ),
@@ -15587,7 +15585,7 @@ module aes (clk,
     .QN(\mix1/data_reg [54]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_55_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_55_  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n225 ),
     .QN(\mix1/data_reg [55]),
     .RESETN(\mix1/FE_OFN59_n564 ),
@@ -15597,12 +15595,12 @@ module aes (clk,
     .QN(\mix1/data_reg [56]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_57_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_57_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n197 ),
     .QN(\mix1/data_reg [57]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_reg_reg_58_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_58_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n183 ),
     .QN(\mix1/data_reg [58]),
     .RESETN(\mix1/n564 ),
@@ -15627,7 +15625,7 @@ module aes (clk,
     .QN(\mix1/data_reg [62]),
     .RESETN(\mix1/n564 ),
     .SETN(FE_OFN5_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_63_  (.CLK(clknet_leaf_0_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_63_  (.CLK(clknet_leaf_0_clk),
     .D(\mix1/n113 ),
     .QN(\mix1/data_reg [63]),
     .RESETN(\mix1/n564 ),
@@ -15637,17 +15635,17 @@ module aes (clk,
     .QN(\mix1/data_reg [64]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_65_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_65_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n537 ),
     .QN(\mix1/data_reg [65]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_66_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_66_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n523 ),
     .QN(\mix1/data_reg [66]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_67_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_67_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n509 ),
     .QN(\mix1/data_reg [67]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15657,22 +15655,22 @@ module aes (clk,
     .QN(\mix1/data_reg [68]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_69_  (.CLK(clknet_leaf_16_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_69_  (.CLK(clknet_leaf_16_clk),
     .D(\mix1/n481 ),
     .QN(\mix1/data_reg [69]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_70_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_70_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n467 ),
     .QN(\mix1/data_reg [70]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_71_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_71_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n453 ),
     .QN(\mix1/data_reg [71]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_72_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_72_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n439 ),
     .QN(\mix1/data_reg [72]),
     .RESETN(\mix1/n564 ),
@@ -15692,7 +15690,7 @@ module aes (clk,
     .QN(\mix1/data_reg [75]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_76_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_76_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n383 ),
     .QN(\mix1/data_reg [76]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15702,7 +15700,7 @@ module aes (clk,
     .QN(\mix1/data_reg [77]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(FE_OFN4_reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_78_  (.CLK(clknet_leaf_19_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_78_  (.CLK(clknet_leaf_19_clk),
     .D(\mix1/n355 ),
     .QN(\mix1/data_reg [78]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15722,7 +15720,7 @@ module aes (clk,
     .QN(\mix1/data_reg [81]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_82_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_82_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n299 ),
     .QN(\mix1/data_reg [82]),
     .RESETN(\mix1/FE_OFN59_n564 ),
@@ -15732,12 +15730,12 @@ module aes (clk,
     .QN(\mix1/data_reg [83]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_upper \mix1/data_reg_reg_84_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_84_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n271 ),
     .QN(\mix1/data_reg [84]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_85_  (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_85_  (.CLK(clknet_leaf_15_clk),
     .D(\mix1/n257 ),
     .QN(\mix1/data_reg [85]),
     .RESETN(\mix1/FE_OFN59_n564 ),
@@ -15752,17 +15750,17 @@ module aes (clk,
     .QN(\mix1/data_reg [87]),
     .RESETN(\mix1/FE_OFN59_n564 ),
     .SETN(reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_88_  (.CLK(clknet_leaf_22_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_88_  (.CLK(clknet_leaf_22_clk),
     .D(\mix1/n215 ),
     .QN(\mix1/data_reg [88]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_89_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_89_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n201 ),
     .QN(\mix1/data_reg [89]),
     .RESETN(\mix1/n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_90_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_90_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n187 ),
     .QN(\mix1/data_reg [90]),
     .RESETN(\mix1/n564 ),
@@ -15782,12 +15780,12 @@ module aes (clk,
     .QN(\mix1/data_reg [93]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_reg_reg_94_  (.CLK(clknet_leaf_20_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_94_  (.CLK(clknet_leaf_20_clk),
     .D(\mix1/n131 ),
     .QN(\mix1/data_reg [94]),
     .RESETN(\mix1/FE_OFN56_n564 ),
     .SETN(\mix1/FE_OFN11_reset ));
- DFFASRHQNx1_upper \mix1/data_reg_reg_95_  (.CLK(clknet_leaf_21_clk),
+ DFFASRHQNx1_bottom \mix1/data_reg_reg_95_  (.CLK(clknet_leaf_21_clk),
     .D(\mix1/n117 ),
     .QN(\mix1/data_reg [95]),
     .RESETN(\mix1/FE_OFN56_n564 ),
@@ -15802,7 +15800,7 @@ module aes (clk,
     .QN(\mix1/data_reg [97]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN13_reset));
- DFFASRHQNx1_bottom \mix1/data_reg_reg_98_  (.CLK(clknet_leaf_17_clk),
+ DFFASRHQNx1_upper \mix1/data_reg_reg_98_  (.CLK(clknet_leaf_17_clk),
     .D(\mix1/n527 ),
     .QN(\mix1/data_reg [98]),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15812,7 +15810,7 @@ module aes (clk,
     .QN(\mix1/data_reg [99]),
     .RESETN(\mix1/FE_OFN58_n564 ),
     .SETN(FE_OFN29_FE_OFN12_reset));
- DFFASRHQNx1_bottom \mix1/ready_o_reg  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_upper \mix1/ready_o_reg  (.CLK(clknet_leaf_14_clk),
     .D(\mix1/n559 ),
     .QN(mixcol_ready_o),
     .RESETN(\mix1/FE_OFN58_n564 ),
@@ -15830,61 +15828,61 @@ module aes (clk,
  XOR2xp5_upper \mix1/w1/bm1/U1  (.A(\mix1/w1/bm1/n1 ),
     .B(\mix1/w1/bm1/n2 ),
     .Y(\mix1/outy [31]));
- XOR2xp5_bottom \mix1/w1/bm1/U10  (.A(\mix1/w1/bm1/n13 ),
+ XOR2xp5_upper \mix1/w1/bm1/U10  (.A(\mix1/w1/bm1/n13 ),
     .B(\mix1/w1/bm1/n14 ),
     .Y(\mix1/outy [29]));
- XNOR2xp5_bottom \mix1/w1/bm1/U11  (.A(\mix1/w1/bm1/n15 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U11  (.A(\mix1/w1/bm1/n15 ),
     .B(\mix1/w1/bm1/n16 ),
     .Y(\mix1/w1/bm1/n14 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U12  (.A(\mix1/w1/bm1/n17 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U12  (.A(\mix1/w1/bm1/n17 ),
     .B(\mix1/outx [29]),
     .Y(\mix1/w1/bm1/n16 ));
- XOR2xp5_bottom \mix1/w1/bm1/U13  (.A(\mix1/w1/bm1/n18 ),
+ XOR2xp5_upper \mix1/w1/bm1/U13  (.A(\mix1/w1/bm1/n18 ),
     .B(\mix1/w1/bm1/n19 ),
     .Y(\mix1/w1/bm1/n13 ));
- XOR2xp5_bottom \mix1/w1/bm1/U14  (.A(\mix1/w1/bm1/n11 ),
+ XOR2xp5_upper \mix1/w1/bm1/U14  (.A(\mix1/w1/bm1/n11 ),
     .B(\mix1/w1/bm1/n20 ),
     .Y(\mix1/w1/bm1/n19 ));
- XOR2xp5_bottom \mix1/w1/bm1/U15  (.A(\mix1/mix_word [11]),
+ XOR2xp5_upper \mix1/w1/bm1/U15  (.A(\mix1/mix_word [11]),
     .B(\mix1/mix_word [27]),
     .Y(\mix1/w1/bm1/n18 ));
- XOR2xp5_bottom \mix1/w1/bm1/U16  (.A(\mix1/w1/bm1/n21 ),
+ XOR2xp5_upper \mix1/w1/bm1/U16  (.A(\mix1/w1/bm1/n21 ),
     .B(\mix1/w1/bm1/n22 ),
     .Y(\mix1/outy [28]));
- XOR2xp5_bottom \mix1/w1/bm1/U17  (.A(\mix1/w1/bm1/n23 ),
+ XOR2xp5_upper \mix1/w1/bm1/U17  (.A(\mix1/w1/bm1/n23 ),
     .B(\mix1/w1/bm1/n24 ),
     .Y(\mix1/w1/bm1/n22 ));
- XOR2xp5_bottom \mix1/w1/bm1/U18  (.A(\mix1/outx [28]),
+ XOR2xp5_upper \mix1/w1/bm1/U18  (.A(\mix1/outx [28]),
     .B(\mix1/w1/bm1/n25 ),
     .Y(\mix1/w1/bm1/n24 ));
- XOR2xp5_bottom \mix1/w1/bm1/U19  (.A(\mix1/w1/bm1/n26 ),
+ XOR2xp5_upper \mix1/w1/bm1/U19  (.A(\mix1/w1/bm1/n26 ),
     .B(\mix1/w1/bm1/n27 ),
     .Y(\mix1/w1/bm1/n21 ));
  XNOR2xp5_upper \mix1/w1/bm1/U2  (.A(\mix1/w1/bm1/n3 ),
     .B(\mix1/outx [31]),
     .Y(\mix1/w1/bm1/n2 ));
- XOR2xp5_bottom \mix1/w1/bm1/U20  (.A(\mix1/w1/bm1/n28 ),
+ XOR2xp5_upper \mix1/w1/bm1/U20  (.A(\mix1/w1/bm1/n28 ),
     .B(\mix1/w1/bm1/n15 ),
     .Y(\mix1/w1/bm1/n27 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U21  (.A(\mix1/mix_word [26]),
+ XNOR2xp5_upper \mix1/w1/bm1/U21  (.A(\mix1/mix_word [26]),
     .B(\mix1/mix_word [10]),
     .Y(\mix1/w1/bm1/n26 ));
- XOR2xp5_bottom \mix1/w1/bm1/U22  (.A(\mix1/w1/bm1/n29 ),
+ XOR2xp5_upper \mix1/w1/bm1/U22  (.A(\mix1/w1/bm1/n29 ),
     .B(\mix1/w1/bm1/n30 ),
     .Y(\mix1/outy [27]));
- XOR2xp5_bottom \mix1/w1/bm1/U23  (.A(\mix1/w1/bm1/n31 ),
+ XOR2xp5_upper \mix1/w1/bm1/U23  (.A(\mix1/w1/bm1/n31 ),
     .B(\mix1/w1/bm1/n32 ),
     .Y(\mix1/w1/bm1/n30 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U24  (.A(\mix1/outx [27]),
+ XNOR2xp5_upper \mix1/w1/bm1/U24  (.A(\mix1/outx [27]),
     .B(\mix1/w1/bm1/n33 ),
     .Y(\mix1/w1/bm1/n32 ));
- XOR2xp5_bottom \mix1/w1/bm1/U25  (.A(\mix1/w1/bm1/n34 ),
+ XOR2xp5_upper \mix1/w1/bm1/U25  (.A(\mix1/w1/bm1/n34 ),
     .B(\mix1/w1/bm1/n35 ),
     .Y(\mix1/w1/bm1/n29 ));
- XOR2xp5_bottom \mix1/w1/bm1/U26  (.A(\mix1/w1/bm1/n11 ),
+ XOR2xp5_upper \mix1/w1/bm1/U26  (.A(\mix1/w1/bm1/n11 ),
     .B(\mix1/w1/bm1/n23 ),
     .Y(\mix1/w1/bm1/n35 ));
- XOR2xp5_bottom \mix1/w1/bm1/U27  (.A(\mix1/mix_word [9]),
+ XOR2xp5_upper \mix1/w1/bm1/U27  (.A(\mix1/mix_word [9]),
     .B(\mix1/mix_word [25]),
     .Y(\mix1/w1/bm1/n34 ));
  XOR2xp5_bottom \mix1/w1/bm1/U28  (.A(\mix1/w1/bm1/n36 ),
@@ -15893,10 +15891,10 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm1/U29  (.A(\mix1/outx [26]),
     .B(\mix1/w1/bm1/n38 ),
     .Y(\mix1/w1/bm1/n37 ));
- XOR2xp5_upper \mix1/w1/bm1/U3  (.A(\mix1/w1/bm1/n4 ),
+ XOR2xp5_bottom \mix1/w1/bm1/U3  (.A(\mix1/w1/bm1/n4 ),
     .B(\mix1/w1/bm1/n5 ),
     .Y(\mix1/w1/bm1/n1 ));
- XOR2xp5_bottom \mix1/w1/bm1/U30  (.A(\mix1/w1/bm1/n39 ),
+ XOR2xp5_upper \mix1/w1/bm1/U30  (.A(\mix1/w1/bm1/n39 ),
     .B(\mix1/w1/bm1/n15 ),
     .Y(\mix1/w1/bm1/n38 ));
  XOR2xp5_bottom \mix1/w1/bm1/U31  (.A(\mix1/w1/bm1/n11 ),
@@ -15905,52 +15903,52 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm1/U32  (.A(\mix1/mix_word [8]),
     .B(\mix1/mix_word [24]),
     .Y(\mix1/w1/bm1/n40 ));
- XOR2xp5_bottom \mix1/w1/bm1/U33  (.A(\mix1/outx [25]),
+ XOR2xp5_upper \mix1/w1/bm1/U33  (.A(\mix1/outx [25]),
     .B(\mix1/w1/bm1/n41 ),
     .Y(\mix1/outy [25]));
- XOR2xp5_bottom \mix1/w1/bm1/U34  (.A(\mix1/w1/bm1/n15 ),
+ XOR2xp5_upper \mix1/w1/bm1/U34  (.A(\mix1/w1/bm1/n15 ),
     .B(\mix1/w1/bm1/n23 ),
     .Y(\mix1/w1/bm1/n41 ));
- XNOR2x2_bottom \mix1/w1/bm1/U35  (.A(\mix1/w1/bm1/n42 ),
+ XNOR2x2_upper \mix1/w1/bm1/U35  (.A(\mix1/w1/bm1/n42 ),
     .B(\mix1/w1/bm1/n43 ),
     .Y(\mix1/w1/bm1/n15 ));
- XOR2xp5_bottom \mix1/w1/bm1/U36  (.A(\mix1/w1/bm1/n44 ),
+ XOR2xp5_upper \mix1/w1/bm1/U36  (.A(\mix1/w1/bm1/n44 ),
     .B(\mix1/w1/bm1/n45 ),
     .Y(\mix1/w1/bm1/n43 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U37  (.A(\mix1/mix_word [31]),
+ XNOR2xp5_upper \mix1/w1/bm1/U37  (.A(\mix1/mix_word [31]),
     .B(\mix1/mix_word [15]),
     .Y(\mix1/w1/bm1/n42 ));
  XOR2xp5_bottom \mix1/w1/bm1/U38  (.A(\mix1/w1/bm1/n23 ),
     .B(\mix1/outx [24]),
     .Y(\mix1/outy [24]));
- XNOR2xp5_bottom \mix1/w1/bm1/U39  (.A(\mix1/w1/bm1/n46 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U39  (.A(\mix1/w1/bm1/n46 ),
     .B(\mix1/w1/bm1/n47 ),
     .Y(\mix1/w1/bm1/n23 ));
- XNOR2xp5_upper \mix1/w1/bm1/U4  (.A(\mix1/mix_word [29]),
+ XNOR2xp5_bottom \mix1/w1/bm1/U4  (.A(\mix1/mix_word [29]),
     .B(\mix1/mix_word [13]),
     .Y(\mix1/w1/bm1/n4 ));
- XOR2xp5_bottom \mix1/w1/bm1/U40  (.A(\mix1/w1/bm1/n48 ),
+ XOR2xp5_upper \mix1/w1/bm1/U40  (.A(\mix1/w1/bm1/n48 ),
     .B(\mix1/w1/bm1/n49 ),
     .Y(\mix1/w1/bm1/n47 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U41  (.A(\mix1/mix_word [30]),
+ XNOR2xp5_upper \mix1/w1/bm1/U41  (.A(\mix1/mix_word [30]),
     .B(\mix1/mix_word [14]),
     .Y(\mix1/w1/bm1/n46 ));
- XOR2xp5_bottom \mix1/w1/bm1/U42  (.A(\mix1/w1/bm1/n44 ),
+ XOR2xp5_upper \mix1/w1/bm1/U42  (.A(\mix1/w1/bm1/n44 ),
     .B(\mix1/w1/bm1/n50 ),
     .Y(\mix1/outx [31]));
- XOR2xp5_bottom \mix1/w1/bm1/U43  (.A(\mix1/mix_word [23]),
+ XOR2xp5_upper \mix1/w1/bm1/U43  (.A(\mix1/mix_word [23]),
     .B(\mix1/w1/bm1/n11 ),
     .Y(\mix1/w1/bm1/n50 ));
  XOR2x2_bottom \mix1/w1/bm1/U44  (.A(\mix1/mix_word [15]),
     .B(\mix1/mix_word [7]),
     .Y(\mix1/w1/bm1/n11 ));
- XOR2xp5_bottom \mix1/w1/bm1/U45  (.A(\mix1/mix_word [30]),
+ XOR2xp5_upper \mix1/w1/bm1/U45  (.A(\mix1/mix_word [30]),
     .B(\mix1/mix_word [22]),
     .Y(\mix1/w1/bm1/n44 ));
- XOR2xp5_bottom \mix1/w1/bm1/U46  (.A(\mix1/w1/bm1/n48 ),
+ XOR2xp5_upper \mix1/w1/bm1/U46  (.A(\mix1/w1/bm1/n48 ),
     .B(\mix1/w1/bm1/n51 ),
     .Y(\mix1/outx [30]));
- XOR2xp5_bottom \mix1/w1/bm1/U47  (.A(\mix1/mix_word [22]),
+ XOR2xp5_upper \mix1/w1/bm1/U47  (.A(\mix1/mix_word [22]),
     .B(\mix1/w1/bm1/n45 ),
     .Y(\mix1/w1/bm1/n51 ));
  XOR2xp5_bottom \mix1/w1/bm1/U48  (.A(\mix1/mix_word [14]),
@@ -15959,10 +15957,10 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm1/U49  (.A(\mix1/mix_word [29]),
     .B(\mix1/mix_word [21]),
     .Y(\mix1/w1/bm1/n48 ));
- XOR2xp5_bottom \mix1/w1/bm1/U5  (.A(\mix1/w1/bm1/n6 ),
+ XOR2xp5_upper \mix1/w1/bm1/U5  (.A(\mix1/w1/bm1/n6 ),
     .B(\mix1/w1/bm1/n7 ),
     .Y(\mix1/outy [30]));
- XOR2xp5_bottom \mix1/w1/bm1/U50  (.A(\mix1/w1/bm1/n49 ),
+ XOR2xp5_upper \mix1/w1/bm1/U50  (.A(\mix1/w1/bm1/n49 ),
     .B(\mix1/w1/bm1/n52 ),
     .Y(\mix1/outx [29]));
  XOR2xp5_bottom \mix1/w1/bm1/U51  (.A(\mix1/mix_word [21]),
@@ -15974,85 +15972,85 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm1/U53  (.A(\mix1/mix_word [13]),
     .B(\mix1/mix_word [5]),
     .Y(\mix1/w1/bm1/n49 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U54  (.A(\mix1/w1/bm1/n53 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U54  (.A(\mix1/w1/bm1/n53 ),
     .B(\mix1/w1/bm1/n8 ),
     .Y(\mix1/outx [28]));
- XNOR2xp5_bottom \mix1/w1/bm1/U55  (.A(\mix1/w1/bm1/n54 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U55  (.A(\mix1/w1/bm1/n54 ),
     .B(\mix1/w1/bm1/n39 ),
     .Y(\mix1/w1/bm1/n8 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U56  (.A(\mix1/mix_word [27]),
+ XNOR2xp5_upper \mix1/w1/bm1/U56  (.A(\mix1/mix_word [27]),
     .B(\mix1/mix_word [19]),
     .Y(\mix1/w1/bm1/n54 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U57  (.A(\mix1/mix_word [20]),
+ XNOR2xp5_upper \mix1/w1/bm1/U57  (.A(\mix1/mix_word [20]),
     .B(\mix1/w1/bm1/n3 ),
     .Y(\mix1/w1/bm1/n53 ));
  XOR2xp5_bottom \mix1/w1/bm1/U58  (.A(\mix1/mix_word [12]),
     .B(\mix1/mix_word [4]),
     .Y(\mix1/w1/bm1/n3 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U59  (.A(\mix1/w1/bm1/n55 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U59  (.A(\mix1/w1/bm1/n55 ),
     .B(\mix1/w1/bm1/n17 ),
     .Y(\mix1/outx [27]));
- XNOR2xp5_bottom \mix1/w1/bm1/U6  (.A(\mix1/w1/bm1/n8 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U6  (.A(\mix1/w1/bm1/n8 ),
     .B(\mix1/w1/bm1/n9 ),
     .Y(\mix1/w1/bm1/n7 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U60  (.A(\mix1/w1/bm1/n56 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U60  (.A(\mix1/w1/bm1/n56 ),
     .B(\mix1/w1/bm1/n39 ),
     .Y(\mix1/w1/bm1/n17 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U61  (.A(\mix1/mix_word [26]),
+ XNOR2xp5_upper \mix1/w1/bm1/U61  (.A(\mix1/mix_word [26]),
     .B(\mix1/mix_word [18]),
     .Y(\mix1/w1/bm1/n56 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U62  (.A(\mix1/mix_word [19]),
+ XNOR2xp5_upper \mix1/w1/bm1/U62  (.A(\mix1/mix_word [19]),
     .B(\mix1/w1/bm1/n10 ),
     .Y(\mix1/w1/bm1/n55 ));
- XOR2xp5_bottom \mix1/w1/bm1/U63  (.A(\mix1/mix_word [11]),
+ XOR2xp5_upper \mix1/w1/bm1/U63  (.A(\mix1/mix_word [11]),
     .B(\mix1/mix_word [3]),
     .Y(\mix1/w1/bm1/n10 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U64  (.A(\mix1/w1/bm1/n28 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U64  (.A(\mix1/w1/bm1/n28 ),
     .B(\mix1/w1/bm1/n57 ),
     .Y(\mix1/outx [26]));
- XOR2xp5_bottom \mix1/w1/bm1/U65  (.A(\mix1/mix_word [18]),
+ XOR2xp5_upper \mix1/w1/bm1/U65  (.A(\mix1/mix_word [18]),
     .B(\mix1/w1/bm1/n20 ),
     .Y(\mix1/w1/bm1/n57 ));
- XOR2xp5_bottom \mix1/w1/bm1/U66  (.A(\mix1/mix_word [10]),
+ XOR2xp5_upper \mix1/w1/bm1/U66  (.A(\mix1/mix_word [10]),
     .B(\mix1/mix_word [2]),
     .Y(\mix1/w1/bm1/n20 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U67  (.A(\mix1/mix_word [25]),
+ XNOR2xp5_upper \mix1/w1/bm1/U67  (.A(\mix1/mix_word [25]),
     .B(\mix1/mix_word [17]),
     .Y(\mix1/w1/bm1/n28 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U68  (.A(\mix1/w1/bm1/n58 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U68  (.A(\mix1/w1/bm1/n58 ),
     .B(\mix1/w1/bm1/n31 ),
     .Y(\mix1/outx [25]));
- XNOR2xp5_bottom \mix1/w1/bm1/U69  (.A(\mix1/w1/bm1/n59 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U69  (.A(\mix1/w1/bm1/n59 ),
     .B(\mix1/w1/bm1/n39 ),
     .Y(\mix1/w1/bm1/n31 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U7  (.A(\mix1/w1/bm1/n10 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U7  (.A(\mix1/w1/bm1/n10 ),
     .B(\mix1/outx [30]),
     .Y(\mix1/w1/bm1/n9 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U70  (.A(\mix1/mix_word [24]),
+ XNOR2xp5_upper \mix1/w1/bm1/U70  (.A(\mix1/mix_word [24]),
     .B(\mix1/mix_word [16]),
     .Y(\mix1/w1/bm1/n59 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U71  (.A(\mix1/mix_word [17]),
+ XNOR2xp5_upper \mix1/w1/bm1/U71  (.A(\mix1/mix_word [17]),
     .B(\mix1/w1/bm1/n25 ),
     .Y(\mix1/w1/bm1/n58 ));
- XOR2xp5_bottom \mix1/w1/bm1/U72  (.A(\mix1/mix_word [9]),
+ XOR2xp5_upper \mix1/w1/bm1/U72  (.A(\mix1/mix_word [9]),
     .B(\mix1/mix_word [1]),
     .Y(\mix1/w1/bm1/n25 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U73  (.A(\mix1/w1/bm1/n33 ),
+ XNOR2xp5_upper \mix1/w1/bm1/U73  (.A(\mix1/w1/bm1/n33 ),
     .B(\mix1/w1/bm1/n60 ),
     .Y(\mix1/outx [24]));
- XOR2xp5_bottom \mix1/w1/bm1/U74  (.A(\mix1/mix_word [16]),
+ XOR2xp5_upper \mix1/w1/bm1/U74  (.A(\mix1/mix_word [16]),
     .B(\mix1/w1/bm1/n39 ),
     .Y(\mix1/w1/bm1/n60 ));
  XOR2x2_bottom \mix1/w1/bm1/U75  (.A(\mix1/mix_word [31]),
     .B(\mix1/mix_word [23]),
     .Y(\mix1/w1/bm1/n39 ));
- XNOR2xp5_bottom \mix1/w1/bm1/U76  (.A(\mix1/mix_word [8]),
+ XNOR2xp5_upper \mix1/w1/bm1/U76  (.A(\mix1/mix_word [8]),
     .B(\mix1/mix_word [0]),
     .Y(\mix1/w1/bm1/n33 ));
- XOR2xp5_bottom \mix1/w1/bm1/U8  (.A(\mix1/w1/bm1/n11 ),
+ XOR2xp5_upper \mix1/w1/bm1/U8  (.A(\mix1/w1/bm1/n11 ),
     .B(\mix1/w1/bm1/n12 ),
     .Y(\mix1/w1/bm1/n6 ));
- XOR2xp5_bottom \mix1/w1/bm1/U9  (.A(\mix1/mix_word [12]),
+ XOR2xp5_upper \mix1/w1/bm1/U9  (.A(\mix1/mix_word [12]),
     .B(\mix1/mix_word [28]),
     .Y(\mix1/w1/bm1/n12 ));
  XOR2xp5_bottom \mix1/w1/bm2/U1  (.A(\mix1/w1/bm2/n120 ),
@@ -16064,16 +16062,16 @@ module aes (clk,
  XNOR2xp5_bottom \mix1/w1/bm2/U11  (.A(\mix1/w1/bm2/n106 ),
     .B(\mix1/w1/bm2/n105 ),
     .Y(\mix1/w1/bm2/n107 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U12  (.A(\mix1/w1/bm2/n104 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U12  (.A(\mix1/w1/bm2/n104 ),
     .B(\mix1/outx [21]),
     .Y(\mix1/w1/bm2/n105 ));
- XOR2xp5_bottom \mix1/w1/bm2/U13  (.A(\mix1/w1/bm2/n103 ),
+ XOR2xp5_upper \mix1/w1/bm2/U13  (.A(\mix1/w1/bm2/n103 ),
     .B(\mix1/w1/bm2/n102 ),
     .Y(\mix1/w1/bm2/n108 ));
- XOR2xp5_bottom \mix1/w1/bm2/U14  (.A(\mix1/w1/bm2/n110 ),
+ XOR2xp5_upper \mix1/w1/bm2/U14  (.A(\mix1/w1/bm2/n110 ),
     .B(\mix1/w1/bm2/n101 ),
     .Y(\mix1/w1/bm2/n102 ));
- XOR2xp5_bottom \mix1/w1/bm2/U15  (.A(\mix1/mix_word [3]),
+ XOR2xp5_upper \mix1/w1/bm2/U15  (.A(\mix1/mix_word [3]),
     .B(\mix1/mix_word [19]),
     .Y(\mix1/w1/bm2/n103 ));
  XOR2xp5_upper \mix1/w1/bm2/U16  (.A(\mix1/w1/bm2/n100 ),
@@ -16085,67 +16083,67 @@ module aes (clk,
  XOR2xp5_upper \mix1/w1/bm2/U18  (.A(\mix1/outx [20]),
     .B(\mix1/w1/bm2/n96 ),
     .Y(\mix1/w1/bm2/n97 ));
- XOR2xp5_bottom \mix1/w1/bm2/U19  (.A(\mix1/w1/bm2/n95 ),
+ XOR2xp5_upper \mix1/w1/bm2/U19  (.A(\mix1/w1/bm2/n95 ),
     .B(\mix1/w1/bm2/n94 ),
     .Y(\mix1/w1/bm2/n100 ));
  XNOR2xp5_bottom \mix1/w1/bm2/U2  (.A(\mix1/w1/bm2/n118 ),
     .B(\mix1/outx [23]),
     .Y(\mix1/w1/bm2/n119 ));
- XOR2xp5_bottom \mix1/w1/bm2/U20  (.A(\mix1/w1/bm2/n93 ),
+ XOR2xp5_upper \mix1/w1/bm2/U20  (.A(\mix1/w1/bm2/n93 ),
     .B(\mix1/w1/bm2/n106 ),
     .Y(\mix1/w1/bm2/n94 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U21  (.A(\mix1/mix_word [18]),
+ XNOR2xp5_upper \mix1/w1/bm2/U21  (.A(\mix1/mix_word [18]),
     .B(\mix1/mix_word [2]),
     .Y(\mix1/w1/bm2/n95 ));
- XOR2xp5_bottom \mix1/w1/bm2/U22  (.A(\mix1/w1/bm2/n92 ),
+ XOR2xp5_upper \mix1/w1/bm2/U22  (.A(\mix1/w1/bm2/n92 ),
     .B(\mix1/w1/bm2/n91 ),
     .Y(\mix1/outy [19]));
- XOR2xp5_bottom \mix1/w1/bm2/U23  (.A(\mix1/w1/bm2/n90 ),
+ XOR2xp5_upper \mix1/w1/bm2/U23  (.A(\mix1/w1/bm2/n90 ),
     .B(\mix1/w1/bm2/n89 ),
     .Y(\mix1/w1/bm2/n91 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U24  (.A(\mix1/outx [19]),
+ XNOR2xp5_upper \mix1/w1/bm2/U24  (.A(\mix1/outx [19]),
     .B(\mix1/w1/bm2/n88 ),
     .Y(\mix1/w1/bm2/n89 ));
- XOR2xp5_bottom \mix1/w1/bm2/U25  (.A(\mix1/w1/bm2/n87 ),
+ XOR2xp5_upper \mix1/w1/bm2/U25  (.A(\mix1/w1/bm2/n87 ),
     .B(\mix1/w1/bm2/n86 ),
     .Y(\mix1/w1/bm2/n92 ));
- XOR2xp5_bottom \mix1/w1/bm2/U26  (.A(\mix1/w1/bm2/n110 ),
+ XOR2xp5_upper \mix1/w1/bm2/U26  (.A(\mix1/w1/bm2/n110 ),
     .B(\mix1/w1/bm2/n98 ),
     .Y(\mix1/w1/bm2/n86 ));
- XOR2xp5_bottom \mix1/w1/bm2/U27  (.A(\mix1/mix_word [1]),
+ XOR2xp5_upper \mix1/w1/bm2/U27  (.A(\mix1/mix_word [1]),
     .B(\mix1/mix_word [17]),
     .Y(\mix1/w1/bm2/n87 ));
- XOR2xp5_bottom \mix1/w1/bm2/U28  (.A(\mix1/w1/bm2/n85 ),
+ XOR2xp5_upper \mix1/w1/bm2/U28  (.A(\mix1/w1/bm2/n85 ),
     .B(\mix1/w1/bm2/n84 ),
     .Y(\mix1/outy [18]));
- XOR2xp5_bottom \mix1/w1/bm2/U29  (.A(\mix1/outx [18]),
+ XOR2xp5_upper \mix1/w1/bm2/U29  (.A(\mix1/outx [18]),
     .B(\mix1/w1/bm2/n83 ),
     .Y(\mix1/w1/bm2/n84 ));
  XOR2xp5_bottom \mix1/w1/bm2/U3  (.A(\mix1/w1/bm2/n117 ),
     .B(\mix1/w1/bm2/n116 ),
     .Y(\mix1/w1/bm2/n120 ));
- XOR2xp5_bottom \mix1/w1/bm2/U30  (.A(\mix1/w1/bm2/n82 ),
+ XOR2xp5_upper \mix1/w1/bm2/U30  (.A(\mix1/w1/bm2/n82 ),
     .B(\mix1/w1/bm2/n106 ),
     .Y(\mix1/w1/bm2/n83 ));
- XOR2xp5_bottom \mix1/w1/bm2/U31  (.A(\mix1/w1/bm2/n110 ),
+ XOR2xp5_upper \mix1/w1/bm2/U31  (.A(\mix1/w1/bm2/n110 ),
     .B(\mix1/w1/bm2/n81 ),
     .Y(\mix1/w1/bm2/n85 ));
- XOR2xp5_bottom \mix1/w1/bm2/U32  (.A(\mix1/mix_word [0]),
+ XOR2xp5_upper \mix1/w1/bm2/U32  (.A(\mix1/mix_word [0]),
     .B(\mix1/mix_word [16]),
     .Y(\mix1/w1/bm2/n81 ));
- XOR2xp5_bottom \mix1/w1/bm2/U33  (.A(\mix1/outx [17]),
+ XOR2xp5_upper \mix1/w1/bm2/U33  (.A(\mix1/outx [17]),
     .B(\mix1/w1/bm2/n80 ),
     .Y(\mix1/outy [17]));
- XOR2xp5_bottom \mix1/w1/bm2/U34  (.A(\mix1/w1/bm2/n106 ),
+ XOR2xp5_upper \mix1/w1/bm2/U34  (.A(\mix1/w1/bm2/n106 ),
     .B(\mix1/w1/bm2/n98 ),
     .Y(\mix1/w1/bm2/n80 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U35  (.A(\mix1/w1/bm2/n79 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U35  (.A(\mix1/w1/bm2/n79 ),
     .B(\mix1/w1/bm2/n78 ),
     .Y(\mix1/w1/bm2/n106 ));
- XOR2xp5_bottom \mix1/w1/bm2/U36  (.A(\mix1/w1/bm2/n77 ),
+ XOR2xp5_upper \mix1/w1/bm2/U36  (.A(\mix1/w1/bm2/n77 ),
     .B(\mix1/w1/bm2/n76 ),
     .Y(\mix1/w1/bm2/n78 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U37  (.A(\mix1/mix_word [23]),
+ XNOR2xp5_upper \mix1/w1/bm2/U37  (.A(\mix1/mix_word [23]),
     .B(\mix1/mix_word [7]),
     .Y(\mix1/w1/bm2/n79 ));
  XOR2xp5_bottom \mix1/w1/bm2/U38  (.A(\mix1/w1/bm2/n98 ),
@@ -16163,10 +16161,10 @@ module aes (clk,
  XNOR2xp5_upper \mix1/w1/bm2/U41  (.A(\mix1/mix_word [22]),
     .B(\mix1/mix_word [6]),
     .Y(\mix1/w1/bm2/n75 ));
- XOR2xp5_bottom \mix1/w1/bm2/U42  (.A(\mix1/w1/bm2/n77 ),
+ XOR2xp5_upper \mix1/w1/bm2/U42  (.A(\mix1/w1/bm2/n77 ),
     .B(\mix1/w1/bm2/n71 ),
     .Y(\mix1/outx [23]));
- XOR2xp5_bottom \mix1/w1/bm2/U43  (.A(\mix1/mix_word [15]),
+ XOR2xp5_upper \mix1/w1/bm2/U43  (.A(\mix1/mix_word [15]),
     .B(\mix1/w1/bm2/n110 ),
     .Y(\mix1/w1/bm2/n71 ));
  XOR2x2_bottom \mix1/w1/bm2/U44  (.A(\mix1/mix_word [7]),
@@ -16184,13 +16182,13 @@ module aes (clk,
  XOR2xp5_upper \mix1/w1/bm2/U48  (.A(\mix1/mix_word [6]),
     .B(\mix1/mix_word [30]),
     .Y(\mix1/w1/bm2/n76 ));
- XOR2xp5_upper \mix1/w1/bm2/U49  (.A(\mix1/mix_word [21]),
+ XOR2xp5_bottom \mix1/w1/bm2/U49  (.A(\mix1/mix_word [21]),
     .B(\mix1/mix_word [13]),
     .Y(\mix1/w1/bm2/n73 ));
- XOR2xp5_upper \mix1/w1/bm2/U5  (.A(\mix1/w1/bm2/n115 ),
+ XOR2xp5_bottom \mix1/w1/bm2/U5  (.A(\mix1/w1/bm2/n115 ),
     .B(\mix1/w1/bm2/n114 ),
     .Y(\mix1/outy [22]));
- XOR2xp5_bottom \mix1/w1/bm2/U50  (.A(\mix1/w1/bm2/n72 ),
+ XOR2xp5_upper \mix1/w1/bm2/U50  (.A(\mix1/w1/bm2/n72 ),
     .B(\mix1/w1/bm2/n69 ),
     .Y(\mix1/outx [21]));
  XOR2xp5_bottom \mix1/w1/bm2/U51  (.A(\mix1/mix_word [13]),
@@ -16199,16 +16197,16 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm2/U52  (.A(\mix1/mix_word [20]),
     .B(\mix1/mix_word [12]),
     .Y(\mix1/w1/bm2/n116 ));
- XOR2xp5_upper \mix1/w1/bm2/U53  (.A(\mix1/mix_word [5]),
+ XOR2xp5_bottom \mix1/w1/bm2/U53  (.A(\mix1/mix_word [5]),
     .B(\mix1/mix_word [29]),
     .Y(\mix1/w1/bm2/n72 ));
- XNOR2xp5_upper \mix1/w1/bm2/U54  (.A(\mix1/w1/bm2/n68 ),
+ XNOR2xp5_bottom \mix1/w1/bm2/U54  (.A(\mix1/w1/bm2/n68 ),
     .B(\mix1/w1/bm2/n113 ),
     .Y(\mix1/outx [20]));
- XNOR2xp5_bottom \mix1/w1/bm2/U55  (.A(\mix1/w1/bm2/n67 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U55  (.A(\mix1/w1/bm2/n67 ),
     .B(\mix1/w1/bm2/n82 ),
     .Y(\mix1/w1/bm2/n113 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U56  (.A(\mix1/mix_word [19]),
+ XNOR2xp5_upper \mix1/w1/bm2/U56  (.A(\mix1/mix_word [19]),
     .B(\mix1/mix_word [11]),
     .Y(\mix1/w1/bm2/n67 ));
  XNOR2xp5_upper \mix1/w1/bm2/U57  (.A(\mix1/mix_word [12]),
@@ -16217,73 +16215,73 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm2/U58  (.A(\mix1/mix_word [4]),
     .B(\mix1/mix_word [28]),
     .Y(\mix1/w1/bm2/n118 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U59  (.A(\mix1/w1/bm2/n66 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U59  (.A(\mix1/w1/bm2/n66 ),
     .B(\mix1/w1/bm2/n104 ),
     .Y(\mix1/outx [19]));
  XNOR2xp5_upper \mix1/w1/bm2/U6  (.A(\mix1/w1/bm2/n113 ),
     .B(\mix1/w1/bm2/n112 ),
     .Y(\mix1/w1/bm2/n114 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U60  (.A(\mix1/w1/bm2/n65 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U60  (.A(\mix1/w1/bm2/n65 ),
     .B(\mix1/w1/bm2/n82 ),
     .Y(\mix1/w1/bm2/n104 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U61  (.A(\mix1/mix_word [18]),
+ XNOR2xp5_upper \mix1/w1/bm2/U61  (.A(\mix1/mix_word [18]),
     .B(\mix1/mix_word [10]),
     .Y(\mix1/w1/bm2/n65 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U62  (.A(\mix1/mix_word [11]),
+ XNOR2xp5_upper \mix1/w1/bm2/U62  (.A(\mix1/mix_word [11]),
     .B(\mix1/w1/bm2/n111 ),
     .Y(\mix1/w1/bm2/n66 ));
  XOR2xp5_bottom \mix1/w1/bm2/U63  (.A(\mix1/mix_word [3]),
     .B(\mix1/mix_word [27]),
     .Y(\mix1/w1/bm2/n111 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U64  (.A(\mix1/w1/bm2/n93 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U64  (.A(\mix1/w1/bm2/n93 ),
     .B(\mix1/w1/bm2/n64 ),
     .Y(\mix1/outx [18]));
- XOR2xp5_bottom \mix1/w1/bm2/U65  (.A(\mix1/mix_word [10]),
+ XOR2xp5_upper \mix1/w1/bm2/U65  (.A(\mix1/mix_word [10]),
     .B(\mix1/w1/bm2/n101 ),
     .Y(\mix1/w1/bm2/n64 ));
- XOR2xp5_bottom \mix1/w1/bm2/U66  (.A(\mix1/mix_word [2]),
+ XOR2xp5_upper \mix1/w1/bm2/U66  (.A(\mix1/mix_word [2]),
     .B(\mix1/mix_word [26]),
     .Y(\mix1/w1/bm2/n101 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U67  (.A(\mix1/mix_word [17]),
+ XNOR2xp5_upper \mix1/w1/bm2/U67  (.A(\mix1/mix_word [17]),
     .B(\mix1/mix_word [9]),
     .Y(\mix1/w1/bm2/n93 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U68  (.A(\mix1/w1/bm2/n63 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U68  (.A(\mix1/w1/bm2/n63 ),
     .B(\mix1/w1/bm2/n90 ),
     .Y(\mix1/outx [17]));
- XNOR2xp5_bottom \mix1/w1/bm2/U69  (.A(\mix1/w1/bm2/n62 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U69  (.A(\mix1/w1/bm2/n62 ),
     .B(\mix1/w1/bm2/n82 ),
     .Y(\mix1/w1/bm2/n90 ));
  XNOR2xp5_upper \mix1/w1/bm2/U7  (.A(\mix1/w1/bm2/n111 ),
     .B(\mix1/outx [22]),
     .Y(\mix1/w1/bm2/n112 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U70  (.A(\mix1/mix_word [16]),
+ XNOR2xp5_upper \mix1/w1/bm2/U70  (.A(\mix1/mix_word [16]),
     .B(\mix1/mix_word [8]),
     .Y(\mix1/w1/bm2/n62 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U71  (.A(\mix1/mix_word [9]),
+ XNOR2xp5_upper \mix1/w1/bm2/U71  (.A(\mix1/mix_word [9]),
     .B(\mix1/w1/bm2/n96 ),
     .Y(\mix1/w1/bm2/n63 ));
- XOR2xp5_bottom \mix1/w1/bm2/U72  (.A(\mix1/mix_word [1]),
+ XOR2xp5_upper \mix1/w1/bm2/U72  (.A(\mix1/mix_word [1]),
     .B(\mix1/mix_word [25]),
     .Y(\mix1/w1/bm2/n96 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U73  (.A(\mix1/w1/bm2/n88 ),
+ XNOR2xp5_upper \mix1/w1/bm2/U73  (.A(\mix1/w1/bm2/n88 ),
     .B(\mix1/w1/bm2/n61 ),
     .Y(\mix1/outx [16]));
- XOR2xp5_bottom \mix1/w1/bm2/U74  (.A(\mix1/mix_word [8]),
+ XOR2xp5_upper \mix1/w1/bm2/U74  (.A(\mix1/mix_word [8]),
     .B(\mix1/w1/bm2/n82 ),
     .Y(\mix1/w1/bm2/n61 ));
  XOR2x2_bottom \mix1/w1/bm2/U75  (.A(\mix1/mix_word [23]),
     .B(\mix1/mix_word [15]),
     .Y(\mix1/w1/bm2/n82 ));
- XNOR2xp5_bottom \mix1/w1/bm2/U76  (.A(\mix1/mix_word [0]),
+ XNOR2xp5_upper \mix1/w1/bm2/U76  (.A(\mix1/mix_word [0]),
     .B(\mix1/mix_word [24]),
     .Y(\mix1/w1/bm2/n88 ));
- XOR2xp5_bottom \mix1/w1/bm2/U8  (.A(\mix1/w1/bm2/n110 ),
+ XOR2xp5_upper \mix1/w1/bm2/U8  (.A(\mix1/w1/bm2/n110 ),
     .B(\mix1/w1/bm2/n109 ),
     .Y(\mix1/w1/bm2/n115 ));
  XOR2xp5_bottom \mix1/w1/bm2/U9  (.A(\mix1/mix_word [4]),
     .B(\mix1/mix_word [20]),
     .Y(\mix1/w1/bm2/n109 ));
- XOR2xp5_upper \mix1/w1/bm3/U1  (.A(\mix1/w1/bm3/n120 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U1  (.A(\mix1/w1/bm3/n120 ),
     .B(\mix1/w1/bm3/n119 ),
     .Y(\mix1/outy [15]));
  XOR2xp5_upper \mix1/w1/bm3/U10  (.A(\mix1/w1/bm3/n108 ),
@@ -16295,34 +16293,34 @@ module aes (clk,
  XNOR2xp5_upper \mix1/w1/bm3/U12  (.A(\mix1/w1/bm3/n104 ),
     .B(\mix1/outx [13]),
     .Y(\mix1/w1/bm3/n105 ));
- XOR2xp5_bottom \mix1/w1/bm3/U13  (.A(\mix1/w1/bm3/n103 ),
+ XOR2xp5_upper \mix1/w1/bm3/U13  (.A(\mix1/w1/bm3/n103 ),
     .B(\mix1/w1/bm3/n102 ),
     .Y(\mix1/w1/bm3/n108 ));
- XOR2xp5_bottom \mix1/w1/bm3/U14  (.A(\mix1/w1/bm3/n110 ),
+ XOR2xp5_upper \mix1/w1/bm3/U14  (.A(\mix1/w1/bm3/n110 ),
     .B(\mix1/w1/bm3/n101 ),
     .Y(\mix1/w1/bm3/n102 ));
- XOR2xp5_bottom \mix1/w1/bm3/U15  (.A(\mix1/mix_word [27]),
+ XOR2xp5_upper \mix1/w1/bm3/U15  (.A(\mix1/mix_word [27]),
     .B(\mix1/mix_word [11]),
     .Y(\mix1/w1/bm3/n103 ));
- XOR2xp5_upper \mix1/w1/bm3/U16  (.A(\mix1/w1/bm3/n100 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U16  (.A(\mix1/w1/bm3/n100 ),
     .B(\mix1/w1/bm3/n99 ),
     .Y(\mix1/outy [12]));
- XOR2xp5_upper \mix1/w1/bm3/U17  (.A(\mix1/w1/bm3/n98 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U17  (.A(\mix1/w1/bm3/n98 ),
     .B(\mix1/w1/bm3/n97 ),
     .Y(\mix1/w1/bm3/n99 ));
- XOR2xp5_upper \mix1/w1/bm3/U18  (.A(\mix1/outx [12]),
+ XOR2xp5_bottom \mix1/w1/bm3/U18  (.A(\mix1/outx [12]),
     .B(\mix1/w1/bm3/n96 ),
     .Y(\mix1/w1/bm3/n97 ));
- XOR2xp5_bottom \mix1/w1/bm3/U19  (.A(\mix1/w1/bm3/n95 ),
+ XOR2xp5_upper \mix1/w1/bm3/U19  (.A(\mix1/w1/bm3/n95 ),
     .B(\mix1/w1/bm3/n94 ),
     .Y(\mix1/w1/bm3/n100 ));
  XNOR2xp5_upper \mix1/w1/bm3/U2  (.A(\mix1/w1/bm3/n118 ),
     .B(\mix1/outx [15]),
     .Y(\mix1/w1/bm3/n119 ));
- XOR2xp5_bottom \mix1/w1/bm3/U20  (.A(\mix1/w1/bm3/n93 ),
+ XOR2xp5_upper \mix1/w1/bm3/U20  (.A(\mix1/w1/bm3/n93 ),
     .B(\mix1/w1/bm3/n106 ),
     .Y(\mix1/w1/bm3/n94 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U21  (.A(\mix1/mix_word [10]),
+ XNOR2xp5_upper \mix1/w1/bm3/U21  (.A(\mix1/mix_word [10]),
     .B(\mix1/mix_word [26]),
     .Y(\mix1/w1/bm3/n95 ));
  XOR2xp5_bottom \mix1/w1/bm3/U22  (.A(\mix1/w1/bm3/n92 ),
@@ -16331,67 +16329,67 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm3/U23  (.A(\mix1/w1/bm3/n90 ),
     .B(\mix1/w1/bm3/n89 ),
     .Y(\mix1/w1/bm3/n91 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U24  (.A(\mix1/outx [11]),
+ XNOR2xp5_upper \mix1/w1/bm3/U24  (.A(\mix1/outx [11]),
     .B(\mix1/w1/bm3/n88 ),
     .Y(\mix1/w1/bm3/n89 ));
  XOR2xp5_bottom \mix1/w1/bm3/U25  (.A(\mix1/w1/bm3/n87 ),
     .B(\mix1/w1/bm3/n86 ),
     .Y(\mix1/w1/bm3/n92 ));
- XOR2xp5_bottom \mix1/w1/bm3/U26  (.A(\mix1/w1/bm3/n110 ),
+ XOR2xp5_upper \mix1/w1/bm3/U26  (.A(\mix1/w1/bm3/n110 ),
     .B(\mix1/w1/bm3/n98 ),
     .Y(\mix1/w1/bm3/n86 ));
  XOR2xp5_bottom \mix1/w1/bm3/U27  (.A(\mix1/mix_word [25]),
     .B(\mix1/mix_word [9]),
     .Y(\mix1/w1/bm3/n87 ));
- XOR2xp5_bottom \mix1/w1/bm3/U28  (.A(\mix1/w1/bm3/n85 ),
+ XOR2xp5_upper \mix1/w1/bm3/U28  (.A(\mix1/w1/bm3/n85 ),
     .B(\mix1/w1/bm3/n84 ),
     .Y(\mix1/outy [10]));
- XOR2xp5_bottom \mix1/w1/bm3/U29  (.A(\mix1/outx [10]),
+ XOR2xp5_upper \mix1/w1/bm3/U29  (.A(\mix1/outx [10]),
     .B(\mix1/w1/bm3/n83 ),
     .Y(\mix1/w1/bm3/n84 ));
- XOR2xp5_upper \mix1/w1/bm3/U3  (.A(\mix1/w1/bm3/n117 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U3  (.A(\mix1/w1/bm3/n117 ),
     .B(\mix1/w1/bm3/n116 ),
     .Y(\mix1/w1/bm3/n120 ));
- XOR2xp5_bottom \mix1/w1/bm3/U30  (.A(\mix1/w1/bm3/n82 ),
+ XOR2xp5_upper \mix1/w1/bm3/U30  (.A(\mix1/w1/bm3/n82 ),
     .B(\mix1/w1/bm3/n106 ),
     .Y(\mix1/w1/bm3/n83 ));
- XOR2xp5_bottom \mix1/w1/bm3/U31  (.A(\mix1/w1/bm3/n110 ),
+ XOR2xp5_upper \mix1/w1/bm3/U31  (.A(\mix1/w1/bm3/n110 ),
     .B(\mix1/w1/bm3/n81 ),
     .Y(\mix1/w1/bm3/n85 ));
- XOR2xp5_bottom \mix1/w1/bm3/U32  (.A(\mix1/mix_word [24]),
+ XOR2xp5_upper \mix1/w1/bm3/U32  (.A(\mix1/mix_word [24]),
     .B(\mix1/mix_word [8]),
     .Y(\mix1/w1/bm3/n81 ));
  XOR2xp5_bottom \mix1/w1/bm3/U33  (.A(\mix1/outx [9]),
     .B(\mix1/w1/bm3/n80 ),
     .Y(\mix1/outy [9]));
- XOR2xp5_bottom \mix1/w1/bm3/U34  (.A(\mix1/w1/bm3/n106 ),
+ XOR2xp5_upper \mix1/w1/bm3/U34  (.A(\mix1/w1/bm3/n106 ),
     .B(\mix1/w1/bm3/n98 ),
     .Y(\mix1/w1/bm3/n80 ));
  XNOR2xp5_upper \mix1/w1/bm3/U35  (.A(\mix1/w1/bm3/n79 ),
     .B(\mix1/w1/bm3/n78 ),
     .Y(\mix1/w1/bm3/n106 ));
- XOR2xp5_upper \mix1/w1/bm3/U36  (.A(\mix1/w1/bm3/n77 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U36  (.A(\mix1/w1/bm3/n77 ),
     .B(\mix1/w1/bm3/n76 ),
     .Y(\mix1/w1/bm3/n78 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U37  (.A(\mix1/mix_word [15]),
+ XNOR2xp5_upper \mix1/w1/bm3/U37  (.A(\mix1/mix_word [15]),
     .B(\mix1/mix_word [31]),
     .Y(\mix1/w1/bm3/n79 ));
  XOR2xp5_bottom \mix1/w1/bm3/U38  (.A(\mix1/w1/bm3/n98 ),
     .B(\mix1/outx [8]),
     .Y(\mix1/outy [8]));
- XNOR2xp5_upper \mix1/w1/bm3/U39  (.A(\mix1/w1/bm3/n75 ),
+ XNOR2xp5_bottom \mix1/w1/bm3/U39  (.A(\mix1/w1/bm3/n75 ),
     .B(\mix1/w1/bm3/n74 ),
     .Y(\mix1/w1/bm3/n98 ));
  XNOR2xp5_upper \mix1/w1/bm3/U4  (.A(\mix1/mix_word [13]),
     .B(\mix1/mix_word [29]),
     .Y(\mix1/w1/bm3/n117 ));
- XOR2xp5_upper \mix1/w1/bm3/U40  (.A(\mix1/w1/bm3/n73 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U40  (.A(\mix1/w1/bm3/n73 ),
     .B(\mix1/w1/bm3/n72 ),
     .Y(\mix1/w1/bm3/n74 ));
  XNOR2xp5_upper \mix1/w1/bm3/U41  (.A(\mix1/mix_word [14]),
     .B(\mix1/mix_word [30]),
     .Y(\mix1/w1/bm3/n75 ));
- XOR2xp5_upper \mix1/w1/bm3/U42  (.A(\mix1/w1/bm3/n77 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U42  (.A(\mix1/w1/bm3/n77 ),
     .B(\mix1/w1/bm3/n71 ),
     .Y(\mix1/outx [15]));
  XOR2xp5_bottom \mix1/w1/bm3/U43  (.A(\mix1/mix_word [7]),
@@ -16400,43 +16398,43 @@ module aes (clk,
  XOR2x2_bottom \mix1/w1/bm3/U44  (.A(\mix1/mix_word [31]),
     .B(\mix1/mix_word [23]),
     .Y(\mix1/w1/bm3/n110 ));
- XOR2xp5_upper \mix1/w1/bm3/U45  (.A(\mix1/mix_word [14]),
+ XOR2xp5_bottom \mix1/w1/bm3/U45  (.A(\mix1/mix_word [14]),
     .B(\mix1/mix_word [6]),
     .Y(\mix1/w1/bm3/n77 ));
- XOR2xp5_upper \mix1/w1/bm3/U46  (.A(\mix1/w1/bm3/n73 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U46  (.A(\mix1/w1/bm3/n73 ),
     .B(\mix1/w1/bm3/n70 ),
     .Y(\mix1/outx [14]));
- XOR2xp5_upper \mix1/w1/bm3/U47  (.A(\mix1/mix_word [6]),
+ XOR2xp5_bottom \mix1/w1/bm3/U47  (.A(\mix1/mix_word [6]),
     .B(\mix1/w1/bm3/n76 ),
     .Y(\mix1/w1/bm3/n70 ));
- XOR2xp5_upper \mix1/w1/bm3/U48  (.A(\mix1/mix_word [30]),
+ XOR2xp5_bottom \mix1/w1/bm3/U48  (.A(\mix1/mix_word [30]),
     .B(\mix1/mix_word [22]),
     .Y(\mix1/w1/bm3/n76 ));
- XOR2xp5_upper \mix1/w1/bm3/U49  (.A(\mix1/mix_word [13]),
+ XOR2xp5_bottom \mix1/w1/bm3/U49  (.A(\mix1/mix_word [13]),
     .B(\mix1/mix_word [5]),
     .Y(\mix1/w1/bm3/n73 ));
- XOR2xp5_upper \mix1/w1/bm3/U5  (.A(\mix1/w1/bm3/n115 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U5  (.A(\mix1/w1/bm3/n115 ),
     .B(\mix1/w1/bm3/n114 ),
     .Y(\mix1/outy [14]));
- XOR2xp5_upper \mix1/w1/bm3/U50  (.A(\mix1/w1/bm3/n72 ),
+ XOR2xp5_bottom \mix1/w1/bm3/U50  (.A(\mix1/w1/bm3/n72 ),
     .B(\mix1/w1/bm3/n69 ),
     .Y(\mix1/outx [13]));
- XOR2xp5_upper \mix1/w1/bm3/U51  (.A(\mix1/mix_word [5]),
+ XOR2xp5_bottom \mix1/w1/bm3/U51  (.A(\mix1/mix_word [5]),
     .B(\mix1/w1/bm3/n116 ),
     .Y(\mix1/w1/bm3/n69 ));
- XOR2xp5_upper \mix1/w1/bm3/U52  (.A(\mix1/mix_word [12]),
+ XOR2xp5_bottom \mix1/w1/bm3/U52  (.A(\mix1/mix_word [12]),
     .B(\mix1/mix_word [4]),
     .Y(\mix1/w1/bm3/n116 ));
- XOR2xp5_upper \mix1/w1/bm3/U53  (.A(\mix1/mix_word [29]),
+ XOR2xp5_bottom \mix1/w1/bm3/U53  (.A(\mix1/mix_word [29]),
     .B(\mix1/mix_word [21]),
     .Y(\mix1/w1/bm3/n72 ));
- XNOR2xp5_upper \mix1/w1/bm3/U54  (.A(\mix1/w1/bm3/n68 ),
+ XNOR2xp5_bottom \mix1/w1/bm3/U54  (.A(\mix1/w1/bm3/n68 ),
     .B(\mix1/w1/bm3/n113 ),
     .Y(\mix1/outx [12]));
- XNOR2xp5_bottom \mix1/w1/bm3/U55  (.A(\mix1/w1/bm3/n67 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U55  (.A(\mix1/w1/bm3/n67 ),
     .B(\mix1/w1/bm3/n82 ),
     .Y(\mix1/w1/bm3/n113 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U56  (.A(\mix1/mix_word [11]),
+ XNOR2xp5_upper \mix1/w1/bm3/U56  (.A(\mix1/mix_word [11]),
     .B(\mix1/mix_word [3]),
     .Y(\mix1/w1/bm3/n67 ));
  XNOR2xp5_upper \mix1/w1/bm3/U57  (.A(\mix1/mix_word [4]),
@@ -16445,64 +16443,64 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm3/U58  (.A(\mix1/mix_word [28]),
     .B(\mix1/mix_word [20]),
     .Y(\mix1/w1/bm3/n118 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U59  (.A(\mix1/w1/bm3/n66 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U59  (.A(\mix1/w1/bm3/n66 ),
     .B(\mix1/w1/bm3/n104 ),
     .Y(\mix1/outx [11]));
  XNOR2xp5_upper \mix1/w1/bm3/U6  (.A(\mix1/w1/bm3/n113 ),
     .B(\mix1/w1/bm3/n112 ),
     .Y(\mix1/w1/bm3/n114 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U60  (.A(\mix1/w1/bm3/n65 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U60  (.A(\mix1/w1/bm3/n65 ),
     .B(\mix1/w1/bm3/n82 ),
     .Y(\mix1/w1/bm3/n104 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U61  (.A(\mix1/mix_word [10]),
+ XNOR2xp5_upper \mix1/w1/bm3/U61  (.A(\mix1/mix_word [10]),
     .B(\mix1/mix_word [2]),
     .Y(\mix1/w1/bm3/n65 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U62  (.A(\mix1/mix_word [3]),
+ XNOR2xp5_upper \mix1/w1/bm3/U62  (.A(\mix1/mix_word [3]),
     .B(\mix1/w1/bm3/n111 ),
     .Y(\mix1/w1/bm3/n66 ));
- XOR2xp5_bottom \mix1/w1/bm3/U63  (.A(\mix1/mix_word [27]),
+ XOR2xp5_upper \mix1/w1/bm3/U63  (.A(\mix1/mix_word [27]),
     .B(\mix1/mix_word [19]),
     .Y(\mix1/w1/bm3/n111 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U64  (.A(\mix1/w1/bm3/n93 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U64  (.A(\mix1/w1/bm3/n93 ),
     .B(\mix1/w1/bm3/n64 ),
     .Y(\mix1/outx [10]));
- XOR2xp5_bottom \mix1/w1/bm3/U65  (.A(\mix1/mix_word [2]),
+ XOR2xp5_upper \mix1/w1/bm3/U65  (.A(\mix1/mix_word [2]),
     .B(\mix1/w1/bm3/n101 ),
     .Y(\mix1/w1/bm3/n64 ));
- XOR2xp5_bottom \mix1/w1/bm3/U66  (.A(\mix1/mix_word [26]),
+ XOR2xp5_upper \mix1/w1/bm3/U66  (.A(\mix1/mix_word [26]),
     .B(\mix1/mix_word [18]),
     .Y(\mix1/w1/bm3/n101 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U67  (.A(\mix1/mix_word [9]),
+ XNOR2xp5_upper \mix1/w1/bm3/U67  (.A(\mix1/mix_word [9]),
     .B(\mix1/mix_word [1]),
     .Y(\mix1/w1/bm3/n93 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U68  (.A(\mix1/w1/bm3/n63 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U68  (.A(\mix1/w1/bm3/n63 ),
     .B(\mix1/w1/bm3/n90 ),
     .Y(\mix1/outx [9]));
- XNOR2xp5_bottom \mix1/w1/bm3/U69  (.A(\mix1/w1/bm3/n62 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U69  (.A(\mix1/w1/bm3/n62 ),
     .B(\mix1/w1/bm3/n82 ),
     .Y(\mix1/w1/bm3/n90 ));
  XNOR2xp5_upper \mix1/w1/bm3/U7  (.A(\mix1/w1/bm3/n111 ),
     .B(\mix1/outx [14]),
     .Y(\mix1/w1/bm3/n112 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U70  (.A(\mix1/mix_word [8]),
+ XNOR2xp5_upper \mix1/w1/bm3/U70  (.A(\mix1/mix_word [8]),
     .B(\mix1/mix_word [0]),
     .Y(\mix1/w1/bm3/n62 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U71  (.A(\mix1/mix_word [1]),
+ XNOR2xp5_upper \mix1/w1/bm3/U71  (.A(\mix1/mix_word [1]),
     .B(\mix1/w1/bm3/n96 ),
     .Y(\mix1/w1/bm3/n63 ));
  XOR2xp5_bottom \mix1/w1/bm3/U72  (.A(\mix1/mix_word [25]),
     .B(\mix1/mix_word [17]),
     .Y(\mix1/w1/bm3/n96 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U73  (.A(\mix1/w1/bm3/n88 ),
+ XNOR2xp5_upper \mix1/w1/bm3/U73  (.A(\mix1/w1/bm3/n88 ),
     .B(\mix1/w1/bm3/n61 ),
     .Y(\mix1/outx [8]));
- XOR2xp5_bottom \mix1/w1/bm3/U74  (.A(\mix1/mix_word [0]),
+ XOR2xp5_upper \mix1/w1/bm3/U74  (.A(\mix1/mix_word [0]),
     .B(\mix1/w1/bm3/n82 ),
     .Y(\mix1/w1/bm3/n61 ));
  XOR2x2_bottom \mix1/w1/bm3/U75  (.A(\mix1/mix_word [15]),
     .B(\mix1/mix_word [7]),
     .Y(\mix1/w1/bm3/n82 ));
- XNOR2xp5_bottom \mix1/w1/bm3/U76  (.A(\mix1/mix_word [24]),
+ XNOR2xp5_upper \mix1/w1/bm3/U76  (.A(\mix1/mix_word [24]),
     .B(\mix1/mix_word [16]),
     .Y(\mix1/w1/bm3/n88 ));
  XOR2xp5_bottom \mix1/w1/bm3/U8  (.A(\mix1/w1/bm3/n110 ),
@@ -16511,22 +16509,22 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm3/U9  (.A(\mix1/mix_word [28]),
     .B(\mix1/mix_word [12]),
     .Y(\mix1/w1/bm3/n109 ));
- XOR2xp5_bottom \mix1/w1/bm4/U1  (.A(\mix1/w1/bm4/n120 ),
+ XOR2xp5_upper \mix1/w1/bm4/U1  (.A(\mix1/w1/bm4/n120 ),
     .B(\mix1/w1/bm4/n119 ),
     .Y(\mix1/outy [7]));
  XOR2xp5_bottom \mix1/w1/bm4/U10  (.A(\mix1/w1/bm4/n108 ),
     .B(\mix1/w1/bm4/n107 ),
     .Y(\mix1/outy [5]));
- XNOR2xp5_bottom \mix1/w1/bm4/U11  (.A(\mix1/w1/bm4/n106 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U11  (.A(\mix1/w1/bm4/n106 ),
     .B(\mix1/w1/bm4/n105 ),
     .Y(\mix1/w1/bm4/n107 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U12  (.A(\mix1/w1/bm4/n104 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U12  (.A(\mix1/w1/bm4/n104 ),
     .B(\mix1/outx [5]),
     .Y(\mix1/w1/bm4/n105 ));
- XOR2xp5_bottom \mix1/w1/bm4/U13  (.A(\mix1/w1/bm4/n103 ),
+ XOR2xp5_upper \mix1/w1/bm4/U13  (.A(\mix1/w1/bm4/n103 ),
     .B(\mix1/w1/bm4/n102 ),
     .Y(\mix1/w1/bm4/n108 ));
- XOR2xp5_bottom \mix1/w1/bm4/U14  (.A(\mix1/w1/bm4/n110 ),
+ XOR2xp5_upper \mix1/w1/bm4/U14  (.A(\mix1/w1/bm4/n110 ),
     .B(\mix1/w1/bm4/n101 ),
     .Y(\mix1/w1/bm4/n102 ));
  XOR2xp5_bottom \mix1/w1/bm4/U15  (.A(\mix1/mix_word [19]),
@@ -16535,40 +16533,40 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm4/U16  (.A(\mix1/w1/bm4/n100 ),
     .B(\mix1/w1/bm4/n99 ),
     .Y(\mix1/outy [4]));
- XOR2xp5_bottom \mix1/w1/bm4/U17  (.A(\mix1/w1/bm4/n98 ),
+ XOR2xp5_upper \mix1/w1/bm4/U17  (.A(\mix1/w1/bm4/n98 ),
     .B(\mix1/w1/bm4/n97 ),
     .Y(\mix1/w1/bm4/n99 ));
- XOR2xp5_bottom \mix1/w1/bm4/U18  (.A(\mix1/outx [4]),
+ XOR2xp5_upper \mix1/w1/bm4/U18  (.A(\mix1/outx [4]),
     .B(\mix1/w1/bm4/n96 ),
     .Y(\mix1/w1/bm4/n97 ));
- XOR2xp5_bottom \mix1/w1/bm4/U19  (.A(\mix1/w1/bm4/n95 ),
+ XOR2xp5_upper \mix1/w1/bm4/U19  (.A(\mix1/w1/bm4/n95 ),
     .B(\mix1/w1/bm4/n94 ),
     .Y(\mix1/w1/bm4/n100 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U2  (.A(\mix1/w1/bm4/n118 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U2  (.A(\mix1/w1/bm4/n118 ),
     .B(\mix1/outx [7]),
     .Y(\mix1/w1/bm4/n119 ));
  XOR2xp5_bottom \mix1/w1/bm4/U20  (.A(\mix1/w1/bm4/n93 ),
     .B(\mix1/w1/bm4/n106 ),
     .Y(\mix1/w1/bm4/n94 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U21  (.A(\mix1/mix_word [2]),
+ XNOR2xp5_upper \mix1/w1/bm4/U21  (.A(\mix1/mix_word [2]),
     .B(\mix1/mix_word [18]),
     .Y(\mix1/w1/bm4/n95 ));
  XOR2xp5_bottom \mix1/w1/bm4/U22  (.A(\mix1/w1/bm4/n92 ),
     .B(\mix1/w1/bm4/n91 ),
     .Y(\mix1/outy [3]));
- XOR2xp5_bottom \mix1/w1/bm4/U23  (.A(\mix1/w1/bm4/n90 ),
+ XOR2xp5_upper \mix1/w1/bm4/U23  (.A(\mix1/w1/bm4/n90 ),
     .B(\mix1/w1/bm4/n89 ),
     .Y(\mix1/w1/bm4/n91 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U24  (.A(\mix1/outx [3]),
+ XNOR2xp5_upper \mix1/w1/bm4/U24  (.A(\mix1/outx [3]),
     .B(\mix1/w1/bm4/n88 ),
     .Y(\mix1/w1/bm4/n89 ));
- XOR2xp5_bottom \mix1/w1/bm4/U25  (.A(\mix1/w1/bm4/n87 ),
+ XOR2xp5_upper \mix1/w1/bm4/U25  (.A(\mix1/w1/bm4/n87 ),
     .B(\mix1/w1/bm4/n86 ),
     .Y(\mix1/w1/bm4/n92 ));
- XOR2xp5_bottom \mix1/w1/bm4/U26  (.A(\mix1/w1/bm4/n110 ),
+ XOR2xp5_upper \mix1/w1/bm4/U26  (.A(\mix1/w1/bm4/n110 ),
     .B(\mix1/w1/bm4/n98 ),
     .Y(\mix1/w1/bm4/n86 ));
- XOR2xp5_bottom \mix1/w1/bm4/U27  (.A(\mix1/mix_word [17]),
+ XOR2xp5_upper \mix1/w1/bm4/U27  (.A(\mix1/mix_word [17]),
     .B(\mix1/mix_word [1]),
     .Y(\mix1/w1/bm4/n87 ));
  XOR2xp5_bottom \mix1/w1/bm4/U28  (.A(\mix1/w1/bm4/n85 ),
@@ -16577,16 +16575,16 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm4/U29  (.A(\mix1/outx [2]),
     .B(\mix1/w1/bm4/n83 ),
     .Y(\mix1/w1/bm4/n84 ));
- XOR2xp5_bottom \mix1/w1/bm4/U3  (.A(\mix1/w1/bm4/n117 ),
+ XOR2xp5_upper \mix1/w1/bm4/U3  (.A(\mix1/w1/bm4/n117 ),
     .B(\mix1/w1/bm4/n116 ),
     .Y(\mix1/w1/bm4/n120 ));
  XOR2xp5_bottom \mix1/w1/bm4/U30  (.A(\mix1/w1/bm4/n82 ),
     .B(\mix1/w1/bm4/n106 ),
     .Y(\mix1/w1/bm4/n83 ));
- XOR2xp5_bottom \mix1/w1/bm4/U31  (.A(\mix1/w1/bm4/n110 ),
+ XOR2xp5_upper \mix1/w1/bm4/U31  (.A(\mix1/w1/bm4/n110 ),
     .B(\mix1/w1/bm4/n81 ),
     .Y(\mix1/w1/bm4/n85 ));
- XOR2xp5_bottom \mix1/w1/bm4/U32  (.A(\mix1/mix_word [16]),
+ XOR2xp5_upper \mix1/w1/bm4/U32  (.A(\mix1/mix_word [16]),
     .B(\mix1/mix_word [0]),
     .Y(\mix1/w1/bm4/n81 ));
  XOR2xp5_bottom \mix1/w1/bm4/U33  (.A(\mix1/outx [1]),
@@ -16595,34 +16593,34 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm4/U34  (.A(\mix1/w1/bm4/n106 ),
     .B(\mix1/w1/bm4/n98 ),
     .Y(\mix1/w1/bm4/n80 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U35  (.A(\mix1/w1/bm4/n79 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U35  (.A(\mix1/w1/bm4/n79 ),
     .B(\mix1/w1/bm4/n78 ),
     .Y(\mix1/w1/bm4/n106 ));
- XOR2xp5_bottom \mix1/w1/bm4/U36  (.A(\mix1/w1/bm4/n77 ),
+ XOR2xp5_upper \mix1/w1/bm4/U36  (.A(\mix1/w1/bm4/n77 ),
     .B(\mix1/w1/bm4/n76 ),
     .Y(\mix1/w1/bm4/n78 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U37  (.A(\mix1/mix_word [7]),
+ XNOR2xp5_upper \mix1/w1/bm4/U37  (.A(\mix1/mix_word [7]),
     .B(\mix1/mix_word [23]),
     .Y(\mix1/w1/bm4/n79 ));
  XOR2xp5_bottom \mix1/w1/bm4/U38  (.A(\mix1/w1/bm4/n98 ),
     .B(\mix1/outx [0]),
     .Y(\mix1/outy [0]));
- XNOR2xp5_bottom \mix1/w1/bm4/U39  (.A(\mix1/w1/bm4/n75 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U39  (.A(\mix1/w1/bm4/n75 ),
     .B(\mix1/w1/bm4/n74 ),
     .Y(\mix1/w1/bm4/n98 ));
  XNOR2xp5_bottom \mix1/w1/bm4/U4  (.A(\mix1/mix_word [5]),
     .B(\mix1/mix_word [21]),
     .Y(\mix1/w1/bm4/n117 ));
- XOR2xp5_bottom \mix1/w1/bm4/U40  (.A(\mix1/w1/bm4/n73 ),
+ XOR2xp5_upper \mix1/w1/bm4/U40  (.A(\mix1/w1/bm4/n73 ),
     .B(\mix1/w1/bm4/n72 ),
     .Y(\mix1/w1/bm4/n74 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U41  (.A(\mix1/mix_word [6]),
+ XNOR2xp5_upper \mix1/w1/bm4/U41  (.A(\mix1/mix_word [6]),
     .B(\mix1/mix_word [22]),
     .Y(\mix1/w1/bm4/n75 ));
- XOR2xp5_bottom \mix1/w1/bm4/U42  (.A(\mix1/w1/bm4/n77 ),
+ XOR2xp5_upper \mix1/w1/bm4/U42  (.A(\mix1/w1/bm4/n77 ),
     .B(\mix1/w1/bm4/n71 ),
     .Y(\mix1/outx [7]));
- XOR2xp5_bottom \mix1/w1/bm4/U43  (.A(\mix1/mix_word [31]),
+ XOR2xp5_upper \mix1/w1/bm4/U43  (.A(\mix1/mix_word [31]),
     .B(\mix1/w1/bm4/n110 ),
     .Y(\mix1/w1/bm4/n71 ));
  XOR2x2_bottom \mix1/w1/bm4/U44  (.A(\mix1/mix_word [23]),
@@ -16631,16 +16629,16 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm4/U45  (.A(\mix1/mix_word [6]),
     .B(\mix1/mix_word [30]),
     .Y(\mix1/w1/bm4/n77 ));
- XOR2xp5_bottom \mix1/w1/bm4/U46  (.A(\mix1/w1/bm4/n73 ),
+ XOR2xp5_upper \mix1/w1/bm4/U46  (.A(\mix1/w1/bm4/n73 ),
     .B(\mix1/w1/bm4/n70 ),
     .Y(\mix1/outx [6]));
- XOR2xp5_bottom \mix1/w1/bm4/U47  (.A(\mix1/mix_word [30]),
+ XOR2xp5_upper \mix1/w1/bm4/U47  (.A(\mix1/mix_word [30]),
     .B(\mix1/w1/bm4/n76 ),
     .Y(\mix1/w1/bm4/n70 ));
- XOR2xp5_bottom \mix1/w1/bm4/U48  (.A(\mix1/mix_word [22]),
+ XOR2xp5_upper \mix1/w1/bm4/U48  (.A(\mix1/mix_word [22]),
     .B(\mix1/mix_word [14]),
     .Y(\mix1/w1/bm4/n76 ));
- XOR2xp5_bottom \mix1/w1/bm4/U49  (.A(\mix1/mix_word [5]),
+ XOR2xp5_upper \mix1/w1/bm4/U49  (.A(\mix1/mix_word [5]),
     .B(\mix1/mix_word [29]),
     .Y(\mix1/w1/bm4/n73 ));
  XOR2xp5_bottom \mix1/w1/bm4/U5  (.A(\mix1/w1/bm4/n115 ),
@@ -16649,107 +16647,107 @@ module aes (clk,
  XOR2xp5_bottom \mix1/w1/bm4/U50  (.A(\mix1/w1/bm4/n72 ),
     .B(\mix1/w1/bm4/n69 ),
     .Y(\mix1/outx [5]));
- XOR2xp5_bottom \mix1/w1/bm4/U51  (.A(\mix1/mix_word [29]),
+ XOR2xp5_upper \mix1/w1/bm4/U51  (.A(\mix1/mix_word [29]),
     .B(\mix1/w1/bm4/n116 ),
     .Y(\mix1/w1/bm4/n69 ));
- XOR2xp5_bottom \mix1/w1/bm4/U52  (.A(\mix1/mix_word [4]),
+ XOR2xp5_upper \mix1/w1/bm4/U52  (.A(\mix1/mix_word [4]),
     .B(\mix1/mix_word [28]),
     .Y(\mix1/w1/bm4/n116 ));
- XOR2xp5_bottom \mix1/w1/bm4/U53  (.A(\mix1/mix_word [21]),
+ XOR2xp5_upper \mix1/w1/bm4/U53  (.A(\mix1/mix_word [21]),
     .B(\mix1/mix_word [13]),
     .Y(\mix1/w1/bm4/n72 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U54  (.A(\mix1/w1/bm4/n68 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U54  (.A(\mix1/w1/bm4/n68 ),
     .B(\mix1/w1/bm4/n113 ),
     .Y(\mix1/outx [4]));
- XNOR2xp5_bottom \mix1/w1/bm4/U55  (.A(\mix1/w1/bm4/n67 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U55  (.A(\mix1/w1/bm4/n67 ),
     .B(\mix1/w1/bm4/n82 ),
     .Y(\mix1/w1/bm4/n113 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U56  (.A(\mix1/mix_word [3]),
+ XNOR2xp5_upper \mix1/w1/bm4/U56  (.A(\mix1/mix_word [3]),
     .B(\mix1/mix_word [27]),
     .Y(\mix1/w1/bm4/n67 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U57  (.A(\mix1/mix_word [28]),
+ XNOR2xp5_upper \mix1/w1/bm4/U57  (.A(\mix1/mix_word [28]),
     .B(\mix1/w1/bm4/n118 ),
     .Y(\mix1/w1/bm4/n68 ));
- XOR2xp5_bottom \mix1/w1/bm4/U58  (.A(\mix1/mix_word [20]),
+ XOR2xp5_upper \mix1/w1/bm4/U58  (.A(\mix1/mix_word [20]),
     .B(\mix1/mix_word [12]),
     .Y(\mix1/w1/bm4/n118 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U59  (.A(\mix1/w1/bm4/n66 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U59  (.A(\mix1/w1/bm4/n66 ),
     .B(\mix1/w1/bm4/n104 ),
     .Y(\mix1/outx [3]));
- XNOR2xp5_bottom \mix1/w1/bm4/U6  (.A(\mix1/w1/bm4/n113 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U6  (.A(\mix1/w1/bm4/n113 ),
     .B(\mix1/w1/bm4/n112 ),
     .Y(\mix1/w1/bm4/n114 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U60  (.A(\mix1/w1/bm4/n65 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U60  (.A(\mix1/w1/bm4/n65 ),
     .B(\mix1/w1/bm4/n82 ),
     .Y(\mix1/w1/bm4/n104 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U61  (.A(\mix1/mix_word [2]),
+ XNOR2xp5_upper \mix1/w1/bm4/U61  (.A(\mix1/mix_word [2]),
     .B(\mix1/mix_word [26]),
     .Y(\mix1/w1/bm4/n65 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U62  (.A(\mix1/mix_word [27]),
+ XNOR2xp5_upper \mix1/w1/bm4/U62  (.A(\mix1/mix_word [27]),
     .B(\mix1/w1/bm4/n111 ),
     .Y(\mix1/w1/bm4/n66 ));
  XOR2xp5_bottom \mix1/w1/bm4/U63  (.A(\mix1/mix_word [19]),
     .B(\mix1/mix_word [11]),
     .Y(\mix1/w1/bm4/n111 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U64  (.A(\mix1/w1/bm4/n93 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U64  (.A(\mix1/w1/bm4/n93 ),
     .B(\mix1/w1/bm4/n64 ),
     .Y(\mix1/outx [2]));
- XOR2xp5_bottom \mix1/w1/bm4/U65  (.A(\mix1/mix_word [26]),
+ XOR2xp5_upper \mix1/w1/bm4/U65  (.A(\mix1/mix_word [26]),
     .B(\mix1/w1/bm4/n101 ),
     .Y(\mix1/w1/bm4/n64 ));
- XOR2xp5_bottom \mix1/w1/bm4/U66  (.A(\mix1/mix_word [18]),
+ XOR2xp5_upper \mix1/w1/bm4/U66  (.A(\mix1/mix_word [18]),
     .B(\mix1/mix_word [10]),
     .Y(\mix1/w1/bm4/n101 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U67  (.A(\mix1/mix_word [1]),
+ XNOR2xp5_upper \mix1/w1/bm4/U67  (.A(\mix1/mix_word [1]),
     .B(\mix1/mix_word [25]),
     .Y(\mix1/w1/bm4/n93 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U68  (.A(\mix1/w1/bm4/n63 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U68  (.A(\mix1/w1/bm4/n63 ),
     .B(\mix1/w1/bm4/n90 ),
     .Y(\mix1/outx [1]));
- XNOR2xp5_bottom \mix1/w1/bm4/U69  (.A(\mix1/w1/bm4/n62 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U69  (.A(\mix1/w1/bm4/n62 ),
     .B(\mix1/w1/bm4/n82 ),
     .Y(\mix1/w1/bm4/n90 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U7  (.A(\mix1/w1/bm4/n111 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U7  (.A(\mix1/w1/bm4/n111 ),
     .B(\mix1/outx [6]),
     .Y(\mix1/w1/bm4/n112 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U70  (.A(\mix1/mix_word [0]),
+ XNOR2xp5_upper \mix1/w1/bm4/U70  (.A(\mix1/mix_word [0]),
     .B(\mix1/mix_word [24]),
     .Y(\mix1/w1/bm4/n62 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U71  (.A(\mix1/mix_word [25]),
+ XNOR2xp5_upper \mix1/w1/bm4/U71  (.A(\mix1/mix_word [25]),
     .B(\mix1/w1/bm4/n96 ),
     .Y(\mix1/w1/bm4/n63 ));
- XOR2xp5_bottom \mix1/w1/bm4/U72  (.A(\mix1/mix_word [17]),
+ XOR2xp5_upper \mix1/w1/bm4/U72  (.A(\mix1/mix_word [17]),
     .B(\mix1/mix_word [9]),
     .Y(\mix1/w1/bm4/n96 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U73  (.A(\mix1/w1/bm4/n88 ),
+ XNOR2xp5_upper \mix1/w1/bm4/U73  (.A(\mix1/w1/bm4/n88 ),
     .B(\mix1/w1/bm4/n61 ),
     .Y(\mix1/outx [0]));
- XOR2xp5_bottom \mix1/w1/bm4/U74  (.A(\mix1/mix_word [24]),
+ XOR2xp5_upper \mix1/w1/bm4/U74  (.A(\mix1/mix_word [24]),
     .B(\mix1/w1/bm4/n82 ),
     .Y(\mix1/w1/bm4/n61 ));
  XOR2x2_bottom \mix1/w1/bm4/U75  (.A(\mix1/mix_word [7]),
     .B(\mix1/mix_word [31]),
     .Y(\mix1/w1/bm4/n82 ));
- XNOR2xp5_bottom \mix1/w1/bm4/U76  (.A(\mix1/mix_word [16]),
+ XNOR2xp5_upper \mix1/w1/bm4/U76  (.A(\mix1/mix_word [16]),
     .B(\mix1/mix_word [8]),
     .Y(\mix1/w1/bm4/n88 ));
- XOR2xp5_bottom \mix1/w1/bm4/U8  (.A(\mix1/w1/bm4/n110 ),
+ XOR2xp5_upper \mix1/w1/bm4/U8  (.A(\mix1/w1/bm4/n110 ),
     .B(\mix1/w1/bm4/n109 ),
     .Y(\mix1/w1/bm4/n115 ));
  XOR2xp5_bottom \mix1/w1/bm4/U9  (.A(\mix1/mix_word [20]),
     .B(\mix1/mix_word [4]),
     .Y(\mix1/w1/bm4/n109 ));
- DFFASRHQNx1_bottom ready_o_reg (.CLK(clknet_leaf_15_clk),
+ DFFASRHQNx1_upper ready_o_reg (.CLK(clknet_leaf_15_clk),
     .D(n1659),
     .QN(ready_o),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN12_reset));
- DFFASRHQNx1_bottom round_reg_0_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper round_reg_0_ (.CLK(clknet_leaf_11_clk),
     .D(n1645),
     .QN(round[0]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom round_reg_1_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper round_reg_1_ (.CLK(clknet_leaf_11_clk),
     .D(n1643),
     .QN(round[1]),
     .RESETN(n1664),
@@ -16759,12 +16757,12 @@ module aes (clk,
     .QN(round[2]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom round_reg_3_ (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper round_reg_3_ (.CLK(clknet_leaf_11_clk),
     .D(n1647),
     .QN(round[3]),
     .RESETN(n1664),
     .SETN(FE_OFN28_FE_OFN14_reset));
- BUFx2_bottom \sbox1/FE_OFC113_ah_2  (.A(\sbox1/ah [2]),
+ BUFx2_upper \sbox1/FE_OFC113_ah_2  (.A(\sbox1/ah [2]),
     .Y(\sbox1/FE_OFN116_ah_2 ));
  XOR2xp5_bottom \sbox1/U10  (.A(\sbox1/n14 ),
     .B(\sbox1/n39 ),
@@ -16772,7 +16770,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U100  (.A(\sbox1/n98 ),
     .B(\sbox1/n99 ),
     .Y(\sbox1/n97 ));
- OAI22xp5_bottom \sbox1/U101  (.A1(\sbox1/n100 ),
+ OAI22xp5_upper \sbox1/U101  (.A1(\sbox1/n100 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n101 ),
@@ -16783,7 +16781,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U103  (.A(\sbox1/n100 ),
     .B(\sbox1/n96 ),
     .Y(\sbox1/n102 ));
- OAI22xp5_bottom \sbox1/U104  (.A1(\sbox1/n103 ),
+ OAI22xp5_upper \sbox1/U104  (.A1(\sbox1/n103 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n104 ),
@@ -16794,7 +16792,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U106  (.A(\sbox1/n107 ),
     .B(\sbox1/n96 ),
     .Y(\sbox1/n106 ));
- OAI22xp5_bottom \sbox1/U107  (.A1(\sbox1/n21 ),
+ OAI22xp5_upper \sbox1/U107  (.A1(\sbox1/n21 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n108 ),
@@ -16805,14 +16803,14 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U109  (.A(\sbox1/n111 ),
     .B(\sbox1/n22 ),
     .Y(\sbox1/n110 ));
- INVx2_bottom \sbox1/U11  (.A(sbox_decrypt_i),
+ INVx2_upper \sbox1/U11  (.A(sbox_decrypt_i),
     .Y(\sbox1/n15 ));
- OAI22xp5_bottom \sbox1/U110  (.A1(\sbox1/n98 ),
+ OAI22xp5_upper \sbox1/U110  (.A1(\sbox1/n98 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n112 ),
     .Y(sbox_data_o[3]));
- XNOR2xp5_bottom \sbox1/U111  (.A(\sbox1/n109 ),
+ XNOR2xp5_upper \sbox1/U111  (.A(\sbox1/n109 ),
     .B(\sbox1/n113 ),
     .Y(\sbox1/n112 ));
  XNOR2xp5_bottom \sbox1/U112  (.A(\sbox1/n114 ),
@@ -16827,16 +16825,16 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U115  (.A(\sbox1/n118 ),
     .B(\sbox1/n119 ),
     .Y(\sbox1/n117 ));
- XNOR2xp5_bottom \sbox1/U116  (.A(\sbox1/n120 ),
+ XNOR2xp5_upper \sbox1/U116  (.A(\sbox1/n120 ),
     .B(\sbox1/n121 ),
     .Y(\sbox1/n119 ));
  NAND2xp5_bottom \sbox1/U117  (.A(\sbox1/ah_reg [2]),
     .B(\sbox1/n122 ),
     .Y(\sbox1/n121 ));
- NAND2xp5_bottom \sbox1/U118  (.A(\sbox1/ah_reg [1]),
+ NAND2xp5_upper \sbox1/U118  (.A(\sbox1/ah_reg [1]),
     .B(\sbox1/n123 ),
     .Y(\sbox1/n120 ));
- NAND2xp5_bottom \sbox1/U119  (.A(\sbox1/n124 ),
+ NAND2xp5_upper \sbox1/U119  (.A(\sbox1/n124 ),
     .B(\sbox1/n125 ),
     .Y(\sbox1/n118 ));
  XOR2xp5_bottom \sbox1/U120  (.A(\sbox1/n126 ),
@@ -16848,18 +16846,18 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U122  (.A(\sbox1/n130 ),
     .B(\sbox1/n131 ),
     .Y(\sbox1/n128 ));
- OAI22xp5_bottom \sbox1/U123  (.A1(\sbox1/n115 ),
+ OAI22xp5_upper \sbox1/U123  (.A1(\sbox1/n115 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n132 ),
     .Y(sbox_data_o[2]));
- XNOR2xp5_bottom \sbox1/U124  (.A(\sbox1/n109 ),
+ XNOR2xp5_upper \sbox1/U124  (.A(\sbox1/n109 ),
     .B(\sbox1/n133 ),
     .Y(\sbox1/n132 ));
  XNOR2xp5_bottom \sbox1/U125  (.A(\sbox1/n99 ),
     .B(\sbox1/n115 ),
     .Y(\sbox1/n133 ));
- OAI22xp5_bottom \sbox1/U126  (.A1(\sbox1/n105 ),
+ OAI22xp5_upper \sbox1/U126  (.A1(\sbox1/n105 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n134 ),
@@ -16879,7 +16877,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U130  (.A(\sbox1/n136 ),
     .B(\sbox1/n127 ),
     .Y(\sbox1/n105 ));
- OAI22xp5_bottom \sbox1/U131  (.A1(\sbox1/n24 ),
+ OAI22xp5_upper \sbox1/U131  (.A1(\sbox1/n24 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n137 ),
@@ -16926,7 +16924,7 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U144  (.A(\sbox1/alph [2]),
     .B(\sbox1/n123 ),
     .Y(\sbox1/n148 ));
- XNOR2xp5_bottom \sbox1/U145  (.A(\sbox1/n151 ),
+ XNOR2xp5_upper \sbox1/U145  (.A(\sbox1/n151 ),
     .B(\sbox1/n152 ),
     .Y(\sbox1/n146 ));
  NAND2xp5_bottom \sbox1/U146  (.A(\sbox1/alph [1]),
@@ -16938,11 +16936,11 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U148  (.A(\sbox1/n142 ),
     .B(\sbox1/n127 ),
     .Y(\sbox1/n115 ));
- XNOR2xp5_bottom \sbox1/U149  (.A(\sbox1/n136 ),
+ XNOR2xp5_upper \sbox1/U149  (.A(\sbox1/n136 ),
     .B(\sbox1/n129 ),
     .Y(\sbox1/n142 ));
- TIEHIx1_upper \sbox1/U15  (.H(\sbox1/n23 ));
- XNOR2xp5_bottom \sbox1/U150  (.A(\sbox1/n153 ),
+ TIEHIx1_bottom \sbox1/U15  (.H(\sbox1/n23 ));
+ XNOR2xp5_upper \sbox1/U150  (.A(\sbox1/n153 ),
     .B(\sbox1/n154 ),
     .Y(\sbox1/n129 ));
  XOR2xp5_bottom \sbox1/U151  (.A(\sbox1/n155 ),
@@ -16954,7 +16952,7 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U153  (.A(\sbox1/alph [0]),
     .B(\sbox1/n123 ),
     .Y(\sbox1/n155 ));
- XNOR2xp5_bottom \sbox1/U154  (.A(\sbox1/n157 ),
+ XNOR2xp5_upper \sbox1/U154  (.A(\sbox1/n157 ),
     .B(\sbox1/n158 ),
     .Y(\sbox1/n153 ));
  NAND2xp5_bottom \sbox1/U155  (.A(\sbox1/alph [3]),
@@ -16966,7 +16964,7 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U157  (.A(\sbox1/alph [2]),
     .B(\sbox1/n160 ),
     .Y(\sbox1/n157 ));
- XNOR2xp5_bottom \sbox1/U158  (.A(\sbox1/n161 ),
+ XNOR2xp5_upper \sbox1/U158  (.A(\sbox1/n161 ),
     .B(\sbox1/n162 ),
     .Y(\sbox1/n136 ));
  XOR2xp5_bottom \sbox1/U159  (.A(\sbox1/n163 ),
@@ -16981,37 +16979,37 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U161  (.A(\sbox1/ah_reg [2]),
     .B(\sbox1/n123 ),
     .Y(\sbox1/n163 ));
- XNOR2xp5_bottom \sbox1/U162  (.A(\sbox1/n165 ),
+ XNOR2xp5_upper \sbox1/U162  (.A(\sbox1/n165 ),
     .B(\sbox1/n166 ),
     .Y(\sbox1/n161 ));
- NAND2xp5_bottom \sbox1/U163  (.A(\sbox1/n131 ),
+ NAND2xp5_upper \sbox1/U163  (.A(\sbox1/n131 ),
     .B(\sbox1/n124 ),
     .Y(\sbox1/n166 ));
- NAND2xp5_bottom \sbox1/U164  (.A(\sbox1/ah_reg [1]),
+ NAND2xp5_upper \sbox1/U164  (.A(\sbox1/ah_reg [1]),
     .B(\sbox1/n125 ),
     .Y(\sbox1/n165 ));
  XNOR2xp5_bottom \sbox1/U165  (.A(\sbox1/n145 ),
     .B(\sbox1/n127 ),
     .Y(\sbox1/n103 ));
- XNOR2xp5_bottom \sbox1/U166  (.A(\sbox1/n167 ),
+ XNOR2xp5_upper \sbox1/U166  (.A(\sbox1/n167 ),
     .B(\sbox1/n168 ),
     .Y(\sbox1/n127 ));
- XNOR2xp5_bottom \sbox1/U167  (.A(\sbox1/n169 ),
+ XNOR2xp5_upper \sbox1/U167  (.A(\sbox1/n169 ),
     .B(\sbox1/n144 ),
     .Y(\sbox1/n168 ));
- NAND2xp5_bottom \sbox1/U168  (.A(\sbox1/n170 ),
+ NAND2xp5_upper \sbox1/U168  (.A(\sbox1/n170 ),
     .B(\sbox1/n131 ),
     .Y(\sbox1/n169 ));
- XOR2xp5_bottom \sbox1/U169  (.A(\sbox1/ah_reg [2]),
+ XOR2xp5_upper \sbox1/U169  (.A(\sbox1/ah_reg [2]),
     .B(\sbox1/ah_reg [1]),
     .Y(\sbox1/n170 ));
  XNOR2x2_bottom \sbox1/U17  (.A(\sbox1/n81 ),
     .B(\sbox1/n219 ),
     .Y(\sbox1/n40 ));
- XOR2xp5_bottom \sbox1/U170  (.A(\sbox1/n171 ),
+ XOR2xp5_upper \sbox1/U170  (.A(\sbox1/n171 ),
     .B(\sbox1/n172 ),
     .Y(\sbox1/n167 ));
- XOR2xp5_bottom \sbox1/U171  (.A(\sbox1/n173 ),
+ XOR2xp5_upper \sbox1/U171  (.A(\sbox1/n173 ),
     .B(\sbox1/n174 ),
     .Y(\sbox1/n172 ));
  NAND2xp5_bottom \sbox1/U172  (.A(\sbox1/ah_reg [1]),
@@ -17020,16 +17018,16 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U173  (.A(\sbox1/n123 ),
     .B(\sbox1/n124 ),
     .Y(\sbox1/n173 ));
- XOR2xp5_bottom \sbox1/U174  (.A(\sbox1/ah_reg [0]),
+ XOR2xp5_upper \sbox1/U174  (.A(\sbox1/ah_reg [0]),
     .B(\sbox1/ah_reg [3]),
     .Y(\sbox1/n124 ));
- NAND2xp5_bottom \sbox1/U175  (.A(\sbox1/n130 ),
+ NAND2xp5_upper \sbox1/U175  (.A(\sbox1/n130 ),
     .B(\sbox1/n125 ),
     .Y(\sbox1/n171 ));
- XOR2xp5_bottom \sbox1/U176  (.A(\sbox1/ah_reg [2]),
+ XOR2xp5_upper \sbox1/U176  (.A(\sbox1/ah_reg [2]),
     .B(\sbox1/ah_reg [3]),
     .Y(\sbox1/n130 ));
- XNOR2xp5_bottom \sbox1/U177  (.A(\sbox1/n175 ),
+ XNOR2xp5_upper \sbox1/U177  (.A(\sbox1/n175 ),
     .B(\sbox1/n176 ),
     .Y(\sbox1/n145 ));
  XOR2xp5_bottom \sbox1/U178  (.A(\sbox1/n177 ),
@@ -17049,7 +17047,7 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U182  (.A(\sbox1/n122 ),
     .B(\sbox1/n131 ),
     .Y(\sbox1/n150 ));
- XNOR2xp5_bottom \sbox1/U183  (.A(\sbox1/n179 ),
+ XNOR2xp5_upper \sbox1/U183  (.A(\sbox1/n179 ),
     .B(\sbox1/n180 ),
     .Y(\sbox1/n175 ));
  NAND2xp5_bottom \sbox1/U184  (.A(\sbox1/alph [1]),
@@ -17064,7 +17062,7 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U187  (.A(\sbox1/n183 ),
     .B(\sbox1/n184 ),
     .Y(\sbox1/n182 ));
- XNOR2xp5_bottom \sbox1/U188  (.A(\sbox1/n185 ),
+ XNOR2xp5_upper \sbox1/U188  (.A(\sbox1/n185 ),
     .B(\sbox1/n186 ),
     .Y(\sbox1/n184 ));
  NAND2xp5_bottom \sbox1/U189  (.A(\sbox1/alph [1]),
@@ -17081,7 +17079,7 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U192  (.A(\sbox1/n187 ),
     .B(\sbox1/n144 ),
     .Y(\sbox1/n181 ));
- XNOR2xp5_bottom \sbox1/U193  (.A(\sbox1/n188 ),
+ XNOR2xp5_upper \sbox1/U193  (.A(\sbox1/n188 ),
     .B(\sbox1/n189 ),
     .Y(\sbox1/n144 ));
  XOR2xp5_bottom \sbox1/U194  (.A(\sbox1/n190 ),
@@ -17104,9 +17102,9 @@ module aes (clk,
     .A2(\sbox1/n194 ),
     .B(\sbox1/n196 ),
     .Y(\sbox1/n192 ));
- INVx1_bottom \sbox1/U20  (.A(\sbox1/n39 ),
+ INVx1_upper \sbox1/U20  (.A(\sbox1/n39 ),
     .Y(\sbox1/n12 ));
- XNOR2xp5_bottom \sbox1/U200  (.A(\sbox1/n197 ),
+ XNOR2xp5_upper \sbox1/U200  (.A(\sbox1/n197 ),
     .B(\sbox1/n198 ),
     .Y(\sbox1/n188 ));
  NAND2xp5_bottom \sbox1/U201  (.A(\sbox1/ah_reg [1]),
@@ -17140,7 +17138,7 @@ module aes (clk,
  XNOR2xp5_upper \sbox1/U210  (.A(\sbox1/n207 ),
     .B(\sbox1/n208 ),
     .Y(\sbox1/n206 ));
- NAND2xp5_upper \sbox1/U211  (.A(\sbox1/n202 ),
+ NAND2xp5_bottom \sbox1/U211  (.A(\sbox1/n202 ),
     .B(\sbox1/n194 ),
     .Y(\sbox1/n208 ));
  NAND2xp5_upper \sbox1/U212  (.A(\sbox1/to_invert [3]),
@@ -17158,13 +17156,13 @@ module aes (clk,
  XNOR2xp5_upper \sbox1/U217  (.A(\sbox1/n207 ),
     .B(\sbox1/to_invert [3]),
     .Y(\sbox1/n211 ));
- NAND2xp5_upper \sbox1/U218  (.A(\sbox1/to_invert [2]),
+ NAND2xp5_bottom \sbox1/U218  (.A(\sbox1/to_invert [2]),
     .B(\sbox1/to_invert [0]),
     .Y(\sbox1/n194 ));
  XOR2xp5_upper \sbox1/U219  (.A(\sbox1/n212 ),
     .B(\sbox1/n213 ),
     .Y(\sbox1/n209 ));
- INVx1_bottom \sbox1/U22  (.A(\sbox1/ah [3]),
+ INVx1_upper \sbox1/U22  (.A(\sbox1/ah [3]),
     .Y(\sbox1/n14 ));
  XNOR2xp5_upper \sbox1/U220  (.A(\sbox1/n195 ),
     .B(\sbox1/n201 ),
@@ -17181,29 +17179,29 @@ module aes (clk,
  AND2x2_upper \sbox1/U224  (.A(\sbox1/to_invert [1]),
     .B(\sbox1/to_invert [0]),
     .Y(\sbox1/n207 ));
- OAI22xp5_bottom \sbox1/U225  (.A1(\sbox1/n15 ),
+ OAI22xp5_upper \sbox1/U225  (.A1(\sbox1/n15 ),
     .A2(\sbox1/n214 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n215 ),
     .Y(\sbox1/ah [2]));
- XNOR2xp5_bottom \sbox1/U226  (.A(sbox_data_i[3]),
+ XNOR2xp5_upper \sbox1/U226  (.A(sbox_data_i[3]),
     .B(\sbox1/n216 ),
     .Y(\sbox1/n215 ));
- XOR2xp5_bottom \sbox1/U227  (.A(\sbox1/n217 ),
+ XOR2xp5_upper \sbox1/U227  (.A(\sbox1/n217 ),
     .B(\sbox1/n218 ),
     .Y(\sbox1/n214 ));
- XNOR2xp5_bottom \sbox1/U228  (.A(sbox_data_i[2]),
+ XNOR2xp5_upper \sbox1/U228  (.A(sbox_data_i[2]),
     .B(\sbox1/n216 ),
     .Y(\sbox1/n218 ));
- XNOR2xp5_bottom \sbox1/U229  (.A(\sbox1/n80 ),
+ XNOR2xp5_upper \sbox1/U229  (.A(\sbox1/n80 ),
     .B(\sbox1/n14 ),
     .Y(\sbox1/n216 ));
  INVx1_bottom \sbox1/U23  (.A(sbox_data_i[3]),
     .Y(\sbox1/n16 ));
- XOR2xp5_bottom \sbox1/U230  (.A(\sbox1/n86 ),
+ XOR2xp5_upper \sbox1/U230  (.A(\sbox1/n86 ),
     .B(\sbox1/n219 ),
     .Y(\sbox1/ah [3]));
- OAI22xp5_bottom \sbox1/U231  (.A1(sbox_decrypt_i),
+ OAI22xp5_upper \sbox1/U231  (.A1(sbox_decrypt_i),
     .A2(\sbox1/n17 ),
     .B1(\sbox1/n15 ),
     .B2(\sbox1/n220 ),
@@ -17211,10 +17209,10 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U232  (.A(sbox_data_i[7]),
     .B(\sbox1/n221 ),
     .Y(\sbox1/n220 ));
- XOR2x2_bottom \sbox1/U233  (.A(\sbox1/n89 ),
+ XOR2x2_upper \sbox1/U233  (.A(\sbox1/n89 ),
     .B(\sbox1/n40 ),
     .Y(\sbox1/ah [1]));
- AOI22xp5_bottom \sbox1/U235  (.A1(\sbox1/n15 ),
+ AOI22xp5_upper \sbox1/U235  (.A1(\sbox1/n15 ),
     .A2(sbox_data_i[7]),
     .B1(\sbox1/n222 ),
     .B2(sbox_decrypt_i),
@@ -17225,7 +17223,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U237  (.A(\sbox1/n18 ),
     .B(sbox_data_i[4]),
     .Y(\sbox1/n221 ));
- OAI22xp5_bottom \sbox1/U238  (.A1(sbox_decrypt_i),
+ OAI22xp5_upper \sbox1/U238  (.A1(sbox_decrypt_i),
     .A2(\sbox1/n18 ),
     .B1(\sbox1/n223 ),
     .B2(\sbox1/n15 ),
@@ -17233,9 +17231,9 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U239  (.A(sbox_data_i[0]),
     .B(\sbox1/n224 ),
     .Y(\sbox1/n223 ));
- INVx1_bottom \sbox1/U24  (.A(sbox_data_i[2]),
+ INVx1_upper \sbox1/U24  (.A(sbox_data_i[2]),
     .Y(\sbox1/n17 ));
- AOI22xp5_bottom \sbox1/U241  (.A1(\sbox1/n15 ),
+ AOI22xp5_upper \sbox1/U241  (.A1(\sbox1/n15 ),
     .A2(sbox_data_i[5]),
     .B1(\sbox1/n225 ),
     .B2(sbox_decrypt_i),
@@ -17276,20 +17274,20 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U251  (.A(sbox_data_i[0]),
     .B(sbox_data_i[5]),
     .Y(\sbox1/n217 ));
- INVx1_bottom \sbox1/U26  (.A(\sbox1/n114 ),
+ INVx1_upper \sbox1/U26  (.A(\sbox1/n114 ),
     .Y(\sbox1/n19 ));
  INVx1_bottom \sbox1/U27  (.A(\sbox1/n136 ),
     .Y(\sbox1/n20 ));
- INVx1_bottom \sbox1/U28  (.A(\sbox1/n111 ),
+ INVx1_upper \sbox1/U28  (.A(\sbox1/n111 ),
     .Y(\sbox1/n21 ));
- INVx1_bottom \sbox1/U29  (.A(\sbox1/n107 ),
+ INVx1_upper \sbox1/U29  (.A(\sbox1/n107 ),
     .Y(\sbox1/n22 ));
  XNOR2xp5_bottom \sbox1/U3  (.A(\sbox1/n66 ),
     .B(\sbox1/n67 ),
     .Y(\sbox1/n1 ));
- INVx1_bottom \sbox1/U30  (.A(\sbox1/n138 ),
+ INVx1_upper \sbox1/U30  (.A(\sbox1/n138 ),
     .Y(\sbox1/n24 ));
- INVx1_bottom \sbox1/U31  (.A(\sbox1/n143 ),
+ INVx1_upper \sbox1/U31  (.A(\sbox1/n143 ),
     .Y(\sbox1/n25 ));
  INVx1_upper \sbox1/U32  (.A(\sbox1/to_invert [3]),
     .Y(\sbox1/n26 ));
@@ -17315,7 +17313,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U5  (.A(\sbox1/n43 ),
     .B(\sbox1/n44 ),
     .Y(\sbox1/n3 ));
- XNOR2xp5_bottom \sbox1/U50  (.A(\sbox1/n50 ),
+ XNOR2xp5_upper \sbox1/U50  (.A(\sbox1/n50 ),
     .B(\sbox1/n51 ),
     .Y(\sbox1/n45 ));
  NAND2xp5_bottom \sbox1/U51  (.A(\sbox1/ah [1]),
@@ -17327,7 +17325,7 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U53  (.A(\sbox1/n52 ),
     .B(\sbox1/n53 ),
     .Y(\sbox1/n43 ));
- XNOR2xp5_bottom \sbox1/U54  (.A(\sbox1/n39 ),
+ XNOR2xp5_upper \sbox1/U54  (.A(\sbox1/n39 ),
     .B(\sbox1/ah [0]),
     .Y(\sbox1/n52 ));
  XOR2xp5_bottom \sbox1/U56  (.A(\sbox1/n56 ),
@@ -17336,7 +17334,7 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U57  (.A(\sbox1/n58 ),
     .B(\sbox1/n59 ),
     .Y(\sbox1/n57 ));
- NAND2xp5_bottom \sbox1/U58  (.A(\sbox1/n60 ),
+ NAND2xp5_upper \sbox1/U58  (.A(\sbox1/n60 ),
     .B(\sbox1/ah [3]),
     .Y(\sbox1/n59 ));
  NAND2xp5_bottom \sbox1/U59  (.A(\sbox1/n49 ),
@@ -17345,37 +17343,37 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U6  (.A(\sbox1/n75 ),
     .B(\sbox1/n76 ),
     .Y(\sbox1/n4 ));
- XNOR2xp5_bottom \sbox1/U60  (.A(\sbox1/n61 ),
+ XNOR2xp5_upper \sbox1/U60  (.A(\sbox1/n61 ),
     .B(\sbox1/n62 ),
     .Y(\sbox1/n56 ));
  NAND2xp5_bottom \sbox1/U61  (.A(\sbox1/ah [1]),
     .B(\sbox1/n41 ),
     .Y(\sbox1/n62 ));
- NAND2xp5_bottom \sbox1/U62  (.A(\sbox1/ah [0]),
+ NAND2xp5_upper \sbox1/U62  (.A(\sbox1/ah [0]),
     .B(\sbox1/n40 ),
     .Y(\sbox1/n61 ));
- XOR2xp5_bottom \sbox1/U63  (.A(\sbox1/n63 ),
+ XOR2xp5_upper \sbox1/U63  (.A(\sbox1/n63 ),
     .B(\sbox1/n64 ),
     .Y(\sbox1/n54 ));
  XOR2xp5_bottom \sbox1/U64  (.A(\sbox1/ah [0]),
     .B(\sbox1/n65 ),
     .Y(\sbox1/n64 ));
- XNOR2xp5_bottom \sbox1/U65  (.A(\sbox1/n41 ),
+ XNOR2xp5_upper \sbox1/U65  (.A(\sbox1/n41 ),
     .B(\sbox1/n39 ),
     .Y(\sbox1/n63 ));
- XOR2xp5_bottom \sbox1/U67  (.A(\sbox1/n68 ),
+ XOR2xp5_upper \sbox1/U67  (.A(\sbox1/n68 ),
     .B(\sbox1/ah [0]),
     .Y(\sbox1/n67 ));
- XOR2xp5_bottom \sbox1/U68  (.A(\sbox1/n69 ),
+ XOR2xp5_upper \sbox1/U68  (.A(\sbox1/n69 ),
     .B(\sbox1/n40 ),
     .Y(\sbox1/n68 ));
  NAND2xp5_bottom \sbox1/U69  (.A(\sbox1/n70 ),
     .B(\sbox1/ah [3]),
     .Y(\sbox1/n69 ));
- XNOR2xp5_bottom \sbox1/U7  (.A(\sbox1/FE_OFN116_ah_2 ),
+ XNOR2xp5_upper \sbox1/U7  (.A(\sbox1/FE_OFN116_ah_2 ),
     .B(\sbox1/n40 ),
     .Y(\sbox1/n5 ));
- XOR2xp5_bottom \sbox1/U70  (.A(\sbox1/n40 ),
+ XOR2xp5_upper \sbox1/U70  (.A(\sbox1/n40 ),
     .B(\sbox1/n41 ),
     .Y(\sbox1/n70 ));
  XOR2xp5_bottom \sbox1/U71  (.A(\sbox1/n71 ),
@@ -17396,7 +17394,7 @@ module aes (clk,
  NAND2xp5_bottom \sbox1/U76  (.A(\sbox1/n60 ),
     .B(\sbox1/FE_OFN116_ah_2 ),
     .Y(\sbox1/n71 ));
- XNOR2xp5_bottom \sbox1/U77  (.A(\sbox1/n12 ),
+ XNOR2xp5_upper \sbox1/U77  (.A(\sbox1/n12 ),
     .B(\sbox1/n40 ),
     .Y(\sbox1/n60 ));
  XOR2xp5_bottom \sbox1/U79  (.A(\sbox1/n77 ),
@@ -17408,10 +17406,10 @@ module aes (clk,
  XOR2xp5_bottom \sbox1/U80  (.A(\sbox1/n42 ),
     .B(\sbox1/n53 ),
     .Y(\sbox1/n78 ));
- XNOR2xp5_bottom \sbox1/U81  (.A(\sbox1/n14 ),
+ XNOR2xp5_upper \sbox1/U81  (.A(\sbox1/n14 ),
     .B(\sbox1/n65 ),
     .Y(\sbox1/n53 ));
- XNOR2xp5_bottom \sbox1/U82  (.A(\sbox1/ah [3]),
+ XNOR2xp5_upper \sbox1/U82  (.A(\sbox1/ah [3]),
     .B(\sbox1/ah [1]),
     .Y(\sbox1/n65 ));
  XOR2xp5_bottom \sbox1/U83  (.A(\sbox1/n79 ),
@@ -17464,7 +17462,7 @@ module aes (clk,
  XNOR2x2_bottom \sbox1/U97  (.A(\sbox1/n80 ),
     .B(\sbox1/n94 ),
     .Y(\sbox1/n39 ));
- OAI22xp5_bottom \sbox1/U98  (.A1(\sbox1/n19 ),
+ OAI22xp5_upper \sbox1/U98  (.A1(\sbox1/n19 ),
     .A2(\sbox1/n15 ),
     .B1(sbox_decrypt_i),
     .B2(\sbox1/n95 ),
@@ -17472,42 +17470,42 @@ module aes (clk,
  XNOR2xp5_bottom \sbox1/U99  (.A(\sbox1/n96 ),
     .B(\sbox1/n97 ),
     .Y(\sbox1/n95 ));
- DFFASRHQNx1_bottom \sbox1/ah_reg_reg_0_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \sbox1/ah_reg_reg_0_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n10 ),
     .QN(\sbox1/ah_reg [0]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/ah_reg_reg_1_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \sbox1/ah_reg_reg_1_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n11 ),
     .QN(\sbox1/ah_reg [1]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/ah_reg_reg_2_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \sbox1/ah_reg_reg_2_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n13 ),
     .QN(\sbox1/ah_reg [2]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/ah_reg_reg_3_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \sbox1/ah_reg_reg_3_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n14 ),
     .QN(\sbox1/ah_reg [3]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/alph_reg_0_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \sbox1/alph_reg_0_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n6 ),
     .QN(\sbox1/alph [0]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/alph_reg_1_  (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper \sbox1/alph_reg_1_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n7 ),
     .QN(\sbox1/alph [1]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/alph_reg_2_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_upper \sbox1/alph_reg_2_  (.CLK(clknet_leaf_9_clk),
     .D(\sbox1/n5 ),
     .QN(\sbox1/alph [2]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom \sbox1/alph_reg_3_  (.CLK(clknet_leaf_9_clk),
+ DFFASRHQNx1_upper \sbox1/alph_reg_3_  (.CLK(clknet_leaf_9_clk),
     .D(\sbox1/n8 ),
     .QN(\sbox1/alph [3]),
     .RESETN(\sbox1/n23 ),
@@ -17517,57 +17515,57 @@ module aes (clk,
     .QN(\sbox1/to_invert [0]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_upper \sbox1/to_invert_reg_1_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_bottom \sbox1/to_invert_reg_1_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n1 ),
     .QN(\sbox1/to_invert [1]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_upper \sbox1/to_invert_reg_2_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_bottom \sbox1/to_invert_reg_2_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n2 ),
     .QN(\sbox1/to_invert [2]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_upper \sbox1/to_invert_reg_3_  (.CLK(clknet_leaf_10_clk),
+ DFFASRHQNx1_bottom \sbox1/to_invert_reg_3_  (.CLK(clknet_leaf_10_clk),
     .D(\sbox1/n3 ),
     .QN(\sbox1/to_invert [3]),
     .RESETN(\sbox1/n23 ),
     .SETN(FE_OFN24_reset));
- DFFASRHQNx1_bottom state_reg (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper state_reg (.CLK(clknet_leaf_13_clk),
     .D(n1657),
     .QN(state),
     .RESETN(FE_OFN43_n1664),
     .SETN(FE_OFN30_FE_OFN7_reset));
- INVx1_upper \sub1/FE_DBTC0_subbytes_data_o_72  (.A(\sub1/FE_RN_1 ),
+ INVx1_bottom \sub1/FE_DBTC0_subbytes_data_o_72  (.A(\sub1/FE_RN_1 ),
     .Y(subbytes_data_o[72]));
- INVx1_upper \sub1/FE_DBTC10_subbytes_data_o_77  (.A(\sub1/FE_RN_11 ),
+ INVx1_bottom \sub1/FE_DBTC10_subbytes_data_o_77  (.A(\sub1/FE_RN_11 ),
     .Y(subbytes_data_o[77]));
- INVx1_upper \sub1/FE_DBTC11_subbytes_data_o_13  (.A(\sub1/FE_RN_12 ),
+ INVx1_bottom \sub1/FE_DBTC11_subbytes_data_o_13  (.A(\sub1/FE_RN_12 ),
     .Y(subbytes_data_o[13]));
- INVx1_upper \sub1/FE_DBTC12_subbytes_data_o_78  (.A(\sub1/FE_RN_13 ),
+ INVx1_bottom \sub1/FE_DBTC12_subbytes_data_o_78  (.A(\sub1/FE_RN_13 ),
     .Y(subbytes_data_o[78]));
- INVx1_upper \sub1/FE_DBTC13_subbytes_data_o_14  (.A(\sub1/FE_RN_14 ),
+ INVx1_bottom \sub1/FE_DBTC13_subbytes_data_o_14  (.A(\sub1/FE_RN_14 ),
     .Y(subbytes_data_o[14]));
- INVx1_upper \sub1/FE_DBTC14_subbytes_data_o_79  (.A(\sub1/FE_RN_15 ),
+ INVx1_bottom \sub1/FE_DBTC14_subbytes_data_o_79  (.A(\sub1/FE_RN_15 ),
     .Y(subbytes_data_o[79]));
  INVx1_upper \sub1/FE_DBTC15_subbytes_data_o_15  (.A(\sub1/FE_RN_16 ),
     .Y(subbytes_data_o[15]));
- INVx1_upper \sub1/FE_DBTC16_subbytes_data_o_112  (.A(\sub1/FE_RN_17 ),
+ INVx1_bottom \sub1/FE_DBTC16_subbytes_data_o_112  (.A(\sub1/FE_RN_17 ),
     .Y(subbytes_data_o[112]));
- INVx1_upper \sub1/FE_DBTC17_subbytes_data_o_80  (.A(\sub1/FE_RN_18 ),
+ INVx1_bottom \sub1/FE_DBTC17_subbytes_data_o_80  (.A(\sub1/FE_RN_18 ),
     .Y(subbytes_data_o[80]));
- INVx1_upper \sub1/FE_DBTC18_subbytes_data_o_48  (.A(\sub1/FE_RN_19 ),
+ INVx1_bottom \sub1/FE_DBTC18_subbytes_data_o_48  (.A(\sub1/FE_RN_19 ),
     .Y(subbytes_data_o[48]));
  INVx1_upper \sub1/FE_DBTC19_subbytes_data_o_16  (.A(\sub1/FE_RN_20 ),
     .Y(subbytes_data_o[16]));
- INVx1_upper \sub1/FE_DBTC1_subbytes_data_o_8  (.A(\sub1/FE_RN_2 ),
+ INVx1_bottom \sub1/FE_DBTC1_subbytes_data_o_8  (.A(\sub1/FE_RN_2 ),
     .Y(subbytes_data_o[8]));
- INVx1_upper \sub1/FE_DBTC20_subbytes_data_o_113  (.A(\sub1/FE_RN_21 ),
+ INVx1_bottom \sub1/FE_DBTC20_subbytes_data_o_113  (.A(\sub1/FE_RN_21 ),
     .Y(subbytes_data_o[113]));
- INVx1_upper \sub1/FE_DBTC21_subbytes_data_o_81  (.A(\sub1/FE_RN_22 ),
+ INVx1_bottom \sub1/FE_DBTC21_subbytes_data_o_81  (.A(\sub1/FE_RN_22 ),
     .Y(subbytes_data_o[81]));
- INVx1_upper \sub1/FE_DBTC22_subbytes_data_o_49  (.A(\sub1/FE_RN_23 ),
+ INVx1_bottom \sub1/FE_DBTC22_subbytes_data_o_49  (.A(\sub1/FE_RN_23 ),
     .Y(subbytes_data_o[49]));
- INVx1_upper \sub1/FE_DBTC23_subbytes_data_o_17  (.A(\sub1/FE_RN_24 ),
+ INVx1_bottom \sub1/FE_DBTC23_subbytes_data_o_17  (.A(\sub1/FE_RN_24 ),
     .Y(subbytes_data_o[17]));
  INVx1_bottom \sub1/FE_DBTC24_subbytes_data_o_114  (.A(\sub1/FE_RN_25 ),
     .Y(subbytes_data_o[114]));
@@ -17581,37 +17579,37 @@ module aes (clk,
     .Y(subbytes_data_o[115]));
  INVx1_bottom \sub1/FE_DBTC29_subbytes_data_o_83  (.A(\sub1/FE_RN_30 ),
     .Y(subbytes_data_o[83]));
- INVx1_upper \sub1/FE_DBTC2_subbytes_data_o_73  (.A(\sub1/FE_RN_3 ),
+ INVx1_bottom \sub1/FE_DBTC2_subbytes_data_o_73  (.A(\sub1/FE_RN_3 ),
     .Y(subbytes_data_o[73]));
  INVx1_bottom \sub1/FE_DBTC30_subbytes_data_o_51  (.A(\sub1/FE_RN_31 ),
     .Y(subbytes_data_o[51]));
  INVx1_bottom \sub1/FE_DBTC31_subbytes_data_o_19  (.A(\sub1/FE_RN_32 ),
     .Y(subbytes_data_o[19]));
- INVx1_upper \sub1/FE_DBTC32_subbytes_data_o_116  (.A(\sub1/FE_RN_33 ),
+ INVx1_bottom \sub1/FE_DBTC32_subbytes_data_o_116  (.A(\sub1/FE_RN_33 ),
     .Y(subbytes_data_o[116]));
- INVx1_upper \sub1/FE_DBTC33_subbytes_data_o_84  (.A(\sub1/FE_RN_34 ),
+ INVx1_bottom \sub1/FE_DBTC33_subbytes_data_o_84  (.A(\sub1/FE_RN_34 ),
     .Y(subbytes_data_o[84]));
- INVx1_upper \sub1/FE_DBTC34_subbytes_data_o_52  (.A(\sub1/FE_RN_35 ),
+ INVx1_bottom \sub1/FE_DBTC34_subbytes_data_o_52  (.A(\sub1/FE_RN_35 ),
     .Y(subbytes_data_o[52]));
- INVx1_upper \sub1/FE_DBTC35_subbytes_data_o_20  (.A(\sub1/FE_RN_36 ),
+ INVx1_bottom \sub1/FE_DBTC35_subbytes_data_o_20  (.A(\sub1/FE_RN_36 ),
     .Y(subbytes_data_o[20]));
- INVx1_upper \sub1/FE_DBTC36_subbytes_data_o_117  (.A(\sub1/FE_RN_37 ),
+ INVx1_bottom \sub1/FE_DBTC36_subbytes_data_o_117  (.A(\sub1/FE_RN_37 ),
     .Y(subbytes_data_o[117]));
- INVx1_upper \sub1/FE_DBTC37_subbytes_data_o_85  (.A(\sub1/FE_RN_38 ),
+ INVx1_bottom \sub1/FE_DBTC37_subbytes_data_o_85  (.A(\sub1/FE_RN_38 ),
     .Y(subbytes_data_o[85]));
- INVx1_upper \sub1/FE_DBTC38_subbytes_data_o_53  (.A(\sub1/FE_RN_39 ),
+ INVx1_bottom \sub1/FE_DBTC38_subbytes_data_o_53  (.A(\sub1/FE_RN_39 ),
     .Y(subbytes_data_o[53]));
- INVx1_upper \sub1/FE_DBTC39_subbytes_data_o_21  (.A(\sub1/FE_RN_40 ),
+ INVx1_bottom \sub1/FE_DBTC39_subbytes_data_o_21  (.A(\sub1/FE_RN_40 ),
     .Y(subbytes_data_o[21]));
- INVx1_upper \sub1/FE_DBTC3_subbytes_data_o_9  (.A(\sub1/FE_RN_4 ),
+ INVx1_bottom \sub1/FE_DBTC3_subbytes_data_o_9  (.A(\sub1/FE_RN_4 ),
     .Y(subbytes_data_o[9]));
- INVx1_upper \sub1/FE_DBTC40_subbytes_data_o_118  (.A(\sub1/FE_RN_41 ),
+ INVx1_bottom \sub1/FE_DBTC40_subbytes_data_o_118  (.A(\sub1/FE_RN_41 ),
     .Y(subbytes_data_o[118]));
- INVx1_upper \sub1/FE_DBTC41_subbytes_data_o_86  (.A(\sub1/FE_RN_42 ),
+ INVx1_bottom \sub1/FE_DBTC41_subbytes_data_o_86  (.A(\sub1/FE_RN_42 ),
     .Y(subbytes_data_o[86]));
- INVx1_upper \sub1/FE_DBTC42_subbytes_data_o_54  (.A(\sub1/FE_RN_43 ),
+ INVx1_bottom \sub1/FE_DBTC42_subbytes_data_o_54  (.A(\sub1/FE_RN_43 ),
     .Y(subbytes_data_o[54]));
- INVx1_upper \sub1/FE_DBTC43_subbytes_data_o_22  (.A(\sub1/FE_RN_44 ),
+ INVx1_bottom \sub1/FE_DBTC43_subbytes_data_o_22  (.A(\sub1/FE_RN_44 ),
     .Y(subbytes_data_o[22]));
  INVx1_bottom \sub1/FE_DBTC44_subbytes_data_o_119  (.A(\sub1/FE_RN_45 ),
     .Y(subbytes_data_o[119]));
@@ -17623,95 +17621,95 @@ module aes (clk,
     .Y(subbytes_data_o[23]));
  INVx1_upper \sub1/FE_DBTC48_subbytes_data_o_96  (.A(\sub1/FE_RN_49 ),
     .Y(subbytes_data_o[96]));
- INVx1_upper \sub1/FE_DBTC49_subbytes_data_o_64  (.A(\sub1/FE_RN_50 ),
+ INVx1_bottom \sub1/FE_DBTC49_subbytes_data_o_64  (.A(\sub1/FE_RN_50 ),
     .Y(subbytes_data_o[64]));
- INVx1_upper \sub1/FE_DBTC4_subbytes_data_o_74  (.A(\sub1/FE_RN_5 ),
+ INVx1_bottom \sub1/FE_DBTC4_subbytes_data_o_74  (.A(\sub1/FE_RN_5 ),
     .Y(subbytes_data_o[74]));
- INVx1_upper \sub1/FE_DBTC50_subbytes_data_o_32  (.A(\sub1/FE_RN_51 ),
+ INVx1_bottom \sub1/FE_DBTC50_subbytes_data_o_32  (.A(\sub1/FE_RN_51 ),
     .Y(subbytes_data_o[32]));
  INVx1_upper \sub1/FE_DBTC51_subbytes_data_o_97  (.A(\sub1/FE_RN_52 ),
     .Y(subbytes_data_o[97]));
  INVx1_upper \sub1/FE_DBTC52_subbytes_data_o_65  (.A(\sub1/FE_RN_53 ),
     .Y(subbytes_data_o[65]));
- INVx1_upper \sub1/FE_DBTC53_subbytes_data_o_33  (.A(\sub1/FE_RN_54 ),
+ INVx1_bottom \sub1/FE_DBTC53_subbytes_data_o_33  (.A(\sub1/FE_RN_54 ),
     .Y(subbytes_data_o[33]));
- INVx1_upper \sub1/FE_DBTC54_subbytes_data_o_98  (.A(\sub1/FE_RN_55 ),
+ INVx1_bottom \sub1/FE_DBTC54_subbytes_data_o_98  (.A(\sub1/FE_RN_55 ),
     .Y(subbytes_data_o[98]));
- INVx1_upper \sub1/FE_DBTC55_subbytes_data_o_66  (.A(\sub1/FE_RN_56 ),
+ INVx1_bottom \sub1/FE_DBTC55_subbytes_data_o_66  (.A(\sub1/FE_RN_56 ),
     .Y(subbytes_data_o[66]));
- INVx1_upper \sub1/FE_DBTC56_subbytes_data_o_34  (.A(\sub1/FE_RN_57 ),
+ INVx1_bottom \sub1/FE_DBTC56_subbytes_data_o_34  (.A(\sub1/FE_RN_57 ),
     .Y(subbytes_data_o[34]));
- INVx1_upper \sub1/FE_DBTC57_subbytes_data_o_99  (.A(\sub1/FE_RN_58 ),
+ INVx1_bottom \sub1/FE_DBTC57_subbytes_data_o_99  (.A(\sub1/FE_RN_58 ),
     .Y(subbytes_data_o[99]));
- INVx1_upper \sub1/FE_DBTC58_subbytes_data_o_67  (.A(\sub1/FE_RN_59 ),
+ INVx1_bottom \sub1/FE_DBTC58_subbytes_data_o_67  (.A(\sub1/FE_RN_59 ),
     .Y(subbytes_data_o[67]));
- INVx1_upper \sub1/FE_DBTC59_subbytes_data_o_35  (.A(\sub1/FE_RN_60 ),
+ INVx1_bottom \sub1/FE_DBTC59_subbytes_data_o_35  (.A(\sub1/FE_RN_60 ),
     .Y(subbytes_data_o[35]));
- INVx1_upper \sub1/FE_DBTC5_subbytes_data_o_10  (.A(\sub1/FE_RN_6 ),
+ INVx1_bottom \sub1/FE_DBTC5_subbytes_data_o_10  (.A(\sub1/FE_RN_6 ),
     .Y(subbytes_data_o[10]));
- INVx1_upper \sub1/FE_DBTC60_subbytes_data_o_100  (.A(\sub1/FE_RN_61 ),
+ INVx1_bottom \sub1/FE_DBTC60_subbytes_data_o_100  (.A(\sub1/FE_RN_61 ),
     .Y(subbytes_data_o[100]));
- INVx1_upper \sub1/FE_DBTC61_subbytes_data_o_68  (.A(\sub1/FE_RN_62 ),
+ INVx1_bottom \sub1/FE_DBTC61_subbytes_data_o_68  (.A(\sub1/FE_RN_62 ),
     .Y(subbytes_data_o[68]));
- INVx1_upper \sub1/FE_DBTC62_subbytes_data_o_36  (.A(\sub1/FE_RN_63 ),
+ INVx1_bottom \sub1/FE_DBTC62_subbytes_data_o_36  (.A(\sub1/FE_RN_63 ),
     .Y(subbytes_data_o[36]));
- INVx1_upper \sub1/FE_DBTC63_subbytes_data_o_101  (.A(\sub1/FE_RN_64 ),
+ INVx1_bottom \sub1/FE_DBTC63_subbytes_data_o_101  (.A(\sub1/FE_RN_64 ),
     .Y(subbytes_data_o[101]));
- INVx1_upper \sub1/FE_DBTC64_subbytes_data_o_69  (.A(\sub1/FE_RN_65 ),
+ INVx1_bottom \sub1/FE_DBTC64_subbytes_data_o_69  (.A(\sub1/FE_RN_65 ),
     .Y(subbytes_data_o[69]));
- INVx1_upper \sub1/FE_DBTC65_subbytes_data_o_37  (.A(\sub1/FE_RN_66 ),
+ INVx1_bottom \sub1/FE_DBTC65_subbytes_data_o_37  (.A(\sub1/FE_RN_66 ),
     .Y(subbytes_data_o[37]));
- INVx1_upper \sub1/FE_DBTC66_subbytes_data_o_102  (.A(\sub1/FE_RN_67 ),
+ INVx1_bottom \sub1/FE_DBTC66_subbytes_data_o_102  (.A(\sub1/FE_RN_67 ),
     .Y(subbytes_data_o[102]));
- INVx1_upper \sub1/FE_DBTC67_subbytes_data_o_70  (.A(\sub1/FE_RN_68 ),
+ INVx1_bottom \sub1/FE_DBTC67_subbytes_data_o_70  (.A(\sub1/FE_RN_68 ),
     .Y(subbytes_data_o[70]));
- INVx1_upper \sub1/FE_DBTC68_subbytes_data_o_38  (.A(\sub1/FE_RN_69 ),
+ INVx1_bottom \sub1/FE_DBTC68_subbytes_data_o_38  (.A(\sub1/FE_RN_69 ),
     .Y(subbytes_data_o[38]));
- INVx1_upper \sub1/FE_DBTC69_subbytes_data_o_103  (.A(\sub1/FE_RN_70 ),
+ INVx1_bottom \sub1/FE_DBTC69_subbytes_data_o_103  (.A(\sub1/FE_RN_70 ),
     .Y(subbytes_data_o[103]));
- INVx1_upper \sub1/FE_DBTC6_subbytes_data_o_75  (.A(\sub1/FE_RN_7 ),
+ INVx1_bottom \sub1/FE_DBTC6_subbytes_data_o_75  (.A(\sub1/FE_RN_7 ),
     .Y(subbytes_data_o[75]));
- INVx1_upper \sub1/FE_DBTC70_subbytes_data_o_71  (.A(\sub1/FE_RN_71 ),
+ INVx1_bottom \sub1/FE_DBTC70_subbytes_data_o_71  (.A(\sub1/FE_RN_71 ),
     .Y(subbytes_data_o[71]));
  INVx1_upper \sub1/FE_DBTC71_subbytes_data_o_39  (.A(\sub1/FE_RN_72 ),
     .Y(subbytes_data_o[39]));
- INVx1_upper \sub1/FE_DBTC72_subbytes_data_o_104  (.A(\sub1/FE_RN_73 ),
+ INVx1_bottom \sub1/FE_DBTC72_subbytes_data_o_104  (.A(\sub1/FE_RN_73 ),
     .Y(subbytes_data_o[104]));
- INVx1_upper \sub1/FE_DBTC73_subbytes_data_o_40  (.A(\sub1/FE_RN_74 ),
+ INVx1_bottom \sub1/FE_DBTC73_subbytes_data_o_40  (.A(\sub1/FE_RN_74 ),
     .Y(subbytes_data_o[40]));
- INVx1_upper \sub1/FE_DBTC74_subbytes_data_o_105  (.A(\sub1/FE_RN_75 ),
+ INVx1_bottom \sub1/FE_DBTC74_subbytes_data_o_105  (.A(\sub1/FE_RN_75 ),
     .Y(subbytes_data_o[105]));
- INVx1_upper \sub1/FE_DBTC75_subbytes_data_o_41  (.A(\sub1/FE_RN_76 ),
+ INVx1_bottom \sub1/FE_DBTC75_subbytes_data_o_41  (.A(\sub1/FE_RN_76 ),
     .Y(subbytes_data_o[41]));
- INVx1_upper \sub1/FE_DBTC76_subbytes_data_o_106  (.A(\sub1/FE_RN_77 ),
+ INVx1_bottom \sub1/FE_DBTC76_subbytes_data_o_106  (.A(\sub1/FE_RN_77 ),
     .Y(subbytes_data_o[106]));
- INVx1_upper \sub1/FE_DBTC77_subbytes_data_o_42  (.A(\sub1/FE_RN_78 ),
+ INVx1_bottom \sub1/FE_DBTC77_subbytes_data_o_42  (.A(\sub1/FE_RN_78 ),
     .Y(subbytes_data_o[42]));
- INVx1_upper \sub1/FE_DBTC78_subbytes_data_o_107  (.A(\sub1/FE_RN_79 ),
+ INVx1_bottom \sub1/FE_DBTC78_subbytes_data_o_107  (.A(\sub1/FE_RN_79 ),
     .Y(subbytes_data_o[107]));
- INVx1_upper \sub1/FE_DBTC79_subbytes_data_o_43  (.A(\sub1/FE_RN_80 ),
+ INVx1_bottom \sub1/FE_DBTC79_subbytes_data_o_43  (.A(\sub1/FE_RN_80 ),
     .Y(subbytes_data_o[43]));
- INVx1_upper \sub1/FE_DBTC7_subbytes_data_o_11  (.A(\sub1/FE_RN_8 ),
+ INVx1_bottom \sub1/FE_DBTC7_subbytes_data_o_11  (.A(\sub1/FE_RN_8 ),
     .Y(subbytes_data_o[11]));
- INVx1_upper \sub1/FE_DBTC80_subbytes_data_o_108  (.A(\sub1/FE_RN_81 ),
+ INVx1_bottom \sub1/FE_DBTC80_subbytes_data_o_108  (.A(\sub1/FE_RN_81 ),
     .Y(subbytes_data_o[108]));
- INVx1_upper \sub1/FE_DBTC81_subbytes_data_o_44  (.A(\sub1/FE_RN_82 ),
+ INVx1_bottom \sub1/FE_DBTC81_subbytes_data_o_44  (.A(\sub1/FE_RN_82 ),
     .Y(subbytes_data_o[44]));
- INVx1_upper \sub1/FE_DBTC82_subbytes_data_o_109  (.A(\sub1/FE_RN_83 ),
+ INVx1_bottom \sub1/FE_DBTC82_subbytes_data_o_109  (.A(\sub1/FE_RN_83 ),
     .Y(subbytes_data_o[109]));
- INVx1_upper \sub1/FE_DBTC83_subbytes_data_o_45  (.A(\sub1/FE_RN_84 ),
+ INVx1_bottom \sub1/FE_DBTC83_subbytes_data_o_45  (.A(\sub1/FE_RN_84 ),
     .Y(subbytes_data_o[45]));
- INVx1_upper \sub1/FE_DBTC84_subbytes_data_o_110  (.A(\sub1/FE_RN_85 ),
+ INVx1_bottom \sub1/FE_DBTC84_subbytes_data_o_110  (.A(\sub1/FE_RN_85 ),
     .Y(subbytes_data_o[110]));
- INVx1_upper \sub1/FE_DBTC85_subbytes_data_o_46  (.A(\sub1/FE_RN_86 ),
+ INVx1_bottom \sub1/FE_DBTC85_subbytes_data_o_46  (.A(\sub1/FE_RN_86 ),
     .Y(subbytes_data_o[46]));
- INVx1_upper \sub1/FE_DBTC86_subbytes_data_o_111  (.A(\sub1/FE_RN_87 ),
+ INVx1_bottom \sub1/FE_DBTC86_subbytes_data_o_111  (.A(\sub1/FE_RN_87 ),
     .Y(subbytes_data_o[111]));
- INVx1_upper \sub1/FE_DBTC87_subbytes_data_o_47  (.A(\sub1/FE_RN_88 ),
+ INVx1_bottom \sub1/FE_DBTC87_subbytes_data_o_47  (.A(\sub1/FE_RN_88 ),
     .Y(subbytes_data_o[47]));
- INVx1_upper \sub1/FE_DBTC8_subbytes_data_o_76  (.A(\sub1/FE_RN_9 ),
+ INVx1_bottom \sub1/FE_DBTC8_subbytes_data_o_76  (.A(\sub1/FE_RN_9 ),
     .Y(subbytes_data_o[76]));
- INVx1_upper \sub1/FE_DBTC9_subbytes_data_o_12  (.A(\sub1/FE_RN_10 ),
+ INVx1_bottom \sub1/FE_DBTC9_subbytes_data_o_12  (.A(\sub1/FE_RN_10 ),
     .Y(subbytes_data_o[12]));
  BUFx3_upper \sub1/FE_OFC114_n4  (.A(\sub1/n4 ),
     .Y(\sub1/FE_OFN117_n4 ));
@@ -17719,39 +17717,39 @@ module aes (clk,
     .Y(\sub1/FE_OFN124_n76 ));
  BUFx2_upper \sub1/FE_OFC122_n207  (.A(\sub1/n207 ),
     .Y(\sub1/FE_OFN125_n207 ));
- BUFx2_bottom \sub1/FE_OFC42_N33  (.A(\sub1/N33 ),
+ BUFx2_upper \sub1/FE_OFC42_N33  (.A(\sub1/N33 ),
     .Y(\sub1/FE_OFN45_N33 ));
  BUFx4_upper \sub1/FE_OFC43_n512  (.A(\sub1/n512 ),
     .Y(\sub1/FE_OFN46_n512 ));
- BUFx4_bottom \sub1/FE_OFC44_n512  (.A(\sub1/n512 ),
+ BUFx4_upper \sub1/FE_OFC44_n512  (.A(\sub1/n512 ),
     .Y(\sub1/FE_OFN47_n512 ));
- BUFx3_bottom \sub1/FE_OFC45_n249  (.A(\sub1/n249 ),
+ BUFx3_upper \sub1/FE_OFC45_n249  (.A(\sub1/n249 ),
     .Y(\sub1/FE_OFN48_n249 ));
- BUFx2_bottom \sub1/FE_OFC46_n251  (.A(\sub1/n251 ),
+ BUFx2_upper \sub1/FE_OFC46_n251  (.A(\sub1/n251 ),
     .Y(\sub1/FE_OFN49_n251 ));
- BUFx2_bottom \sub1/FE_OFC47_n253  (.A(\sub1/n253 ),
+ BUFx2_upper \sub1/FE_OFC47_n253  (.A(\sub1/n253 ),
     .Y(\sub1/FE_OFN50_n253 ));
- BUFx2_bottom \sub1/FE_OFC48_n255  (.A(\sub1/n255 ),
+ BUFx2_upper \sub1/FE_OFC48_n255  (.A(\sub1/n255 ),
     .Y(\sub1/FE_OFN51_n255 ));
- BUFx2_bottom \sub1/FE_OFC49_n259  (.A(\sub1/n259 ),
+ BUFx2_upper \sub1/FE_OFC49_n259  (.A(\sub1/n259 ),
     .Y(\sub1/FE_OFN52_n259 ));
- BUFx2_bottom \sub1/FE_OFC50_n263  (.A(\sub1/n263 ),
+ BUFx2_upper \sub1/FE_OFC50_n263  (.A(\sub1/n263 ),
     .Y(\sub1/FE_OFN53_n263 ));
  BUFx4_upper \sub1/FE_OFC85_n5  (.A(\sub1/n5 ),
     .Y(\sub1/FE_OFN88_n5 ));
  BUFx2_upper \sub1/FE_OFC86_n68  (.A(\sub1/n68 ),
     .Y(\sub1/FE_OFN89_n68 ));
- BUFx2_bottom \sub1/FE_OFC87_n134  (.A(\sub1/n134 ),
+ BUFx2_upper \sub1/FE_OFC87_n134  (.A(\sub1/n134 ),
     .Y(\sub1/FE_OFN90_n134 ));
  BUFx2_upper \sub1/FE_OFC88_n140  (.A(\sub1/n140 ),
     .Y(\sub1/FE_OFN91_n140 ));
  BUFx2_bottom \sub1/FE_OFC89_n237  (.A(\sub1/n237 ),
     .Y(\sub1/FE_OFN92_n237 ));
- BUFx2_bottom \sub1/FE_OFC90_n513  (.A(\sub1/n513 ),
+ BUFx2_upper \sub1/FE_OFC90_n513  (.A(\sub1/n513 ),
     .Y(\sub1/FE_OFN93_n513 ));
- BUFx2_upper \sub1/FE_OFC95_n63  (.A(\sub1/n63 ),
+ BUFx2_bottom \sub1/FE_OFC95_n63  (.A(\sub1/n63 ),
     .Y(\sub1/FE_OFN98_n63 ));
- AO22x1_bottom \sub1/U10  (.A1(\sub1/N131 ),
+ AO22x1_upper \sub1/U10  (.A1(\sub1/N131 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[120]),
     .B2(\sub1/n2 ),
@@ -17759,7 +17757,7 @@ module aes (clk,
  NAND2xp5_bottom \sub1/U100  (.A(\sub1/n43 ),
     .B(\sub1/n345 ),
     .Y(\sub1/n249 ));
- AOI221xp5_upper \sub1/U101  (.A1(\sub1/FE_RN_21 ),
+ AOI221xp5_bottom \sub1/U101  (.A1(\sub1/FE_RN_21 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_23 ),
     .B2(\sub1/n4 ),
@@ -17779,12 +17777,12 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n86 ),
     .Y(\sub1/n310 ));
- OAI22xp5_bottom \sub1/U105  (.A1(\sub1/FE_OFN98_n63 ),
+ OAI22xp5_upper \sub1/U105  (.A1(\sub1/FE_OFN98_n63 ),
     .A2(subbytes_data_o[114]),
     .B1(\sub1/n323 ),
     .B2(\sub1/n65 ),
     .Y(\sub1/n86 ));
- NAND2xp5_upper \sub1/U106  (.A(\sub1/n128 ),
+ NAND2xp5_bottom \sub1/U106  (.A(\sub1/n128 ),
     .B(\sub1/n61 ),
     .Y(\sub1/n207 ));
  AOI221xp5_bottom \sub1/U107  (.A1(\sub1/FE_RN_27 ),
@@ -17793,15 +17791,15 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n88 ),
     .Y(\sub1/n312 ));
- OAI22xp5_bottom \sub1/U108  (.A1(\sub1/FE_OFN89_n68 ),
+ OAI22xp5_upper \sub1/U108  (.A1(\sub1/FE_OFN89_n68 ),
     .A2(subbytes_data_o[82]),
     .B1(\sub1/n323 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n88 ));
- NAND2xp5_upper \sub1/U109  (.A(\sub1/n61 ),
+ NAND2xp5_bottom \sub1/U109  (.A(\sub1/n61 ),
     .B(\sub1/n57 ),
     .Y(\sub1/n23 ));
- AND2x2_bottom \sub1/U11  (.A(subbytes_start_i),
+ AND2x2_upper \sub1/U11  (.A(subbytes_start_i),
     .B(\sub1/n339 ),
     .Y(\sub1/n2 ));
  AOI221xp5_bottom \sub1/U110  (.A1(\sub1/FE_RN_28 ),
@@ -17810,7 +17808,7 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n90 ),
     .Y(\sub1/n314 ));
- OAI22xp5_bottom \sub1/U111  (.A1(\sub1/n72 ),
+ OAI22xp5_upper \sub1/U111  (.A1(\sub1/n72 ),
     .A2(subbytes_data_o[50]),
     .B1(\sub1/n323 ),
     .B2(\sub1/n73 ),
@@ -17824,7 +17822,7 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n92 ),
     .Y(\sub1/n316 ));
- OAI22xp5_bottom \sub1/U114  (.A1(\sub1/FE_OFN124_n76 ),
+ OAI22xp5_upper \sub1/U114  (.A1(\sub1/FE_OFN124_n76 ),
     .A2(subbytes_data_o[18]),
     .B1(\sub1/n323 ),
     .B2(\sub1/n77 ),
@@ -17838,12 +17836,12 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n94 ),
     .Y(\sub1/n318 ));
- OAI22xp5_bottom \sub1/U117  (.A1(\sub1/FE_OFN98_n63 ),
+ OAI22xp5_upper \sub1/U117  (.A1(\sub1/FE_OFN98_n63 ),
     .A2(subbytes_data_o[115]),
     .B1(\sub1/n325 ),
     .B2(\sub1/n65 ),
     .Y(\sub1/n94 ));
- NAND2xp5_upper \sub1/U118  (.A(\sub1/n141 ),
+ NAND2xp5_bottom \sub1/U118  (.A(\sub1/n141 ),
     .B(\sub1/n61 ),
     .Y(\sub1/n140 ));
  AOI221xp5_bottom \sub1/U119  (.A1(\sub1/FE_RN_31 ),
@@ -17852,13 +17850,13 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n96 ),
     .Y(\sub1/n320 ));
- AOI221xp5_upper \sub1/U12  (.A1(\sub1/FE_RN_49 ),
+ AOI221xp5_bottom \sub1/U12  (.A1(\sub1/FE_RN_49 ),
     .A2(\sub1/n4 ),
     .B1(\sub1/FE_RN_51 ),
     .B2(\sub1/FE_OFN88_n5 ),
     .C(\sub1/n6 ),
     .Y(\sub1/n246 ));
- OAI22xp5_bottom \sub1/U120  (.A1(\sub1/FE_OFN89_n68 ),
+ OAI22xp5_upper \sub1/U120  (.A1(\sub1/FE_OFN89_n68 ),
     .A2(subbytes_data_o[83]),
     .B1(\sub1/n325 ),
     .B2(\sub1/n69 ),
@@ -17872,7 +17870,7 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n98 ),
     .Y(\sub1/n322 ));
- OAI22xp5_bottom \sub1/U123  (.A1(\sub1/n72 ),
+ OAI22xp5_upper \sub1/U123  (.A1(\sub1/n72 ),
     .A2(subbytes_data_o[51]),
     .B1(\sub1/n325 ),
     .B2(\sub1/n73 ),
@@ -17886,15 +17884,15 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n100 ),
     .Y(\sub1/n324 ));
- OAI22xp5_bottom \sub1/U126  (.A1(\sub1/FE_OFN124_n76 ),
+ OAI22xp5_upper \sub1/U126  (.A1(\sub1/FE_OFN124_n76 ),
     .A2(subbytes_data_o[19]),
     .B1(\sub1/n325 ),
     .B2(\sub1/n77 ),
     .Y(\sub1/n100 ));
- NAND2x1_upper \sub1/U127  (.A(\sub1/FE_OFN90_n134 ),
+ NAND2x1_bottom \sub1/U127  (.A(\sub1/FE_OFN90_n134 ),
     .B(\sub1/n196 ),
     .Y(\sub1/n149 ));
- AOI221xp5_upper \sub1/U128  (.A1(\sub1/FE_RN_34 ),
+ AOI221xp5_bottom \sub1/U128  (.A1(\sub1/FE_RN_34 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_36 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17911,7 +17909,7 @@ module aes (clk,
  NAND2x1_upper \sub1/U130  (.A(\sub1/n128 ),
     .B(\sub1/n58 ),
     .Y(\sub1/n203 ));
- AOI221xp5_upper \sub1/U131  (.A1(\sub1/FE_RN_35 ),
+ AOI221xp5_bottom \sub1/U131  (.A1(\sub1/FE_RN_35 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_33 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17922,10 +17920,10 @@ module aes (clk,
     .B1(\sub1/n327 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n104 ));
- NAND2xp5_upper \sub1/U133  (.A(\sub1/n57 ),
+ NAND2xp5_bottom \sub1/U133  (.A(\sub1/n57 ),
     .B(\sub1/n58 ),
     .Y(\sub1/n18 ));
- AOI221xp5_upper \sub1/U134  (.A1(\sub1/FE_RN_36 ),
+ AOI221xp5_bottom \sub1/U134  (.A1(\sub1/FE_RN_36 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_34 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17936,10 +17934,10 @@ module aes (clk,
     .B1(\sub1/n327 ),
     .B2(\sub1/n73 ),
     .Y(\sub1/n106 ));
- NAND2x1_bottom \sub1/U136  (.A(\sub1/n58 ),
+ NAND2x1_upper \sub1/U136  (.A(\sub1/n58 ),
     .B(\sub1/n196 ),
     .Y(\sub1/n242 ));
- AOI221xp5_upper \sub1/U137  (.A1(\sub1/FE_RN_33 ),
+ AOI221xp5_bottom \sub1/U137  (.A1(\sub1/FE_RN_33 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_35 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17950,16 +17948,16 @@ module aes (clk,
     .B1(\sub1/n327 ),
     .B2(\sub1/n77 ),
     .Y(\sub1/n108 ));
- NAND2x1_bottom \sub1/U139  (.A(\sub1/n141 ),
+ NAND2x1_upper \sub1/U139  (.A(\sub1/n141 ),
     .B(\sub1/n58 ),
     .Y(\sub1/n240 ));
- AOI221xp5_upper \sub1/U14  (.A1(\sub1/FE_RN_52 ),
+ AOI221xp5_bottom \sub1/U14  (.A1(\sub1/FE_RN_52 ),
     .A2(\sub1/n4 ),
     .B1(\sub1/FE_RN_54 ),
     .B2(\sub1/FE_OFN88_n5 ),
     .C(\sub1/n7 ),
     .Y(\sub1/n248 ));
- AOI221xp5_upper \sub1/U140  (.A1(\sub1/FE_RN_38 ),
+ AOI221xp5_bottom \sub1/U140  (.A1(\sub1/FE_RN_38 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_40 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17970,7 +17968,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/n65 ),
     .Y(\sub1/n110 ));
- AOI221xp5_upper \sub1/U143  (.A1(\sub1/FE_RN_39 ),
+ AOI221xp5_bottom \sub1/U143  (.A1(\sub1/FE_RN_39 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_37 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17981,7 +17979,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n112 ));
- AOI221xp5_upper \sub1/U146  (.A1(\sub1/FE_RN_40 ),
+ AOI221xp5_bottom \sub1/U146  (.A1(\sub1/FE_RN_40 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_38 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -17992,7 +17990,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/n73 ),
     .Y(\sub1/n114 ));
- AOI221xp5_upper \sub1/U149  (.A1(\sub1/FE_RN_37 ),
+ AOI221xp5_bottom \sub1/U149  (.A1(\sub1/FE_RN_37 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_39 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18006,7 +18004,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/n77 ),
     .Y(\sub1/n116 ));
- AOI221xp5_upper \sub1/U152  (.A1(\sub1/FE_RN_42 ),
+ AOI221xp5_bottom \sub1/U152  (.A1(\sub1/FE_RN_42 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_44 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18017,7 +18015,7 @@ module aes (clk,
     .B1(\sub1/n331 ),
     .B2(\sub1/n65 ),
     .Y(\sub1/n118 ));
- AOI221xp5_upper \sub1/U155  (.A1(\sub1/FE_RN_43 ),
+ AOI221xp5_bottom \sub1/U155  (.A1(\sub1/FE_RN_43 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_41 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18028,7 +18026,7 @@ module aes (clk,
     .B1(\sub1/n331 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n120 ));
- AOI221xp5_upper \sub1/U158  (.A1(\sub1/FE_RN_44 ),
+ AOI221xp5_bottom \sub1/U158  (.A1(\sub1/FE_RN_44 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_42 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18039,13 +18037,13 @@ module aes (clk,
     .B1(\sub1/n331 ),
     .B2(\sub1/n73 ),
     .Y(\sub1/n122 ));
- AOI221xp5_upper \sub1/U16  (.A1(\sub1/FE_RN_55 ),
+ AOI221xp5_bottom \sub1/U16  (.A1(\sub1/FE_RN_55 ),
     .A2(\sub1/FE_OFN117_n4 ),
     .B1(\sub1/FE_RN_57 ),
     .B2(\sub1/FE_OFN88_n5 ),
     .C(\sub1/n8 ),
     .Y(\sub1/n250 ));
- AOI221xp5_upper \sub1/U161  (.A1(\sub1/FE_RN_41 ),
+ AOI221xp5_bottom \sub1/U161  (.A1(\sub1/FE_RN_41 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_43 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18062,12 +18060,12 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n126 ),
     .Y(\sub1/n350 ));
- OAI22xp5_bottom \sub1/U165  (.A1(\sub1/FE_OFN98_n63 ),
+ OAI22xp5_upper \sub1/U165  (.A1(\sub1/FE_OFN98_n63 ),
     .A2(subbytes_data_o[119]),
     .B1(\sub1/n333 ),
     .B2(\sub1/n65 ),
     .Y(\sub1/n126 ));
- NAND2xp5_upper \sub1/U167  (.A(\sub1/n65 ),
+ NAND2xp5_bottom \sub1/U167  (.A(\sub1/n65 ),
     .B(\sub1/FE_OFN93_n513 ),
     .Y(\sub1/n63 ));
  AOI221xp5_bottom \sub1/U169  (.A1(\sub1/FE_RN_47 ),
@@ -18079,12 +18077,12 @@ module aes (clk,
  AND2x2_upper \sub1/U17  (.A(subbytes_data_o[2]),
     .B(\sub1/FE_OFN93_n513 ),
     .Y(\sub1/n8 ));
- OAI22xp5_bottom \sub1/U170  (.A1(\sub1/FE_OFN89_n68 ),
+ OAI22xp5_upper \sub1/U170  (.A1(\sub1/FE_OFN89_n68 ),
     .A2(subbytes_data_o[87]),
     .B1(\sub1/n333 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n130 ));
- NAND2xp5_upper \sub1/U172  (.A(\sub1/n69 ),
+ NAND2xp5_bottom \sub1/U172  (.A(\sub1/n69 ),
     .B(\sub1/n283 ),
     .Y(\sub1/n68 ));
  AOI221xp5_bottom \sub1/U174  (.A1(\sub1/FE_RN_48 ),
@@ -18093,7 +18091,7 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n132 ),
     .Y(\sub1/n354 ));
- OAI22xp5_bottom \sub1/U175  (.A1(\sub1/n72 ),
+ OAI22xp5_upper \sub1/U175  (.A1(\sub1/n72 ),
     .A2(subbytes_data_o[55]),
     .B1(\sub1/n333 ),
     .B2(\sub1/n73 ),
@@ -18113,13 +18111,13 @@ module aes (clk,
     .B2(\sub1/FE_OFN117_n4 ),
     .C(\sub1/n135 ),
     .Y(\sub1/n356 ));
- AOI221xp5_upper \sub1/U18  (.A1(\sub1/FE_RN_58 ),
+ AOI221xp5_bottom \sub1/U18  (.A1(\sub1/FE_RN_58 ),
     .A2(\sub1/n4 ),
     .B1(\sub1/FE_RN_60 ),
     .B2(\sub1/FE_OFN88_n5 ),
     .C(\sub1/n9 ),
     .Y(\sub1/n252 ));
- OAI22xp5_bottom \sub1/U180  (.A1(\sub1/FE_OFN124_n76 ),
+ OAI22xp5_upper \sub1/U180  (.A1(\sub1/FE_OFN124_n76 ),
     .A2(subbytes_data_o[23]),
     .B1(\sub1/n333 ),
     .B2(\sub1/n77 ),
@@ -18127,7 +18125,7 @@ module aes (clk,
  NAND2x1p5_bottom \sub1/U181  (.A(\sub1/n48 ),
     .B(\sub1/N30 ),
     .Y(\sub1/n261 ));
- NAND2xp5_upper \sub1/U182  (.A(\sub1/n77 ),
+ NAND2xp5_bottom \sub1/U182  (.A(\sub1/n77 ),
     .B(\sub1/n283 ),
     .Y(\sub1/n76 ));
  NAND2x1p5_bottom \sub1/U183  (.A(\sub1/n45 ),
@@ -18136,17 +18134,17 @@ module aes (clk,
  NOR2x1_bottom \sub1/U184  (.A(\sub1/n279 ),
     .B(\sub1/n351 ),
     .Y(\sub1/n57 ));
- OAI22xp5_bottom \sub1/U185  (.A1(subbytes_data_o[24]),
+ OAI22xp5_upper \sub1/U185  (.A1(subbytes_data_o[24]),
     .A2(\sub1/n337 ),
     .B1(FE_OFN115_sbox_data_o_0),
     .B2(\sub1/FE_OFN91_n140 ),
     .Y(\sub1/n358 ));
- OAI22xp5_bottom \sub1/U186  (.A1(subbytes_data_o[25]),
+ OAI22xp5_upper \sub1/U186  (.A1(subbytes_data_o[25]),
     .A2(\sub1/n337 ),
     .B1(FE_OFN114_sbox_data_o_1),
     .B2(\sub1/FE_OFN91_n140 ),
     .Y(\sub1/n360 ));
- OAI22xp5_bottom \sub1/U187  (.A1(subbytes_data_o[26]),
+ OAI22xp5_upper \sub1/U187  (.A1(subbytes_data_o[26]),
     .A2(\sub1/n337 ),
     .B1(FE_OFN113_sbox_data_o_2),
     .B2(\sub1/FE_OFN91_n140 ),
@@ -18169,7 +18167,7 @@ module aes (clk,
     .B1(FE_OFN110_sbox_data_o_5),
     .B2(\sub1/FE_OFN91_n140 ),
     .Y(\sub1/n368 ));
- OAI22xp5_bottom \sub1/U191  (.A1(subbytes_data_o[30]),
+ OAI22xp5_upper \sub1/U191  (.A1(subbytes_data_o[30]),
     .A2(\sub1/n337 ),
     .B1(FE_OFN109_sbox_data_o_6),
     .B2(\sub1/FE_OFN91_n140 ),
@@ -18188,7 +18186,7 @@ module aes (clk,
     .B1(\sub1/n145 ),
     .B2(\sub1/n319 ),
     .Y(\sub1/n142 ));
- AOI221xp5_upper \sub1/U198  (.A1(\sub1/FE_RN_49 ),
+ AOI221xp5_bottom \sub1/U198  (.A1(\sub1/FE_RN_49 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/n4 ),
     .B2(\sub1/FE_RN_51 ),
@@ -18199,7 +18197,7 @@ module aes (clk,
     .B1(\sub1/n319 ),
     .B2(\sub1/n149 ),
     .Y(\sub1/n146 ));
- AOI221xp5_upper \sub1/U20  (.A1(\sub1/FE_RN_61 ),
+ AOI221xp5_bottom \sub1/U20  (.A1(\sub1/FE_RN_61 ),
     .A2(\sub1/FE_OFN117_n4 ),
     .B1(\sub1/FE_RN_63 ),
     .B2(\sub1/FE_OFN88_n5 ),
@@ -18214,7 +18212,7 @@ module aes (clk,
     .B1(\sub1/n153 ),
     .B2(\sub1/n319 ),
     .Y(\sub1/n150 ));
- TIEHIx1_upper \sub1/U203  (.H(\sub1/n512 ));
+ TIEHIx1_bottom \sub1/U203  (.H(\sub1/n512 ));
  AOI21xp5_upper \sub1/U204  (.A1(\sub1/FE_RN_53 ),
     .A2(\sub1/n4 ),
     .B(\sub1/n154 ),
@@ -18224,10 +18222,10 @@ module aes (clk,
     .B1(\sub1/n145 ),
     .B2(\sub1/n321 ),
     .Y(\sub1/n154 ));
- AND2x2_bottom \sub1/U206  (.A(\sub1/N31 ),
+ AND2x2_upper \sub1/U206  (.A(\sub1/N31 ),
     .B(\sub1/n279 ),
     .Y(\sub1/n43 ));
- AOI221xp5_upper \sub1/U207  (.A1(\sub1/FE_RN_52 ),
+ AOI221xp5_bottom \sub1/U207  (.A1(\sub1/FE_RN_52 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_54 ),
     .B2(\sub1/n4 ),
@@ -18253,7 +18251,7 @@ module aes (clk,
     .B1(\sub1/n153 ),
     .B2(\sub1/n321 ),
     .Y(\sub1/n158 ));
- AND2x2_bottom \sub1/U212  (.A(\sub1/n351 ),
+ AND2x2_upper \sub1/U212  (.A(\sub1/n351 ),
     .B(\sub1/n279 ),
     .Y(\sub1/n45 ));
  AOI21xp5_upper \sub1/U213  (.A1(\sub1/FE_RN_56 ),
@@ -18265,11 +18263,11 @@ module aes (clk,
     .B1(\sub1/n145 ),
     .B2(\sub1/n323 ),
     .Y(\sub1/n160 ));
- OAI21xp5_bottom \sub1/U215  (.A1(subbytes_data_i[56]),
+ OAI21xp5_upper \sub1/U215  (.A1(subbytes_data_i[56]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n55 ));
- AOI221xp5_upper \sub1/U216  (.A1(\sub1/FE_RN_55 ),
+ AOI221xp5_bottom \sub1/U216  (.A1(\sub1/FE_RN_55 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_57 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18280,14 +18278,14 @@ module aes (clk,
     .B1(\sub1/n323 ),
     .B2(\sub1/n149 ),
     .Y(\sub1/n162 ));
- AND2x2_bottom \sub1/U218  (.A(\sub1/N32 ),
+ AND2x2_upper \sub1/U218  (.A(\sub1/N32 ),
     .B(\sub1/N31 ),
     .Y(\sub1/n46 ));
  AOI21xp5_upper \sub1/U219  (.A1(\sub1/FE_RN_56 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B(\sub1/n164 ),
     .Y(\sub1/n390 ));
- AOI221xp5_upper \sub1/U22  (.A1(\sub1/FE_RN_64 ),
+ AOI221xp5_bottom \sub1/U22  (.A1(\sub1/FE_RN_64 ),
     .A2(\sub1/n4 ),
     .B1(\sub1/FE_RN_66 ),
     .B2(\sub1/FE_OFN88_n5 ),
@@ -18298,7 +18296,7 @@ module aes (clk,
     .B1(\sub1/n153 ),
     .B2(\sub1/n323 ),
     .Y(\sub1/n164 ));
- AND2x2_bottom \sub1/U221  (.A(\sub1/N32 ),
+ AND2x2_upper \sub1/U221  (.A(\sub1/N32 ),
     .B(\sub1/n351 ),
     .Y(\sub1/n48 ));
  AOI21xp5_upper \sub1/U222  (.A1(\sub1/FE_RN_59 ),
@@ -18310,12 +18308,12 @@ module aes (clk,
     .B1(\sub1/n145 ),
     .B2(\sub1/n325 ),
     .Y(\sub1/n166 ));
- OAI22xp5_bottom \sub1/U224  (.A1(subbytes_data_i[8]),
+ OAI22xp5_upper \sub1/U224  (.A1(subbytes_data_i[8]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[24]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n53 ));
- AOI221xp5_upper \sub1/U225  (.A1(\sub1/FE_RN_58 ),
+ AOI221xp5_bottom \sub1/U225  (.A1(\sub1/FE_RN_58 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_60 ),
     .B2(\sub1/n4 ),
@@ -18343,12 +18341,12 @@ module aes (clk,
  AND2x2_upper \sub1/U23  (.A(subbytes_data_o[5]),
     .B(\sub1/n283 ),
     .Y(\sub1/n11 ));
- OAI22xp5_bottom \sub1/U230  (.A1(subbytes_data_i[0]),
+ OAI22xp5_upper \sub1/U230  (.A1(subbytes_data_i[0]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[16]),
     .B2(\sub1/n261 ),
     .Y(\sub1/n50 ));
- AOI21xp5_upper \sub1/U231  (.A1(\sub1/FE_RN_62 ),
+ AOI21xp5_bottom \sub1/U231  (.A1(\sub1/FE_RN_62 ),
     .A2(\sub1/FE_OFN117_n4 ),
     .B(\sub1/n172 ),
     .Y(\sub1/n398 ));
@@ -18363,7 +18361,7 @@ module aes (clk,
     .D(\sub1/n51 ),
     .E(\sub1/n50 ),
     .Y(\sub1/n81 ));
- AOI221xp5_upper \sub1/U234  (.A1(\sub1/FE_RN_61 ),
+ AOI221xp5_bottom \sub1/U234  (.A1(\sub1/FE_RN_61 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_63 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18386,11 +18384,11 @@ module aes (clk,
     .B1(\sub1/n153 ),
     .B2(\sub1/n327 ),
     .Y(\sub1/n176 ));
- OAI21xp5_bottom \sub1/U239  (.A1(subbytes_data_i[120]),
+ OAI21xp5_upper \sub1/U239  (.A1(subbytes_data_i[120]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/n353 ),
     .Y(\sub1/n71 ));
- AOI221xp5_upper \sub1/U24  (.A1(\sub1/FE_RN_67 ),
+ AOI221xp5_bottom \sub1/U24  (.A1(\sub1/FE_RN_67 ),
     .A2(\sub1/FE_OFN117_n4 ),
     .B1(\sub1/FE_RN_69 ),
     .B2(\sub1/FE_OFN88_n5 ),
@@ -18405,12 +18403,12 @@ module aes (clk,
     .B1(\sub1/n145 ),
     .B2(\sub1/n329 ),
     .Y(\sub1/n178 ));
- OAI22xp5_bottom \sub1/U242  (.A1(subbytes_data_i[72]),
+ OAI22xp5_upper \sub1/U242  (.A1(subbytes_data_i[72]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[88]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n67 ));
- AOI221xp5_upper \sub1/U243  (.A1(\sub1/FE_RN_64 ),
+ AOI221xp5_bottom \sub1/U243  (.A1(\sub1/FE_RN_64 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_66 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18421,7 +18419,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/n149 ),
     .Y(\sub1/n180 ));
- OAI22xp5_bottom \sub1/U245  (.A1(subbytes_data_i[96]),
+ OAI22xp5_upper \sub1/U245  (.A1(subbytes_data_i[96]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[112]),
     .B2(\sub1/n257 ),
@@ -18458,7 +18456,7 @@ module aes (clk,
     .D(\sub1/n64 ),
     .E(\sub1/n60 ),
     .Y(\sub1/n79 ));
- AOI221xp5_upper \sub1/U252  (.A1(\sub1/FE_RN_67 ),
+ AOI221xp5_bottom \sub1/U252  (.A1(\sub1/FE_RN_67 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_69 ),
     .B2(\sub1/FE_OFN117_n4 ),
@@ -18493,26 +18491,26 @@ module aes (clk,
     .B1(\sub1/n145 ),
     .B2(\sub1/n333 ),
     .Y(\sub1/n190 ));
- AOI221xp5_upper \sub1/U26  (.A1(\sub1/FE_RN_70 ),
+ AOI221xp5_bottom \sub1/U26  (.A1(\sub1/FE_RN_70 ),
     .A2(\sub1/n4 ),
     .B1(\sub1/FE_RN_72 ),
     .B2(\sub1/FE_OFN88_n5 ),
     .C(\sub1/n13 ),
     .Y(\sub1/n260 ));
- NOR2x1_upper \sub1/U260  (.A(\sub1/n341 ),
+ NOR2x1_bottom \sub1/U260  (.A(\sub1/n341 ),
     .B(\sub1/FE_OFN88_n5 ),
     .Y(\sub1/n145 ));
- OAI21xp5_bottom \sub1/U261  (.A1(subbytes_data_i[57]),
+ OAI21xp5_upper \sub1/U261  (.A1(subbytes_data_i[57]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n89 ));
- NAND2xp5_upper \sub1/U262  (.A(\sub1/n193 ),
+ NAND2xp5_bottom \sub1/U262  (.A(\sub1/n193 ),
     .B(\sub1/FE_OFN93_n513 ),
     .Y(\sub1/n144 ));
- NAND2xp5_upper \sub1/U263  (.A(\sub1/n141 ),
+ NAND2xp5_bottom \sub1/U263  (.A(\sub1/n141 ),
     .B(\sub1/n129 ),
     .Y(\sub1/n193 ));
- OAI22xp5_bottom \sub1/U264  (.A1(subbytes_data_i[9]),
+ OAI22xp5_upper \sub1/U264  (.A1(subbytes_data_i[9]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[25]),
     .B2(\sub1/FE_OFN50_n253 ),
@@ -18533,10 +18531,10 @@ module aes (clk,
     .B1(subbytes_data_i[49]),
     .B2(\sub1/n257 ),
     .Y(\sub1/n85 ));
- NAND2xp5_upper \sub1/U268  (.A(\sub1/n149 ),
+ NAND2xp5_bottom \sub1/U268  (.A(\sub1/n149 ),
     .B(\sub1/n283 ),
     .Y(\sub1/n148 ));
- OAI22xp5_bottom \sub1/U269  (.A1(subbytes_data_i[1]),
+ OAI22xp5_upper \sub1/U269  (.A1(subbytes_data_i[1]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[17]),
     .B2(\sub1/n261 ),
@@ -18553,7 +18551,7 @@ module aes (clk,
     .B1(\sub1/n153 ),
     .B2(\sub1/n333 ),
     .Y(\sub1/n197 ));
- AOI21x1_upper \sub1/U272  (.A1(\sub1/FE_OFN90_n134 ),
+ AOI21x1_bottom \sub1/U272  (.A1(\sub1/FE_OFN90_n134 ),
     .A2(\sub1/n141 ),
     .B(\sub1/n4 ),
     .Y(\sub1/n153 ));
@@ -18570,10 +18568,10 @@ module aes (clk,
     .D(\sub1/n85 ),
     .E(\sub1/n83 ),
     .Y(\sub1/n105 ));
- NOR2x1_upper \sub1/U276  (.A(subbytes_data_i[105]),
+ NOR2x1_bottom \sub1/U276  (.A(subbytes_data_i[105]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n101 ));
- NOR2x1_upper \sub1/U277  (.A(\sub1/n283 ),
+ NOR2x1_bottom \sub1/U277  (.A(\sub1/n283 ),
     .B(subbytes_sbox_decrypt_o),
     .Y(\sub1/n5 ));
  AOI21xp5_upper \sub1/U278  (.A1(\sub1/FE_RN_74 ),
@@ -18585,7 +18583,7 @@ module aes (clk,
     .B1(\sub1/n319 ),
     .B2(\sub1/n203 ),
     .Y(\sub1/n200 ));
- AOI21xp5_upper \sub1/U28  (.A1(\sub1/FE_RN_2 ),
+ AOI21xp5_bottom \sub1/U28  (.A1(\sub1/FE_RN_2 ),
     .A2(\sub1/n343 ),
     .B(\sub1/n15 ),
     .Y(\sub1/n262 ));
@@ -18640,7 +18638,7 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n319 ),
     .Y(\sub1/n15 ));
- OR5x1_upper \sub1/U290  (.A(\sub1/n101 ),
+ OR5x1_bottom \sub1/U290  (.A(\sub1/n101 ),
     .B(\sub1/n99 ),
     .C(\sub1/n97 ),
     .D(\sub1/n95 ),
@@ -18670,11 +18668,11 @@ module aes (clk,
     .B1(\sub1/n323 ),
     .B2(\sub1/FE_OFN125_n207 ),
     .Y(\sub1/n214 ));
- OAI21xp5_bottom \sub1/U297  (.A1(subbytes_data_i[58]),
+ OAI21xp5_upper \sub1/U297  (.A1(subbytes_data_i[58]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n113 ));
- OAI22xp5_bottom \sub1/U298  (.A1(subbytes_data_i[10]),
+ OAI22xp5_upper \sub1/U298  (.A1(subbytes_data_i[10]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[26]),
     .B2(\sub1/FE_OFN50_n253 ),
@@ -18683,7 +18681,7 @@ module aes (clk,
     .A2(\sub1/n343 ),
     .B(\sub1/n216 ),
     .Y(\sub1/n434 ));
- AO22x1_bottom \sub1/U3  (.A1(\sub1/N124 ),
+ AO22x1_upper \sub1/U3  (.A1(\sub1/N124 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[127]),
     .B2(\sub1/n2 ),
@@ -18711,7 +18709,7 @@ module aes (clk,
     .B1(\sub1/n325 ),
     .B2(\sub1/FE_OFN125_n207 ),
     .Y(\sub1/n218 ));
- OAI22xp5_bottom \sub1/U304  (.A1(subbytes_data_i[2]),
+ OAI22xp5_upper \sub1/U304  (.A1(subbytes_data_i[2]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[18]),
     .B2(\sub1/n261 ),
@@ -18738,7 +18736,7 @@ module aes (clk,
     .A2(\sub1/n343 ),
     .B(\sub1/n222 ),
     .Y(\sub1/n440 ));
- AOI21xp5_upper \sub1/U31  (.A1(\sub1/FE_RN_1 ),
+ AOI21xp5_bottom \sub1/U31  (.A1(\sub1/FE_RN_1 ),
     .A2(\sub1/n343 ),
     .B(\sub1/n20 ),
     .Y(\sub1/n264 ));
@@ -18747,11 +18745,11 @@ module aes (clk,
     .B1(\sub1/n327 ),
     .B2(\sub1/FE_OFN125_n207 ),
     .Y(\sub1/n222 ));
- OAI21xp5_bottom \sub1/U311  (.A1(subbytes_data_i[122]),
+ OAI21xp5_upper \sub1/U311  (.A1(subbytes_data_i[122]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/n353 ),
     .Y(\sub1/n123 ));
- OAI22xp5_bottom \sub1/U312  (.A1(subbytes_data_i[74]),
+ OAI22xp5_upper \sub1/U312  (.A1(subbytes_data_i[74]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[90]),
     .B2(\sub1/FE_OFN50_n253 ),
@@ -18765,7 +18763,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/n203 ),
     .Y(\sub1/n224 ));
- OAI22xp5_bottom \sub1/U315  (.A1(subbytes_data_i[98]),
+ OAI22xp5_upper \sub1/U315  (.A1(subbytes_data_i[98]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[114]),
     .B2(\sub1/n257 ),
@@ -18779,7 +18777,7 @@ module aes (clk,
     .B1(\sub1/n329 ),
     .B2(\sub1/FE_OFN125_n207 ),
     .Y(\sub1/n226 ));
- OAI22xp5_bottom \sub1/U318  (.A1(subbytes_data_i[66]),
+ OAI22xp5_upper \sub1/U318  (.A1(subbytes_data_i[66]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[82]),
     .B2(\sub1/n261 ),
@@ -18804,7 +18802,7 @@ module aes (clk,
     .B1(\sub1/n331 ),
     .B2(\sub1/n203 ),
     .Y(\sub1/n228 ));
- NAND2xp5_bottom \sub1/U322  (.A(\sub1/n131 ),
+ NAND2xp5_upper \sub1/U322  (.A(\sub1/n131 ),
     .B(\sub1/n127 ),
     .Y(\sub1/N129 ));
  AOI21xp5_upper \sub1/U323  (.A1(\sub1/FE_RN_85 ),
@@ -18819,7 +18817,7 @@ module aes (clk,
  NOR2x1_bottom \sub1/U325  (.A(subbytes_data_i[43]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n139 ));
- OAI21xp5_bottom \sub1/U326  (.A1(subbytes_data_i[59]),
+ OAI21xp5_upper \sub1/U326  (.A1(subbytes_data_i[59]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n138 ));
@@ -18832,7 +18830,7 @@ module aes (clk,
     .B1(\sub1/n333 ),
     .B2(\sub1/n203 ),
     .Y(\sub1/n232 ));
- OAI22xp5_bottom \sub1/U329  (.A1(subbytes_data_i[11]),
+ OAI22xp5_upper \sub1/U329  (.A1(subbytes_data_i[11]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[27]),
     .B2(\sub1/FE_OFN50_n253 ),
@@ -18841,10 +18839,10 @@ module aes (clk,
     .B(\sub1/state_4_ ),
     .C(\sub1/n353 ),
     .Y(\sub1/n61 ));
- NAND2xp5_upper \sub1/U330  (.A(\sub1/n203 ),
+ NAND2xp5_bottom \sub1/U330  (.A(\sub1/n203 ),
     .B(\sub1/FE_OFN93_n513 ),
     .Y(\sub1/n201 ));
- OAI22xp5_bottom \sub1/U331  (.A1(subbytes_data_i[35]),
+ OAI22xp5_upper \sub1/U331  (.A1(subbytes_data_i[35]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[51]),
     .B2(\sub1/n257 ),
@@ -18869,7 +18867,7 @@ module aes (clk,
     .D(\sub1/n136 ),
     .E(\sub1/n133 ),
     .Y(\sub1/n161 ));
- NAND2xp5_upper \sub1/U336  (.A(\sub1/FE_OFN125_n207 ),
+ NAND2xp5_bottom \sub1/U336  (.A(\sub1/FE_OFN125_n207 ),
     .B(\sub1/n283 ),
     .Y(\sub1/n206 ));
  NOR2x1_bottom \sub1/U337  (.A(subbytes_data_i[107]),
@@ -18882,16 +18880,16 @@ module aes (clk,
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/n353 ),
     .Y(\sub1/n155 ));
- AOI21xp5_upper \sub1/U34  (.A1(\sub1/FE_RN_4 ),
+ AOI21xp5_bottom \sub1/U34  (.A1(\sub1/FE_RN_4 ),
     .A2(\sub1/n343 ),
     .B(\sub1/n24 ),
     .Y(\sub1/n266 ));
- OAI22xp5_bottom \sub1/U340  (.A1(subbytes_data_o[56]),
+ OAI22xp5_upper \sub1/U340  (.A1(subbytes_data_o[56]),
     .A2(\sub1/n335 ),
     .B1(FE_OFN115_sbox_data_o_0),
     .B2(\sub1/FE_OFN92_n237 ),
     .Y(\sub1/n454 ));
- OAI22xp5_bottom \sub1/U341  (.A1(subbytes_data_o[57]),
+ OAI22xp5_upper \sub1/U341  (.A1(subbytes_data_o[57]),
     .A2(\sub1/n335 ),
     .B1(FE_OFN114_sbox_data_o_1),
     .B2(\sub1/FE_OFN92_n237 ),
@@ -18901,12 +18899,12 @@ module aes (clk,
     .B1(FE_OFN113_sbox_data_o_2),
     .B2(\sub1/FE_OFN92_n237 ),
     .Y(\sub1/n458 ));
- OAI22xp5_bottom \sub1/U343  (.A1(subbytes_data_o[59]),
+ OAI22xp5_upper \sub1/U343  (.A1(subbytes_data_o[59]),
     .A2(\sub1/n335 ),
     .B1(FE_OFN112_sbox_data_o_3),
     .B2(\sub1/FE_OFN92_n237 ),
     .Y(\sub1/n460 ));
- OAI22xp5_bottom \sub1/U344  (.A1(subbytes_data_o[60]),
+ OAI22xp5_upper \sub1/U344  (.A1(subbytes_data_o[60]),
     .A2(\sub1/n335 ),
     .B1(FE_OFN111_sbox_data_o_4),
     .B2(\sub1/FE_OFN92_n237 ),
@@ -18916,7 +18914,7 @@ module aes (clk,
     .B1(FE_OFN110_sbox_data_o_5),
     .B2(\sub1/FE_OFN92_n237 ),
     .Y(\sub1/n464 ));
- OAI22xp5_bottom \sub1/U346  (.A1(subbytes_data_o[62]),
+ OAI22xp5_upper \sub1/U346  (.A1(subbytes_data_o[62]),
     .A2(\sub1/n335 ),
     .B1(FE_OFN109_sbox_data_o_6),
     .B2(\sub1/FE_OFN92_n237 ),
@@ -18926,12 +18924,12 @@ module aes (clk,
     .B1(FE_OFN108_sbox_data_o_7),
     .B2(\sub1/FE_OFN92_n237 ),
     .Y(\sub1/n468 ));
- OAI22xp5_bottom \sub1/U348  (.A1(subbytes_data_i[75]),
+ OAI22xp5_upper \sub1/U348  (.A1(subbytes_data_i[75]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[91]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n151 ));
- OAI22xp5_bottom \sub1/U349  (.A1(subbytes_data_i[99]),
+ OAI22xp5_upper \sub1/U349  (.A1(subbytes_data_i[99]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[115]),
     .B2(\sub1/n257 ),
@@ -18941,12 +18939,12 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n321 ),
     .Y(\sub1/n24 ));
- OAI22xp5_bottom \sub1/U350  (.A1(subbytes_data_i[67]),
+ OAI22xp5_upper \sub1/U350  (.A1(subbytes_data_i[67]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[83]),
     .B2(\sub1/n261 ),
     .Y(\sub1/n143 ));
- OAI22xp5_bottom \sub1/U351  (.A1(subbytes_data_o[88]),
+ OAI22xp5_upper \sub1/U351  (.A1(subbytes_data_o[88]),
     .A2(\sub1/n349 ),
     .B1(FE_OFN115_sbox_data_o_0),
     .B2(\sub1/n240 ),
@@ -18956,22 +18954,22 @@ module aes (clk,
     .B1(FE_OFN114_sbox_data_o_1),
     .B2(\sub1/n240 ),
     .Y(\sub1/n472 ));
- OAI22xp5_bottom \sub1/U353  (.A1(subbytes_data_o[90]),
+ OAI22xp5_upper \sub1/U353  (.A1(subbytes_data_o[90]),
     .A2(\sub1/n349 ),
     .B1(FE_OFN113_sbox_data_o_2),
     .B2(\sub1/n240 ),
     .Y(\sub1/n474 ));
- OAI22xp5_bottom \sub1/U354  (.A1(subbytes_data_o[91]),
+ OAI22xp5_upper \sub1/U354  (.A1(subbytes_data_o[91]),
     .A2(\sub1/n349 ),
     .B1(FE_OFN112_sbox_data_o_3),
     .B2(\sub1/n240 ),
     .Y(\sub1/n476 ));
- OAI22xp5_bottom \sub1/U355  (.A1(subbytes_data_o[92]),
+ OAI22xp5_upper \sub1/U355  (.A1(subbytes_data_o[92]),
     .A2(\sub1/n349 ),
     .B1(FE_OFN111_sbox_data_o_4),
     .B2(\sub1/n240 ),
     .Y(\sub1/n478 ));
- OAI22xp5_bottom \sub1/U356  (.A1(subbytes_data_o[93]),
+ OAI22xp5_upper \sub1/U356  (.A1(subbytes_data_o[93]),
     .A2(\sub1/n349 ),
     .B1(FE_OFN110_sbox_data_o_5),
     .B2(\sub1/n240 ),
@@ -18992,12 +18990,12 @@ module aes (clk,
     .D(\sub1/n147 ),
     .E(\sub1/n143 ),
     .Y(\sub1/n159 ));
- INVx1_upper \sub1/U36  (.A(FE_OFN113_sbox_data_o_2),
+ INVx1_bottom \sub1/U36  (.A(FE_OFN113_sbox_data_o_2),
     .Y(\sub1/n323 ));
  NAND2xp5_bottom \sub1/U360  (.A(\sub1/n161 ),
     .B(\sub1/n159 ),
     .Y(\sub1/N128 ));
- NOR2x1_bottom \sub1/U361  (.A(\sub1/n279 ),
+ NOR2x1_upper \sub1/U361  (.A(\sub1/n279 ),
     .B(\sub1/N31 ),
     .Y(\sub1/n141 ));
  NOR2x1_bottom \sub1/U362  (.A(subbytes_data_i[44]),
@@ -19018,7 +19016,7 @@ module aes (clk,
     .B1(FE_OFN113_sbox_data_o_2),
     .B2(\sub1/n242 ),
     .Y(\sub1/n490 ));
- OAI22xp5_bottom \sub1/U366  (.A1(subbytes_data_o[123]),
+ OAI22xp5_upper \sub1/U366  (.A1(subbytes_data_o[123]),
     .A2(\sub1/n347 ),
     .B1(FE_OFN112_sbox_data_o_3),
     .B2(\sub1/n242 ),
@@ -19028,17 +19026,17 @@ module aes (clk,
     .B1(FE_OFN111_sbox_data_o_4),
     .B2(\sub1/n242 ),
     .Y(\sub1/n494 ));
- OAI22xp5_bottom \sub1/U368  (.A1(subbytes_data_o[125]),
+ OAI22xp5_upper \sub1/U368  (.A1(subbytes_data_o[125]),
     .A2(\sub1/n347 ),
     .B1(FE_OFN110_sbox_data_o_5),
     .B2(\sub1/n242 ),
     .Y(\sub1/n496 ));
- OAI22xp5_bottom \sub1/U369  (.A1(subbytes_data_o[126]),
+ OAI22xp5_upper \sub1/U369  (.A1(subbytes_data_o[126]),
     .A2(\sub1/n347 ),
     .B1(FE_OFN109_sbox_data_o_6),
     .B2(\sub1/n242 ),
     .Y(\sub1/n498 ));
- AOI21xp5_upper \sub1/U37  (.A1(\sub1/FE_RN_3 ),
+ AOI21xp5_bottom \sub1/U37  (.A1(\sub1/FE_RN_3 ),
     .A2(\sub1/n343 ),
     .B(\sub1/n27 ),
     .Y(\sub1/n268 ));
@@ -19047,7 +19045,7 @@ module aes (clk,
     .B1(FE_OFN108_sbox_data_o_7),
     .B2(\sub1/n242 ),
     .Y(\sub1/n500 ));
- OAI21xp5_bottom \sub1/U371  (.A1(subbytes_data_i[60]),
+ OAI21xp5_upper \sub1/U371  (.A1(subbytes_data_i[60]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n169 ));
@@ -19056,7 +19054,7 @@ module aes (clk,
     .B1(subbytes_data_i[28]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n167 ));
- AND2x2_bottom \sub1/U373  (.A(\sub1/N30 ),
+ AND2x2_upper \sub1/U373  (.A(\sub1/N30 ),
     .B(\sub1/n243 ),
     .Y(\sub1/n58 ));
  NAND2xp5_bottom \sub1/U374  (.A(\sub1/N295 ),
@@ -19071,12 +19069,12 @@ module aes (clk,
  NAND2xp5_bottom \sub1/U377  (.A(\sub1/N296 ),
     .B(\sub1/n1 ),
     .Y(\sub1/n509 ));
- A2O1A1Ixp33_bottom \sub1/U378  (.A1(\sub1/n345 ),
+ A2O1A1Ixp33_upper \sub1/U378  (.A1(\sub1/n345 ),
     .A2(\sub1/n1 ),
     .B(\sub1/n339 ),
     .C(\sub1/n244 ),
     .Y(\sub1/n511 ));
- OR2x2_bottom \sub1/U379  (.A(\sub1/n245 ),
+ OR2x2_upper \sub1/U379  (.A(\sub1/n245 ),
     .B(subbytes_start_i),
     .Y(\sub1/n244 ));
  OAI22xp5_upper \sub1/U38  (.A1(\sub1/n22 ),
@@ -19084,12 +19082,12 @@ module aes (clk,
     .B1(\sub1/n23 ),
     .B2(\sub1/n321 ),
     .Y(\sub1/n27 ));
- OAI22xp5_bottom \sub1/U380  (.A1(subbytes_data_i[36]),
+ OAI22xp5_upper \sub1/U380  (.A1(subbytes_data_i[36]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[52]),
     .B2(\sub1/n257 ),
     .Y(\sub1/n165 ));
- OAI22xp5_bottom \sub1/U381  (.A1(subbytes_data_i[4]),
+ OAI22xp5_upper \sub1/U381  (.A1(subbytes_data_i[4]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[20]),
     .B2(\sub1/n261 ),
@@ -19103,10 +19101,10 @@ module aes (clk,
  NAND2xp5_bottom \sub1/U383  (.A(\sub1/n196 ),
     .B(\sub1/n129 ),
     .Y(\sub1/n245 ));
- AND2x2_bottom \sub1/U384  (.A(\sub1/n243 ),
+ AND2x2_upper \sub1/U384  (.A(\sub1/n243 ),
     .B(\sub1/n345 ),
     .Y(\sub1/n129 ));
- NOR2x1_bottom \sub1/U385  (.A(\sub1/state_4_ ),
+ NOR2x1_upper \sub1/U385  (.A(\sub1/state_4_ ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n243 ));
  NAND4xp25_bottom \sub1/U386  (.A(\sub1/state_4_ ),
@@ -19114,17 +19112,17 @@ module aes (clk,
     .C(\sub1/n345 ),
     .D(\sub1/n353 ),
     .Y(\sub1/n513 ));
- NOR2x1_upper \sub1/U387  (.A(subbytes_data_i[108]),
+ NOR2x1_bottom \sub1/U387  (.A(subbytes_data_i[108]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n181 ));
- OAI21xp5_bottom \sub1/U388  (.A1(subbytes_data_i[124]),
+ OAI21xp5_upper \sub1/U388  (.A1(subbytes_data_i[124]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/n353 ),
     .Y(\sub1/n179 ));
- NOR2x1_bottom \sub1/U389  (.A(\sub1/N32 ),
+ NOR2x1_upper \sub1/U389  (.A(\sub1/N32 ),
     .B(\sub1/N31 ),
     .Y(\sub1/n196 ));
- NOR2x1_bottom \sub1/U39  (.A(\sub1/n339 ),
+ NOR2x1_upper \sub1/U39  (.A(\sub1/n339 ),
     .B(\sub1/n343 ),
     .Y(\sub1/n1 ));
  OAI22xp5_upper \sub1/U390  (.A1(subbytes_data_i[76]),
@@ -19142,38 +19140,38 @@ module aes (clk,
     .B1(subbytes_data_i[84]),
     .B2(\sub1/n261 ),
     .Y(\sub1/n173 ));
- OR5x1_upper \sub1/U393  (.A(\sub1/n181 ),
+ OR5x1_bottom \sub1/U393  (.A(\sub1/n181 ),
     .B(\sub1/n179 ),
     .C(\sub1/n177 ),
     .D(\sub1/n175 ),
     .E(\sub1/n173 ),
     .Y(\sub1/n183 ));
- NAND2xp5_bottom \sub1/U394  (.A(\sub1/n185 ),
+ NAND2xp5_upper \sub1/U394  (.A(\sub1/n185 ),
     .B(\sub1/n183 ),
     .Y(\sub1/N127 ));
  NOR2x1_bottom \sub1/U395  (.A(subbytes_data_i[45]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n195 ));
- OAI21xp5_bottom \sub1/U396  (.A1(subbytes_data_i[61]),
+ OAI21xp5_upper \sub1/U396  (.A1(subbytes_data_i[61]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n192 ));
- OAI22xp5_bottom \sub1/U397  (.A1(subbytes_data_i[13]),
+ OAI22xp5_upper \sub1/U397  (.A1(subbytes_data_i[13]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[29]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n191 ));
- OAI22xp5_bottom \sub1/U398  (.A1(subbytes_data_i[37]),
+ OAI22xp5_upper \sub1/U398  (.A1(subbytes_data_i[37]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[53]),
     .B2(\sub1/n257 ),
     .Y(\sub1/n189 ));
- OAI22xp5_bottom \sub1/U399  (.A1(subbytes_data_i[5]),
+ OAI22xp5_upper \sub1/U399  (.A1(subbytes_data_i[5]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[21]),
     .B2(\sub1/n261 ),
     .Y(\sub1/n187 ));
- AO22x1_bottom \sub1/U4  (.A1(\sub1/N125 ),
+ AO22x1_upper \sub1/U4  (.A1(\sub1/N125 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[126]),
     .B2(\sub1/n2 ),
@@ -19188,24 +19186,24 @@ module aes (clk,
     .D(\sub1/n189 ),
     .E(\sub1/n187 ),
     .Y(\sub1/n213 ));
- NOR2x1_bottom \sub1/U401  (.A(subbytes_data_i[109]),
+ NOR2x1_upper \sub1/U401  (.A(subbytes_data_i[109]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n209 ));
- OAI21xp5_bottom \sub1/U402  (.A1(subbytes_data_i[125]),
+ OAI21xp5_upper \sub1/U402  (.A1(subbytes_data_i[125]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/n353 ),
     .Y(\sub1/n205 ));
- OAI22xp5_bottom \sub1/U403  (.A1(subbytes_data_i[77]),
+ OAI22xp5_upper \sub1/U403  (.A1(subbytes_data_i[77]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[93]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n202 ));
- OAI22xp5_bottom \sub1/U404  (.A1(subbytes_data_i[101]),
+ OAI22xp5_upper \sub1/U404  (.A1(subbytes_data_i[101]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[117]),
     .B2(\sub1/n257 ),
     .Y(\sub1/n199 ));
- OAI22xp5_bottom \sub1/U405  (.A1(subbytes_data_i[69]),
+ OAI22xp5_upper \sub1/U405  (.A1(subbytes_data_i[69]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[85]),
     .B2(\sub1/n261 ),
@@ -19216,13 +19214,13 @@ module aes (clk,
     .D(\sub1/n199 ),
     .E(\sub1/n198 ),
     .Y(\sub1/n211 ));
- NAND2xp5_bottom \sub1/U407  (.A(\sub1/n213 ),
+ NAND2xp5_upper \sub1/U407  (.A(\sub1/n213 ),
     .B(\sub1/n211 ),
     .Y(\sub1/N126 ));
  NOR2x1_bottom \sub1/U408  (.A(subbytes_data_i[46]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n223 ));
- OAI21xp5_bottom \sub1/U409  (.A1(subbytes_data_i[62]),
+ OAI21xp5_upper \sub1/U409  (.A1(subbytes_data_i[62]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n221 ));
@@ -19231,12 +19229,12 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n323 ),
     .Y(\sub1/n29 ));
- OAI22xp5_bottom \sub1/U410  (.A1(subbytes_data_i[14]),
+ OAI22xp5_upper \sub1/U410  (.A1(subbytes_data_i[14]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[30]),
     .B2(\sub1/FE_OFN50_n253 ),
     .Y(\sub1/n219 ));
- OAI22xp5_bottom \sub1/U411  (.A1(subbytes_data_i[38]),
+ OAI22xp5_upper \sub1/U411  (.A1(subbytes_data_i[38]),
     .A2(\sub1/FE_OFN52_n259 ),
     .B1(subbytes_data_i[54]),
     .B2(\sub1/n257 ),
@@ -19255,11 +19253,11 @@ module aes (clk,
  NOR2x1_bottom \sub1/U414  (.A(subbytes_data_i[110]),
     .B(\sub1/FE_OFN48_n249 ),
     .Y(\sub1/n233 ));
- OAI21xp5_bottom \sub1/U415  (.A1(subbytes_data_i[126]),
+ OAI21xp5_upper \sub1/U415  (.A1(subbytes_data_i[126]),
     .A2(\sub1/FE_OFN49_n251 ),
     .B(\sub1/n353 ),
     .Y(\sub1/n231 ));
- OAI22xp5_bottom \sub1/U416  (.A1(subbytes_data_i[78]),
+ OAI22xp5_upper \sub1/U416  (.A1(subbytes_data_i[78]),
     .A2(\sub1/FE_OFN51_n255 ),
     .B1(subbytes_data_i[94]),
     .B2(\sub1/FE_OFN50_n253 ),
@@ -19269,7 +19267,7 @@ module aes (clk,
     .B1(subbytes_data_i[118]),
     .B2(\sub1/n257 ),
     .Y(\sub1/n227 ));
- OAI22xp5_bottom \sub1/U418  (.A1(subbytes_data_i[70]),
+ OAI22xp5_upper \sub1/U418  (.A1(subbytes_data_i[70]),
     .A2(\sub1/FE_OFN53_n263 ),
     .B1(subbytes_data_i[86]),
     .B2(\sub1/n261 ),
@@ -19294,7 +19292,7 @@ module aes (clk,
     .A2(\sub1/FE_OFN53_n263 ),
     .B(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n241 ));
- OAI222xp33_upper \sub1/U423  (.A1(subbytes_data_i[47]),
+ OAI222xp33_bottom \sub1/U423  (.A1(subbytes_data_i[47]),
     .A2(\sub1/FE_OFN48_n249 ),
     .B1(subbytes_data_i[63]),
     .B2(\sub1/FE_OFN49_n251 ),
@@ -19306,7 +19304,7 @@ module aes (clk,
     .B1(subbytes_data_i[15]),
     .B2(\sub1/FE_OFN51_n255 ),
     .Y(\sub1/n238 ));
- OR4x1_upper \sub1/U425  (.A(\sub1/n247 ),
+ OR4x1_bottom \sub1/U425  (.A(\sub1/n247 ),
     .B(\sub1/n241 ),
     .C(\sub1/n239 ),
     .D(\sub1/n238 ),
@@ -19328,7 +19326,7 @@ module aes (clk,
     .B1(subbytes_data_i[119]),
     .B2(\sub1/n257 ),
     .Y(\sub1/n267 ));
- AOI21xp5_upper \sub1/U43  (.A1(\sub1/FE_RN_5 ),
+ AOI21xp5_bottom \sub1/U43  (.A1(\sub1/FE_RN_5 ),
     .A2(\sub1/n343 ),
     .B(\sub1/n32 ),
     .Y(\sub1/n272 ));
@@ -19337,16 +19335,16 @@ module aes (clk,
     .B1(subbytes_data_i[87]),
     .B2(\sub1/n261 ),
     .Y(\sub1/n265 ));
- OR5x1_upper \sub1/U431  (.A(\sub1/n273 ),
+ OR5x1_bottom \sub1/U431  (.A(\sub1/n273 ),
     .B(\sub1/n271 ),
     .C(\sub1/n269 ),
     .D(\sub1/n267 ),
     .E(\sub1/n265 ),
     .Y(\sub1/n275 ));
- NAND2xp5_upper \sub1/U432  (.A(\sub1/n277 ),
+ NAND2xp5_bottom \sub1/U432  (.A(\sub1/n277 ),
     .B(\sub1/n275 ),
     .Y(\sub1/N124 ));
- INVx1_bottom \sub1/U433  (.A(\sub1/N32 ),
+ INVx1_upper \sub1/U433  (.A(\sub1/N32 ),
     .Y(\sub1/n279 ));
  NAND4xp75_bottom \sub1/U434  (.A(\sub1/state_4_ ),
     .B(\sub1/n196 ),
@@ -19375,23 +19373,23 @@ module aes (clk,
     .Y(\sub1/n335 ));
  INVx1_bottom \sub1/U442  (.A(\sub1/FE_OFN91_n140 ),
     .Y(\sub1/n337 ));
- INVx1_bottom \sub1/U443  (.A(\sub1/n245 ),
+ INVx1_upper \sub1/U443  (.A(\sub1/n245 ),
     .Y(\sub1/n339 ));
  INVx1_upper \sub1/U444  (.A(\sub1/n193 ),
     .Y(\sub1/n341 ));
  INVx3_upper \sub1/U445  (.A(\sub1/FE_OFN93_n513 ),
     .Y(\sub1/n343 ));
- INVx1_bottom \sub1/U446  (.A(\sub1/N30 ),
+ INVx1_upper \sub1/U446  (.A(\sub1/N30 ),
     .Y(\sub1/n345 ));
- INVx1_upper \sub1/U447  (.A(\sub1/n242 ),
+ INVx1_bottom \sub1/U447  (.A(\sub1/n242 ),
     .Y(\sub1/n347 ));
- INVx1_upper \sub1/U448  (.A(\sub1/n240 ),
+ INVx1_bottom \sub1/U448  (.A(\sub1/n240 ),
     .Y(\sub1/n349 ));
  INVx1_bottom \sub1/U449  (.A(\sub1/N31 ),
     .Y(\sub1/n351 ));
- INVx1_upper \sub1/U45  (.A(FE_OFN114_sbox_data_o_1),
+ INVx1_bottom \sub1/U45  (.A(FE_OFN114_sbox_data_o_1),
     .Y(\sub1/n321 ));
- INVx2_bottom \sub1/U450  (.A(\sub1/FE_OFN45_N33 ),
+ INVx2_upper \sub1/U450  (.A(\sub1/FE_OFN45_N33 ),
     .Y(\sub1/n353 ));
  AOI21xp5_upper \sub1/U46  (.A1(\sub1/FE_RN_8 ),
     .A2(\sub1/n343 ),
@@ -19402,13 +19400,13 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n325 ),
     .Y(\sub1/n34 ));
- INVx1_upper \sub1/U48  (.A(FE_OFN109_sbox_data_o_6),
+ INVx1_bottom \sub1/U48  (.A(FE_OFN109_sbox_data_o_6),
     .Y(\sub1/n331 ));
  AOI21xp5_upper \sub1/U49  (.A1(\sub1/FE_RN_7 ),
     .A2(\sub1/n343 ),
     .B(\sub1/n37 ),
     .Y(\sub1/n276 ));
- AO22x1_bottom \sub1/U5  (.A1(\sub1/N126 ),
+ AO22x1_upper \sub1/U5  (.A1(\sub1/N126 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[125]),
     .B2(\sub1/n2 ),
@@ -19418,7 +19416,7 @@ module aes (clk,
     .B1(\sub1/n23 ),
     .B2(\sub1/n325 ),
     .Y(\sub1/n37 ));
- INVx1_upper \sub1/U51  (.A(FE_OFN108_sbox_data_o_7),
+ INVx1_bottom \sub1/U51  (.A(FE_OFN108_sbox_data_o_7),
     .Y(\sub1/n333 ));
  AOI21xp5_upper \sub1/U52  (.A1(\sub1/FE_RN_10 ),
     .A2(\sub1/n343 ),
@@ -19429,7 +19427,7 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n327 ),
     .Y(\sub1/n39 ));
- INVx1_upper \sub1/U54  (.A(FE_OFN112_sbox_data_o_3),
+ INVx1_bottom \sub1/U54  (.A(FE_OFN112_sbox_data_o_3),
     .Y(\sub1/n325 ));
  AOI21xp5_upper \sub1/U55  (.A1(\sub1/FE_RN_9 ),
     .A2(\sub1/n343 ),
@@ -19440,7 +19438,7 @@ module aes (clk,
     .B1(\sub1/n23 ),
     .B2(\sub1/n327 ),
     .Y(\sub1/n42 ));
- INVx1_upper \sub1/U57  (.A(FE_OFN111_sbox_data_o_4),
+ INVx1_bottom \sub1/U57  (.A(FE_OFN111_sbox_data_o_4),
     .Y(\sub1/n327 ));
  AOI21xp5_upper \sub1/U58  (.A1(\sub1/FE_RN_12 ),
     .A2(\sub1/n343 ),
@@ -19451,7 +19449,7 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n329 ),
     .Y(\sub1/n44 ));
- AO22x1_bottom \sub1/U6  (.A1(\sub1/N127 ),
+ AO22x1_upper \sub1/U6  (.A1(\sub1/N127 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[124]),
     .B2(\sub1/n2 ),
@@ -19497,10 +19495,10 @@ module aes (clk,
     .B1(\sub1/n18 ),
     .B2(\sub1/n333 ),
     .Y(\sub1/n54 ));
- NAND2xp5_upper \sub1/U73  (.A(\sub1/n18 ),
+ NAND2xp5_bottom \sub1/U73  (.A(\sub1/n18 ),
     .B(\sub1/FE_OFN93_n513 ),
     .Y(\sub1/n16 ));
- INVx1_upper \sub1/U74  (.A(FE_OFN115_sbox_data_o_0),
+ INVx1_bottom \sub1/U74  (.A(FE_OFN115_sbox_data_o_0),
     .Y(\sub1/n319 ));
  AOI21xp5_upper \sub1/U75  (.A1(\sub1/FE_RN_15 ),
     .A2(\sub1/n343 ),
@@ -19511,18 +19509,18 @@ module aes (clk,
     .B1(\sub1/n23 ),
     .B2(\sub1/n333 ),
     .Y(\sub1/n59 ));
- NAND2xp5_upper \sub1/U78  (.A(\sub1/n23 ),
+ NAND2xp5_bottom \sub1/U78  (.A(\sub1/n23 ),
     .B(\sub1/n283 ),
     .Y(\sub1/n22 ));
  NAND2x1_bottom \sub1/U79  (.A(\sub1/n57 ),
     .B(\sub1/n129 ),
     .Y(\sub1/n69 ));
- AO22x1_bottom \sub1/U8  (.A1(\sub1/N129 ),
+ AO22x1_upper \sub1/U8  (.A1(\sub1/N129 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[122]),
     .B2(\sub1/n2 ),
     .Y(subbytes_sbox_data_o[2]));
- AOI221xp5_upper \sub1/U80  (.A1(\sub1/FE_RN_18 ),
+ AOI221xp5_bottom \sub1/U80  (.A1(\sub1/FE_RN_18 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_20 ),
     .B2(\sub1/n4 ),
@@ -19533,7 +19531,7 @@ module aes (clk,
     .B1(\sub1/n319 ),
     .B2(\sub1/n65 ),
     .Y(\sub1/n62 ));
- AOI221xp5_upper \sub1/U83  (.A1(\sub1/FE_RN_19 ),
+ AOI221xp5_bottom \sub1/U83  (.A1(\sub1/FE_RN_19 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_17 ),
     .B2(\sub1/n4 ),
@@ -19544,7 +19542,7 @@ module aes (clk,
     .B1(\sub1/n319 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n66 ));
- AOI221xp5_upper \sub1/U86  (.A1(\sub1/FE_RN_20 ),
+ AOI221xp5_bottom \sub1/U86  (.A1(\sub1/FE_RN_20 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_18 ),
     .B2(\sub1/n4 ),
@@ -19561,7 +19559,7 @@ module aes (clk,
     .B2(\sub1/n4 ),
     .C(\sub1/n74 ),
     .Y(\sub1/n300 ));
- AO22x1_bottom \sub1/U9  (.A1(\sub1/N130 ),
+ AO22x1_upper \sub1/U9  (.A1(\sub1/N130 ),
     .A2(\sub1/n1 ),
     .B1(subbytes_data_i[121]),
     .B2(\sub1/n2 ),
@@ -19574,7 +19572,7 @@ module aes (clk,
  NAND2xp5_bottom \sub1/U91  (.A(\sub1/n46 ),
     .B(\sub1/n345 ),
     .Y(\sub1/n255 ));
- AOI221xp5_upper \sub1/U92  (.A1(\sub1/FE_RN_22 ),
+ AOI221xp5_bottom \sub1/U92  (.A1(\sub1/FE_RN_22 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_24 ),
     .B2(\sub1/n4 ),
@@ -19588,7 +19586,7 @@ module aes (clk,
  NAND2xp5_bottom \sub1/U94  (.A(\sub1/n48 ),
     .B(\sub1/n345 ),
     .Y(\sub1/n253 ));
- AOI221xp5_upper \sub1/U95  (.A1(\sub1/FE_RN_23 ),
+ AOI221xp5_bottom \sub1/U95  (.A1(\sub1/FE_RN_23 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_21 ),
     .B2(\sub1/n4 ),
@@ -19599,7 +19597,7 @@ module aes (clk,
     .B1(\sub1/n321 ),
     .B2(\sub1/n69 ),
     .Y(\sub1/n80 ));
- AOI221xp5_upper \sub1/U98  (.A1(\sub1/FE_RN_24 ),
+ AOI221xp5_bottom \sub1/U98  (.A1(\sub1/FE_RN_24 ),
     .A2(\sub1/FE_OFN88_n5 ),
     .B1(\sub1/FE_RN_22 ),
     .B2(\sub1/n4 ),
@@ -19627,7 +19625,7 @@ module aes (clk,
     .QN(subbytes_data_o[0]),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_100_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_100_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n398 ),
     .QN(\sub1/FE_RN_61 ),
     .RESETN(\sub1/n512 ),
@@ -19637,7 +19635,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_64 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_102_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_102_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n410 ),
     .QN(\sub1/FE_RN_67 ),
     .RESETN(\sub1/n512 ),
@@ -19647,7 +19645,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_70 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_104_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_104_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n422 ),
     .QN(\sub1/FE_RN_73 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -19657,17 +19655,17 @@ module aes (clk,
     .QN(\sub1/FE_RN_75 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_106_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_106_  (.CLK(clknet_leaf_2_clk),
     .D(\sub1/n430 ),
     .QN(\sub1/FE_RN_77 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_107_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_107_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n434 ),
     .QN(\sub1/FE_RN_79 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN31_FE_OFN4_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_108_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_108_  (.CLK(clknet_leaf_18_clk),
     .D(\sub1/n438 ),
     .QN(\sub1/FE_RN_81 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -19682,12 +19680,12 @@ module aes (clk,
     .QN(\sub1/FE_RN_6 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_110_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_110_  (.CLK(clknet_leaf_18_clk),
     .D(\sub1/n446 ),
     .QN(\sub1/FE_RN_85 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN15_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_111_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_111_  (.CLK(clknet_leaf_18_clk),
     .D(\sub1/n450 ),
     .QN(\sub1/FE_RN_87 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -19702,12 +19700,12 @@ module aes (clk,
     .QN(\sub1/FE_RN_21 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_114_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_114_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n310 ),
     .QN(\sub1/FE_RN_25 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_115_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_115_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n318 ),
     .QN(\sub1/FE_RN_29 ),
     .RESETN(\sub1/n512 ),
@@ -19757,17 +19755,17 @@ module aes (clk,
     .QN(subbytes_data_o[123]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_124_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_124_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n494 ),
     .QN(subbytes_data_o[124]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_125_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_125_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n496 ),
     .QN(subbytes_data_o[125]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_126_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_126_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n498 ),
     .QN(subbytes_data_o[126]),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -19792,7 +19790,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_14 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN15_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_15_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_15_  (.CLK(clknet_leaf_7_clk),
     .D(\sub1/n292 ),
     .QN(\sub1/FE_RN_16 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -19807,12 +19805,12 @@ module aes (clk,
     .QN(\sub1/FE_RN_24 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_18_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_18_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n316 ),
     .QN(\sub1/FE_RN_28 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_19_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_19_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n324 ),
     .QN(\sub1/FE_RN_32 ),
     .RESETN(\sub1/n512 ),
@@ -19842,17 +19840,17 @@ module aes (clk,
     .QN(\sub1/FE_RN_48 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_24_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_24_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n358 ),
     .QN(subbytes_data_o[24]),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_25_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_25_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n360 ),
     .QN(subbytes_data_o[25]),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN3_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_26_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_26_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n362 ),
     .QN(subbytes_data_o[26]),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -19877,7 +19875,7 @@ module aes (clk,
     .QN(subbytes_data_o[2]),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_30_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_30_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n370 ),
     .QN(subbytes_data_o[30]),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -19922,7 +19920,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_69 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_39_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_39_  (.CLK(clknet_leaf_12_clk),
     .D(\sub1/n420 ),
     .QN(\sub1/FE_RN_72 ),
     .RESETN(\sub1/n512 ),
@@ -19932,22 +19930,22 @@ module aes (clk,
     .QN(subbytes_data_o[3]),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_40_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_40_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n424 ),
     .QN(\sub1/FE_RN_74 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_41_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_41_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n428 ),
     .QN(\sub1/FE_RN_76 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_42_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_42_  (.CLK(clknet_leaf_2_clk),
     .D(\sub1/n432 ),
     .QN(\sub1/FE_RN_78 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_43_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_43_  (.CLK(clknet_leaf_2_clk),
     .D(\sub1/n436 ),
     .QN(\sub1/FE_RN_80 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -19962,12 +19960,12 @@ module aes (clk,
     .QN(\sub1/FE_RN_84 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN15_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_46_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_46_  (.CLK(clknet_leaf_18_clk),
     .D(\sub1/n448 ),
     .QN(\sub1/FE_RN_86 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN15_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_47_  (.CLK(clknet_leaf_18_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_47_  (.CLK(clknet_leaf_18_clk),
     .D(\sub1/n452 ),
     .QN(\sub1/FE_RN_88 ),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -19987,12 +19985,12 @@ module aes (clk,
     .QN(subbytes_data_o[4]),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN28_FE_OFN14_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_50_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_50_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n314 ),
     .QN(\sub1/FE_RN_27 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_51_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_51_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n322 ),
     .QN(\sub1/FE_RN_31 ),
     .RESETN(\sub1/n512 ),
@@ -20007,7 +20005,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_39 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_54_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_54_  (.CLK(clknet_leaf_14_clk),
     .D(\sub1/n346 ),
     .QN(\sub1/FE_RN_43 ),
     .RESETN(\sub1/n512 ),
@@ -20022,7 +20020,7 @@ module aes (clk,
     .QN(subbytes_data_o[56]),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_57_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_57_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n456 ),
     .QN(subbytes_data_o[57]),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -20032,7 +20030,7 @@ module aes (clk,
     .QN(subbytes_data_o[58]),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_59_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_59_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n460 ),
     .QN(subbytes_data_o[59]),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -20042,7 +20040,7 @@ module aes (clk,
     .QN(subbytes_data_o[5]),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN22_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_60_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_60_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n462 ),
     .QN(subbytes_data_o[60]),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -20052,7 +20050,7 @@ module aes (clk,
     .QN(subbytes_data_o[61]),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_62_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_62_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n466 ),
     .QN(subbytes_data_o[62]),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -20077,7 +20075,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_56 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_67_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_67_  (.CLK(clknet_leaf_12_clk),
     .D(\sub1/n394 ),
     .QN(\sub1/FE_RN_59 ),
     .RESETN(\sub1/n512 ),
@@ -20097,12 +20095,12 @@ module aes (clk,
     .QN(subbytes_data_o[6]),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_70_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_70_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n412 ),
     .QN(\sub1/FE_RN_68 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_71_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_71_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n418 ),
     .QN(\sub1/FE_RN_71 ),
     .RESETN(\sub1/n512 ),
@@ -20127,7 +20125,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_7 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_76_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_76_  (.CLK(clknet_leaf_2_clk),
     .D(\sub1/n278 ),
     .QN(\sub1/FE_RN_9 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
@@ -20142,12 +20140,12 @@ module aes (clk,
     .QN(\sub1/FE_RN_13 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN15_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_79_  (.CLK(clknet_leaf_2_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_79_  (.CLK(clknet_leaf_2_clk),
     .D(\sub1/n290 ),
     .QN(\sub1/FE_RN_15 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN15_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_7_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_7_  (.CLK(clknet_leaf_12_clk),
     .D(\sub1/n260 ),
     .QN(subbytes_data_o[7]),
     .RESETN(\sub1/n512 ),
@@ -20162,12 +20160,12 @@ module aes (clk,
     .QN(\sub1/FE_RN_22 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN21_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_82_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_82_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n312 ),
     .QN(\sub1/FE_RN_26 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_83_  (.CLK(clknet_leaf_13_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_83_  (.CLK(clknet_leaf_13_clk),
     .D(\sub1/n320 ),
     .QN(\sub1/FE_RN_30 ),
     .RESETN(\sub1/n512 ),
@@ -20182,7 +20180,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_38 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_86_  (.CLK(clknet_leaf_14_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_86_  (.CLK(clknet_leaf_14_clk),
     .D(\sub1/n344 ),
     .QN(\sub1/FE_RN_42 ),
     .RESETN(\sub1/n512 ),
@@ -20192,7 +20190,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_46 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_88_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_88_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n470 ),
     .QN(subbytes_data_o[88]),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -20202,27 +20200,27 @@ module aes (clk,
     .QN(subbytes_data_o[89]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_8_  (.CLK(clknet_leaf_3_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_8_  (.CLK(clknet_leaf_3_clk),
     .D(\sub1/n264 ),
     .QN(\sub1/FE_RN_2 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_90_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_90_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n474 ),
     .QN(subbytes_data_o[90]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_91_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_91_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n476 ),
     .QN(subbytes_data_o[91]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_92_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_92_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n478 ),
     .QN(subbytes_data_o[92]),
     .RESETN(\sub1/FE_OFN46_n512 ),
     .SETN(FE_OFN32_FE_OFN1_reset));
- DFFASRHQNx1_bottom \sub1/data_reg_reg_93_  (.CLK(clknet_leaf_1_clk),
+ DFFASRHQNx1_upper \sub1/data_reg_reg_93_  (.CLK(clknet_leaf_1_clk),
     .D(\sub1/n480 ),
     .QN(subbytes_data_o[93]),
     .RESETN(\sub1/FE_OFN46_n512 ),
@@ -20252,7 +20250,7 @@ module aes (clk,
     .QN(\sub1/FE_RN_55 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_upper \sub1/data_reg_reg_99_  (.CLK(clknet_leaf_12_clk),
+ DFFASRHQNx1_bottom \sub1/data_reg_reg_99_  (.CLK(clknet_leaf_12_clk),
     .D(\sub1/n392 ),
     .QN(\sub1/FE_RN_58 ),
     .RESETN(\sub1/n512 ),
@@ -20262,32 +20260,32 @@ module aes (clk,
     .QN(\sub1/FE_RN_4 ),
     .RESETN(\sub1/FE_OFN47_n512 ),
     .SETN(FE_OFN27_reset));
- DFFASRHQNx1_bottom \sub1/ready_o_reg  (.CLK(clknet_leaf_11_clk),
+ DFFASRHQNx1_upper \sub1/ready_o_reg  (.CLK(clknet_leaf_11_clk),
     .D(\sub1/FE_OFN93_n513 ),
     .QN(subbytes_ready_o),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN30_FE_OFN7_reset));
- DFFASRHQNx1_bottom \sub1/state_reg_0_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \sub1/state_reg_0_  (.CLK(clknet_leaf_7_clk),
     .D(\sub1/n511 ),
     .QN(\sub1/N30 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom \sub1/state_reg_1_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \sub1/state_reg_1_  (.CLK(clknet_leaf_7_clk),
     .D(\sub1/n507 ),
     .QN(\sub1/N31 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom \sub1/state_reg_2_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \sub1/state_reg_2_  (.CLK(clknet_leaf_7_clk),
     .D(\sub1/n505 ),
     .QN(\sub1/N32 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom \sub1/state_reg_3_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \sub1/state_reg_3_  (.CLK(clknet_leaf_7_clk),
     .D(\sub1/n503 ),
     .QN(\sub1/N33 ),
     .RESETN(\sub1/n512 ),
     .SETN(FE_OFN26_reset));
- DFFASRHQNx1_bottom \sub1/state_reg_4_  (.CLK(clknet_leaf_7_clk),
+ DFFASRHQNx1_upper \sub1/state_reg_4_  (.CLK(clknet_leaf_7_clk),
     .D(\sub1/n509 ),
     .QN(\sub1/state_4_ ),
     .RESETN(\sub1/n512 ),

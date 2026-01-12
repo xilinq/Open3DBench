@@ -10,6 +10,18 @@ set out_fh [open $output_file "w"]
 # 写入表头 (CSV 格式)
 puts $out_fh "Instance,Cell_Type,Output_Pin,Fanout,Worst_Slack"
 
+# 报告slack
+# 检查snake_loss_report.txt是否存在，如果存在则删除，否则执行report_checks
+set snake_loss_file "$::env(RESULTS_DIR)/snake_loss_report.txt"
+if {[file exists $snake_loss_file]} {
+    file delete $snake_loss_file
+} else {
+    report_checks -path_delay max -slack_max 0 -group_count 20 -path_group DFF >> $snake_loss_file
+}
+report_checks -path_delay max -slack_max 0 -group_count 20 -path_group DFF >> $snake_loss_file
+# 处理snake loss报告
+source $::env(SCRIPTS_DIR)/extract_snake_loss.tcl
+
 # 2. 获取所有实例的集合
 # 根据需要可以增加 filter，例如: get_cells * -filter "is_hierarchical == false"
 set all_instances [get_cells *]
@@ -17,8 +29,14 @@ set all_instances [get_cells *]
 # 3. 遍历每个实例
 foreach inst $all_instances {
     # 如果 ref_name 含有 DFF，则跳过
-    set ref_name [get_property $inst ref_name]
-    if {[string match "*DFF*" $ref_name]} {
+    # set ref_name [get_property $inst ref_name]
+    # if {[string match "*DFF*" $ref_name]} {
+    #     continue
+    # }
+
+    # 如果实例名中带有clk，则跳过
+    set inst_name_check [get_property $inst full_name]
+    if {[string match "*clk*" $inst_name_check] || [string match "*CLK*" $inst_name_check]} {
         continue
     }
     set inst_name [get_property $inst full_name]
