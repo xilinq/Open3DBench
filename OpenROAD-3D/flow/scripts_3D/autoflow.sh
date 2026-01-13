@@ -19,7 +19,8 @@ then
     cp ../3D_def/${DEF_VERSION}.def designs/asap7_3D/${DESIGN_NAME}/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def
     cp ../3D_sdc/${DEF_VERSION}.sdc designs/asap7_3D/${DESIGN_NAME}/
     cp ../3D_sdc/${DEF_VERSION}.sdc results/asap7_3D/${DESIGN_NAME}/${DESIGN_DIMENSION}/1_synth.sdc
-    make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config.mk do-autoflow 
+    # TO DO: use upper_shrink for do-autoflow(cts)
+    make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config_upper_shrink.mk do-autoflow 
     make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config.mk do-cts_eval 
 
 elif [ "$DESIGN_DIMENSION" = "3D_tiling" ]
