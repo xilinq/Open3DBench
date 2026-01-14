@@ -8,7 +8,7 @@ set sdc_version 2.1
 set_units -time ps -resistance kOhm -capacitance fF -voltage V -current mA
 set_wire_load_mode top
 set_max_transition 40 [current_design]
-create_clock [get_ports clk]  -period 1200  -waveform {0 600}
+create_clock [get_ports clk]  -period 1100  -waveform {0 550}
 set_clock_uncertainty 30  [get_clocks clk]
 set_clock_transition -max -rise 30 [get_clocks clk]
 set_clock_transition -min -rise 10 [get_clocks clk]
