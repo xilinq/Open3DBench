@@ -22,11 +22,14 @@ write_verilog $::env(RESULTS_DIR)/6_final.v
 check_setup -verbose -unconstrained_endpoints
 
 estimate_parasitics -placement
-puts "post placement phase"
+puts "-----------post placement phase----------------"
 report_wns
 report_tns
 report_worst_slack
-report_power
+# report_power
+set setup_violations [find_timing_paths -path_delay max -slack_max 0 -group_count 50000]
+set num_setup_violations [llength $setup_violations]
+puts "Total Setup Violations: $num_setup_violations"
 # estimate_parasitics -global_routing
 # puts "global routing phase"
 # report_wns
@@ -35,6 +38,7 @@ report_power
 # report_power
 source $::env(SCRIPTS_DIR)/count_cross_die_nets.tcl
 
+# 提取单元级时序信息（2D时打开）
 # source $::env(SCRIPTS_DIR)/my_report_metric.tcl
 
 # Run extraction and STA
@@ -88,11 +92,15 @@ if {[info exist ::env(RCX_RULES)]} {
   puts "OpenRCX is not enabled for this platform."
 }
 
-puts "post routing phase"
+puts "------------post routing phase----------------"
 report_wns
 report_tns
 report_worst_slack
 report_power
+set setup_violations [find_timing_paths -path_delay max -slack_max 0 -group_count 50000]
+set num_setup_violations [llength $setup_violations]
+puts "Total Setup Violations: $num_setup_violations"
+
 # source $::env(SCRIPTS_DIR)/report_metrics.tcl
 # report_metrics "finish"
 

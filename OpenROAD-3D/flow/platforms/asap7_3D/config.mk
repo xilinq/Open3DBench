@@ -18,8 +18,9 @@ export GDS_FILES = $(sort $(wildcard $(PLATFORM_DIR)/gds/*.gds)) \
                      $(ADDITIONAL_GDS)
 # Dont use cells to ease congestion
 # Specify at least one filler cell if none
-export DONT_USE_CELLS = TAPCELL_upper FILLER_upper BUFx2_upper BUFx3_upper BUFx4_upper BUFx5_upper BUFx8_upper BUFx10_upper BUFx12_upper BUFx24_upper \
-                        BUFx12q_upper BUFx16q_upper BUFx4q_upper BUFx6q_upper
+export DONT_USE_CELLS = TAPCELL_upper FILLER_upper 
+#BUFx2_upper BUFx3_upper BUFx4_upper BUFx5_upper BUFx8_upper BUFx10_upper BUFx12_upper BUFx24_upper \
+                        BUFx12q_upper BUFx16q_upper BUFx4q_upper BUFx6q_upper INVxp5_upper
 
 # Fill cells used in fill cell insertion
 export FILL_CELLS ?= TAPCELL_bottom

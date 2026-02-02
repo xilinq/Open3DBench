@@ -39,9 +39,13 @@ then
 
 elif [ "$DESIGN_DIMENSION" = "2D" ] 
 then
-    cp ../../Place-3D/install/results/${DEF_VERSION}_${DESIGN_DIMENSION}/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def designs/nangate45/${DESIGN_NAME}/
-    make DESIGN_CONFIG=designs/nangate45/${DESIGN_NAME}/config_2d_dmp.mk do-def_eval
-    make DESIGN_CONFIG=designs/nangate45_3D/${DESIGN_NAME}/config.mk do-hotspot_2D
+    echo "2D flow"
+    cp ../3D_def/${DEF_VERSION}.def.all_bottom designs/asap7_3D/${DESIGN_NAME}/${DEF_VERSION}_${DESIGN_DIMENSION}.gp.def
+    cp ../3D_sdc/${DEF_VERSION}.sdc designs/asap7_3D/${DESIGN_NAME}/
+    cp ../3D_sdc/${DEF_VERSION}.sdc results/asap7_3D/${DESIGN_NAME}/3D/1_synth.sdc
+    # TO DO: use upper_shrink for do-autoflow(cts)
+    make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config_2D.mk do-autoflow 
+    make DESIGN_CONFIG=designs/asap7_3D/${DESIGN_NAME}/config_2D.mk do-cts_eval 
 
 elif [ "$DESIGN_DIMENSION" = "2D_mp" ]
 then
