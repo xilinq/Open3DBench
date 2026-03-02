@@ -1,12 +1,12 @@
 ###############################################################################
 # Created by write_sdc
-# Sun Feb  1 21:53:57 2026
+# Thu Feb 26 08:58:32 2026
 ###############################################################################
 current_design aes
 ###############################################################################
 # Timing Constraints
 ###############################################################################
-create_clock -name clk -period 908.6857 [get_ports {clk}]
+create_clock -name clk -period 969.2332 [get_ports {clk}]
 set_clock_transition -min 10.0000 [get_clocks {clk}]
 set_clock_transition -max 30.0000 [get_clocks {clk}]
 set_clock_uncertainty 30.0000 clk

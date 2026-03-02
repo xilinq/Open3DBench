@@ -19,6 +19,8 @@ write_verilog $::env(RESULTS_DIR)/6_final.v
 # report_checks -unconstrained -path_delay max
 
 #new:
+puts [clock format [clock seconds]]
+
 check_setup -verbose -unconstrained_endpoints
 
 estimate_parasitics -placement
@@ -91,6 +93,8 @@ if {[info exist ::env(RCX_RULES)]} {
 } else {
   puts "OpenRCX is not enabled for this platform."
 }
+
+puts [clock format [clock seconds]]
 
 puts "------------post routing phase----------------"
 report_wns
